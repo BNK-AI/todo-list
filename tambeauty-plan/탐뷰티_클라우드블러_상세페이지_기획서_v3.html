@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>탐뷰티 | 더 클라우드 블러 — 상세페이지 기획 v3 FINAL</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Noto Sans KR",sans-serif;background:#d6d6d6;color:#333;-webkit-font-smoothing:antialiased}
+
+    /* ═══ 플래닝 바 ═══ */
+    .p-bar{background:#0f0f1a;color:#888;padding:10px 20px;font-size:11px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+    .p-bar strong{color:#ffd369}
+    .p-bar .badge{background:#ffd369;color:#0f0f1a;padding:3px 12px;border-radius:10px;font-size:10px;font-weight:700}
+
+    /* ═══ 프레임 ═══ */
+    .frame{width:860px;margin:20px auto;background:#fff;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,0.08)}
+
+    /* ═══ 마커 (기획용 섹션 구분) ═══ */
+    .mk{background:#0f0f1a;color:#ffd369;padding:8px 18px;font-size:10px;font-weight:700;letter-spacing:1.5px;display:flex;justify-content:space-between;align-items:center}
+    .mk .n{color:#555;font-weight:400;font-size:10px}
+
+    /* ═══ 메모 (기획 노트) ═══ */
+    .memo{padding:12px 18px;font-size:11px;line-height:1.7;border-left:3px solid #ffe082;background:#fffde7;color:#8a7a30}
+    .memo b{color:#5d4e00}
+    .memo.photo{border-left-color:#90caf9;background:#e3f2fd;color:#37474f}
+    .memo.photo b{color:#1565c0}
+    .memo.copy{border-left-color:#ce93d8;background:#f3e5f5;color:#4a148c}
+    .memo.copy b{color:#6a1b9a}
+    .memo.warn{border-left-color:#ef9a9a;background:#ffebee;color:#b71c1c}
+    .memo.warn b{color:#c62828}
+    .memo ul{margin:6px 0 0 16px}
+    .memo li{margin-bottom:2px}
+
+    /* ═══ 이미지 플레이스홀더 ═══ */
+    .img-ph{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:#bbb;font-size:12px;overflow:hidden;position:relative;background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(0,0,0,0.015) 20px,rgba(0,0,0,0.015) 40px)}
+    .img-ph .lb{font-size:10px;color:#c9a07a;letter-spacing:2px;font-weight:700;padding:6px 14px;background:rgba(255,255,255,0.7);border-radius:6px;backdrop-filter:blur(4px)}
+
+    /* ════════════════════════════════════════════
+       실제 상세페이지 디자인
+       ════════════════════════════════════════════ */
+
+    /* ── 히어로 ── */
+    .hero{position:relative;min-height:720px;background:linear-gradient(170deg,#fef8f3 0%,#fdeee4 30%,#f8ddd0 60%,#f0cfc0 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px 56px;overflow:hidden}
+    .hero::before{content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(244,139,164,0.12) 0%,transparent 70%);border-radius:50%}
+    .hero::after{content:"";position:absolute;bottom:-80px;left:-80px;width:450px;height:450px;background:radial-gradient(circle,rgba(255,183,165,0.15) 0%,transparent 70%);border-radius:50%}
+    .hero .z{position:relative;z-index:1}
+    .hero .brand{font-size:11px;letter-spacing:5px;color:#c9a07a;font-weight:700;margin-bottom:24px;text-align:center}
+    .hero .prod-wrap{width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,0.55);backdrop-filter:blur(24px);display:flex;align-items:center;justify-content:center;margin-bottom:36px;box-shadow:0 24px 64px rgba(180,130,100,0.12),0 0 0 1px rgba(255,255,255,0.4)}
+    .hero .prod-wrap img{width:280px;height:auto;object-fit:contain}
+    .hero h1{font-size:36px;font-weight:900;color:#2a2a2a;text-align:center;line-height:1.45;margin-bottom:14px;letter-spacing:-0.5px}
+    .hero h1 em{font-style:normal;background:linear-gradient(135deg,#d4856a,#c96b8e);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero .sub{font-size:15px;color:#999;text-align:center;line-height:1.9;margin-bottom:32px}
+    .hero .sub strong{color:#777;font-weight:600}
+    .swatch-row{display:flex;gap:14px;justify-content:center}
+    .sw-item{display:flex;flex-direction:column;align-items:center;gap:7px}
+    .sw-item .dot{width:36px;height:36px;border-radius:50%;border:3px solid #fff;box-shadow:0 3px 12px rgba(0,0,0,0.1)}
+    .sw-item span{font-size:9px;color:#aaa;letter-spacing:0.5px;font-weight:500}
+
+    /* ── 프루프 ── */
+    .proof{padding:52px 50px;background:#fff;text-align:center}
+    .proof-row{display:flex;gap:20px;justify-content:center;margin-bottom:28px}
+    .proof-card{flex:1;max-width:220px;padding:32px 20px;background:#faf8f5;border-radius:20px;border:1px solid #f0ece6}
+    .proof-card .num{font-size:40px;font-weight:900;color:#222;line-height:1}
+    .proof-card .unit{font-size:14px;font-weight:700;color:#c9a07a;margin-left:2px}
+    .proof-card .lb{font-size:12px;color:#999;margin-top:10px}
+    .hash-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    .hash{padding:9px 22px;border:1px solid #ede8e0;border-radius:24px;font-size:13px;color:#888;background:#fdfcfa;font-weight:500}
+
+    /* ── 공통 섹션 ── */
+    .sec{padding:60px 50px}
+    .sec.alt{background:#faf8f5}
+    .sec.dark{background:#2a2a2a;color:#fff}
+    .sl{font-size:11px;letter-spacing:4px;color:#c9a07a;font-weight:700;text-align:center;margin-bottom:10px}
+    .st{font-size:28px;font-weight:900;color:#222;text-align:center;margin-bottom:8px;line-height:1.45;letter-spacing:-0.3px}
+    .sd{font-size:14px;color:#999;text-align:center;line-height:1.9;margin-bottom:40px}
+    .sec.dark .st{color:#fff}
+    .sec.dark .sd{color:#888}
+
+    /* ── USP 카드 ── */
+    .usp{display:flex;align-items:center;gap:40px;padding:48px 0;border-bottom:1px solid #f0f0f0}
+    .usp:last-child{border-bottom:none}
+    .usp.rev{flex-direction:row-reverse}
+    .usp-img{width:320px;height:320px;border-radius:24px;flex-shrink:0;overflow:hidden}
+    .usp-n{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#d4856a,#c9a07a);color:#fff;font-size:13px;font-weight:800;margin-bottom:14px}
+    .usp-t h3{font-size:24px;font-weight:800;color:#222;margin-bottom:14px;line-height:1.45}
+    .usp-t p{font-size:14px;color:#888;line-height:2}
+    .usp-tag{display:inline-block;margin-top:14px;padding:8px 18px;background:linear-gradient(135deg,#fef6f0,#fdf0e8);border-radius:10px;font-size:12px;color:#c9a07a;font-weight:700;border:1px solid #f5e6d8}
+
+    /* ── 무드컷 ── */
+    .mood{height:420px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;font-size:12px;color:rgba(255,255,255,0.7);position:relative;overflow:hidden}
+    .mood .lb{font-size:10px;color:#fff;letter-spacing:3px;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,0.15)}
+    .mood-ov{position:absolute;bottom:0;left:0;right:0;padding:44px 50px;background:linear-gradient(transparent,rgba(0,0,0,0.4))}
+    .mood-ov h3{font-size:26px;font-weight:800;color:#fff;margin-bottom:6px;text-shadow:0 2px 12px rgba(0,0,0,0.15);letter-spacing:-0.3px}
+    .mood-ov p{font-size:14px;color:rgba(255,255,255,0.85);font-weight:300}
+
+    /* ── 텍스처 플로우 ── */
+    .tx-flow{display:flex;gap:0;position:relative}
+    .tx-step{flex:1;text-align:center;padding:0 14px;position:relative}
+    .tx-step .tv{width:100%;height:300px;border-radius:20px;margin-bottom:18px}
+    .tx-step .tn{font-size:10px;color:#c9a07a;font-weight:700;letter-spacing:2px;margin-bottom:8px}
+    .tx-step h4{font-size:17px;font-weight:700;color:#333;margin-bottom:6px}
+    .tx-step p{font-size:12px;color:#999;line-height:1.7}
+    .tx-arrow{position:absolute;top:140px;right:-10px;width:20px;height:20px;z-index:2;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-size:12px;color:#c9a07a}
+
+    /* ── 컬러 ── */
+    .cg-head{display:flex;align-items:center;gap:16px;margin-bottom:24px;padding:18px 26px;background:#faf8f5;border-radius:14px}
+    .cg-head .circle{width:48px;height:48px;border-radius:50%;flex-shrink:0}
+    .cg-head .cgl{font-size:11px;letter-spacing:3px;font-weight:700}
+    .cg-head h3{font-size:18px;font-weight:700;color:#222;margin-top:3px}
+    .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px}
+    .c-card{border-radius:20px;overflow:hidden;border:1px solid #f0ece6;background:#fff;transition:box-shadow 0.2s}
+    .c-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.06)}
+    .c-card .cs{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .c-card .cs .cn{font-size:64px;font-weight:900;color:rgba(255,255,255,0.75);text-shadow:0 2px 24px rgba(0,0,0,0.04);position:relative;z-index:1}
+    .c-card .cs .cb{width:180px;height:180px;border-radius:50%;filter:blur(45px);opacity:0.4;position:absolute}
+    .c-card .cb2{padding:22px}
+    .c-card .cb2 .nm{font-size:18px;font-weight:700;color:#222;margin-bottom:3px}
+    .c-card .cb2 .en{font-size:11px;color:#ccc;letter-spacing:1.5px;margin-bottom:12px}
+    .c-card .cb2 .cd{font-size:13px;color:#888;line-height:1.8;margin-bottom:14px}
+    .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{padding:5px 14px;border:1px solid #eee;border-radius:16px;font-size:11px;color:#999;background:#fdfcfa}
+
+    /* ── 컬러맵 ── */
+    .cmap{display:flex;gap:16px;margin-top:8px}
+    .cmap .box{flex:1;border:1px solid #eee;border-radius:18px;padding:28px 20px;text-align:center;background:#fff}
+    .cmap .box .bl{font-size:10px;letter-spacing:2px;font-weight:700;margin-bottom:4px}
+    .cmap .box .bs{font-size:11px;color:#bbb;margin-bottom:16px}
+    .cmap .dots{display:flex;gap:16px;justify-content:center}
+    .cmap .di{text-align:center}
+    .cmap .di .d{width:44px;height:44px;border-radius:50%;margin:0 auto 6px;border:3px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+    .cmap .di span{font-size:10px;color:#888}
+
+    /* ── 사용법 ── */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{background:#fff;border-radius:18px;padding:26px 16px;text-align:center;border:1px solid #f0ece6}
+    .step .sv{width:100%;height:150px;border-radius:14px;background:#f5f0ea;margin-bottom:16px}
+    .step .sn{display:inline-block;padding:4px 14px;background:linear-gradient(135deg,#d4856a,#c9a07a);border-radius:14px;font-size:10px;font-weight:700;color:#fff;letter-spacing:2px;margin-bottom:10px}
+    .step h4{font-size:14px;font-weight:700;color:#333;margin-bottom:6px}
+    .step p{font-size:11px;color:#999;line-height:1.7}
+    .step .tip{margin-top:10px;font-size:11px;color:#c9a07a;font-weight:600}
+
+    /* ── 얼굴형 ── */
+    .f-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .f-card{border-radius:18px;overflow:hidden;border:1px solid #f0ece6;background:#fff}
+    .f-card .fv{height:155px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
+    .f-card .fb{padding:16px;text-align:center}
+    .f-card .fb h4{font-size:14px;font-weight:700;color:#333;margin-bottom:6px}
+    .f-card .fb p{font-size:12px;color:#999;line-height:1.7}
+
+    /* ── 멀티유즈 ── */
+    .m-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .m-card{border-radius:18px;overflow:hidden;border:1px solid #f0ece6;background:#fff}
+    .m-card .mi{height:230px}
+    .m-card .mb{padding:22px;text-align:center}
+    .m-card .mb h4{font-size:16px;font-weight:700;color:#333;margin-bottom:6px}
+    .m-card .mb p{font-size:12px;color:#999;line-height:1.7}
+
+    /* ── 리뷰 ── */
+    .rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .rv-card{background:#faf8f5;border-radius:16px;padding:26px;border:1px solid #f0ece6}
+    .rv-card .stars{color:#f0c36d;font-size:14px;margin-bottom:10px;letter-spacing:2px}
+    .rv-card .rt{font-size:13px;color:#555;line-height:1.9;margin-bottom:12px}
+    .rv-card .ru{font-size:11px;color:#bbb}
+    .rv-card .rc{display:inline-block;margin-top:6px;padding:3px 12px;border:1px solid #eee;border-radius:12px;font-size:10px;color:#aaa;background:#fff}
+
+    /* ── 제품정보 ── */
+    .info-tbl{width:100%;font-size:13px;border-collapse:collapse}
+    .info-tbl td{padding:13px 18px;border-bottom:1px solid #f0f0f0}
+    .info-tbl td:first-child{width:150px;color:#999;font-weight:600;background:#faf8f5}
+    .info-tbl .need{color:#d4856a;font-style:italic}
+
+    /* ── 레퍼런스 ── */
+    .ref-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .ref-card{border-radius:18px;overflow:hidden;border:1px solid #f0ece6;background:#fff;display:flex}
+    .ref-card .ri{width:160px;flex-shrink:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:11px;color:#ccc}
+    .ref-card .ri .lb{font-size:10px;color:#c9a07a;letter-spacing:1px;font-weight:700}
+    .ref-card .rb{flex:1;padding:22px}
+    .ref-card .rb h4{font-size:15px;font-weight:700;color:#333;margin-bottom:4px}
+    .ref-card .rb .rsub{font-size:12px;color:#bbb;margin-bottom:10px}
+    .ref-card .rb p{font-size:12px;color:#888;line-height:1.7}
+
+    /* ── 체크리스트 ── */
+    .checklist{columns:2;gap:20px}
+    .ck-item{break-inside:avoid;padding:10px 0;display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#555}
+    .ck-item .ck-box{width:18px;height:18px;border-radius:4px;border:2px solid #ddd;flex-shrink:0;margin-top:1px}
+    .ck-item .ck-box.done{background:#c9a07a;border-color:#c9a07a}
+
+    /* ── 가이드라인 ── */
+    .gl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .gl-card{padding:24px;border-radius:16px;border:1px solid #f0ece6;background:#fff}
+    .gl-card h4{font-size:14px;font-weight:700;color:#333;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+    .gl-card h4 .icon{width:24px;height:24px;border-radius:6px;background:#fef6f0;display:flex;align-items:center;justify-content:center;font-size:12px}
+    .gl-card p{font-size:12px;color:#888;line-height:1.8}
+    .gl-card ul{margin:6px 0 0 16px;font-size:12px;color:#888;line-height:1.8}
+
+    /* ── TIP ── */
+    .tip-box{margin-top:28px;padding:20px 28px;background:linear-gradient(135deg,#fef6f0,#fdf0e8);border-radius:14px;font-size:13px;color:#888;text-align:center;border:1px solid #f5e6d8}
+    .tip-box b{color:#c9a07a}
+
+    /* ── 푸터 ── */
+    .footer{text-align:center;padding:40px;font-size:11px;color:#aaa;background:#faf8f5;border-top:1px solid #f0f0f0}
+
+    /* ── bg ── */
+    .bg-warm{background:linear-gradient(135deg,#f0d9c4,#d4a88a)}
+    .bg-cool{background:linear-gradient(135deg,#d4c4d8,#b89cc0)}
+    .bg-soft{background:linear-gradient(135deg,#f5e6da,#e8d4c4)}
+    .bg-fresh{background:linear-gradient(135deg,#fce4ec,#f48fb1)}
+    .bg-dark{background:linear-gradient(135deg,#2a2a2a,#1a1a1a)}
+  </style>
+</head>
+<body>
+  <div class="p-bar">
+    <span><strong>TAM BEAUTY</strong> &mdash; 더 클라우드 블러 크림 블러셔 &mdash; 자사몰 상세페이지 기획 v3 FINAL</span>
+    <span class="badge">자사몰 &middot; FINAL &middot; 디자이너 가이드</span>
+  </div>
+
+  <div class="frame">
+
+    <!-- ══════════════════════════════════════════════
+         SEC 1: 히어로
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 1 &mdash; 히어로</span>
+      <span class="n">3초 안에 스크롤 멈추기 &middot; 감성 첫인상</span>
+    </div>
+
+    <div class="hero">
+      <div class="z">
+        <div class="brand">TAM BEAUTY</div>
+        <div class="prod-wrap">
+          <img src="https://tambeauty.kr/web/product/big/202603/859de2f3fade0d6f3b7430d337465fc7.jpg" alt="더 클라우드 블러"/>
+        </div>
+        <h1>더 클라우드 블러<br/><em>크림 블러셔</em></h1>
+        <div class="sub">
+          <strong>크림인데 보송, 파우더인데 촉촉</strong><br/>
+          피부 위에서 사르르 녹는 클라우드 블러 피니쉬
+        </div>
+        <div class="swatch-row">
+          <div class="sw-item"><div class="dot" style="background:#ffb7a5"></div><span>백도</span></div>
+          <div class="sw-item"><div class="dot" style="background:#f48ba4"></div><span>구아바</span></div>
+          <div class="sw-item"><div class="dot" style="background:#c96b8e"></div><span>아사이베리</span></div>
+          <div class="sw-item"><div class="dot" style="background:#f4a460"></div><span>파파야</span></div>
+          <div class="sw-item"><div class="dot" style="background:#e84393"></div><span>용과</span></div>
+          <div class="sw-item"><div class="dot" style="background:#f5c6a1"></div><span>살구</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="memo">
+      <b>DESIGN:</b> 배경은 피치~코랄 그라데이션 (170도). 제품은 원형 글래스모피즘 프레임. 뭉게구름 오버레이 텍스처 추가 권장. 스와치 컬러는 실제 발색 기준 조정.
+    </div>
+    <div class="memo copy">
+      <b>COPY ALT:</b>
+      <ul>
+        <li>A안: "더 클라우드 블러 크림 블러셔" (현재 채택 — 제품명 직관적 노출)</li>
+        <li>B안: "크림인데 보송, 이게 말이 돼?"</li>
+        <li>C안: "바르면 사라지는 크림 블러셔"</li>
+      </ul>
+    </div>
+    <div class="memo photo">
+      <b>PHOTO:</b> 제품 패키지 정면 촬영. 배경 화이트~크림 베이지. 그림자 최소화(플로팅 느낌). 조명: 자연광 or 소프트박스 디퓨저.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 1.5: 사회적 증거
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 1.5 &mdash; 사회적 증거</span>
+      <span class="n">수치 3개 + 해시태그 &middot; 초반 이탈 방지</span>
+    </div>
+
+    <div class="proof">
+      <div class="proof-row">
+        <div class="proof-card">
+          <div class="num">10<span class="unit">만개+</span></div>
+          <div class="lb">누적 판매</div>
+        </div>
+        <div class="proof-card">
+          <div class="num">4.8<span class="unit">점</span></div>
+          <div class="lb">평균 리뷰 평점</div>
+        </div>
+        <div class="proof-card">
+          <div class="num">96<span class="unit">%</span></div>
+          <div class="lb">재구매 의향</div>
+        </div>
+      </div>
+      <div class="hash-row">
+        <span class="hash">#구름핏치크</span>
+        <span class="hash">#무중력치크</span>
+        <span class="hash">#보송생기</span>
+        <span class="hash">#수채화컬러</span>
+        <span class="hash">#다피자블러셔</span>
+      </div>
+    </div>
+
+    <div class="memo warn">
+      <b>DATA CHECK:</b> 누적 판매, 평점, 재구매율 &rarr; <u>반드시 실제 데이터로 교체</u>. 근거 없는 수치는 화장품 광고법 위반 (과장 광고). 해시태그도 SNS 실제 반응 기반으로 조정.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         연출컷 1
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>연출컷 1</span>
+      <span class="n">모델 반신 &middot; 자연광 &middot; 블러셔 발색 강조</span>
+    </div>
+
+    <div class="mood" style="height:460px;background:url('https://tambeauty.kr/web/product/medium/202603/b8ac09eed0f6c885a30aee0267f314bd.jpg') center/cover no-repeat">
+      <div class="mood-ov">
+        <h3>바른 듯 안 바른 듯, 근데 확실히 예뻐진 볼</h3>
+        <p>은은한 속광 블러 &mdash; 조명 없이도 빛나는 피부</p>
+      </div>
+    </div>
+
+    <div class="memo photo">
+      <b>PHOTO DIRECTION:</b> 모델 반신(가슴~머리). 자연광 창가 촬영. 블러셔 발색 잘 보이는 앵글(약간 3/4 뷰). 컬러: 01 백도 or 02 구아바 (가장 대중적 컬러). 의상: 화이트 or 크림. 헤어: 귀 뒤로 넘겨 볼 노출.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 2: 셀링포인트
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 2 &mdash; 셀링포인트 3가지</span>
+      <span class="n">넘버링 + 비주얼 교차 배치</span>
+    </div>
+
+    <div class="sec">
+      <div class="sl">WHY CLOUD BLUR</div>
+      <div class="st">이 블러셔가 다른 이유</div>
+      <div class="sd">크림 블러셔는 많지만, 클라우드 블러는 결이 달라요</div>
+
+      <!-- USP 1 -->
+      <div class="usp">
+        <div class="usp-img img-ph" style="background:#fef4ee">
+          <div class="lb">IMAGE / GIF</div>
+          손가락 블렌딩 클로즈업<br/>(크림&rarr;파우더 전환 과정)
+        </div>
+        <div class="usp-t">
+          <div class="usp-n">1</div>
+          <h3>체온에 녹는 크림이<br/>파우더로 세팅</h3>
+          <p>바르는 순간 사르르 녹으면서 보송하게 전환.<br/>뭉침 없이 얇게 밀착되니까 덧바를수록 자연스러워요.</p>
+          <span class="usp-tag">크림-투-파우더 피니쉬</span>
+        </div>
+      </div>
+
+      <!-- USP 2 -->
+      <div class="usp rev">
+        <div class="usp-img img-ph" style="background:#f4eef6">
+          <div class="lb">IMAGE</div>
+          피부결 Before / After<br/>(동일 조건 클로즈업)
+        </div>
+        <div class="usp-t">
+          <div class="usp-n">2</div>
+          <h3>모공도 잡티도<br/>소프트 블러링</h3>
+          <p>미세 파우더 입자가 피부 요철을 채워서<br/>조명 받은 것처럼 보정. 파데 위에 올려도 안 밀려요.</p>
+          <span class="usp-tag">소프트포커스 보정 효과</span>
+        </div>
+      </div>
+
+      <!-- USP 3 -->
+      <div class="usp">
+        <div class="usp-img img-ph" style="background:#f5efe5">
+          <div class="lb">IMAGE</div>
+          시간대별 발색 비교<br/>(AM 9 / PM 3 / PM 9)
+        </div>
+        <div class="usp-t">
+          <div class="usp-n">3</div>
+          <h3>아침에 바르면<br/>저녁까지 그대로</h3>
+          <p>크림이 먼저 밀착, 파우더가 잡아주니까 쉽게 안 지워져요.<br/>지성 피부도 무너짐 없이 하루 종일 생기 유지.</p>
+          <span class="usp-tag">12시간 지속력 테스트 완료*</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="memo">
+      <b>DESIGN:</b> 텍스트-이미지 교차 배치 (좌-우-좌). 넘버 배지 그라데이션(피치~골드). 태그는 배경색 카드로 강조.
+    </div>
+    <div class="memo warn">
+      <b>LEGAL:</b> "12시간 지속력" &rarr; 자체 테스트 근거 데이터 필요. 없으면 "하루 종일 생기 유지"로 변경. "*자체 테스트 기준" 단서 문구 필수.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         연출컷 2
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>연출컷 2</span>
+      <span class="n">제품 스틸컷 + 과일 소품</span>
+    </div>
+
+    <div class="mood bg-soft" style="height:400px">
+      <div class="lb">PRODUCT STILL</div>
+      제품 클로즈업 + 과일 소품(백도, 살구 등)<br/>화이트/베이지 톤
+      <div class="mood-ov">
+        <h3>피부 위에 스며들 듯 피어나는 과즙 발색</h3>
+        <p>맑게, 한 겹. 그걸로 충분한 컬러</p>
+      </div>
+    </div>
+
+    <div class="memo photo">
+      <b>PHOTO:</b> 탑뷰 or 45도 앵글. 과일 소품 종류: 백도, 살구, 구아바(없으면 핑크자몽), 파파야. 배경: 화이트 대리석 or 패브릭. 소품 배치는 비대칭으로 자연스럽게.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 3: 텍스처
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 3 &mdash; 텍스처</span>
+      <span class="n">크림 &rarr; 블렌딩 &rarr; 파우더 3단계 &middot; GIF 권장</span>
+    </div>
+
+    <div class="sec alt" style="text-align:center">
+      <div class="sl">TEXTURE</div>
+      <div class="st">크림에서 파우더로, 바르는 순간 전환</div>
+      <div class="sd">손끝에서 사르르 녹으면서 보송하게 마무리</div>
+
+      <div class="tx-flow">
+        <div class="tx-step">
+          <div class="tv img-ph" style="background:#f5efe8"><div class="lb">MACRO</div>크림 텍스처</div>
+          <div class="tn">STEP 01</div>
+          <h4>촉촉한 크림</h4>
+          <p>밀착력 높은 크림 제형이<br/>피부에 얇게 올라가요</p>
+          <div class="tx-arrow">&rarr;</div>
+        </div>
+        <div class="tx-step">
+          <div class="tv img-ph" style="background:#efe9de"><div class="lb">GIF 권장</div>블렌딩 과정</div>
+          <div class="tn">STEP 02</div>
+          <h4>체온에 녹는 중</h4>
+          <p>손끝으로 톡톡 두드리면<br/>사르르 녹아들어요</p>
+          <div class="tx-arrow">&rarr;</div>
+        </div>
+        <div class="tx-step">
+          <div class="tv img-ph" style="background:#e8e2d6"><div class="lb">RESULT</div>파우더 피니쉬</div>
+          <div class="tn">STEP 03</div>
+          <h4>보송 파우더 피니쉬</h4>
+          <p>뽀얗게 세팅 완료<br/>모공까지 블러링</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="memo">
+      <b>DESIGN:</b> STEP 2는 GIF 또는 짧은 영상 권장 (블렌딩 과정이 핵심 비주얼). 3컷 사이 화살표로 전환 과정 표현. 매크로 촬영 필수.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         연출컷 3
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>연출컷 3</span>
+      <span class="n">볼 클로즈업 &middot; 텍스처 선명하게</span>
+    </div>
+
+    <div class="mood bg-fresh" style="height:400px">
+      <div class="lb">CLOSE-UP</div>
+      모델 볼 확대 컷<br/>블러셔 텍스처 &amp; 발색 선명하게
+      <div class="mood-ov">
+        <h3>결 위로 녹아드는 실키 블러</h3>
+        <p>뽀얗게 채우는 보송한 한 겹, 피부결이 달라져요</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 4: 컬러
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 4 &mdash; 컬러 6색</span>
+      <span class="n">2열 그리드 &middot; 톤별 그룹 &middot; 컬러맵</span>
+    </div>
+
+    <div class="sec">
+      <div class="sl">6 COLORS</div>
+      <div class="st">과즙 한 방울에서 태어난 컬러</div>
+      <div class="sd">어떤 피부톤 위에서도 자연스럽게 녹아드는 6가지</div>
+
+      <!-- NEUTRAL -->
+      <div class="cg-head">
+        <div class="circle" style="background:linear-gradient(135deg,#ffb7a5,#f48ba4)"></div>
+        <div><div class="cgl" style="color:#b8926a">NEUTRAL</div><h3>누구한테나 잘 어울리는 뉴트럴</h3></div>
+      </div>
+      <div class="c-grid">
+        <div class="c-card">
+          <div class="cs" style="background:#fff0e8"><div class="cb" style="background:#ffb7a5"></div><div class="cn">01</div></div>
+          <div class="cb2">
+            <div class="nm">백도 쉐이크</div><div class="en">PEACH SHAKE</div>
+            <div class="cd">은은한 피치 코랄.<br/>가장 웨어러블한 데일리 컬러.</div>
+            <div class="tags"><span class="tag">데일리</span><span class="tag">퍼스널컬러 무관</span><span class="tag">BEST</span></div>
+          </div>
+        </div>
+        <div class="c-card">
+          <div class="cs" style="background:#fde8ee"><div class="cb" style="background:#f48ba4"></div><div class="cn">02</div></div>
+          <div class="cb2">
+            <div class="nm">구아바 쉐이크</div><div class="en">GUAVA SHAKE</div>
+            <div class="cd">달콤한 핑크 코랄.<br/>사랑스러운 분위기 만능 컬러.</div>
+            <div class="tags"><span class="tag">만능 컬러</span><span class="tag">퍼스널컬러 무관</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COOL -->
+      <div class="cg-head">
+        <div class="circle" style="background:linear-gradient(135deg,#c96b8e,#e84393)"></div>
+        <div><div class="cgl" style="color:#9b59b6">COOL TONE</div><h3>쿨톤이 반할 베리 &middot; 핑크</h3></div>
+      </div>
+      <div class="c-grid">
+        <div class="c-card">
+          <div class="cs" style="background:#f2e0e8"><div class="cb" style="background:#c96b8e"></div><div class="cn">03</div></div>
+          <div class="cb2">
+            <div class="nm">아사이베리 쉐이크</div><div class="en">ACAI BERRY SHAKE</div>
+            <div class="cd">깊은 베리 핑크.<br/>세련된 무드에 입체감까지.</div>
+            <div class="tags"><span class="tag">쿨톤 베스트</span><span class="tag">여름/겨울 쿨</span></div>
+          </div>
+        </div>
+        <div class="c-card">
+          <div class="cs" style="background:#fce4ef"><div class="cb" style="background:#e84393"></div><div class="cn">05</div></div>
+          <div class="cb2">
+            <div class="nm">용과 쉐이크</div><div class="en">DRAGON FRUIT SHAKE</div>
+            <div class="cd">비비드 핫핑크.<br/>소량으로도 확실한 포인트.</div>
+            <div class="tags"><span class="tag">포인트 컬러</span><span class="tag">겨울 브라이트</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WARM -->
+      <div class="cg-head">
+        <div class="circle" style="background:linear-gradient(135deg,#f4a460,#f5c6a1)"></div>
+        <div><div class="cgl" style="color:#c9a07a">WARM TONE</div><h3>웜톤을 위한 오렌지 &middot; 누드</h3></div>
+      </div>
+      <div class="c-grid">
+        <div class="c-card">
+          <div class="cs" style="background:#fff0e0"><div class="cb" style="background:#f4a460"></div><div class="cn">04</div></div>
+          <div class="cb2">
+            <div class="nm">파파야 쉐이크</div><div class="en">PAPAYA SHAKE</div>
+            <div class="cd">따뜻한 오렌지 코랄.<br/>건강한 윤기 + 화사함.</div>
+            <div class="tags"><span class="tag">웜톤 베스트</span><span class="tag">봄/가을 웜</span></div>
+          </div>
+        </div>
+        <div class="c-card">
+          <div class="cs" style="background:#fff4e8"><div class="cb" style="background:#f5c6a1"></div><div class="cn">06</div></div>
+          <div class="cb2">
+            <div class="nm">살구 쉐이크</div><div class="en">APRICOT SHAKE</div>
+            <div class="cd">누디 피치.<br/>내 피부색 같은 자연스러운 생기.</div>
+            <div class="tags"><span class="tag">내추럴</span><span class="tag">가을 웜뮤트</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 컬러맵 -->
+      <div style="margin-top:48px;text-align:center">
+        <div class="sl">COLOR MAP</div>
+        <div class="st" style="font-size:22px;margin-bottom:24px">나한테 맞는 컬러 찾기</div>
+      </div>
+      <div class="cmap">
+        <div class="box">
+          <div class="bl" style="color:#b8926a">NEUTRAL</div><div class="bs">모든 피부톤 OK</div>
+          <div class="dots">
+            <div class="di"><div class="d" style="background:#ffb7a5"></div><span>01 백도</span></div>
+            <div class="di"><div class="d" style="background:#f48ba4"></div><span>02 구아바</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="bl" style="color:#9b59b6">COOL</div><div class="bs">여름 &middot; 겨울</div>
+          <div class="dots">
+            <div class="di"><div class="d" style="background:#c96b8e"></div><span>03 아사이베리</span></div>
+            <div class="di"><div class="d" style="background:#e84393"></div><span>05 용과</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="bl" style="color:#c9a07a">WARM</div><div class="bs">봄 &middot; 가을</div>
+          <div class="dots">
+            <div class="di"><div class="d" style="background:#f4a460"></div><span>04 파파야</span></div>
+            <div class="di"><div class="d" style="background:#f5c6a1"></div><span>06 살구</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="memo photo">
+      <b>PHOTO:</b> 각 컬러 카드에 들어갈 이미지 — 팔 안쪽 스와치 1컷 + 모델 착용 1컷. 총 12컷 필요. 스와치는 동일 조명/배경에서 촬영하여 색상 비교 용이하게.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         연출컷 4: 6색 비교 통합
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>연출컷 4</span>
+      <span class="n">6색 전체 스와치 비교 + 톤별 모델 3인</span>
+    </div>
+
+    <div class="mood bg-soft" style="height:460px">
+      <div class="lb">ALL COLORS &middot; SWATCH COMPARISON</div>
+      6색 팔 안쪽 스와치 한 번에 비교<br/>뉴트럴 / 쿨톤 / 웜톤 모델 각 1인 볼 클로즈업
+      <div class="mood-ov">
+        <h3>같은 블러셔, 다른 분위기</h3>
+        <p>퍼스널컬러별로 달라지는 발색 &mdash; 나한테 맞는 컬러 찾기</p>
+      </div>
+    </div>
+
+    <div class="memo photo">
+      <b>PHOTO:</b> 6색 스와치를 한 팔에 나란히 (번호 순서). 모델 3인: 봄웜/여름쿨/가을웜 각 1인, 동일 블러셔 착용. 배경 통일(스튜디오 화이트).
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 5: 사용법
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 5 &mdash; 사용법</span>
+      <span class="n">4 Step + 얼굴형별 가이드 + TIP</span>
+    </div>
+
+    <div class="sec alt" style="text-align:center">
+      <div class="sl">HOW TO USE</div>
+      <div class="st">크림 블러셔, 이렇게 쓰면 달라요</div>
+      <div class="sd">파우더 블러셔와는 다르게 &mdash; 손가락이 최고의 도구</div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="sv img-ph"><div class="lb">IMAGE</div></div>
+          <div class="sn">STEP 01</div>
+          <h4>손가락으로 소량</h4>
+          <p>약지 끝으로 살짝<br/>긁어내듯 소량만</p>
+          <div class="tip">브러시보다 손가락 발색 UP</div>
+        </div>
+        <div class="step">
+          <div class="sv img-ph"><div class="lb">IMAGE</div></div>
+          <div class="sn">STEP 02</div>
+          <h4>볼 위에 톡톡</h4>
+          <p>살짝 미소 짓고<br/>볼록한 지점에 2~3점</p>
+          <div class="tip">웃었을 때 올라오는 곳</div>
+        </div>
+        <div class="step">
+          <div class="sv img-ph"><div class="lb">IMAGE</div></div>
+          <div class="sn">STEP 03</div>
+          <h4>안&rarr;바깥 블렌딩</h4>
+          <p>볼 안쪽에서 바깥으로<br/>경계선 없이 톡톡</p>
+          <div class="tip">체온으로 크림이 녹으며 밀착</div>
+        </div>
+        <div class="step">
+          <div class="sv img-ph"><div class="lb">IMAGE</div></div>
+          <div class="sn">STEP 04</div>
+          <h4>레이어링</h4>
+          <p>더 진한 발색 원하면<br/>같은 방법으로 한 번 더</p>
+          <div class="tip">얇게 쌓을수록 뭉침 ZERO</div>
+        </div>
+      </div>
+
+      <!-- 얼굴형 가이드 -->
+      <div style="margin-top:60px">
+        <div class="sl">FACE TYPE GUIDE</div>
+        <div class="st" style="font-size:22px">내 얼굴형에 맞는 블러셔 위치</div>
+        <div class="sd">같은 블러셔도 어디에 올리느냐에 따라 인상이 달라져요</div>
+      </div>
+
+      <div class="f-grid">
+        <div class="f-card">
+          <div class="fv" style="background:linear-gradient(180deg,#fef4ee,#f9e8da)">
+            <div style="width:64px;height:80px;border-radius:50%;border:2px solid #e0cbb8;position:relative;display:flex;align-items:center;justify-content:center">
+              <div style="position:absolute;top:28px;left:8px;width:14px;height:8px;border-radius:50%;background:rgba(255,168,140,0.5)"></div>
+              <div style="position:absolute;top:28px;right:8px;width:14px;height:8px;border-radius:50%;background:rgba(255,168,140,0.5)"></div>
+              <div style="width:4px;height:6px;border-radius:2px;background:#e0cbb8;margin-top:8px"></div>
+            </div>
+            <div style="font-size:10px;color:#c9a07a;letter-spacing:1px;font-weight:700;margin-top:4px">ILLUSTRATION</div>
+          </div>
+          <div class="fb"><h4>계란형</h4><p>광대 중앙 &rarr;<br/>관자놀이로 빼기</p></div>
+        </div>
+        <div class="f-card">
+          <div class="fv" style="background:linear-gradient(180deg,#f4eef6,#e8dced)">
+            <div style="width:64px;height:74px;border-radius:8px;border:2px solid #c8b0d0;position:relative;display:flex;align-items:center;justify-content:center">
+              <div style="position:absolute;top:26px;left:10px;width:12px;height:12px;border-radius:50%;background:rgba(200,160,210,0.4)"></div>
+              <div style="position:absolute;top:26px;right:10px;width:12px;height:12px;border-radius:50%;background:rgba(200,160,210,0.4)"></div>
+              <div style="width:4px;height:6px;border-radius:2px;background:#c8b0d0;margin-top:8px"></div>
+            </div>
+            <div style="font-size:10px;color:#c9a07a;letter-spacing:1px;font-weight:700;margin-top:4px">ILLUSTRATION</div>
+          </div>
+          <div class="fb"><h4>각진형</h4><p>볼 중앙에 둥글게<br/>모아서 부드럽게</p></div>
+        </div>
+        <div class="f-card">
+          <div class="fv" style="background:linear-gradient(180deg,#fce8ed,#f5d0da)">
+            <div style="width:70px;height:70px;border-radius:50%;border:2px solid #e8a0b0;position:relative;display:flex;align-items:center;justify-content:center">
+              <div style="position:absolute;top:22px;left:6px;width:16px;height:6px;border-radius:50%;background:rgba(240,140,170,0.4);transform:rotate(-25deg)"></div>
+              <div style="position:absolute;top:22px;right:6px;width:16px;height:6px;border-radius:50%;background:rgba(240,140,170,0.4);transform:rotate(25deg)"></div>
+              <div style="width:4px;height:6px;border-radius:2px;background:#e8a0b0;margin-top:8px"></div>
+            </div>
+            <div style="font-size:10px;color:#c9a07a;letter-spacing:1px;font-weight:700;margin-top:4px">ILLUSTRATION</div>
+          </div>
+          <div class="fb"><h4>둥근형</h4><p>광대 위에서 사선으로<br/>빼면 갸름해 보여요</p></div>
+        </div>
+        <div class="f-card">
+          <div class="fv" style="background:linear-gradient(180deg,#fef4ee,#f0e2d2)">
+            <div style="width:56px;height:84px;border-radius:40%;border:2px solid #d4b896;position:relative;display:flex;align-items:center;justify-content:center">
+              <div style="position:absolute;top:30px;left:4px;width:18px;height:6px;border-radius:50%;background:rgba(220,170,130,0.45)"></div>
+              <div style="position:absolute;top:30px;right:4px;width:18px;height:6px;border-radius:50%;background:rgba(220,170,130,0.45)"></div>
+              <div style="width:4px;height:6px;border-radius:2px;background:#d4b896;margin-top:8px"></div>
+            </div>
+            <div style="font-size:10px;color:#c9a07a;letter-spacing:1px;font-weight:700;margin-top:4px">ILLUSTRATION</div>
+          </div>
+          <div class="fb"><h4>긴 얼굴형</h4><p>볼 중앙에 가로로<br/>넓게 &rarr; 짧아 보여요</p></div>
+        </div>
+      </div>
+
+      <div class="memo" style="text-align:left;margin-top:24px">
+        <b>NOTE:</b> 얼굴형 일러스트는 디자이너가 제작. 위 도형은 블러셔 위치 참고용 와이어프레임.
+      </div>
+
+      <div class="tip-box">
+        <b>TIP 1</b> &mdash; 파운데이션 세팅 전에 바르면 더 자연스럽게 스며들어요!<br/>
+        <b>TIP 2</b> &mdash; 립에도 톡톡 올리면 치크 &amp; 립 원톤 메이크업 완성.
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 6: 멀티유즈
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 6 &mdash; 멀티유즈 스타일링</span>
+      <span class="n">치크 &middot; 콧등 &middot; 턱 3포인트</span>
+    </div>
+
+    <div class="sec" style="text-align:center">
+      <div class="sl">STYLING GUIDE</div>
+      <div class="st">어디에 올리느냐에 따라 다른 분위기</div>
+      <div class="sd">하나로 세 군데. 이게 크림 블러셔의 진짜 장점.</div>
+
+      <div class="m-grid">
+        <div class="m-card">
+          <div class="mi img-ph" style="background:#fef4ee"><div class="lb">IMAGE</div>치크 착용 컷</div>
+          <div class="mb"><h4>CHEEK</h4><p>광대존에 가볍게 올려<br/>자연스러운 생기 볼</p></div>
+        </div>
+        <div class="m-card">
+          <div class="mi img-ph" style="background:#f5efe5"><div class="lb">IMAGE</div>콧등 착용 컷</div>
+          <div class="mb"><h4>NOSE</h4><p>콧등에 소량 톡톡<br/>햇빛 받은 듯 자연 홍조</p></div>
+        </div>
+        <div class="m-card">
+          <div class="mi img-ph" style="background:#f4eef6"><div class="lb">IMAGE</div>턱 착용 컷</div>
+          <div class="mb"><h4>CHIN</h4><p>턱 끝에 한 번 터치<br/>얼굴 전체 혈색 업</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         연출컷 5: 파이널 룩
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>연출컷 5 (FINAL)</span>
+      <span class="n">치크+콧등+턱 전부 활용 완성 룩</span>
+    </div>
+
+    <div class="mood bg-fresh" style="height:460px">
+      <div class="lb">FINAL LOOK</div>
+      치크 &middot; 콧등 &middot; 턱 전부 활용한 완성 모델 컷
+      <div class="mood-ov">
+        <h3>이거 하나로 끝. 치크, 콧등, 턱 다 이걸로.</h3>
+        <p>원톤 메이크업의 정석 &mdash; 더 클라우드 블러 크림 블러셔</p>
+      </div>
+    </div>
+
+    <div class="memo photo">
+      <b>PHOTO:</b> 파이널 룩 모델 컷. 치크/콧등/턱 3포인트 전부 동일 컬러 활용. 카메라 정면 or 살짝 틸트. 밝은 자연광. 이 이미지가 상세페이지의 클라이맥스 — 가장 예쁜 컷으로 촬영.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 7: 리뷰
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 7 &mdash; 리뷰</span>
+      <span class="n">실사용 후기 &middot; 컬러별 태그 &middot; 실제 리뷰로 교체 필수</span>
+    </div>
+
+    <div class="sec alt" style="text-align:center">
+      <div class="sl">REVIEW</div>
+      <div class="st">써본 사람들의 솔직 후기</div>
+      <div class="sd">* 아래는 더미 데이터입니다. 실제 자사몰 구매 리뷰로 교체하세요.</div>
+
+      <div class="rv-grid">
+        <div class="rv-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rt">"크림인데 진짜 보송하게 마무리돼요. 지성인데 안 무너져서 감동"</div>
+          <div class="ru">&mdash; 자사몰 구매자</div>
+          <div class="rc">01 백도</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <div class="rt">"발색 예쁘고 뭉침 없어요. 파데 위에 올려도 깔끔하게 붙어요"</div>
+          <div class="ru">&mdash; 자사몰 구매자</div>
+          <div class="rc">02 구아바</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rt">"쿨톤인데 아사이베리 찰떡이에요. 세련된 느낌!"</div>
+          <div class="ru">&mdash; 자사몰 구매자</div>
+          <div class="rc">03 아사이베리</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rt">"웜톤이라 파파야 샀는데 건강 혈색 그 자체. 출근 데일리!"</div>
+          <div class="ru">&mdash; 자사몰 구매자</div>
+          <div class="rc">04 파파야</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <div class="rt">"소량이면 충분해서 오래 써요. 가성비 역대급"</div>
+          <div class="ru">&mdash; 자사몰 구매자</div>
+          <div class="rc">05 용과</div>
+        </div>
+        <div class="rv-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rt">"립에도 톡톡 올렸는데 물먹은 입술 그자체. 멀티로 씀"</div>
+          <div class="ru">&mdash; 자사몰 구매자</div>
+          <div class="rc">06 살구</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="memo warn">
+      <b>IMPORTANT:</b> 리뷰는 반드시 실제 자사몰 구매 리뷰로 교체. 허위/조작 리뷰 금지. SNS 바이럴 컷(인스타/틱톡) 추가 가능.
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 8: 제품 정보
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 8 &mdash; 제품 정보</span>
+      <span class="n">법적 필수 기재 사항</span>
+    </div>
+
+    <div class="sec">
+      <div class="st" style="font-size:18px;margin-bottom:24px">제품 정보</div>
+      <table class="info-tbl">
+        <tr><td>제품명</td><td>더 클라우드 블러 크림 블러셔</td></tr>
+        <tr><td>용량</td><td class="need">확인 필요</td></tr>
+        <tr><td>가격</td><td>14,400원</td></tr>
+        <tr><td>전성분</td><td class="need">확인 필요 (법적 필수)</td></tr>
+        <tr><td>사용기한</td><td class="need">확인 필요</td></tr>
+        <tr><td>제조사 / 판매사</td><td>탐뷰티</td></tr>
+        <tr><td>원산지</td><td class="need">확인 필요</td></tr>
+        <tr><td>사용 시 주의사항</td><td>화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것</td></tr>
+        <tr><td>품질보증기준</td><td class="need">확인 필요</td></tr>
+      </table>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 9: 레퍼런스 & 벤치마킹
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 9 &mdash; 레퍼런스 &amp; 벤치마킹</span>
+      <span class="n">디자이너 참고용 &middot; 실제 상세페이지에 포함 X</span>
+    </div>
+
+    <div class="sec alt">
+      <div class="sl">REFERENCE</div>
+      <div class="st" style="font-size:22px">벤치마킹 브랜드 &amp; 참고 포인트</div>
+      <div class="sd">아래 브랜드의 상세페이지 구성과 연출 방식을 참고하세요</div>
+
+      <div class="ref-grid">
+        <div class="ref-card">
+          <div class="ri" style="background:#fef4ee"><div class="lb">LOGO</div>롬앤</div>
+          <div class="rb">
+            <h4>롬앤 &mdash; 베러댄치크</h4>
+            <div class="rsub">크림 블러셔 대표 브랜드</div>
+            <p><b>참고:</b> 컬러 소개 방식 (과일 소품 + 퍼스널컬러 매칭). 짧은 체언 종결 카피. 스와치 비교 레이아웃.</p>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ri" style="background:#f4eef6"><div class="lb">LOGO</div>페리페라</div>
+          <div class="rb">
+            <h4>페리페라 &mdash; 맑게 블러셔</h4>
+            <div class="rsub">블러 피니쉬 선두주자</div>
+            <p><b>참고:</b> 블러 피니쉬 시각화 방법 (Before/After). 텍스처 전환 GIF. 모바일 최적화 레이아웃.</p>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ri" style="background:#f5efe5"><div class="lb">LOGO</div>클리오</div>
+          <div class="rb">
+            <h4>클리오 &mdash; 프리즘에어 블러셔</h4>
+            <div class="rsub">프리미엄 라인</div>
+            <p><b>참고:</b> 프리미엄 무드 연출. 모델 착용컷 구성 (다양한 앵글). 고급스러운 타이포그래피.</p>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ri" style="background:#fce8ed"><div class="lb">LOGO</div>에스쁘아</div>
+          <div class="rb">
+            <h4>에스쁘아 &mdash; 컬러풀 유어 립</h4>
+            <div class="rsub">상세페이지 레이아웃 모범</div>
+            <p><b>참고:</b> 자사몰 상세페이지 레이아웃 구조. 섹션 간 여백/리듬감. 제품 정보 하단 구성.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="memo copy" style="margin-top:20px">
+        <b>COPY STYLE 가이드:</b>
+        <ul>
+          <li><b>어조:</b> 짧은 체언 종결 + 감각 동사 (물들다, 피어나다, 스며들다)</li>
+          <li><b>텍스처 표현:</b> 의태어 활용 (보송, 사르르, 뽀얗게, 톡톡)</li>
+          <li><b>문장 길이:</b> 한 문장 20자 이내. 줄바꿈으로 리듬감.</li>
+          <li><b>지양:</b> "최고", "1위", "완벽" 등 근거 없는 최상급 표현</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 10: 자사몰 제작 가이드라인
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 10 &mdash; 자사몰 제작 가이드라인</span>
+      <span class="n">이미지 사이즈 &middot; 주의사항 &middot; 디자이너 필독</span>
+    </div>
+
+    <div class="sec">
+      <div class="sl">GUIDELINE</div>
+      <div class="st" style="font-size:22px">자사몰 상세페이지 제작 가이드라인</div>
+      <div class="sd">디자인 작업 전 반드시 확인하세요</div>
+
+      <div class="gl-grid">
+        <div class="gl-card">
+          <h4><span class="icon">&#128207;</span> 이미지 사이즈</h4>
+          <ul>
+            <li>상세페이지: <b>가로 860~1000px</b> (자사몰 레이아웃 기준)</li>
+            <li>모바일 최적화: 텍스트 <b>최소 24pt 이상</b></li>
+            <li>썸네일: 자사몰 규격에 맞게 (정사각 권장)</li>
+            <li>파일 형식: JPG/PNG/WebP (GIF 가능)</li>
+          </ul>
+        </div>
+        <div class="gl-card">
+          <h4><span class="icon">&#9888;</span> 광고 표현 규제</h4>
+          <ul>
+            <li>과장 표현 금지 ("최고", "1위" 근거 없으면 X)</li>
+            <li>화장품 효능 표현 범위 준수</li>
+            <li>의약외품 아닌 이상 치료/개선 표현 금지</li>
+            <li>"*자체 테스트 기준" 단서 문구 필수</li>
+          </ul>
+        </div>
+        <div class="gl-card">
+          <h4><span class="icon">&#128241;</span> 모바일 최적화</h4>
+          <ul>
+            <li>자사몰 트래픽 대부분 <b>모바일</b></li>
+            <li>텍스트는 이미지 내 삽입 or HTML 텍스트 병행 가능</li>
+            <li>한 화면에 정보 과다 배치 지양</li>
+            <li>스크롤 시 리듬감 있는 여백 배분</li>
+          </ul>
+        </div>
+        <div class="gl-card">
+          <h4><span class="icon">&#127912;</span> 디자인 톤앤매너</h4>
+          <ul>
+            <li>기본 배경: 화이트 ~ 크림 베이지</li>
+            <li>포인트 컬러: #c9a07a (골드), #d4856a (피치)</li>
+            <li>폰트: Noto Sans KR (웹) / 본문 Pretendard 가능</li>
+            <li>무드: 고급스러운 생기, 클린 뷰티</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SEC 11: 디자이너 체크리스트
+         ══════════════════════════════════════════════ -->
+    <div class="mk">
+      <span>SEC 11 &mdash; 디자이너 체크리스트</span>
+      <span class="n">작업 진행 시 하나씩 체크</span>
+    </div>
+
+    <div class="sec alt">
+      <div class="sl">CHECKLIST</div>
+      <div class="st" style="font-size:22px">디자이너 작업 체크리스트</div>
+      <div class="sd">모든 항목 완료 후 최종 검수 진행</div>
+
+      <div class="checklist">
+        <div class="ck-item"><div class="ck-box"></div>메인 히어로 배너 (구름 컨셉 + 그라데이션 배경)</div>
+        <div class="ck-item"><div class="ck-box"></div>사회적 증거 카드 3종 (실제 수치 반영)</div>
+        <div class="ck-item"><div class="ck-box"></div>셀링포인트 3종 인포그래픽 (교차 배치)</div>
+        <div class="ck-item"><div class="ck-box"></div>텍스처 3단계 이미지 (STEP 2 GIF)</div>
+        <div class="ck-item"><div class="ck-box"></div>6색 컬러 카드 (스와치 + 착용컷 각 12장)</div>
+        <div class="ck-item"><div class="ck-box"></div>퍼스널컬러 컬러맵</div>
+        <div class="ck-item"><div class="ck-box"></div>사용법 4 Step 이미지</div>
+        <div class="ck-item"><div class="ck-box"></div>얼굴형별 가이드 일러스트 4종</div>
+        <div class="ck-item"><div class="ck-box"></div>멀티유즈 3포인트 이미지 (치크/콧등/턱)</div>
+        <div class="ck-item"><div class="ck-box"></div>연출컷 5장 (모델 촬영)</div>
+        <div class="ck-item"><div class="ck-box"></div>리뷰 섹션 (실제 리뷰 캡처 교체)</div>
+        <div class="ck-item"><div class="ck-box"></div>제품 정보 하단 이미지</div>
+        <div class="ck-item"><div class="ck-box"></div>모바일 가독성 최종 확인 (860px)</div>
+        <div class="ck-item"><div class="ck-box"></div>전체 파일 용량 체크 (페이지 로딩 속도 최적화)</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════ -->
+
+    <div class="footer">
+      TAM BEAUTY &copy; 2026 &mdash; 자사몰 상세페이지 기획 v3 FINAL<br/>
+      <span style="color:#ccc">본문 8섹션 + 연출컷 5개 + 레퍼런스 &middot; 가이드라인 &middot; 체크리스트 (총 11섹션) &middot; 디자이너 작업 가이드</span>
+    </div>
+
+  </div>
+</body>
+</html>
