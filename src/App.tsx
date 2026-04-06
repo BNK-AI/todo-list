@@ -376,13 +376,20 @@ const IngaSection = () => (
         </ul>
       </div>
       <div className="card">
-        <h4>유통 채널</h4>
+        <h4>유통 채널 (크롤링 결과)</h4>
+        <p className="desc" style={{ marginBottom: 10, fontWeight: 600 }}>온라인 (6개 채널)</p>
         <div className="channel-grid">
-          {["큐텐 (주력)", "올리브영 글로벌", "아마존 JP", "라쿠텐"].map((ch) => (
+          {["큐텐 공식숍 (주력)", "아마존 JP (공식)", "라쿠텐 (COSTORY 공식)", "@cosme 쇼핑", "야후 쇼핑", "로프트 넷스토어"].map((ch) => (
             <span key={ch} className="channel-badge inga-badge">{ch}</span>
           ))}
         </div>
-        <p className="desc" style={{ marginTop: 12 }}>큐텐 중심 온라인 전략. 오프라인 채널 확장 적극 검토 중.</p>
+        <p className="desc" style={{ marginBottom: 10, marginTop: 14, fontWeight: 600 }}>오프라인 (전국 37개 매장 확인)</p>
+        <div className="channel-grid">
+          {["로프트 (복수 매장)", "숍인 (Shop In)", "로즈마리", "@cosme 매장", "돈키호테 (2025.03~)", "미니스톱 (한정판)"].map((ch) => (
+            <span key={ch} className="channel-badge inga-badge">{ch}</span>
+          ))}
+        </div>
+        <p className="desc" style={{ marginTop: 10 }}>2024년 5월부터 전국 오프라인 확대. 매장별 취급 제품 다름.</p>
       </div>
     </div>
 
@@ -452,6 +459,136 @@ const IngaSection = () => (
         <span className="stat-label">@inga_global</span>
         <span className="stat-value" style={{ color: "#2563eb" }}>1.4만</span>
         <span className="stat-sub">553개 게시물</span>
+      </div>
+    </div>
+
+    {/* ── 마케팅 레퍼런스 상세 ── */}
+    <h3 className="sub-title">잉가 마케팅 레퍼런스 (크롤링 팩트)</h3>
+
+    <div className="grid-2" style={{ marginBottom: 16 }}>
+      <div className="card" style={{ borderLeft: "4px solid #3b82f6" }}>
+        <h4 style={{ color: "#2563eb" }}>큐텐 플레이 전략</h4>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">1</div>
+            <div className="marketing-body">
+              <h5>히어로 1개 집중 → 신뢰 축적</h5>
+              <p>워터 그로우 립 틴트 하나에 집중. LIPS 859건, @cosme 114건 리뷰 확보. "최근 은밀하게 엄청 바이럴 되는 코스메" (@cosme 리뷰 원문)</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">2</div>
+            <div className="marketing-body">
+              <h5>신제품 런칭 프로모 = 당일 1위</h5>
+              <p>워터 더블래스팅 센티드 틴트, 프로모 시작일 큐텐 포인트메이크 전체 1위 달성. 기존 히어로 신뢰가 신제품으로 전이.</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">3</div>
+            <div className="marketing-body">
+              <h5>큐텐 공식숍 운영</h5>
+              <p>INGA 공식숍 직접 운영. 메가와리 시즌 프로모 + 20% 쿠폰 적용 가능 구조로 가격 경쟁력 확보.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card" style={{ borderLeft: "4px solid #8b5cf6" }}>
+        <h4 style={{ color: "#7c3aed" }}>오프라인 확장 전략</h4>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div className="marketing-card">
+            <div className="marketing-icon purple">1</div>
+            <div className="marketing-body">
+              <h5>매장별 차별화 제품 배치</h5>
+              <p><b>로프트:</b> 워터 그로우 립 틴트 (글로시 타입)<br/><b>돈키호테:</b> 벨벳 슛 틴트 (매트) + 젤리 샤인 립 플럼퍼<br/><b>미니스톱:</b> 한정 색상 3종 (베어피치, 로지로즈, 리치살몬)</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon purple">2</div>
+            <div className="marketing-body">
+              <h5>편의점 한정판 전략</h5>
+              <p>미니스톱 전용 한정 컬러 3색 출시 (2025.03.20~). 이엘베/블루베/뉴트럴 각 1색씩 구성. 편의점 K-코스메 트렌드 활용.</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon purple">3</div>
+            <div className="marketing-body">
+              <h5>돈키호테 입점 (2025.03~)</h5>
+              <p>공식 X(트위터) @officialINGA_jp 통해 돈키호테 입점 공식 발표. 전국 매장 확대 중.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="grid-2">
+      <div className="card" style={{ borderLeft: "4px solid #06b6d4" }}>
+        <h4 style={{ color: "#0891b2" }}>인스타 시딩 & 인플루언서</h4>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">📱</div>
+            <div className="marketing-body">
+              <h5>@inga_jp 모니터 이벤트</h5>
+              <p>일본 전용 계정에서 체험단/모니터 이벤트 정기 운영. 제품 무료 제공 → 리뷰 수집 → @cosme/LIPS 리뷰 확보 루프.</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">👩</div>
+            <div className="marketing-body">
+              <h5>일본 뷰티 블로거/유튜버 리뷰</h5>
+              <p>@cosme 리뷰어 "こまいぬ＠ポメ" 등 뷰티 인플루언서 자발적 리뷰 다수. "한 번 바르면 색이 안 빠진다! 키프력 최강!" (실제 리뷰 원문)</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">🎨</div>
+            <div className="marketing-body">
+              <h5>퍼스널 컬러 마케팅</h5>
+              <p>이엘베/블루베 구분 콘텐츠 적극 활용. 일본 뷰티 미디어 daon.media에서 "전 색상 이엘베·블루베별 소개" 콘텐츠 확산.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card" style={{ borderLeft: "4px solid #f59e0b" }}>
+        <h4 style={{ color: "#d97706" }}>일본 소비자 반응 (실제 리뷰)</h4>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          <div style={{ background: "#fffbeb", padding: 14, borderRadius: 10 }}>
+            <p style={{ fontSize: "0.85rem", color: "#92400e", fontStyle: "italic" }}>"とにかく色が落ちない！本当に落ちない！キープ力最強です"</p>
+            <p className="desc">(정말 색이 안 빠진다! 키프력 최강!) — @cosme 리뷰</p>
+          </div>
+          <div style={{ background: "#fffbeb", padding: 14, borderRadius: 10 }}>
+            <p style={{ fontSize: "0.85rem", color: "#92400e", fontStyle: "italic" }}>"水々しいのにしっかり密着するので落ちにくい"</p>
+            <p className="desc">(물광인데 밀착력이 좋아서 지워지지 않는다) — @cosme 리뷰</p>
+          </div>
+          <div style={{ background: "#fffbeb", padding: 14, borderRadius: 10 }}>
+            <p style={{ fontSize: "0.85rem", color: "#92400e", fontStyle: "italic" }}>"最近ひそかにバズりまくってるコスメ"</p>
+            <p className="desc">(최근 은밀하게 엄청 바이럴 되는 코스메) — @cosme 리뷰</p>
+          </div>
+          <div style={{ background: "#fffbeb", padding: 14, borderRadius: 10 }}>
+            <p style={{ fontSize: "0.85rem", color: "#92400e", fontStyle: "italic" }}>"ひと塗りでパッと華やぐ発色でうるっとツヤ感がかわいすぎる"</p>
+            <p className="desc">(한 번 발라도 확 화사한 발색, 촉촉한 윤기가 너무 귀엽다) — 인플루언서 리뷰</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="card" style={{ marginTop: 16 }}>
+      <h4>잉가 마케팅 타임라인 요약</h4>
+      <div className="table-wrap" style={{ border: "none", boxShadow: "none" }}>
+        <table>
+          <thead>
+            <tr><th>시기</th><th>액션</th><th>성과/결과</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2022</td><td>일본 시장 첫 진출 (큐텐 입점)</td><td>K-뷰티 립 카테고리 진입</td></tr>
+            <tr><td>2023.03</td><td>오프라인 확대 (토큐핸즈, 숍인, 로즈마리)</td><td>전국 매장 유통 시작</td></tr>
+            <tr><td>2024.04</td><td>워터 그로우 세루마틱 립 밤 출시</td><td>@cosme 평점 5.3/7.0</td></tr>
+            <tr><td>2024.05</td><td>전국 오프라인 매장 확대</td><td>37개 매장 확인</td></tr>
+            <tr><td>2025.03</td><td>미니스톱 한정 색상 출시 + 돈키호테 입점</td><td>편의점/대형 유통 동시 진출</td></tr>
+            <tr><td>2025.07</td><td>로드 아이즈 섀도우 팔레트 출시</td><td>@cosme 평점 6.4/7.0 (최고점)</td></tr>
+            <tr><td>2026.01</td><td>워터 더블래스팅 센티드 틴트 런칭</td><td>큐텐 포인트메이크 전체 1위</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -538,10 +675,17 @@ const MarketingSection = () => (
             </div>
           </div>
           <div className="marketing-card">
-            <div className="marketing-icon blue">📈</div>
+            <div className="marketing-icon blue">🏪</div>
             <div className="marketing-body">
-              <h5>유통 채널 확장 계획</h5>
-              <p>큐텐 성공을 기반으로 일본 내 유통 채널 적극 확장 검토 중. 오프라인 진출 가능성.</p>
+              <h5>오프라인 전략적 확장 (실행 완료)</h5>
+              <p>로프트→숍인→로즈마리→돈키호테(2025.03)→미니스톱 한정판까지. 매장별 제품 차별화 (로프트=글로시, 돈키=매트). 전국 37개 매장 확보.</p>
+            </div>
+          </div>
+          <div className="marketing-card">
+            <div className="marketing-icon blue">🎨</div>
+            <div className="marketing-body">
+              <h5>퍼스널 컬러 마케팅</h5>
+              <p>이엘베/블루베별 색상 분류 콘텐츠 적극 활용. 일본 뷰티 미디어에서 "전 색상 퍼스널 컬러별 소개" 콘텐츠 자발적 확산.</p>
             </div>
           </div>
         </div>
@@ -587,8 +731,20 @@ const MarketingSection = () => (
           <tr>
             <td><b>오프라인</b></td>
             <td>플라자/돈키/로프트 입점</td>
-            <td>미진출</td>
+            <td>로프트, 돈키(2025.03~), 숍인, 미니스톱 한정판</td>
             <td>온라인 성과 선행 후 오프라인 검토</td>
+          </tr>
+          <tr>
+            <td><b>편의점 한정판</b></td>
+            <td>해당 없음</td>
+            <td>미니스톱 한정 3색 (2025.03)</td>
+            <td>편의점 K-코스메 트렌드 활용 검토</td>
+          </tr>
+          <tr>
+            <td><b>퍼스널 컬러</b></td>
+            <td>해당 없음</td>
+            <td>이엘베/블루베별 콘텐츠 적극 활용</td>
+            <td>일본 MZ 트렌드에 맞춰 필수 적용</td>
           </tr>
           <tr>
             <td><b>리뷰 확보</b></td>
