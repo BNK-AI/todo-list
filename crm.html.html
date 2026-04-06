@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>탐뷰티 립 오일 카카오톡 CRM 기획서</title>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: #faf9f7;
+    color: #1a1a1a;
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 48px 0 36px;
+    border-bottom: 1px solid #e8e4df;
+    margin-bottom: 40px;
+  }
+  .header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  .header .sub { font-size: 14px; color: #888; }
+  .header .meta {
+    margin-top: 20px;
+    display: flex; justify-content: center; gap: 28px;
+    font-size: 13px; color: #999;
+  }
+  .header .meta span { font-weight: 600; color: #555; }
+
+  .section { margin-bottom: 48px; }
+  .section-label {
+    font-size: 11px; font-weight: 700; color: #c9a87c;
+    letter-spacing: 2px; margin-bottom: 6px;
+  }
+  .section h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th {
+    background: #f5f3f0; font-weight: 600; text-align: left;
+    padding: 10px 14px; border-bottom: 2px solid #e0dcd6; font-size: 13px; color: #666;
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+
+  .offer-box {
+    background: #fff; border: 2px solid #c9a87c; border-radius: 14px;
+    padding: 28px; text-align: center; margin: 20px 0;
+  }
+  .offer-box .price { font-size: 32px; font-weight: 800; color: #1a1a1a; }
+  .offer-box .old { font-size: 14px; color: #bbb; text-decoration: line-through; }
+  .offer-box .desc { font-size: 15px; color: #666; margin-top: 6px; }
+
+  hr { border: none; border-top: 1px solid #e8e4df; margin: 40px 0; }
+
+  /* 2컬럼: 디자인 가이드 + 레퍼런스 */
+  .card-section {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    margin: 24px 0;
+  }
+  .card-guide {
+    background: #fff;
+    border: 1px solid #e8e4df;
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .card-guide h3 {
+    font-size: 16px; font-weight: 700; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .card-guide h3 .num {
+    background: #c9a87c; color: #fff; font-size: 11px; font-weight: 700;
+    width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .ref-panel {
+    background: #fff;
+    border: 1px solid #e8e4df;
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .ref-panel .ref-title {
+    font-size: 11px; font-weight: 700; color: #c9a87c;
+    letter-spacing: 1.5px; margin-bottom: 12px;
+  }
+  .ref-link {
+    display: block;
+    background: #f9f7f5;
+    border: 1px solid #e8e4df;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 13px;
+    transition: background 0.2s;
+  }
+  .ref-link:hover { background: #f0ece7; }
+  .ref-link .ref-tag {
+    display: inline-block;
+    background: #e8e4df;
+    font-size: 10px; font-weight: 600; color: #888;
+    padding: 2px 8px; border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  .ref-link .ref-name { font-weight: 600; display: block; margin-bottom: 2px; }
+  .ref-link .ref-desc { font-size: 11px; color: #999; }
+
+  .note {
+    background: #f5f3f0; border-radius: 10px; padding: 14px 18px;
+    font-size: 13px; color: #666; margin: 14px 0;
+  }
+  .note strong { color: #1a1a1a; }
+
+  .colors { display: flex; gap: 12px; margin: 12px 0; }
+  .chip {
+    display: flex; align-items: center; gap: 8px;
+    background: #f9f7f5; border: 1px solid #e8e4df; border-radius: 10px;
+    padding: 10px 14px; flex: 1;
+  }
+  .dot { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; }
+  .chip .nm { font-size: 12px; font-weight: 600; }
+  .chip .sub { font-size: 10px; color: #999; }
+
+  .footer {
+    text-align: center; padding: 32px 0 16px;
+    border-top: 1px solid #e8e4df; margin-top: 48px;
+    font-size: 11px; color: #ccc;
+  }
+
+  @media (max-width: 800px) {
+    .card-section { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>더 젤리 플럼핑 립 오일 — 카카오톡 CRM</h1>
+    <div class="sub">친구톡 캐러셀 · 3장 · 디자이너 작업 가이드</div>
+    <div class="meta">
+      <div>발송 <span>2026.04.07 (화) 오후 12:00 또는 8:00</span></div>
+      <div>대상 <span>플친 구독자</span></div>
+      <div>종료 <span>2026.04.09 (목) 자정</span></div>
+    </div>
+  </div>
+
+  <!-- 프로모션 요약 -->
+  <div class="section">
+    <div class="section-label">PROMOTION</div>
+    <h2>프로모션 요약</h2>
+    <div class="offer-box">
+      <div class="old">34,000원</div>
+      <div class="price">17,000원</div>
+      <div class="desc">립 오일 1개 구매 시 → 립 글로스 본품 무료 증정</div>
+    </div>
+    <table>
+      <tr><td style="width:120px;">결제 금액</td><td><strong>17,000원</strong> (정가 그대로)</td></tr>
+      <tr><td>고객 수령</td><td>립 오일 본품 1개 (3색 중 택1) + 립 글로스 본품 1개 (히말라야 핑크)</td></tr>
+      <tr><td>기간</td><td>04.07 ~ 04.09 · 3일간 · 1인 1세트</td></tr>
+      <tr><td>배송비</td><td>자사몰 기본 정책 적용 (3,000원)</td></tr>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- 이미지 공통 규격 -->
+  <div class="section">
+    <div class="section-label">SPEC</div>
+    <h2>이미지 공통 규격</h2>
+    <table>
+      <tr><td style="width:120px;">사이즈</td><td><strong>800 x 600px</strong> (4:3)</td></tr>
+      <tr><td>포맷</td><td>PNG 또는 JPG · 카드당 5MB 이하</td></tr>
+      <tr><td>폰트</td><td>Pretendard (브랜드 서체 통일)</td></tr>
+      <tr><td>톤</td><td>소프트 글로시 · 파스텔 베이스 · 프리미엄 감성</td></tr>
+      <tr><td>모델</td><td>사용 안 함 — 제품 + 텍스처 중심</td></tr>
+      <tr><td>카드 수</td><td>3장 (캐러셀 피드형)</td></tr>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- 고객 흐름 -->
+  <div class="section">
+    <div class="section-label">FLOW</div>
+    <h2>고객 흐름</h2>
+    <div class="note">
+      <strong>카드 1</strong> "17,000원에 2개?!" (멈춤) → <strong>카드 2</strong> "어떤 색 살까" (관여) → <strong>카드 3</strong> "구성 확인, 결제" (전환)
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 카드 1 -->
+  <div class="section">
+    <div class="section-label">CARD 01</div>
+    <h2>가격 후킹</h2>
+
+    <div class="card-section">
+      <div class="card-guide">
+        <h3><span class="num">1</span> 디자인 가이드</h3>
+        <table>
+          <tr><td style="width:100px;">제목</td><td><strong>17,000원에 본품 2개</strong></td></tr>
+          <tr><td>설명</td><td>플친 단독 · 3일 한정 · 34,000원 상당</td></tr>
+          <tr><td>CTA</td><td>바로 구매하기</td></tr>
+        </table>
+        <table>
+          <tr><th style="width:100px;">요소</th><th>디렉션</th></tr>
+          <tr><td>레이아웃</td><td>좌측: 가격 타이포 / 우측: 립 오일 + 립 글로스 제품 2개</td></tr>
+          <tr><td>메인</td><td><strong>17,000원</strong> 대형 타이포 · 화면 30%+ · 코럴~피치 컬러</td></tr>
+          <tr><td>취소선</td><td>~~34,000원~~ 바로 위에 작게</td></tr>
+          <tr><td>제품</td><td>립 오일 + "+" + 립 글로스 나란히</td></tr>
+          <tr><td>뱃지</td><td>좌상단 "플친 단독" (다크) · 우상단 "본품 증정" (코럴)</td></tr>
+          <tr><td>배경</td><td>연한 피치~크림 그라데이션</td></tr>
+        </table>
+        <div class="note"><strong>핵심:</strong> 숫자가 주인공. 빨간 폭탄세일 느낌 X, 프리미엄 감성 유지.</div>
+      </div>
+
+      <div class="ref-panel">
+        <div class="ref-title">REFERENCE</div>
+        <a href="https://www.pinterest.com/ideas/skincare-sale-poster/940714598510/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Skincare Sale Poster</span>
+          <span class="ref-desc">미니멀 가격 강조형 뷰티 프로모션 배너 모음</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/makeup-offer-banner/949363816384/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Makeup Offer Banner</span>
+          <span class="ref-desc">화장품 할인/오퍼 배너 디자인 레퍼런스</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/beauty-promotion-design/914713159274/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Beauty Promotion Design</span>
+          <span class="ref-desc">뷰티 프로모션 카드 전체 모음 — 파스텔/미니멀 톤 참고</span>
+        </a>
+        <a href="https://kr.pinterest.com/ideas/%ED%99%94%EC%9E%A5%ED%92%88-%EC%84%B8%EC%9D%BC-%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98/961328760947/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">화장품 세일 프로모션</span>
+          <span class="ref-desc">한국 화장품 세일 프로모션 디자인 모음</span>
+        </a>
+        <a href="https://kr.pinterest.com/unsola10/%ED%99%94%EC%9E%A5%ED%92%88-%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">화장품 프로모션 63선</span>
+          <span class="ref-desc">가격 카드/배너 레이아웃 참고</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 카드 2 -->
+  <div class="section">
+    <div class="section-label">CARD 02</div>
+    <h2>컬러 스와치</h2>
+
+    <div class="card-section">
+      <div class="card-guide">
+        <h3><span class="num">2</span> 디자인 가이드</h3>
+        <table>
+          <tr><td style="width:100px;">제목</td><td><strong>내 톤은 어떤 컬러?</strong></td></tr>
+          <tr><td>설명</td><td>#01 웜톤픽 · #02 뉴트럴 · #03 쿨톤픽</td></tr>
+          <tr><td>CTA</td><td>내 컬러 찾기</td></tr>
+        </table>
+        <table>
+          <tr><th style="width:100px;">요소</th><th>디렉션</th></tr>
+          <tr><td>레이아웃</td><td>3분할 균등 — 영역당 1색</td></tr>
+          <tr><td>각 영역</td><td>상단: 입술 발색 크롭 (입술만, 얼굴 X) / 하단: 컬러명 + 톤 태그</td></tr>
+          <tr><td>배경</td><td>각 컬러 톤온톤 (웜피치 / 로즈 / 쿨퍼플)</td></tr>
+          <tr><td>태그</td><td>라운드 뱃지 — "웜톤픽" "뉴트럴" "쿨톤픽"</td></tr>
+        </table>
+        <div class="colors">
+          <div class="chip">
+            <div class="dot" style="background:linear-gradient(135deg,#f4b8b8,#f0a0a0);"></div>
+            <div><div class="nm">#01 퍼스트 러브</div><div class="sub">웜톤픽 · 여릿한 벚꽃빛</div></div>
+          </div>
+          <div class="chip">
+            <div class="dot" style="background:linear-gradient(135deg,#d4899a,#c77d90);"></div>
+            <div><div class="nm">#02 인피니트 로즈</div><div class="sub">뉴트럴 · 오묘한 장미빛</div></div>
+          </div>
+          <div class="chip">
+            <div class="dot" style="background:linear-gradient(135deg,#b88aad,#a07aa0);"></div>
+            <div><div class="nm">#03 나이트 뷰</div><div class="sub">쿨톤픽 · 청량한 퍼플</div></div>
+          </div>
+        </div>
+        <div class="note"><strong>핵심:</strong> 자연광 발색 느낌. 실제 발색감 정확도 우선. 보정 최소화.</div>
+      </div>
+
+      <div class="ref-panel">
+        <div class="ref-title">REFERENCE</div>
+        <a href="https://www.pinterest.com/ideas/lip-tint-color-chart/959131136151/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Lip Tint Color Chart</span>
+          <span class="ref-desc">립 틴트 컬러 차트 — 스와치 비교 레이아웃 참고</span>
+        </a>
+        <a href="https://www.pinterest.com/pin/best-korean-lip-tint-swatch-comparison--282530576618037584/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Korean Lip Tint Swatch Comparison</span>
+          <span class="ref-desc">한국 립 틴트 8종 스와치 비교 카드</span>
+        </a>
+        <a href="https://ca.pinterest.com/missylou0509/lip-tint-chart/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Lip Tint Chart 33선</span>
+          <span class="ref-desc">립 컬러 차트/스와치 레이아웃 모음</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/peripera-ink-velvet/911867367553/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Peripera Ink Velvet 스와치</span>
+          <span class="ref-desc">페리페라 컬러별 스와치 카드 — 3분할 레이아웃 참고</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/colorgram-lip-tint/961607747650/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Colorgram Lip Tint</span>
+          <span class="ref-desc">컬러그램 립 스와치 — 퍼스널컬러 태그 디자인 참고</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 카드 3 -->
+  <div class="section">
+    <div class="section-label">CARD 03</div>
+    <h2>세트 구성 + 전환</h2>
+
+    <div class="card-section">
+      <div class="card-guide">
+        <h3><span class="num">3</span> 디자인 가이드</h3>
+        <table>
+          <tr><td style="width:100px;">제목</td><td><strong>더 젤리 듀오 구성</strong></td></tr>
+          <tr><td>설명</td><td>립 오일 택1 + 히말라야 핑크 글로스 증정</td></tr>
+          <tr><td>CTA</td><td>바로 구매하기</td></tr>
+        </table>
+        <table>
+          <tr><th style="width:100px;">요소</th><th>디렉션</th></tr>
+          <tr><td>레이아웃</td><td>중앙 정렬 — 립 오일(좌) + "+" + 립 글로스(우)</td></tr>
+          <tr><td>타이틀</td><td>"THE JELLY DUO" 상단</td></tr>
+          <tr><td>구성 표시</td><td>립 오일 아래 "택1" · 립 글로스 아래 "증정"</td></tr>
+          <tr><td>기간</td><td>"04.07 ~ 04.09" 하단 소형</td></tr>
+          <tr><td>배경</td><td>화이트 또는 연한 크림</td></tr>
+        </table>
+        <div class="note"><strong>핵심:</strong> 세트 구성을 한눈에 정리. 선물 패키지처럼 깔끔하게.</div>
+      </div>
+
+      <div class="ref-panel">
+        <div class="ref-title">REFERENCE</div>
+        <a href="https://www.pinterest.com/ideas/bundle-package-promo-design/959516439334/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Bundle Package Promo Design</span>
+          <span class="ref-desc">제품 번들/세트 프로모션 디자인 모음</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/beauty-bundle/952321630315/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Beauty Bundle</span>
+          <span class="ref-desc">뷰티 번들 세트 구성 디자인 — 2개 제품 배치 참고</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/skincare-gift-set/944239584521/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Skincare Gift Set</span>
+          <span class="ref-desc">스킨케어 기프트 세트 — 깔끔한 듀오 구성 레이아웃</span>
+        </a>
+        <a href="https://www.pinterest.com/oluwagbemilekea/product-bundle-design-ideas/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Product Bundle Design 22선</span>
+          <span class="ref-desc">제품 번들 디자인 아이디어 — "+" 구성 레이아웃 참고</span>
+        </a>
+        <a href="https://www.pinterest.com/ideas/bundle-promo-design/951614935704/" target="_blank" class="ref-link">
+          <span class="ref-tag">Pinterest</span>
+          <span class="ref-name">Bundle Promo Design</span>
+          <span class="ref-desc">번들 프로모션 배너/카드 디자인 모음</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 리마인드 -->
+  <div class="section">
+    <div class="section-label">REMIND</div>
+    <h2>04.09 리마인드 (와이드 이미지 1장)</h2>
+    <table>
+      <tr><td style="width:120px;">규격</td><td>와이드 이미지 · <strong>800 x 600px</strong> (4:3)</td></tr>
+      <tr><td>이미지</td><td>카드 1 변형 + "오늘 자정 종료" 오버레이</td></tr>
+      <tr><td>카피</td><td><strong>오늘 자정 종료</strong> — 17,000원에 본품 2개, 마지막 기회</td></tr>
+      <tr><td>CTA</td><td>마지막 기회</td></tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    TAM BEAUTY — Kakao CRM Plan · 2026.04.06
+  </div>
+
+</div>
+</body>
+</html>
