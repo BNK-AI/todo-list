@@ -10164,6 +10164,7 @@ Error generating stack: ` +
               { id: "marketing", label: "마케팅 분석" },
               { id: "insight", label: "인사이트" },
               { id: "flow", label: "마케팅 플로우" },
+              { id: "seeding", label: "시딩 비교" },
             ];
           return l.jsxs("div", {
             className: "dashboard",
@@ -10217,6 +10218,7 @@ Error generating stack: ` +
                   S === "marketing" && l.jsx($d, {}),
                   S === "insight" && l.jsx(Yd, {}),
                   S === "flow" && l.jsx(Zd, {}),
+                  S === "seeding" && l.jsx(Xd, {}),
                 ],
               }),
               l.jsx("footer", {
@@ -12693,7 +12695,925 @@ Error generating stack: ` +
               }),
             ],
           }),
-        Zd = () => l.jsxs("div",{className:"section",children:[l.jsx("h2",{className:"section-title",children:"탐뷰티 마케팅 플로우"}),l.jsxs("div",{className:"card highlight-card",style:{background:"linear-gradient(135deg, #f5f3ff, #ede9fe)",marginBottom:24},children:[l.jsx("h3",{style:{color:"#6366f1",marginBottom:8},children:"컨셉: 데이터 기반 스케일업 로드맵"}),l.jsxs("p",{children:["탐뷰티는 이미 ",l.jsx("b",{children:"큐텐 메가데뷔 4위"}),"를 달성하며 일본 시장 진입을 검증했습니다. 경쟁사(잉가/홀리카홀리카) 데이터를 근거로, 탐뷰티만의 컨셉에 맞춘 ",l.jsx("b",{children:"6단계 마케팅 플로우"}),"를 제안합니다."]})]}),l.jsx("h3",{className:"sub-title",children:"전체 마케팅 플로우 타임라인"}),l.jsxs("div",{className:"card",style:{padding:"32px 24px"},children:[l.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:0,position:"relative"},children:[l.jsxs("div",{style:{display:"flex",gap:20,alignItems:"flex-start",position:"relative",paddingBottom:32,borderLeft:"3px solid #e2e8f0",marginLeft:23,paddingLeft:32},children:[l.jsx("div",{style:{width:48,height:48,borderRadius:"50%",background:"linear-gradient(135deg,#6366f1,#a855f7)",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:800,fontSize:"1.1rem",flexShrink:0,zIndex:2,position:"absolute",left:-27},children:"1"}),l.jsxs("div",{style:{flex:1},children:[l.jsx("h4",{style:{color:"#6366f1",marginBottom:4},children:"PHASE 1: 히어로 SKU 확정 (1~2개월)"}),l.jsxs("p",{className:"desc",children:["메가데뷔 4위 달성 제품 데이터 분석 → 일본 소비자 선호도 기반 히어로 1~2개 확정.",l.jsx("br",{}),"잉가는 워터 그로우 립 틴트 ",l.jsx("b",{children:"단 1개에 집중"}),"하여 LIPS 859건, @cosme 114건 리뷰를 확보하고 카테고리 1위를 달성."]}),l.jsxs("div",{style:{marginTop:8,padding:"10px 14px",background:"#f8f7ff",borderRadius:8,fontSize:".85rem"},children:[l.jsx("b",{style:{color:"#6366f1"},children:"근거: "}),"잉가 히어로 SKU 집중 전략 → 큐텐 포인트메이크 1위 / 홀리카홀리카 아이팔레트 단일 제품 리뷰 2,355건"]})]})]}),l.jsxs("div",{style:{display:"flex",gap:20,alignItems:"flex-start",position:"relative",paddingBottom:32,borderLeft:"3px solid #e2e8f0",marginLeft:23,paddingLeft:32},children:[l.jsx("div",{style:{width:48,height:48,borderRadius:"50%",background:"linear-gradient(135deg,#3b82f6,#06b6d4)",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:800,fontSize:"1.1rem",flexShrink:0,zIndex:2,position:"absolute",left:-27},children:"2"}),l.jsxs("div",{style:{flex:1},children:[l.jsx("h4",{style:{color:"#3b82f6",marginBottom:4},children:"PHASE 2: 현지화 & 색상 커스터마이징 (2~3개월)"}),l.jsxs("p",{className:"desc",children:["일본 전용 색상/네이밍 개발. 잉가는 ",l.jsx("b",{children:"이엘베 5색 / 블루베 5색 / 뉴트럴 3색"}),"으로 퍼스널컬러 기반 라인업을 구성하여 성공.",l.jsx("br",{}),"탐뷰티도 일본 MZ세대 트렌드(글로이스킨, 투명감 메이크업)에 맞춘 전용 컬러 개발 필요."]}),l.jsxs("div",{style:{marginTop:8,padding:"10px 14px",background:"#eff6ff",borderRadius:8,fontSize:".85rem"},children:[l.jsx("b",{style:{color:"#3b82f6"},children:"근거: "}),"잉가 인기색상 TOP3 모두 일본 현지 맞춤 컬러 / 홀리카홀리카는 글로벌 라인업 그대로 → 인스타 성장 한계(2,100명)"]})]})]}),l.jsxs("div",{style:{display:"flex",gap:20,alignItems:"flex-start",position:"relative",paddingBottom:32,borderLeft:"3px solid #e2e8f0",marginLeft:23,paddingLeft:32},children:[l.jsx("div",{style:{width:48,height:48,borderRadius:"50%",background:"linear-gradient(135deg,#ec4899,#f43f5e)",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:800,fontSize:"1.1rem",flexShrink:0,zIndex:2,position:"absolute",left:-27},children:"3"}),l.jsxs("div",{style:{flex:1},children:[l.jsx("h4",{style:{color:"#ec4899",marginBottom:4},children:"PHASE 3: 인스타 시딩 & UGC 확보 (3~4개월)"}),l.jsxs("p",{className:"desc",children:["일본 마이크로 인플루언서(1K~10K) 중심 시딩 캠페인 진행.",l.jsx("br",{}),"잉가는 인스타 모니터 이벤트(무상 제공 → 리뷰 의무)를 통해 ",l.jsx("b",{children:"@inga_jp 3,412명"})," 팔로워를 확보.",l.jsx("br",{}),"일본 Z세대 54.9%가 SNS에서 화제가 됐을 때 구매를 결정하므로, UGC 콘텐츠 양산이 핵심."]}),l.jsxs("div",{style:{marginTop:8,padding:"10px 14px",background:"#fdf2f8",borderRadius:8,fontSize:".85rem"},children:[l.jsx("b",{style:{color:"#ec4899"},children:"근거: "}),"경쟁사 3사 모두 일본 인스타 팔로워 소규모(2,100~3,400명) → 시딩만 잘 하면 빠르게 추월 가능"]})]})]}),l.jsxs("div",{style:{display:"flex",gap:20,alignItems:"flex-start",position:"relative",paddingBottom:32,borderLeft:"3px solid #e2e8f0",marginLeft:23,paddingLeft:32},children:[l.jsx("div",{style:{width:48,height:48,borderRadius:"50%",background:"linear-gradient(135deg,#f59e0b,#f97316)",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:800,fontSize:"1.1rem",flexShrink:0,zIndex:2,position:"absolute",left:-27},children:"4"}),l.jsxs("div",{style:{flex:1},children:[l.jsx("h4",{style:{color:"#f59e0b",marginBottom:4},children:"PHASE 4: 큐텐 메가와리 집중 공략 (4~6개월)"}),l.jsxs("p",{className:"desc",children:["큐텐 메가와리(연 4회: 3/6/9/11월)에 맞춘 프로모션 전략 실행.",l.jsx("br",{}),"홀리카홀리카는 메가와리 시 ",l.jsx("b",{children:"아이팔레트 구매 시 단색 2개 증정"})," 번들 전략으로 리뷰 2,355건 확보.",l.jsx("br",{}),"잉가는 공식숍 ",l.jsx("b",{children:"20% 쿠폰 + 메가와리 할인"})," 이중 구조로 가격 경쟁력 극대화."]}),l.jsxs("div",{style:{marginTop:8,padding:"10px 14px",background:"#fffbeb",borderRadius:8,fontSize:".85rem"},children:[l.jsx("b",{style:{color:"#f59e0b"},children:"근거: "}),"메가데뷔 4위 → 정규 랭킹 진입 필요. 메가와리가 가장 효과적인 전환 타이밍 (잉가: 프로모 당일 포인트메이크 1위)"]})]})]}),l.jsxs("div",{style:{display:"flex",gap:20,alignItems:"flex-start",position:"relative",paddingBottom:32,borderLeft:"3px solid #e2e8f0",marginLeft:23,paddingLeft:32},children:[l.jsx("div",{style:{width:48,height:48,borderRadius:"50%",background:"linear-gradient(135deg,#10b981,#059669)",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:800,fontSize:"1.1rem",flexShrink:0,zIndex:2,position:"absolute",left:-27},children:"5"}),l.jsxs("div",{style:{flex:1},children:[l.jsx("h4",{style:{color:"#10b981",marginBottom:4},children:"PHASE 5: @cosme 리뷰 100건 돌파 (6~9개월)"}),l.jsxs("p",{className:"desc",children:["@cosme 리뷰 100건은 일본 소비자 신뢰의 마지노선.",l.jsx("br",{}),"잉가는 현재 @cosme 114건(히어로 제품)으로 바이럴이 시작되는 단계.",l.jsx("br",{}),"체험단 운영 + @cosme 쇼핑 입점으로 리뷰 축적 가속화."]}),l.jsxs("div",{style:{marginTop:8,padding:"10px 14px",background:"#ecfdf5",borderRadius:8,fontSize:".85rem"},children:[l.jsx("b",{style:{color:"#10b981"},children:"근거: "}),"홀리카홀리카 LIPS 13,605건 vs 잉가 @cosme 282건 → 리뷰 플랫폼 전략이 인지도 확보 속도를 결정"]})]})]}),l.jsxs("div",{style:{display:"flex",gap:20,alignItems:"flex-start",position:"relative",marginLeft:23,paddingLeft:32},children:[l.jsx("div",{style:{width:48,height:48,borderRadius:"50%",background:"linear-gradient(135deg,#8b5cf6,#6366f1)",color:"#fff",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:800,fontSize:"1.1rem",flexShrink:0,zIndex:2,position:"absolute",left:-27},children:"6"}),l.jsxs("div",{style:{flex:1},children:[l.jsx("h4",{style:{color:"#8b5cf6",marginBottom:4},children:"PHASE 6: 오프라인 확장 & 풀퍼널 완성 (9~12개월)"}),l.jsxs("p",{className:"desc",children:["온라인 성과를 기반으로 오프라인 버라이어티숍(플라자, 로프트, 돈키호테) 입점 추진.",l.jsx("br",{}),"잉가는 2024.05부터 전국 37개 오프라인 매장 확보. 특히 ",l.jsx("b",{children:"돈키호테(2025.03~)"})," 입점으로 대중 인지도 확장.",l.jsx("br",{}),"홀리카홀리카는 플라자+돈키+로프트 동시 운영으로 온오프 시너지 극대화."]}),l.jsxs("div",{style:{marginTop:8,padding:"10px 14px",background:"#f5f3ff",borderRadius:8,fontSize:".85rem"},children:[l.jsx("b",{style:{color:"#8b5cf6"},children:"근거: "}),"잉가 오프라인 37개 매장 + 편의점(미니스톱) 한정판 전략 / 홀리카홀리카 6개 유통채널 동시 운영"]})]})]})]})]}),l.jsx("h3",{className:"sub-title",style:{marginTop:36},children:"단계별 KPI & 목표 수치"}),l.jsx("div",{className:"table-wrap",children:l.jsxs("table",{children:[l.jsx("thead",{children:l.jsxs("tr",{children:[l.jsx("th",{children:"Phase"}),l.jsx("th",{children:"기간"}),l.jsx("th",{children:"핵심 KPI"}),l.jsx("th",{children:"목표 수치"}),l.jsx("th",{children:"벤치마크 (경쟁사)"})]})}),l.jsxs("tbody",{children:[l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{style:{color:"#6366f1"},children:"1. 히어로 확정"})}),l.jsx("td",{children:"1~2개월"}),l.jsx("td",{children:"히어로 SKU 확정"}),l.jsx("td",{children:"1~2개 제품"}),l.jsx("td",{children:"잉가: 워터 그로우 립틴트 1개"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{style:{color:"#3b82f6"},children:"2. 현지화"})}),l.jsx("td",{children:"2~3개월"}),l.jsx("td",{children:"일본 전용 색상 출시"}),l.jsx("td",{children:"5~8색상"}),l.jsx("td",{children:"잉가: 13색 (PC기반)"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{style:{color:"#ec4899"},children:"3. 시딩"})}),l.jsx("td",{children:"3~4개월"}),l.jsx("td",{children:"인스타 팔로워 / UGC"}),l.jsx("td",{children:"3,000명+ / 월 50건+"}),l.jsx("td",{children:"잉가: 3,412명"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{style:{color:"#f59e0b"},children:"4. 메가와리"})}),l.jsx("td",{children:"4~6개월"}),l.jsx("td",{children:"큐텐 카테고리 랭킹"}),l.jsx("td",{children:"카테고리 TOP 10"}),l.jsx("td",{children:"잉가: 포인트메이크 1위"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{style:{color:"#10b981"},children:"5. 리뷰 확보"})}),l.jsx("td",{children:"6~9개월"}),l.jsx("td",{children:"@cosme 리뷰 수"}),l.jsx("td",{children:"100건+"}),l.jsx("td",{children:"잉가: 114건 (히어로)"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{style:{color:"#8b5cf6"},children:"6. 오프라인"})}),l.jsx("td",{children:"9~12개월"}),l.jsx("td",{children:"오프라인 매장 수"}),l.jsx("td",{children:"10개+ 매장"}),l.jsx("td",{children:"잉가: 37개 매장"})]})]})]})}),l.jsx("h3",{className:"sub-title",style:{marginTop:36},children:"탐뷰티 차별화 전략 포인트"}),l.jsxs("div",{className:"grid-3",children:[l.jsxs("div",{className:"card",style:{borderTop:"4px solid #6366f1"},children:[l.jsx("h4",{style:{color:"#6366f1",marginBottom:8},children:"가격 포지셔닝"}),l.jsxs("p",{className:"desc",children:["홀리카홀리카(\u00a5990~)는 초저가, 잉가(\u00a51,590~)는 중가.",l.jsx("br",{}),l.jsx("b",{children:"탐뷰티는 \u00a51,200~2,500 중저가 밴드"}),"로 가성비 + 품질감 모두 잡는 포지션 추천."]}),l.jsx("div",{style:{marginTop:12,padding:"8px 12px",background:"#f5f3ff",borderRadius:8,fontSize:".8rem",color:"#6366f1",fontWeight:600},children:"큐텐 회원 71%가 10~30대 MZ세대"})]}),l.jsxs("div",{className:"card",style:{borderTop:"4px solid #ec4899"},children:[l.jsx("h4",{style:{color:"#ec4899",marginBottom:8},children:"콘텐츠 차별화"}),l.jsxs("p",{className:"desc",children:["홀리카홀리카는 캐릭터 콜라보, 잉가는 세련된 무드.",l.jsx("br",{}),l.jsx("b",{children:"탐뷰티만의 비주얼 아이덴티티"}),"를 일본 시장에 맞게 구축. 투명감/글로이 키워드 중심 비주얼 전략."]}),l.jsx("div",{style:{marginTop:12,padding:"8px 12px",background:"#fdf2f8",borderRadius:8,fontSize:".8rem",color:"#ec4899",fontWeight:600},children:"성분 & 저자극 키워드 주목도 상승 트렌드"})]}),l.jsxs("div",{className:"card",style:{borderTop:"4px solid #10b981"},children:[l.jsx("h4",{style:{color:"#10b981",marginBottom:8},children:"스피드 전략"}),l.jsxs("p",{className:"desc",children:["잉가가 히어로 1개로 1위를 만드는 데 약 1년 소요.",l.jsx("br",{}),"탐뷰티는 이미 메가데뷔 4위 달성으로 ",l.jsx("b",{children:"0→1 단계를 건너뛴 상태"}),".",l.jsx("br",{}),"대행사 시딩 네트워크 활용 시 ",l.jsx("b",{children:"6~9개월 내 정규 랭킹 TOP 10"})," 진입 가능."]}),l.jsx("div",{style:{marginTop:12,padding:"8px 12px",background:"#ecfdf5",borderRadius:8,fontSize:".8rem",color:"#10b981",fontWeight:600},children:"메가데뷔 4위 = 시장 검증 완료 상태"})]})]}),l.jsx("h3",{className:"sub-title",style:{marginTop:36},children:"월별 실행 캘린더 (2026)"}),l.jsxs("div",{className:"card",children:[l.jsx("div",{className:"table-wrap",children:l.jsxs("table",{children:[l.jsx("thead",{children:l.jsxs("tr",{children:[l.jsx("th",{children:"월"}),l.jsx("th",{children:"핵심 액션"}),l.jsx("th",{children:"큐텐 이벤트"}),l.jsx("th",{children:"기대 성과"})]})}),l.jsxs("tbody",{children:[l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"4~5월"})}),l.jsx("td",{children:"히어로 SKU 확정 / 일본 전용 색상 기획"}),l.jsx("td",{children:"-"}),l.jsx("td",{children:"제품 전략 완성"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"5~6월"})}),l.jsx("td",{children:"인스타 시딩 시작 / 마이크로 인플루언서 30명+ 섭외"}),l.jsx("td",{style:{color:"#f59e0b",fontWeight:700},children:"6월 메가와리"}),l.jsx("td",{children:"팔로워 1,000명+ / UGC 30건+"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"6~7월"})}),l.jsx("td",{children:"메가와리 프로모 집중 / 번들 기획전"}),l.jsx("td",{style:{color:"#f59e0b",fontWeight:700},children:"메가와리 D-day"}),l.jsx("td",{children:"카테고리 TOP 20 진입"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"7~8월"})}),l.jsx("td",{children:"@cosme 체험단 운영 / 리뷰 확보 캠페인"}),l.jsx("td",{children:"-"}),l.jsx("td",{children:"@cosme 리뷰 50건+"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"9월"})}),l.jsx("td",{children:"2차 메가와리 공략 / 신제품 런칭 프로모"}),l.jsx("td",{style:{color:"#f59e0b",fontWeight:700},children:"9월 메가와리"}),l.jsx("td",{children:"카테고리 TOP 10 / 리뷰 100건+"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"10~11월"})}),l.jsx("td",{children:"오프라인 입점 협의 (로프트, 플라자)"}),l.jsx("td",{style:{color:"#f59e0b",fontWeight:700},children:"11월 메가와리"}),l.jsx("td",{children:"오프라인 5개+ 매장 확보"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"12월~"})}),l.jsx("td",{children:"풀퍼널 완성 / 2027년 전략 수립"}),l.jsx("td",{children:"-"}),l.jsx("td",{children:"연간 매출 목표 달성 검증"})]})]})]})}),l.jsx("p",{className:"note",style:{marginTop:12},children:"* 큐텐 메가와리 일정: 3월/6월/9월/11월 (연 4회). 프로모 준비는 최소 1개월 전 시작 권장."})]}),l.jsxs("div",{className:"card",style:{marginTop:24,background:"linear-gradient(135deg,#f5f3ff,#ede9fe)",border:"2px solid #6366f1"},children:[l.jsx("h4",{style:{color:"#6366f1",marginBottom:12},children:"핵심 메시지"}),l.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:12},children:[l.jsxs("p",{style:{fontSize:"1.05rem",lineHeight:1.8},children:[l.jsx("b",{children:"잉가는 히어로 1개로 1위를 만들었고, 홀리카홀리카는 459개 제품으로 시장을 넓혔습니다."}),l.jsx("br",{}),"탐뷰티의 답은 그 사이에 있습니다."]}),l.jsxs("p",{style:{fontSize:"1.05rem",lineHeight:1.8},children:["이미 검증된 메가데뷔 4위의 모멘텀을 활용해,",l.jsx("br",{}),l.jsx("b",{style:{color:"#6366f1"},children:"히어로 집중 → 현지화 → 시딩 → 메가와리 → 리뷰 → 오프라인"}),l.jsx("br",{}),"이 6단계 플로우를 12개월 안에 실행하면,",l.jsx("br",{}),"대행사와 함께 ",l.jsx("b",{children:"큐텐 정규 랭킹 TOP 10 + 오프라인 10개 매장"}),"은 충분히 달성 가능한 목표입니다."]})]})]})]}),
+        Xd = () => l.jsxs("div",{className:"section",children:[l.jsx("h2",{className:"section-title",children:"시딩 비교 분석: 탐뷰티 vs 잉가"}),l.jsxs("div",{className:"card highlight-card",style:{background:"linear-gradient(135deg, #fdf2f8, #fce7f3)",marginBottom:24},children:[l.jsx("h3",{style:{color:"#ec4899",marginBottom:8},children:"왜 시딩 비교가 중요한가?"}),l.jsxs("p",{children:["일본 Z세대 ",l.jsx("b",{children:'54.9%가 "SNS에서 화제가 됐을 때"'})," 구매를 결정합니다. 시딩의 퀄리티와 구조가 곧 매출 전환율을 결정합니다.",l.jsx("br",{}),"잉가의 실제 시딩 데이터를 기반으로, 탐뷰티의 현재 위치와 개선 방향을 분석합니다."]})]}),l.jsx("h3",{className:"sub-title",children:"현재 상태 비교"}),l.jsxs("div",{className:"grid-2",style:{marginBottom:24},children:[l.jsxs("div",{className:"card",style:{borderTop:"4px solid #6366f1"},children:[l.jsx("h4",{style:{color:"#6366f1",marginBottom:12},children:"탐뷰티 현재"}),l.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:12},children:[l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#f8f7ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"공식 계정"}),l.jsx("span",{children:"@tambeautyme (14K, 글로벌 단일)"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#f8f7ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"일본 전용 계정"}),l.jsx("span",{style:{color:"#ef4444",fontWeight:700},children:"없음"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#f8f7ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"시딩 채널"}),l.jsx("span",{children:"인스타 태그 소수"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#f8f7ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"@cosme 리뷰"}),l.jsx("span",{style:{color:"#ef4444",fontWeight:700},children:"0건"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#f8f7ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"LIPS 리뷰"}),l.jsx("span",{style:{color:"#ef4444",fontWeight:700},children:"0건"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#f8f7ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"시딩 구조"}),l.jsx("span",{children:"인스타 1채널만"})]})]})]}),l.jsxs("div",{className:"card",style:{borderTop:"4px solid #3b82f6"},children:[l.jsx("h4",{style:{color:"#3b82f6",marginBottom:12},children:"잉가 (벤치마크)"}),l.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:12},children:[l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#eff6ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"공식 계정"}),l.jsx("span",{children:"@inga_official (24K) + @inga_global (14K)"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#eff6ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"일본 전용 계정"}),l.jsx("span",{style:{color:"#22c55e",fontWeight:700},children:"@inga_jp (3,412명)"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#eff6ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"시딩 채널"}),l.jsx("span",{children:"인스타 + @cosme + LIPS 3채널"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#eff6ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"@cosme 리뷰"}),l.jsx("span",{style:{color:"#22c55e",fontWeight:700},children:"114건 (히어로)"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#eff6ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"LIPS 리뷰"}),l.jsx("span",{style:{color:"#22c55e",fontWeight:700},children:"859건"})]}),l.jsxs("div",{style:{display:"flex",justifyContent:"space-between",padding:"8px 12px",background:"#eff6ff",borderRadius:8},children:[l.jsx("span",{style:{fontWeight:600},children:"시딩 구조"}),l.jsx("span",{children:"3중 구조 (인지→신뢰→전환)"})]})]})]})]})  ,l.jsx("h3",{className:"sub-title",style:{marginTop:32},children:"잉가의 3중 시딩 구조 vs 탐뷰티 GAP"}),l.jsxs("div",{className:"card",style:{padding:"28px 24px"},children:[l.jsxs("div",{className:"grid-3",style:{gap:16,marginBottom:24},children:[l.jsxs("div",{style:{textAlign:"center",padding:20,background:"linear-gradient(135deg,#fdf2f8,#fce7f3)",borderRadius:12,border:"2px solid #ec4899"},children:[l.jsx("div",{style:{fontSize:"2rem",marginBottom:8},children:"1"}),l.jsx("h4",{style:{color:"#ec4899",marginBottom:4},children:"인스타 릴스"}),l.jsx("p",{style:{fontSize:".85rem",color:"#64748b"},children:"인지도 (도달)"}),l.jsx("div",{style:{marginTop:12,padding:"6px 12px",background:"#fff",borderRadius:8},children:l.jsxs("p",{style:{fontSize:".8rem"},children:[l.jsx("b",{style:{color:"#3b82f6"},children:"잉가: "}),"릴스 중심 콘텐츠, 퍼스널컬러 스와치"]})}),l.jsx("div",{style:{marginTop:6,padding:"6px 12px",background:"#fff",borderRadius:8},children:l.jsxs("p",{style:{fontSize:".8rem"},children:[l.jsx("b",{style:{color:"#6366f1"},children:"탐뷰티: "}),"소수 태그 존재 (초기 단계)"]})})]}),l.jsxs("div",{style:{textAlign:"center",padding:20,background:"linear-gradient(135deg,#ecfdf5,#d1fae5)",borderRadius:12,border:"2px solid #10b981"},children:[l.jsx("div",{style:{fontSize:"2rem",marginBottom:8},children:"2"}),l.jsx("h4",{style:{color:"#10b981",marginBottom:4},children:"@cosme 모니터"}),l.jsx("p",{style:{fontSize:".85rem",color:"#64748b"},children:"신뢰도 (평점)"}),l.jsx("div",{style:{marginTop:12,padding:"6px 12px",background:"#fff",borderRadius:8},children:l.jsxs("p",{style:{fontSize:".8rem"},children:[l.jsx("b",{style:{color:"#3b82f6"},children:"잉가: "}),"5.8/7.0 평점, 114건 리뷰"]})}),l.jsx("div",{style:{marginTop:6,padding:"6px 12px",background:"#fff",borderRadius:8},children:l.jsxs("p",{style:{fontSize:".8rem",color:"#ef4444"},children:[l.jsx("b",{children:"탐뷰티: "}),"미등록 상태 (GAP)"]})})]}),l.jsxs("div",{style:{textAlign:"center",padding:20,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",borderRadius:12,border:"2px solid #3b82f6"},children:[l.jsx("div",{style:{fontSize:"2rem",marginBottom:8},children:"3"}),l.jsx("h4",{style:{color:"#3b82f6",marginBottom:4},children:"LIPS PR 리뷰"}),l.jsx("p",{style:{fontSize:".85rem",color:"#64748b"},children:"구매 전환"}),l.jsx("div",{style:{marginTop:12,padding:"6px 12px",background:"#fff",borderRadius:8},children:l.jsxs("p",{style:{fontSize:".8rem"},children:[l.jsx("b",{style:{color:"#3b82f6"},children:"잉가: "}),"859건, #PR 태그 명시"]})}),l.jsx("div",{style:{marginTop:6,padding:"6px 12px",background:"#fff",borderRadius:8},children:l.jsxs("p",{style:{fontSize:".8rem",color:"#ef4444"},children:[l.jsx("b",{children:"탐뷰티: "}),"미등록 상태 (GAP)"]})})]})]})  ,l.jsxs("div",{style:{padding:"16px 20px",background:"#fef3c7",borderRadius:12,border:"1px solid #f59e0b"},children:[l.jsx("h5",{style:{color:"#d97706",marginBottom:4},children:"핵심 문제"}),l.jsxs("p",{style:{fontSize:".9rem"},children:["일본 소비자 구매 흐름: ",l.jsx("b",{children:"인스타에서 발견 → @cosme/LIPS에서 리뷰 확인 → 큐텐에서 구매"}),l.jsx("br",{}),"탐뷰티는 현재 1단계(인스타)만 있고, ",l.jsx("b",{children:"2·3단계(리뷰 플랫폼)가 완전히 비어 있는 상태"}),". 시딩을 해도 전환이 일어나지 않는 구조입니다."]})]})]}),l.jsx("h3",{className:"sub-title",style:{marginTop:32},children:"시딩 퀄리티 상세 비교"}),l.jsx("div",{className:"table-wrap",children:l.jsxs("table",{children:[l.jsx("thead",{children:l.jsxs("tr",{children:[l.jsx("th",{children:"항목"}),l.jsx("th",{className:"inga-col",children:"잉가 (INGA)"}),l.jsx("th",{className:"tam-col",children:"탐뷰티 (현재)"}),l.jsx("th",{children:"GAP 분석"})]})}),l.jsxs("tbody",{children:[l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"일본 전용 계정"})}),l.jsx("td",{children:"@inga_jp (3,412명 / 336 게시물)"}),l.jsx("td",{style:{color:"#ef4444"},children:"없음 (글로벌 계정만)"}),l.jsx("td",{children:"즉시 개설 필요"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"콘텐츠 유형"})}),l.jsx("td",{children:"릴스 중심 + 퍼스널컬러 스와치"}),l.jsx("td",{children:"일반 제품 태그"}),l.jsx("td",{children:"릴스 전환 + PC 콘텐츠 제작"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"인플루언서 유형"})}),l.jsx("td",{children:"마이크로(1K~10K) + 릴스 조회수 기준"}),l.jsx("td",{children:"확인 어려움"}),l.jsx("td",{children:"릴스 조회수 기준 선정으로 전환"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"PR 표기"})}),l.jsx("td",{children:"#PR, #INGA 명시 (일본 법규 준수)"}),l.jsx("td",{children:"-"}),l.jsx("td",{children:"PR 표기 가이드라인 수립"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"시딩 타이밍"})}),l.jsx("td",{children:"메가와리 + 신제품 런칭 집중"}),l.jsx("td",{children:"비정기적"}),l.jsx("td",{children:"메가와리 역산 스케줄링"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"리뷰 플랫폼 연계"})}),l.jsx("td",{children:"@cosme 모니터 + LIPS PR 동시 진행"}),l.jsx("td",{style:{color:"#ef4444"},children:"연계 없음"}),l.jsx("td",{children:"@cosme 등록 + 모니터 캠페인 시작"})]}),l.jsxs("tr",{children:[l.jsx("td",{children:l.jsx("b",{children:"현지화 수준"})}),l.jsx("td",{children:"일본 전용 색상명 + 이엘베/블루베 구분"}),l.jsx("td",{children:"한국 라인업 그대로"}),l.jsx("td",{children:"일본 맞춤 컬러명/구성 필요"})]})]})]})}),l.jsx("h3",{className:"sub-title",style:{marginTop:32},children:"탐뷰티 시딩 액션 플랜"}),l.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:16},children:[l.jsxs("div",{className:"card",style:{borderLeft:"4px solid #ef4444"},children:[l.jsxs("div",{style:{display:"flex",alignItems:"center",gap:12,marginBottom:8},children:[l.jsx("span",{style:{background:"#ef4444",color:"#fff",padding:"4px 12px",borderRadius:20,fontSize:".8rem",fontWeight:700},children:"즉시 실행"}),l.jsx("h4",{style:{color:"#ef4444"},children:"Phase 0: 기반 구축 (1~2주)"})]}),l.jsxs("ul",{className:"list",children:[l.jsxs("li",{children:[l.jsx("b",{children:"@tambeauty_jp 계정 개설"})," — 일본어 바이오 + 일본 전용 콘텐츠 운영 시작"]}),l.jsxs("li",{children:[l.jsx("b",{children:"@cosme에 히어로 제품 등록"})," — Cloud Blur 립틴트 우선 등록, 제품 페이지 확보"]}),l.jsxs("li",{children:[l.jsx("b",{children:"기존 태그 일본 계정 리스트업"})," — 기존 시딩된 계정들의 팔로워/조회수/콘텐츠 퀄리티 분석 → 재협업 가능 계정 선별"]})]})]}),l.jsxs("div",{className:"card",style:{borderLeft:"4px solid #f59e0b"},children:[l.jsxs("div",{style:{display:"flex",alignItems:"center",gap:12,marginBottom:8},children:[l.jsx("span",{style:{background:"#f59e0b",color:"#fff",padding:"4px 12px",borderRadius:20,fontSize:".8rem",fontWeight:700},children:"1~2개월"}),l.jsx("h4",{style:{color:"#f59e0b"},children:"Phase 1: 시딩 퀄리티 업그레이드"})]}),l.jsxs("ul",{className:"list",children:[l.jsxs("li",{children:[l.jsx("b",{children:"마이크로 인플루언서 30명 선정"})," — 기준: 릴스 평균 조회수 1,000+ (팔로워 수보다 중요)"]}),l.jsxs("li",{children:[l.jsx("b",{children:"퍼스널컬러 콘텐츠 가이드 제작"})," — Cloud Blur 립틴트 색상별 이엘베/블루베 분류 + 스와치 촬영 가이드"]}),l.jsxs("li",{children:[l.jsx("b",{children:"@cosme 모니터 캠페인 시작"})," — 30명 규모 체험단 → 리뷰 의무 조건 (잉가 방식 벤치마킹)"]}),l.jsxs("li",{children:[l.jsx("b",{children:"LIPS 제품 등록 + PR 시딩"})," — #PR 태그 가이드라인 포함"]})]})]}),l.jsxs("div",{className:"card",style:{borderLeft:"4px solid #10b981"},children:[l.jsxs("div",{style:{display:"flex",alignItems:"center",gap:12,marginBottom:8},children:[l.jsx("span",{style:{background:"#10b981",color:"#fff",padding:"4px 12px",borderRadius:20,fontSize:".8rem",fontWeight:700},children:"3~4개월"}),l.jsx("h4",{style:{color:"#10b981"},children:"Phase 2: 3중 구조 완성 → 메가와리 전환"})]}),l.jsxs("ul",{className:"list",children:[l.jsxs("li",{children:[l.jsx("b",{children:"인스타 릴스 UGC 50건+ 확보"})," → 인지도 채널 완성"]}),l.jsxs("li",{children:[l.jsx("b",{children:"@cosme 리뷰 50건+ 확보"})," → 신뢰도 채널 완성"]}),l.jsxs("li",{children:[l.jsx("b",{children:"LIPS PR 리뷰 100건+ 확보"})," → 전환 채널 완성"]}),l.jsxs("li",{children:[l.jsx("b",{children:"6월 메가와리에 3채널 콘텐츠 집중 투하"})," → 시딩 → 리뷰 → 프로모 → 구매 풀퍼널 가동"]})]})]})]})  ,l.jsxs("div",{className:"card",style:{marginTop:24,background:"linear-gradient(135deg,#f5f3ff,#ede9fe)",border:"2px solid #6366f1"},children:[l.jsx("h4",{style:{color:"#6366f1",marginBottom:12},children:"결론: 탐뷰티가 잉가를 따라잡을 수 있는 이유"}),l.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:12},children:[l.jsxs("p",{style:{fontSize:"1.05rem",lineHeight:1.8},children:["잉가의 @inga_jp도 ",l.jsx("b",{children:"3,412명"}),"에 불과합니다. 일본 뷰티 인스타 시장에서 이 숫자는 아직 작습니다.",l.jsx("br",{}),"잉가가 시딩으로 카테고리 1위를 만든 건 팔로워 수가 아니라, ",l.jsx("b",{children:"인스타 → @cosme → LIPS → 큐텐"}),"으로 이어지는 전환 구조 때문입니다."]}),l.jsxs("p",{style:{fontSize:"1.05rem",lineHeight:1.8},children:["탐뷰티는 이미 ",l.jsx("b",{children:"큐텐 메가데뷔 4위"}),"로 판매 채널이 검증된 상태.",l.jsx("br",{}),"지금 필요한 건 대량 시딩이 아니라, ",l.jsx("b",{style:{color:"#6366f1"},children:"3중 구조(인지→신뢰→전환)를 빠르게 구축"}),"하는 것입니다.",l.jsx("br",{}),"대행사와 함께 이 구조만 잡으면, 잉가가 1년 걸린 것을 ",l.jsx("b",{children:"6개월 안에 달성"}),"할 수 있습니다."]})]})]})]}),
+        Zd = () =>
+          l.jsxs("div", {
+            className: "section",
+            children: [
+              l.jsx("h2", {
+                className: "section-title",
+                children: "탐뷰티 마케팅 플로우",
+              }),
+              l.jsxs("div", {
+                className: "card highlight-card",
+                style: {
+                  background: "linear-gradient(135deg, #f5f3ff, #ede9fe)",
+                  marginBottom: 24,
+                },
+                children: [
+                  l.jsx("h3", {
+                    style: { color: "#6366f1", marginBottom: 8 },
+                    children: "컨셉: 데이터 기반 스케일업 로드맵",
+                  }),
+                  l.jsxs("p", {
+                    children: [
+                      "탐뷰티는 이미 ",
+                      l.jsx("b", { children: "큐텐 메가데뷔 4위" }),
+                      "를 달성하며 일본 시장 진입을 검증했습니다. 경쟁사(잉가/홀리카홀리카) 데이터를 근거로, 탐뷰티만의 컨셉에 맞춘 ",
+                      l.jsx("b", { children: "6단계 마케팅 플로우" }),
+                      "를 제안합니다.",
+                    ],
+                  }),
+                ],
+              }),
+              l.jsx("h3", {
+                className: "sub-title",
+                children: "전체 마케팅 플로우 타임라인",
+              }),
+              l.jsxs("div", {
+                className: "card",
+                style: { padding: "32px 24px" },
+                children: [
+                  l.jsxs("div", {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 0,
+                      position: "relative",
+                    },
+                    children: [
+                      l.jsxs("div", {
+                        style: {
+                          display: "flex",
+                          gap: 20,
+                          alignItems: "flex-start",
+                          position: "relative",
+                          paddingBottom: 32,
+                          borderLeft: "3px solid #e2e8f0",
+                          marginLeft: 23,
+                          paddingLeft: 32,
+                        },
+                        children: [
+                          l.jsx("div", {
+                            style: {
+                              width: 48,
+                              height: 48,
+                              borderRadius: "50%",
+                              background:
+                                "linear-gradient(135deg,#6366f1,#a855f7)",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontWeight: 800,
+                              fontSize: "1.1rem",
+                              flexShrink: 0,
+                              zIndex: 2,
+                              position: "absolute",
+                              left: -27,
+                            },
+                            children: "1",
+                          }),
+                          l.jsxs("div", {
+                            style: { flex: 1 },
+                            children: [
+                              l.jsx("h4", {
+                                style: { color: "#6366f1", marginBottom: 4 },
+                                children: "PHASE 1: 히어로 SKU 확정 (1~2개월)",
+                              }),
+                              l.jsxs("p", {
+                                className: "desc",
+                                children: [
+                                  "메가데뷔 4위 달성 제품 데이터 분석 → 일본 소비자 선호도 기반 히어로 1~2개 확정.",
+                                  l.jsx("br", {}),
+                                  "잉가는 워터 그로우 립 틴트 ",
+                                  l.jsx("b", { children: "단 1개에 집중" }),
+                                  "하여 LIPS 859건, @cosme 114건 리뷰를 확보하고 카테고리 1위를 달성.",
+                                ],
+                              }),
+                              l.jsxs("div", {
+                                style: {
+                                  marginTop: 8,
+                                  padding: "10px 14px",
+                                  background: "#f8f7ff",
+                                  borderRadius: 8,
+                                  fontSize: ".85rem",
+                                },
+                                children: [
+                                  l.jsx("b", {
+                                    style: { color: "#6366f1" },
+                                    children: "근거: ",
+                                  }),
+                                  "잉가 히어로 SKU 집중 전략 → 큐텐 포인트메이크 1위 / 홀리카홀리카 아이팔레트 단일 제품 리뷰 2,355건",
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      l.jsxs("div", {
+                        style: {
+                          display: "flex",
+                          gap: 20,
+                          alignItems: "flex-start",
+                          position: "relative",
+                          paddingBottom: 32,
+                          borderLeft: "3px solid #e2e8f0",
+                          marginLeft: 23,
+                          paddingLeft: 32,
+                        },
+                        children: [
+                          l.jsx("div", {
+                            style: {
+                              width: 48,
+                              height: 48,
+                              borderRadius: "50%",
+                              background:
+                                "linear-gradient(135deg,#3b82f6,#06b6d4)",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontWeight: 800,
+                              fontSize: "1.1rem",
+                              flexShrink: 0,
+                              zIndex: 2,
+                              position: "absolute",
+                              left: -27,
+                            },
+                            children: "2",
+                          }),
+                          l.jsxs("div", {
+                            style: { flex: 1 },
+                            children: [
+                              l.jsx("h4", {
+                                style: { color: "#3b82f6", marginBottom: 4 },
+                                children:
+                                  "PHASE 2: 현지화 & 색상 커스터마이징 (2~3개월)",
+                              }),
+                              l.jsxs("p", {
+                                className: "desc",
+                                children: [
+                                  "일본 전용 색상/네이밍 개발. 잉가는 ",
+                                  l.jsx("b", {
+                                    children:
+                                      "이엘베 5색 / 블루베 5색 / 뉴트럴 3색",
+                                  }),
+                                  "으로 퍼스널컬러 기반 라인업을 구성하여 성공.",
+                                  l.jsx("br", {}),
+                                  "탐뷰티도 일본 MZ세대 트렌드(글로이스킨, 투명감 메이크업)에 맞춘 전용 컬러 개발 필요.",
+                                ],
+                              }),
+                              l.jsxs("div", {
+                                style: {
+                                  marginTop: 8,
+                                  padding: "10px 14px",
+                                  background: "#eff6ff",
+                                  borderRadius: 8,
+                                  fontSize: ".85rem",
+                                },
+                                children: [
+                                  l.jsx("b", {
+                                    style: { color: "#3b82f6" },
+                                    children: "근거: ",
+                                  }),
+                                  "잉가 인기색상 TOP3 모두 일본 현지 맞춤 컬러 / 홀리카홀리카는 글로벌 라인업 그대로 → 인스타 성장 한계(2,100명)",
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      l.jsxs("div", {
+                        style: {
+                          display: "flex",
+                          gap: 20,
+                          alignItems: "flex-start",
+                          position: "relative",
+                          paddingBottom: 32,
+                          borderLeft: "3px solid #e2e8f0",
+                          marginLeft: 23,
+                          paddingLeft: 32,
+                        },
+                        children: [
+                          l.jsx("div", {
+                            style: {
+                              width: 48,
+                              height: 48,
+                              borderRadius: "50%",
+                              background:
+                                "linear-gradient(135deg,#ec4899,#f43f5e)",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontWeight: 800,
+                              fontSize: "1.1rem",
+                              flexShrink: 0,
+                              zIndex: 2,
+                              position: "absolute",
+                              left: -27,
+                            },
+                            children: "3",
+                          }),
+                          l.jsxs("div", {
+                            style: { flex: 1 },
+                            children: [
+                              l.jsx("h4", {
+                                style: { color: "#ec4899", marginBottom: 4 },
+                                children:
+                                  "PHASE 3: 인스타 시딩 & UGC 확보 (3~4개월)",
+                              }),
+                              l.jsxs("p", {
+                                className: "desc",
+                                children: [
+                                  "일본 마이크로 인플루언서(1K~10K) 중심 시딩 캠페인 진행.",
+                                  l.jsx("br", {}),
+                                  "잉가는 인스타 모니터 이벤트(무상 제공 → 리뷰 의무)를 통해 ",
+                                  l.jsx("b", { children: "@inga_jp 3,412명" }),
+                                  " 팔로워를 확보.",
+                                  l.jsx("br", {}),
+                                  "일본 Z세대 54.9%가 SNS에서 화제가 됐을 때 구매를 결정하므로, UGC 콘텐츠 양산이 핵심.",
+                                ],
+                              }),
+                              l.jsxs("div", {
+                                style: {
+                                  marginTop: 8,
+                                  padding: "10px 14px",
+                                  background: "#fdf2f8",
+                                  borderRadius: 8,
+                                  fontSize: ".85rem",
+                                },
+                                children: [
+                                  l.jsx("b", {
+                                    style: { color: "#ec4899" },
+                                    children: "근거: ",
+                                  }),
+                                  "경쟁사 3사 모두 일본 인스타 팔로워 소규모(2,100~3,400명) → 시딩만 잘 하면 빠르게 추월 가능",
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      l.jsxs("div", {
+                        style: {
+                          display: "flex",
+                          gap: 20,
+                          alignItems: "flex-start",
+                          position: "relative",
+                          paddingBottom: 32,
+                          borderLeft: "3px solid #e2e8f0",
+                          marginLeft: 23,
+                          paddingLeft: 32,
+                        },
+                        children: [
+                          l.jsx("div", {
+                            style: {
+                              width: 48,
+                              height: 48,
+                              borderRadius: "50%",
+                              background:
+                                "linear-gradient(135deg,#f59e0b,#f97316)",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontWeight: 800,
+                              fontSize: "1.1rem",
+                              flexShrink: 0,
+                              zIndex: 2,
+                              position: "absolute",
+                              left: -27,
+                            },
+                            children: "4",
+                          }),
+                          l.jsxs("div", {
+                            style: { flex: 1 },
+                            children: [
+                              l.jsx("h4", {
+                                style: { color: "#f59e0b", marginBottom: 4 },
+                                children:
+                                  "PHASE 4: 큐텐 메가와리 집중 공략 (4~6개월)",
+                              }),
+                              l.jsxs("p", {
+                                className: "desc",
+                                children: [
+                                  "큐텐 메가와리(연 4회: 3/6/9/11월)에 맞춘 프로모션 전략 실행.",
+                                  l.jsx("br", {}),
+                                  "홀리카홀리카는 메가와리 시 ",
+                                  l.jsx("b", {
+                                    children:
+                                      "아이팔레트 구매 시 단색 2개 증정",
+                                  }),
+                                  " 번들 전략으로 리뷰 2,355건 확보.",
+                                  l.jsx("br", {}),
+                                  "잉가는 공식숍 ",
+                                  l.jsx("b", {
+                                    children: "20% 쿠폰 + 메가와리 할인",
+                                  }),
+                                  " 이중 구조로 가격 경쟁력 극대화.",
+                                ],
+                              }),
+                              l.jsxs("div", {
+                                style: {
+                                  marginTop: 8,
+                                  padding: "10px 14px",
+                                  background: "#fffbeb",
+                                  borderRadius: 8,
+                                  fontSize: ".85rem",
+                                },
+                                children: [
+                                  l.jsx("b", {
+                                    style: { color: "#f59e0b" },
+                                    children: "근거: ",
+                                  }),
+                                  "메가데뷔 4위 → 정규 랭킹 진입 필요. 메가와리가 가장 효과적인 전환 타이밍 (잉가: 프로모 당일 포인트메이크 1위)",
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      l.jsxs("div", {
+                        style: {
+                          display: "flex",
+                          gap: 20,
+                          alignItems: "flex-start",
+                          position: "relative",
+                          paddingBottom: 32,
+                          borderLeft: "3px solid #e2e8f0",
+                          marginLeft: 23,
+                          paddingLeft: 32,
+                        },
+                        children: [
+                          l.jsx("div", {
+                            style: {
+                              width: 48,
+                              height: 48,
+                              borderRadius: "50%",
+                              background:
+                                "linear-gradient(135deg,#10b981,#059669)",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontWeight: 800,
+                              fontSize: "1.1rem",
+                              flexShrink: 0,
+                              zIndex: 2,
+                              position: "absolute",
+                              left: -27,
+                            },
+                            children: "5",
+                          }),
+                          l.jsxs("div", {
+                            style: { flex: 1 },
+                            children: [
+                              l.jsx("h4", {
+                                style: { color: "#10b981", marginBottom: 4 },
+                                children:
+                                  "PHASE 5: @cosme 리뷰 100건 돌파 (6~9개월)",
+                              }),
+                              l.jsxs("p", {
+                                className: "desc",
+                                children: [
+                                  "@cosme 리뷰 100건은 일본 소비자 신뢰의 마지노선.",
+                                  l.jsx("br", {}),
+                                  "잉가는 현재 @cosme 114건(히어로 제품)으로 바이럴이 시작되는 단계.",
+                                  l.jsx("br", {}),
+                                  "체험단 운영 + @cosme 쇼핑 입점으로 리뷰 축적 가속화.",
+                                ],
+                              }),
+                              l.jsxs("div", {
+                                style: {
+                                  marginTop: 8,
+                                  padding: "10px 14px",
+                                  background: "#ecfdf5",
+                                  borderRadius: 8,
+                                  fontSize: ".85rem",
+                                },
+                                children: [
+                                  l.jsx("b", {
+                                    style: { color: "#10b981" },
+                                    children: "근거: ",
+                                  }),
+                                  "홀리카홀리카 LIPS 13,605건 vs 잉가 @cosme 282건 → 리뷰 플랫폼 전략이 인지도 확보 속도를 결정",
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      l.jsxs("div", {
+                        style: {
+                          display: "flex",
+                          gap: 20,
+                          alignItems: "flex-start",
+                          position: "relative",
+                          marginLeft: 23,
+                          paddingLeft: 32,
+                        },
+                        children: [
+                          l.jsx("div", {
+                            style: {
+                              width: 48,
+                              height: 48,
+                              borderRadius: "50%",
+                              background:
+                                "linear-gradient(135deg,#8b5cf6,#6366f1)",
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontWeight: 800,
+                              fontSize: "1.1rem",
+                              flexShrink: 0,
+                              zIndex: 2,
+                              position: "absolute",
+                              left: -27,
+                            },
+                            children: "6",
+                          }),
+                          l.jsxs("div", {
+                            style: { flex: 1 },
+                            children: [
+                              l.jsx("h4", {
+                                style: { color: "#8b5cf6", marginBottom: 4 },
+                                children:
+                                  "PHASE 6: 오프라인 확장 & 풀퍼널 완성 (9~12개월)",
+                              }),
+                              l.jsxs("p", {
+                                className: "desc",
+                                children: [
+                                  "온라인 성과를 기반으로 오프라인 버라이어티숍(플라자, 로프트, 돈키호테) 입점 추진.",
+                                  l.jsx("br", {}),
+                                  "잉가는 2024.05부터 전국 37개 오프라인 매장 확보. 특히 ",
+                                  l.jsx("b", {
+                                    children: "돈키호테(2025.03~)",
+                                  }),
+                                  " 입점으로 대중 인지도 확장.",
+                                  l.jsx("br", {}),
+                                  "홀리카홀리카는 플라자+돈키+로프트 동시 운영으로 온오프 시너지 극대화.",
+                                ],
+                              }),
+                              l.jsxs("div", {
+                                style: {
+                                  marginTop: 8,
+                                  padding: "10px 14px",
+                                  background: "#f5f3ff",
+                                  borderRadius: 8,
+                                  fontSize: ".85rem",
+                                },
+                                children: [
+                                  l.jsx("b", {
+                                    style: { color: "#8b5cf6" },
+                                    children: "근거: ",
+                                  }),
+                                  "잉가 오프라인 37개 매장 + 편의점(미니스톱) 한정판 전략 / 홀리카홀리카 6개 유통채널 동시 운영",
+                                ],
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              l.jsx("h3", {
+                className: "sub-title",
+                style: { marginTop: 36 },
+                children: "단계별 KPI & 목표 수치",
+              }),
+              l.jsx("div", {
+                className: "table-wrap",
+                children: l.jsxs("table", {
+                  children: [
+                    l.jsx("thead", {
+                      children: l.jsxs("tr", {
+                        children: [
+                          l.jsx("th", { children: "Phase" }),
+                          l.jsx("th", { children: "기간" }),
+                          l.jsx("th", { children: "핵심 KPI" }),
+                          l.jsx("th", { children: "목표 수치" }),
+                          l.jsx("th", { children: "벤치마크 (경쟁사)" }),
+                        ],
+                      }),
+                    }),
+                    l.jsxs("tbody", {
+                      children: [
+                        l.jsxs("tr", {
+                          children: [
+                            l.jsx("td", {
+                              children: l.jsx("b", {
+                                style: { color: "#6366f1" },
+                                children: "1. 히어로 확정",
+                              }),
+                            }),
+                            l.jsx("td", { children: "1~2개월" }),
+                            l.jsx("td", { children: "히어로 SKU 확정" }),
+                            l.jsx("td", { children: "1~2개 제품" }),
+                            l.jsx("td", {
+                              children: "잉가: 워터 그로우 립틴트 1개",
+                            }),
+                          ],
+                        }),
+                        l.jsxs("tr", {
+                          children: [
+                            l.jsx("td", {
+                              children: l.jsx("b", {
+                                style: { color: "#3b82f6" },
+                                children: "2. 현지화",
+                              }),
+                            }),
+                            l.jsx("td", { children: "2~3개월" }),
+                            l.jsx("td", { children: "일본 전용 색상 출시" }),
+                            l.jsx("td", { children: "5~8색상" }),
+                            l.jsx("td", { children: "잉가: 13색 (PC기반)" }),
+                          ],
+                        }),
+                        l.jsxs("tr", {
+                          children: [
+                            l.jsx("td", {
+                              children: l.jsx("b", {
+                                style: { color: "#ec4899" },
+                                children: "3. 시딩",
+                              }),
+                            }),
+                            l.jsx("td", { children: "3~4개월" }),
+                            l.jsx("td", { children: "인스타 팔로워 / UGC" }),
+                            l.jsx("td", { children: "3,000명+ / 월 50건+" }),
+                            l.jsx("td", { children: "잉가: 3,412명" }),
+                          ],
+                        }),
+                        l.jsxs("tr", {
+                          children: [
+                            l.jsx("td", {
+                              children: l.jsx("b", {
+                                style: { color: "#f59e0b" },
+                                children: "4. 메가와리",
+                              }),
+                            }),
+                            l.jsx("td", { children: "4~6개월" }),
+                            l.jsx("td", { children: "큐텐 카테고리 랭킹" }),
+                            l.jsx("td", { children: "카테고리 TOP 10" }),
+                            l.jsx("td", { children: "잉가: 포인트메이크 1위" }),
+                          ],
+                        }),
+                        l.jsxs("tr", {
+                          children: [
+                            l.jsx("td", {
+                              children: l.jsx("b", {
+                                style: { color: "#10b981" },
+                                children: "5. 리뷰 확보",
+                              }),
+                            }),
+                            l.jsx("td", { children: "6~9개월" }),
+                            l.jsx("td", { children: "@cosme 리뷰 수" }),
+                            l.jsx("td", { children: "100건+" }),
+                            l.jsx("td", { children: "잉가: 114건 (히어로)" }),
+                          ],
+                        }),
+                        l.jsxs("tr", {
+                          children: [
+                            l.jsx("td", {
+                              children: l.jsx("b", {
+                                style: { color: "#8b5cf6" },
+                                children: "6. 오프라인",
+                              }),
+                            }),
+                            l.jsx("td", { children: "9~12개월" }),
+                            l.jsx("td", { children: "오프라인 매장 수" }),
+                            l.jsx("td", { children: "10개+ 매장" }),
+                            l.jsx("td", { children: "잉가: 37개 매장" }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+              l.jsx("h3", {
+                className: "sub-title",
+                style: { marginTop: 36 },
+                children: "탐뷰티 차별화 전략 포인트",
+              }),
+              l.jsxs("div", {
+                className: "grid-3",
+                children: [
+                  l.jsxs("div", {
+                    className: "card",
+                    style: { borderTop: "4px solid #6366f1" },
+                    children: [
+                      l.jsx("h4", {
+                        style: { color: "#6366f1", marginBottom: 8 },
+                        children: "가격 포지셔닝",
+                      }),
+                      l.jsxs("p", {
+                        className: "desc",
+                        children: [
+                          "홀리카홀리카(\u00a5990~)는 초저가, 잉가(\u00a51,590~)는 중가.",
+                          l.jsx("br", {}),
+                          l.jsx("b", {
+                            children: "탐뷰티는 \u00a51,200~2,500 중저가 밴드",
+                          }),
+                          "로 가성비 + 품질감 모두 잡는 포지션 추천.",
+                        ],
+                      }),
+                      l.jsx("div", {
+                        style: {
+                          marginTop: 12,
+                          padding: "8px 12px",
+                          background: "#f5f3ff",
+                          borderRadius: 8,
+                          fontSize: ".8rem",
+                          color: "#6366f1",
+                          fontWeight: 600,
+                        },
+                        children: "큐텐 회원 71%가 10~30대 MZ세대",
+                      }),
+                    ],
+                  }),
+                  l.jsxs("div", {
+                    className: "card",
+                    style: { borderTop: "4px solid #ec4899" },
+                    children: [
+                      l.jsx("h4", {
+                        style: { color: "#ec4899", marginBottom: 8 },
+                        children: "콘텐츠 차별화",
+                      }),
+                      l.jsxs("p", {
+                        className: "desc",
+                        children: [
+                          "홀리카홀리카는 캐릭터 콜라보, 잉가는 세련된 무드.",
+                          l.jsx("br", {}),
+                          l.jsx("b", {
+                            children: "탐뷰티만의 비주얼 아이덴티티",
+                          }),
+                          "를 일본 시장에 맞게 구축. 투명감/글로이 키워드 중심 비주얼 전략.",
+                        ],
+                      }),
+                      l.jsx("div", {
+                        style: {
+                          marginTop: 12,
+                          padding: "8px 12px",
+                          background: "#fdf2f8",
+                          borderRadius: 8,
+                          fontSize: ".8rem",
+                          color: "#ec4899",
+                          fontWeight: 600,
+                        },
+                        children: "성분 & 저자극 키워드 주목도 상승 트렌드",
+                      }),
+                    ],
+                  }),
+                  l.jsxs("div", {
+                    className: "card",
+                    style: { borderTop: "4px solid #10b981" },
+                    children: [
+                      l.jsx("h4", {
+                        style: { color: "#10b981", marginBottom: 8 },
+                        children: "스피드 전략",
+                      }),
+                      l.jsxs("p", {
+                        className: "desc",
+                        children: [
+                          "잉가가 히어로 1개로 1위를 만드는 데 약 1년 소요.",
+                          l.jsx("br", {}),
+                          "탐뷰티는 이미 메가데뷔 4위 달성으로 ",
+                          l.jsx("b", { children: "0→1 단계를 건너뛴 상태" }),
+                          ".",
+                          l.jsx("br", {}),
+                          "대행사 시딩 네트워크 활용 시 ",
+                          l.jsx("b", {
+                            children: "6~9개월 내 정규 랭킹 TOP 10",
+                          }),
+                          " 진입 가능.",
+                        ],
+                      }),
+                      l.jsx("div", {
+                        style: {
+                          marginTop: 12,
+                          padding: "8px 12px",
+                          background: "#ecfdf5",
+                          borderRadius: 8,
+                          fontSize: ".8rem",
+                          color: "#10b981",
+                          fontWeight: 600,
+                        },
+                        children: "메가데뷔 4위 = 시장 검증 완료 상태",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              l.jsx("h3", {
+                className: "sub-title",
+                style: { marginTop: 36 },
+                children: "월별 실행 캘린더 (2026)",
+              }),
+              l.jsxs("div", {
+                className: "card",
+                children: [
+                  l.jsx("div", {
+                    className: "table-wrap",
+                    children: l.jsxs("table", {
+                      children: [
+                        l.jsx("thead", {
+                          children: l.jsxs("tr", {
+                            children: [
+                              l.jsx("th", { children: "월" }),
+                              l.jsx("th", { children: "핵심 액션" }),
+                              l.jsx("th", { children: "큐텐 이벤트" }),
+                              l.jsx("th", { children: "기대 성과" }),
+                            ],
+                          }),
+                        }),
+                        l.jsxs("tbody", {
+                          children: [
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "4~5월" }),
+                                }),
+                                l.jsx("td", {
+                                  children:
+                                    "히어로 SKU 확정 / 일본 전용 색상 기획",
+                                }),
+                                l.jsx("td", { children: "-" }),
+                                l.jsx("td", { children: "제품 전략 완성" }),
+                              ],
+                            }),
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "5~6월" }),
+                                }),
+                                l.jsx("td", {
+                                  children:
+                                    "인스타 시딩 시작 / 마이크로 인플루언서 30명+ 섭외",
+                                }),
+                                l.jsx("td", {
+                                  style: { color: "#f59e0b", fontWeight: 700 },
+                                  children: "6월 메가와리",
+                                }),
+                                l.jsx("td", {
+                                  children: "팔로워 1,000명+ / UGC 30건+",
+                                }),
+                              ],
+                            }),
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "6~7월" }),
+                                }),
+                                l.jsx("td", {
+                                  children:
+                                    "메가와리 프로모 집중 / 번들 기획전",
+                                }),
+                                l.jsx("td", {
+                                  style: { color: "#f59e0b", fontWeight: 700 },
+                                  children: "메가와리 D-day",
+                                }),
+                                l.jsx("td", {
+                                  children: "카테고리 TOP 20 진입",
+                                }),
+                              ],
+                            }),
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "7~8월" }),
+                                }),
+                                l.jsx("td", {
+                                  children:
+                                    "@cosme 체험단 운영 / 리뷰 확보 캠페인",
+                                }),
+                                l.jsx("td", { children: "-" }),
+                                l.jsx("td", { children: "@cosme 리뷰 50건+" }),
+                              ],
+                            }),
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "9월" }),
+                                }),
+                                l.jsx("td", {
+                                  children:
+                                    "2차 메가와리 공략 / 신제품 런칭 프로모",
+                                }),
+                                l.jsx("td", {
+                                  style: { color: "#f59e0b", fontWeight: 700 },
+                                  children: "9월 메가와리",
+                                }),
+                                l.jsx("td", {
+                                  children: "카테고리 TOP 10 / 리뷰 100건+",
+                                }),
+                              ],
+                            }),
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "10~11월" }),
+                                }),
+                                l.jsx("td", {
+                                  children:
+                                    "오프라인 입점 협의 (로프트, 플라자)",
+                                }),
+                                l.jsx("td", {
+                                  style: { color: "#f59e0b", fontWeight: 700 },
+                                  children: "11월 메가와리",
+                                }),
+                                l.jsx("td", {
+                                  children: "오프라인 5개+ 매장 확보",
+                                }),
+                              ],
+                            }),
+                            l.jsxs("tr", {
+                              children: [
+                                l.jsx("td", {
+                                  children: l.jsx("b", { children: "12월~" }),
+                                }),
+                                l.jsx("td", {
+                                  children: "풀퍼널 완성 / 2027년 전략 수립",
+                                }),
+                                l.jsx("td", { children: "-" }),
+                                l.jsx("td", {
+                                  children: "연간 매출 목표 달성 검증",
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                  l.jsx("p", {
+                    className: "note",
+                    style: { marginTop: 12 },
+                    children:
+                      "* 큐텐 메가와리 일정: 3월/6월/9월/11월 (연 4회). 프로모 준비는 최소 1개월 전 시작 권장.",
+                  }),
+                ],
+              }),
+              l.jsxs("div", {
+                className: "card",
+                style: {
+                  marginTop: 24,
+                  background: "linear-gradient(135deg,#f5f3ff,#ede9fe)",
+                  border: "2px solid #6366f1",
+                },
+                children: [
+                  l.jsx("h4", {
+                    style: { color: "#6366f1", marginBottom: 12 },
+                    children: "핵심 메시지",
+                  }),
+                  l.jsxs("div", {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 12,
+                    },
+                    children: [
+                      l.jsxs("p", {
+                        style: { fontSize: "1.05rem", lineHeight: 1.8 },
+                        children: [
+                          l.jsx("b", {
+                            children:
+                              "잉가는 히어로 1개로 1위를 만들었고, 홀리카홀리카는 459개 제품으로 시장을 넓혔습니다.",
+                          }),
+                          l.jsx("br", {}),
+                          "탐뷰티의 답은 그 사이에 있습니다.",
+                        ],
+                      }),
+                      l.jsxs("p", {
+                        style: { fontSize: "1.05rem", lineHeight: 1.8 },
+                        children: [
+                          "이미 검증된 메가데뷔 4위의 모멘텀을 활용해,",
+                          l.jsx("br", {}),
+                          l.jsx("b", {
+                            style: { color: "#6366f1" },
+                            children:
+                              "히어로 집중 → 현지화 → 시딩 → 메가와리 → 리뷰 → 오프라인",
+                          }),
+                          l.jsx("br", {}),
+                          "이 6단계 플로우를 12개월 안에 실행하면,",
+                          l.jsx("br", {}),
+                          "대행사와 함께 ",
+                          l.jsx("b", {
+                            children:
+                              "큐텐 정규 랭킹 TOP 10 + 오프라인 10개 매장",
+                          }),
+                          "은 충분히 달성 가능한 목표입니다.",
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
         Yd = () =>
           l.jsxs("div", {
             className: "section",
