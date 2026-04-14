@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>탐뷰티 립라이너 · 카톡 플친 CRM 캐러셀 기획서</title>
+    <title>탐뷰티 립라이너 · 카톡 플친 CRM 캐러셀 기획서 v2</title>
     <style>
       :root {
         --tb-primary: #ec4899;
@@ -17,6 +17,7 @@
         --tb-bg: #faf5ff;
         --tb-border: #f3e8ff;
         --tb-gray: #64748b;
+        --tb-yellow: #fde68a;
       }
       * {
         box-sizing: border-box;
@@ -35,7 +36,6 @@
         margin: 0 auto;
       }
 
-      /* Header */
       .hero {
         background: linear-gradient(
           135deg,
@@ -68,8 +68,19 @@
         opacity: 0.9;
         font-size: 15px;
       }
+      .hero .meta {
+        margin-top: 18px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .hero .meta span {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+      }
 
-      /* Section */
       .sec {
         background: #fff;
         border-radius: 16px;
@@ -104,7 +115,6 @@
         margin: 0 0 20px;
       }
 
-      /* Info grid */
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -129,115 +139,56 @@
         color: #1f0b25;
       }
 
-      /* USP */
-      .usp-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 14px;
-        margin-top: 12px;
-      }
-      .usp {
-        background: linear-gradient(135deg, #fff, var(--tb-light));
-        border: 1.5px solid var(--tb-soft);
-        border-radius: 14px;
-        padding: 18px;
-      }
-      .usp .badge {
-        display: inline-block;
-        background: var(--tb-primary);
-        color: #fff;
-        font-size: 11px;
-        padding: 3px 10px;
-        border-radius: 999px;
-        font-weight: 700;
-        margin-bottom: 8px;
-      }
-      .usp h4 {
-        margin: 0 0 6px;
-        font-size: 16px;
-        color: var(--tb-ink);
-      }
-      .usp p {
-        margin: 0;
-        font-size: 13px;
-        color: var(--tb-gray);
-        line-height: 1.55;
-      }
-
-      /* Carousel cards */
       .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
         margin-top: 12px;
       }
       .card {
         background: #fff;
-        border-radius: 16px;
+        border-radius: 18px;
         overflow: hidden;
         border: 1px solid var(--tb-border);
-        box-shadow: 0 8px 24px -12px rgba(74, 4, 78, 0.18);
+        box-shadow: 0 10px 30px -12px rgba(74, 4, 78, 0.2);
         display: flex;
         flex-direction: column;
       }
       .card .preview {
-        aspect-ratio: 1/1;
-        background: var(--tb-light);
+        aspect-ratio: 8/11;
         position: relative;
-        padding: 26px;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        overflow: hidden;
-      }
-      .card .preview::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          circle at 80% 20%,
-          rgba(236, 72, 153, 0.15),
-          transparent 50%
-        );
-        pointer-events: none;
       }
       .card-index {
         position: absolute;
-        top: 14px;
-        left: 14px;
+        top: 16px;
+        left: 16px;
         background: #1f0b25;
         color: #fff;
         font-size: 11px;
         padding: 5px 11px;
         border-radius: 999px;
         font-weight: 700;
-        letter-spacing: 1px;
-        z-index: 2;
+        letter-spacing: 1.5px;
+        z-index: 5;
       }
-      .card-headline {
-        font-size: 22px;
-        font-weight: 800;
-        color: var(--tb-ink);
-        line-height: 1.25;
-        letter-spacing: -0.5px;
-        position: relative;
-        z-index: 1;
-      }
-      .card-visual {
-        font-size: 13px;
+      .card-size {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: rgba(255, 255, 255, 0.9);
         color: var(--tb-deep);
-        background: rgba(255, 255, 255, 0.7);
-        padding: 10px 12px;
-        border-radius: 10px;
-        position: relative;
-        z-index: 1;
-        border-left: 3px solid var(--tb-primary);
-      }
-      .card-visual b {
-        color: var(--tb-primary);
+        font-size: 10px;
+        padding: 4px 9px;
+        border-radius: 6px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        z-index: 5;
       }
       .card-body {
-        padding: 18px 20px;
+        padding: 20px 22px;
         background: #fff;
         flex: 1;
         display: flex;
@@ -272,12 +223,517 @@
         color: var(--tb-ink);
       }
 
-      /* Color chips */
+      /* Slide 1 MAIN */
+      .s1 {
+        background: linear-gradient(
+          160deg,
+          #fdf2f8 0%,
+          #fce7f3 60%,
+          #f5d0dc 100%
+        );
+        padding: 44px 30px 24px;
+        justify-content: space-between;
+      }
+      .s1 .new-badge {
+        position: absolute;
+        top: 54px;
+        right: 26px;
+        background: #1f0b25;
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        z-index: 3;
+      }
+      .s1 .discount {
+        position: absolute;
+        top: 98px;
+        right: 26px;
+        text-align: right;
+        z-index: 3;
+      }
+      .s1 .discount .up {
+        font-size: 11px;
+        color: var(--tb-deep);
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .s1 .discount .pct {
+        font-size: 46px;
+        font-weight: 900;
+        color: var(--tb-primary);
+        line-height: 1;
+        letter-spacing: -2px;
+      }
+      .s1 .discount .off {
+        font-size: 12px;
+        color: var(--tb-ink);
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-top: 2px;
+      }
+      .s1 .title {
+        margin-top: 70px;
+      }
+      .s1 .title .kicker {
+        font-size: 12px;
+        color: var(--tb-deep);
+        letter-spacing: 4px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .s1 .title h3 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--tb-ink);
+        letter-spacing: -1px;
+        line-height: 1.1;
+      }
+      .s1 .title .sub {
+        font-size: 12px;
+        color: var(--tb-gray);
+        margin-top: 8px;
+        letter-spacing: 1px;
+      }
+      .s1 .product {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 6px 0;
+      }
+      .s1 .product-mock {
+        width: 48%;
+        aspect-ratio: 1/4.5;
+        background: linear-gradient(
+          180deg,
+          #1f0b25 0%,
+          #1f0b25 22%,
+          #ec4899 22%,
+          #ec4899 78%,
+          #1f0b25 78%
+        );
+        border-radius: 6px;
+        box-shadow: 0 20px 40px -15px rgba(190, 24, 93, 0.5);
+        transform: rotate(-15deg);
+        position: relative;
+      }
+      .s1 .product-mock::after {
+        content: "LIP SHAPER";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        color: #fff;
+        font-size: 9px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .s1 .foot {
+        background: #1f0b25;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .s1 .foot b {
+        color: var(--tb-yellow);
+        font-size: 13px;
+      }
+
+      /* Slide 2 B&A */
+      .s2 {
+        background: #fff;
+      }
+      .s2 .header {
+        padding: 26px 22px 12px;
+        text-align: center;
+      }
+      .s2 .header h3 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--tb-ink);
+        letter-spacing: -1px;
+      }
+      .s2 .header h3 span {
+        color: var(--tb-primary);
+      }
+      .s2 .header p {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--tb-gray);
+      }
+      .s2 .ba {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .s2 .ba-row {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .s2 .ba-row .lip {
+        width: 70%;
+        height: 72%;
+        border-radius: 14px;
+        position: relative;
+      }
+      .s2 .ba-row .tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        z-index: 3;
+      }
+      .s2 .before {
+        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      }
+      .s2 .before .tag {
+        background: #6b7280;
+        color: #fff;
+      }
+      .s2 .before .lip {
+        background:
+          radial-gradient(
+            ellipse at 50% 50%,
+            #c76573 0%,
+            #b85462 35%,
+            transparent 36%
+          ),
+          #e5e7eb;
+        filter: blur(3px);
+        opacity: 0.75;
+      }
+      .s2 .after {
+        background: linear-gradient(135deg, #fce7f3, #fdf2f8);
+      }
+      .s2 .after .tag {
+        background: var(--tb-primary);
+        color: #fff;
+      }
+      .s2 .after .lip {
+        background:
+          radial-gradient(
+            ellipse at 50% 50%,
+            #be185d 0%,
+            #c76573 38%,
+            #e8a0b4 40%,
+            transparent 42%
+          ),
+          #fce7f3;
+      }
+      .s2 .divider {
+        background: #1f0b25;
+        color: #fff;
+        padding: 9px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      .s2 .divider span {
+        color: var(--tb-yellow);
+      }
+
+      /* Slide 3 HERO */
+      .s3 {
+        background: linear-gradient(180deg, #500724 0%, #4a044e 100%);
+        color: #fff;
+        padding: 40px 26px 24px;
+        justify-content: space-between;
+        overflow: hidden;
+      }
+      .s3::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 70% 40%,
+          rgba(236, 72, 153, 0.35),
+          transparent 55%
+        );
+      }
+      .s3 .model {
+        position: absolute;
+        right: -10%;
+        bottom: -5%;
+        width: 75%;
+        aspect-ratio: 3/4;
+        background: linear-gradient(160deg, #8b4c5e 0%, #6b2d3a 100%);
+        border-radius: 50% 50% 45% 55% / 60% 60% 40% 40%;
+        opacity: 0.55;
+        filter: blur(1px);
+      }
+      .s3 .content {
+        position: relative;
+        z-index: 2;
+      }
+      .s3 .eyebrow {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: var(--tb-yellow);
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .s3 h3 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -1.5px;
+      }
+      .s3 h3 em {
+        font-style: italic;
+        color: var(--tb-yellow);
+      }
+      .s3 .sub {
+        margin-top: 12px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.55;
+      }
+      .s3 .usps {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .s3 .usp-line {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(6px);
+        padding: 9px 13px;
+        border-radius: 10px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-left: 3px solid var(--tb-yellow);
+      }
+      .s3 .usp-line b {
+        color: var(--tb-yellow);
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      /* Slide 4 SET */
+      .s4 {
+        background: #fff;
+        padding: 28px 22px;
+        justify-content: space-between;
+      }
+      .s4 .header h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--tb-ink);
+        letter-spacing: -0.5px;
+      }
+      .s4 .header .sub {
+        font-size: 11px;
+        color: var(--tb-gray);
+        margin-top: 4px;
+        letter-spacing: 1px;
+      }
+      .s4 .set-visual {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 18px 0;
+        background: var(--tb-light);
+        border-radius: 14px;
+        margin: 14px 0;
+        position: relative;
+      }
+      .s4 .set-visual::before {
+        content: "+";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 26px;
+        color: var(--tb-primary);
+        font-weight: 300;
+      }
+      .s4 .pm {
+        width: 36px;
+        aspect-ratio: 1/4;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px -6px rgba(190, 24, 93, 0.4);
+      }
+      .s4 .pm1 {
+        background: linear-gradient(
+          180deg,
+          #1f0b25 0%,
+          #1f0b25 22%,
+          #ec4899 22%,
+          #ec4899 78%,
+          #1f0b25 78%
+        );
+      }
+      .s4 .pm2 {
+        background: linear-gradient(
+          180deg,
+          #be185d 0%,
+          #be185d 30%,
+          #fce7f3 30%,
+          #fce7f3 70%,
+          #be185d 70%
+        );
+        width: 32px;
+        aspect-ratio: 1/3;
+      }
+      .s4 .price-box {
+        background: var(--tb-ink);
+        color: #fff;
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+      .s4 .price-box .name {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 6px;
+        letter-spacing: 0.5px;
+      }
+      .s4 .price-box .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .s4 .price-box .old {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: line-through;
+      }
+      .s4 .price-box .new {
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--tb-yellow);
+        letter-spacing: -0.5px;
+      }
+      .s4 .price-box .new small {
+        font-size: 12px;
+        color: #fff;
+        font-weight: 600;
+      }
+      .s4 .price-box .off-pct {
+        background: var(--tb-primary);
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      /* Slide 5 BENEFIT */
+      .s5 {
+        background: linear-gradient(135deg, #be185d, #a855f7);
+        color: #fff;
+        padding: 38px 26px 24px;
+        justify-content: space-between;
+        text-align: center;
+      }
+      .s5::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 20% 80%,
+          rgba(253, 230, 138, 0.25),
+          transparent 50%
+        );
+      }
+      .s5 .content {
+        position: relative;
+        z-index: 2;
+      }
+      .s5 .eyebrow {
+        font-size: 12px;
+        letter-spacing: 4px;
+        color: var(--tb-yellow);
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .s5 h3 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -1px;
+      }
+      .s5 h3 .big {
+        display: block;
+        font-size: 80px;
+        font-weight: 900;
+        color: var(--tb-yellow);
+        line-height: 0.9;
+        margin: 8px 0;
+        letter-spacing: -3px;
+      }
+      .s5 .sub {
+        font-size: 12px;
+        opacity: 0.85;
+        margin-top: 8px;
+      }
+      .s5 .cta {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        color: var(--tb-deep);
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: 900;
+        font-size: 15px;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.3);
+      }
+      .s5 .cta small {
+        display: block;
+        color: var(--tb-gray);
+        font-weight: 500;
+        font-size: 10px;
+        letter-spacing: 0;
+        margin-top: 4px;
+      }
+      .s5 .deadline {
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 7px;
+        border-radius: 8px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-top: 8px;
+      }
+      .s5 .deadline b {
+        color: var(--tb-yellow);
+      }
+
+      /* common */
       .swatches {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
-        margin-top: 6px;
+        margin-top: 8px;
       }
       .sw {
         display: flex;
@@ -287,14 +743,13 @@
         color: var(--tb-gray);
       }
       .sw i {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
         display: inline-block;
         border: 1px solid rgba(0, 0, 0, 0.05);
       }
 
-      /* Scenario table */
       table {
         width: 100%;
         border-collapse: collapse;
@@ -326,7 +781,6 @@
         font-weight: 700;
       }
 
-      /* Checklist */
       .check {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -347,29 +801,38 @@
         font-weight: 800;
       }
 
-      /* AB copy */
-      .ab {
+      .usp-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 14px;
         margin-top: 12px;
       }
-      .ab-col {
-        background: var(--tb-light);
-        border-radius: 12px;
-        padding: 16px;
+      .usp {
+        background: linear-gradient(135deg, #fff, var(--tb-light));
+        border: 1.5px solid var(--tb-soft);
+        border-radius: 14px;
+        padding: 18px;
       }
-      .ab-col h5 {
-        margin: 0 0 10px;
-        color: var(--tb-deep);
-        font-size: 14px;
+      .usp .badge {
+        display: inline-block;
+        background: var(--tb-primary);
+        color: #fff;
+        font-size: 11px;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-weight: 700;
+        margin-bottom: 8px;
       }
-      .ab-col ul {
+      .usp h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        color: var(--tb-ink);
+      }
+      .usp p {
         margin: 0;
-        padding-left: 18px;
         font-size: 13px;
-        color: #1f0b25;
-        line-height: 1.7;
+        color: var(--tb-gray);
+        line-height: 1.55;
       }
 
       .footer {
@@ -379,353 +842,294 @@
         margin-top: 30px;
         padding: 20px;
       }
-
-      @media (max-width: 640px) {
-        .ab {
-          grid-template-columns: 1fr;
-        }
-        .hero h1 {
-          font-size: 24px;
-        }
-      }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <!-- Hero -->
       <section class="hero">
-        <span class="tag">KAKAO PLUS · CRM CAROUSEL</span>
+        <span class="tag">KAKAO PLUS · CRM CAROUSEL · V2</span>
         <h1>탐뷰티 립라이너 · 플친 캐러셀 기획서</h1>
-        <p>카톡 플러스친구 대상 6컷 캐러셀 마케팅 · 런칭 캠페인 v1</p>
+        <p>
+          5컷 구성 · Before &amp; After 중심 · 지그재그 마스카라 캐러셀 톤
+          레퍼런스
+        </p>
+        <div class="meta">
+          <span>📐 800 × 1100 세로</span>
+          <span>🎞 5컷</span>
+          <span>💡 B&amp;A · 세트 · 혜택 구조</span>
+        </div>
       </section>
 
-      <!-- 개요 -->
       <section class="sec">
         <h2><span class="num">0</span>캠페인 개요</h2>
         <p class="lead">
-          플친 채널 구독자 대상 신제품 립라이너 런칭 캐러셀. 구독자 = 이미
-          브랜드 호감층 → 제품력·혜택 중심으로 전환 유도.
+          v1(6컷) → v2(5컷) 압축. 문제 공감 컷 제거, B&amp;A를 주축으로. 세로
+          800×1100 포맷으로 모바일 풀뷰.
         </p>
         <div class="grid">
           <div class="kv">
             <div class="k">제품 (가칭)</div>
-            <div class="v">탐뷰티 더 파인 립 셰이퍼</div>
+            <div class="v">더 파인 립 셰이퍼</div>
           </div>
           <div class="kv">
             <div class="k">정가</div>
             <div class="v">14,400원 · 4 컬러</div>
           </div>
           <div class="kv">
+            <div class="k">사이즈</div>
+            <div class="v">800 × 1100 px</div>
+          </div>
+          <div class="kv">
+            <div class="k">컷수</div>
+            <div class="v">5컷</div>
+          </div>
+          <div class="kv">
             <div class="k">채널</div>
-            <div class="v">카카오톡 플친 / 캐러셀</div>
+            <div class="v">카톡 플친</div>
           </div>
           <div class="kv">
-            <div class="k">1차 타겟</div>
-            <div class="v">20~30대 · 립 제품 기구매자</div>
-          </div>
-          <div class="kv">
-            <div class="k">핵심 KPI</div>
-            <div class="v">클릭률(CTR) 12% / 전환율 4%</div>
-          </div>
-          <div class="kv">
-            <div class="k">발송 규모</div>
-            <div class="v">플친 전체 (D-day) + 미오픈 재발송 (D+2)</div>
+            <div class="k">KPI</div>
+            <div class="v">CTR 12% · 전환 4%</div>
           </div>
         </div>
       </section>
 
-      <!-- USP -->
       <section class="sec">
-        <h2><span class="num">1</span>USP 4가지</h2>
+        <h2><span class="num">1</span>USP 3가지</h2>
         <p class="lead">
-          립라이너 시장 포화 → 탐뷰티 "레이어링·데일리" 결을 살린 차별점.
+          v2에서는 3개로 압축 (레이어링은 3컷 모델컷 아래 캡션으로 통합).
         </p>
         <div class="usp-grid">
           <div class="usp">
             <span class="badge">USP 01</span>
-            <h4>0.1mm 초슬림 각도 팁</h4>
-            <p>
-              밀리미터 단위로 그리는 입술 라인. 초보도 실패 없이 또렷한 윤곽.
-            </p>
+            <h4>0.1mm 각도 팁</h4>
+            <p>밀리미터 단위 정교한 라인. 초보도 실패 없이.</p>
           </div>
           <div class="usp">
             <span class="badge">USP 02</span>
-            <h4>12시간 NO 번짐 · NO 지워짐</h4>
-            <p>
-              스마지 프루프 폴리머 처방. 마스크·커피잔·물에도 뭉개지지 않음.
-            </p>
+            <h4>12시간 롱래스팅</h4>
+            <p>물·마스크·커피잔에도 뭉개지지 않는 밀착력.</p>
           </div>
           <div class="usp">
             <span class="badge">USP 03</span>
-            <h4>젤리 립과 완벽 레이어</h4>
-            <p>
-              탐뷰티 더 젤리 플럼핑 립과 겹쳐 쓰면 입술 볼륨·컬러 UP. 세트 매칭
-              최적화.
-            </p>
-          </div>
-          <div class="usp">
-            <span class="badge">USP 04</span>
-            <h4>한국인 입술에 맞춘 4 컬러</h4>
-            <p>누드모카·웜로즈·쿨핑크·버건디. 퍼스널컬러 웜/쿨 모두 커버.</p>
+            <h4>4 컬러 · 웜쿨 커버</h4>
+            <p>한국인 입술 맞춤 누드모카·웜로즈·쿨핑크·버건디.</p>
             <div class="swatches">
-              <div class="sw"><i style="background: #b98875"></i>누드모카</div>
-              <div class="sw"><i style="background: #c76573"></i>웜로즈</div>
-              <div class="sw"><i style="background: #d4748a"></i>쿨핑크</div>
-              <div class="sw"><i style="background: #7a2838"></i>버건디</div>
+              <div class="sw"><i style="background: #b98875"></i>01</div>
+              <div class="sw"><i style="background: #c76573"></i>02</div>
+              <div class="sw"><i style="background: #d4748a"></i>03</div>
+              <div class="sw"><i style="background: #7a2838"></i>04</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Carousel 6 slides -->
       <section class="sec">
-        <h2><span class="num">2</span>캐러셀 6컷 시안</h2>
+        <h2><span class="num">2</span>캐러셀 5컷 시안 (800 × 1100)</h2>
         <p class="lead">
-          카톡 플친 캐러셀 권장 사이즈 800×800 / 1040×1040 정사각. 시선 흐름:
-          문제제기 → 제품 → 증거 → 활용 → 컬러 → 혜택.
+          참고 이미지(지그재그 마스카라 캐러셀) 구조 차용 — MAIN → B&amp;A →
+          MODEL HERO → SET → BENEFIT.
         </p>
 
         <div class="cards">
-          <!-- Card 01 -->
+          <!-- S1 MAIN -->
           <div class="card">
-            <div
-              class="preview"
-              style="background: linear-gradient(135deg, #fdf2f8, #fce7f3)"
-            >
-              <span class="card-index">01 / 06</span>
-              <div class="card-headline">
-                립스틱이 예뻐도<br />입술 라인이 흐리면<br /><span
-                  style="color: var(--tb-primary)"
-                  >완성도는 반토막.</span
-                >
+            <div class="preview s1">
+              <span class="card-index">01 / 05</span>
+              <span class="card-size">800×1100</span>
+              <span class="new-badge">NEW</span>
+              <div class="discount">
+                <div class="up">UP TO</div>
+                <div class="pct">30%</div>
+                <div class="off">OFF</div>
               </div>
-              <div class="card-visual">
-                비주얼 · <b>Before / After</b> 분할컷 — 번진 입술 vs 또렷한 입술
+              <div class="title">
+                <div class="kicker">TAM BEAUTY · LIP SHAPER</div>
+                <h3>The Fine<br />Lip Shaper.</h3>
+                <div class="sub">0.1mm · 12H LASTING · 4 COLORS</div>
+              </div>
+              <div class="product">
+                <div class="product-mock"></div>
+              </div>
+              <div class="foot">
+                <span>플친 단독 런칭</span>
+                <b>D-3 마감</b>
               </div>
             </div>
             <div class="card-body">
-              <div class="role">🎯 HOOK · 문제 공감</div>
+              <div class="role">🎯 MAIN · 제품 + 할인 배지</div>
               <div class="copy">
-                "메이크업 완성도는 <span class="em">0.1mm 차이</span>에서
-                갈립니다."
+                "NEW · 더 파인 립 셰이퍼 ·
+                <span class="em">플친 UP TO 30% OFF</span>"
               </div>
               <div class="note">
-                <b>목적:</b> 스크롤 멈추게 하기. 페인 포인트 직격 → 2컷으로
-                자연스러운 연결.
+                <b>비주얼:</b> 제품 3D 샷 (15도 틸트) · NEW 배지 · UP TO 30% OFF
+                우상단 · 하단 D-3 긴박감.<br /><b>레퍼런스:</b> 지그재그 이미지
+                1번컷 (NEW MASCARA + UP TO 47%) 구조 동일.
               </div>
             </div>
           </div>
 
-          <!-- Card 02 -->
+          <!-- S2 B&A -->
           <div class="card">
-            <div
-              class="preview"
-              style="background: linear-gradient(135deg, #f5f3ff, #fce7f3)"
-            >
-              <span class="card-index">02 / 06</span>
-              <div class="card-headline">
-                NEW<br /><span style="color: var(--tb-deep)"
-                  >더 파인 립 셰이퍼</span
-                ><br />0.1mm 각도 팁.
+            <div class="preview s2">
+              <span
+                class="card-index"
+                style="
+                  background: #fff;
+                  color: #1f0b25;
+                  border: 1px solid #1f0b25;
+                "
+                >02 / 05</span
+              >
+              <span class="card-size">800×1100</span>
+              <div class="header">
+                <h3>립라이너 <span>하나</span>의 차이.</h3>
+                <p>흐린 윤곽 vs 또렷한 입술</p>
               </div>
-              <div class="card-visual">
-                비주얼 · 제품 본체 + 팁 <b>매크로 확대컷</b> (연필 끝 디테일)
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="role">✨ REVEAL · 제품 공개 + USP 01</div>
-              <div class="copy">
-                "정교한 각도 팁으로
-                <span class="em">초보도 실패 없이</span> 그리는 입술 라인."
-              </div>
-              <div class="note">
-                <b>목적:</b> 신제품 존재 인지 + 기능적 차별화 1차 제시.
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 03 -->
-          <div class="card">
-            <div
-              class="preview"
-              style="background: linear-gradient(135deg, #fdf2f8, #faf5ff)"
-            >
-              <span class="card-index">03 / 06</span>
-              <div class="card-headline">
-                AM 9 → PM 9<br /><span style="color: var(--tb-primary)"
-                  >12시간</span
-                >
-                그대로.
-              </div>
-              <div class="card-visual">
-                비주얼 · <b>타임라인 4컷</b> (커피/마스크/식사/퇴근) 착용 지속
-                증명
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="role">🧪 PROOF · USP 02 지속력</div>
-              <div class="copy">
-                "물·마스크·커피잔에도 <span class="em">밀착 · 번짐 ZERO</span>."
-              </div>
-              <div class="note">
-                <b>목적:</b> 립 제품 최대 페인(지속력) 해결 증명. 생활 씬으로
-                공감 유도.
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 04 -->
-          <div class="card">
-            <div
-              class="preview"
-              style="background: linear-gradient(135deg, #fce7f3, #f5f3ff)"
-            >
-              <span class="card-index">04 / 06</span>
-              <div class="card-headline">
-                젤리 립과 <span style="color: var(--tb-deep)">겹치면</span
-                ><br />입술이 통통하게<br />살아나요.
-              </div>
-              <div class="card-visual">
-                비주얼 · <b>단독 vs 레이어드</b> 비교컷 — 젤리 플럼핑 립 오일
-                오버랩
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="role">💋 COMBO · USP 03 레이어링</div>
-              <div class="copy">
-                "오버립 · 언더립 · 그라데이션 —
-                <span class="em">탐뷰티 립 라인과 완벽 매칭</span>."
-              </div>
-              <div class="note">
-                <b>목적:</b> 크로스셀 유도. 기존 젤리 립 구매자에게 "또 다른
-                용도" 제안.
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 05 -->
-          <div class="card">
-            <div
-              class="preview"
-              style="background: linear-gradient(135deg, #fdf2f8, #fce7f3)"
-            >
-              <span class="card-index">05 / 06</span>
-              <div class="card-headline">
-                한국인 입술에<br />딱 맞는
-                <span style="color: var(--tb-primary)">4 컬러</span>.
-              </div>
-              <div class="card-visual" style="background: #fff">
-                <div class="swatches" style="margin-top: 0">
-                  <div class="sw">
-                    <i style="background: #b98875"></i>01 누드모카
-                  </div>
-                  <div class="sw">
-                    <i style="background: #c76573"></i>02 웜로즈
-                  </div>
-                  <div class="sw">
-                    <i style="background: #d4748a"></i>03 쿨핑크
-                  </div>
-                  <div class="sw">
-                    <i style="background: #7a2838"></i>04 버건디
-                  </div>
+              <div class="ba">
+                <div class="ba-row before">
+                  <span class="tag">BEFORE</span>
+                  <div class="lip"></div>
+                </div>
+                <div class="divider">0.1mm 차이 → <span>완성도 100%</span></div>
+                <div class="ba-row after">
+                  <span class="tag">AFTER</span>
+                  <div class="lip"></div>
                 </div>
               </div>
             </div>
             <div class="card-body">
-              <div class="role">🎨 RANGE · USP 04 컬러</div>
+              <div class="role">🔍 B&amp;A · 비교 증명</div>
               <div class="copy">
-                "데일리부터 포인트까지 —
-                <span class="em">웜/쿨 모두 커버</span>."
+                "<span class="em">흐린 윤곽 vs 또렷한 입술</span> · 0.1mm 차이가
+                만드는 완성도"
               </div>
               <div class="note">
-                <b>목적:</b> 컬러 선택 고민 해소. 입술 착장컷 4장(모델 or 손등
-                스와치) 배치.
+                <b>비주얼:</b> 상·하단 2분할. 같은 모델 · 같은 립스틱 ·
+                립라이너만 차이.<br /><b>촬영:</b> 입술 클로즈업 (코~턱 프레임).
+                조명·각도 동일 유지 필수.<br /><b>레퍼런스:</b> 지그재그 이미지
+                2번컷 (속눈썹 BEFORE/AFTER) 구조.
               </div>
             </div>
           </div>
 
-          <!-- Card 06 -->
+          <!-- S3 HERO -->
           <div class="card">
-            <div
-              class="preview"
-              style="
-                background: linear-gradient(135deg, #be185d, #a855f7);
-                color: #fff;
-              "
-            >
+            <div class="preview s3">
               <span
                 class="card-index"
-                style="background: #fff; color: var(--tb-deep)"
-                >06 / 06</span
+                style="background: var(--tb-yellow); color: #1f0b25"
+                >03 / 05</span
               >
-              <div class="card-headline" style="color: #fff">
-                플친 전용<br /><span style="font-size: 42px; color: #fde68a"
-                  >30% OFF</span
-                ><br />D-3 마감.
+              <span class="card-size">800×1100</span>
+              <div class="model"></div>
+              <div class="content">
+                <div class="eyebrow">REAL LIP, REAL LINE</div>
+                <h3>Desirable<br /><em>lip line.</em></h3>
+                <div class="sub">
+                  리얼한 입술 라인,<br />그대로 오래 가는 하루.
+                </div>
               </div>
-              <div
-                class="card-visual"
-                style="
-                  background: rgba(255, 255, 255, 0.15);
-                  color: #fff;
-                  border-left-color: #fde68a;
-                "
-              >
-                <b style="color: #fde68a">단품</b> 9,900원 (정가 14,400원)<br />
-                <b style="color: #fde68a">립 오일 세트</b> 19,900원 (정가
-                28,800원)
+              <div class="usps">
+                <div class="usp-line"><b>01</b> 0.1mm 각도 팁</div>
+                <div class="usp-line"><b>02</b> 12시간 밀착</div>
+                <div class="usp-line"><b>03</b> 젤리 립 레이어 OK</div>
               </div>
             </div>
             <div class="card-body">
-              <div class="role">🔥 CTA · 혜택 + 긴박감</div>
+              <div class="role">✨ HERO · 모델컷 + USP 요약</div>
               <div class="copy">
-                "<span class="em">플친에게만</span> 드리는 첫 런칭 가격. 3일 뒤
-                정가로 돌아갑니다."
+                "Desirable lip line —
+                <span class="em">리얼한 입술 라인, 그대로 오래 가는 하루</span
+                >."
               </div>
               <div class="note">
-                <b>버튼:</b> [지금 구매하기] → tambeauty.kr 립라이너 상세
-                딥링크.
+                <b>비주얼:</b> 모델 측면 3/4 페이스 (입술 1/3 프레임). 어두운
+                플럼/퍼플 배경 + 하이라이트.<br /><b>레퍼런스:</b> 지그재그
+                이미지 3번컷 "UNREAL BUT REAL" 모델 헤로컷 구조.
+              </div>
+            </div>
+          </div>
+
+          <!-- S4 SET -->
+          <div class="card">
+            <div class="preview s4">
+              <span class="card-index">04 / 05</span>
+              <span class="card-size">800×1100</span>
+              <div class="header">
+                <h3>오버립 완성 세트</h3>
+                <div class="sub">LIP SHAPER + JELLY LIP OIL</div>
+              </div>
+              <div class="set-visual">
+                <div class="pm pm1"></div>
+                <div class="pm pm2"></div>
+              </div>
+              <div class="price-box">
+                <div class="name">립 셰이퍼 + 젤리 립 오일 매칭 세트</div>
+                <div class="row">
+                  <div>
+                    <div class="old">28,800원</div>
+                    <div class="new">19,900<small>원</small></div>
+                  </div>
+                  <div class="off-pct">-30%</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="role">💋 SET · 크로스셀</div>
+              <div class="copy">
+                "<span class="em">젤리 립과 겹치면</span> 입술이 통통 · 세트 30%
+                OFF"
+              </div>
+              <div class="note">
+                <b>비주얼:</b> 제품 2종 나란히 + 아이콘 · 밝은 핑크 바닥.<br /><b
+                  >레퍼런스:</b
+                >
+                지그재그 이미지 4~5번컷 (꾸꾸무 / 아이돌 레이 세트) 구조.
+              </div>
+            </div>
+          </div>
+
+          <!-- S5 BENEFIT -->
+          <div class="card">
+            <div class="preview s5">
+              <span
+                class="card-index"
+                style="background: #fff; color: var(--tb-deep)"
+                >05 / 05</span
+              >
+              <span class="card-size">800×1100</span>
+              <div class="content">
+                <div class="eyebrow">ONLY PLUS FRIENDS</div>
+                <h3>플친에게만<span class="big">30%</span>OFF</h3>
+                <div class="sub">선착순 쿠폰 · 5,000명 한정</div>
+              </div>
+              <div class="cta">
+                지금 쿠폰 받기 →
+                <small>tambeauty.kr 자동 적용</small>
+              </div>
+              <div class="deadline">⏰ <b>D-3 자정</b> 정가 복귀</div>
+            </div>
+            <div class="card-body">
+              <div class="role">🔥 BENEFIT · CTA</div>
+              <div class="copy">
+                "<span class="em">ONLY 플친에서만</span> · 30% OFF · 선착순
+                5,000명"
+              </div>
+              <div class="note">
+                <b>비주얼:</b> 브랜드 그라디언트 배경 · 큰 30% 숫자 · CTA +
+                D-3.<br /><b>레퍼런스:</b> 지그재그 이미지 6번컷 (ONLY
+                지그재그에서만 30%) 구조 동일.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- A/B 카피 -->
       <section class="sec">
-        <h2><span class="num">3</span>카피 A/B 테스트 안</h2>
-        <p class="lead">
-          1컷(Hook)과 6컷(CTA) 카피는 A/B로 쪼개서 발송 — 오픈율·CTR 비교.
-        </p>
-        <div class="ab">
-          <div class="ab-col">
-            <h5>A안 · 기능 직격형</h5>
-            <ul>
-              <li>
-                HOOK: "립스틱이 예뻐도 입술 라인이 흐리면 완성도는 반토막."
-              </li>
-              <li>CTA: "플친 전용 30% OFF · D-3 마감"</li>
-              <li>톤: 직설적·문제해결 강조</li>
-            </ul>
-          </div>
-          <div class="ab-col">
-            <h5>B안 · 감성 공감형</h5>
-            <ul>
-              <li>HOOK: "오늘 내 입술, 마음에 드셨나요?"</li>
-              <li>CTA: "Desirable me, 오늘만 9,900원"</li>
-              <li>톤: 브랜드 슬로건 연결·감정 유도</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- 발송 시나리오 -->
-      <section class="sec">
-        <h2><span class="num">4</span>발송 시나리오 (3단 플로우)</h2>
-        <p class="lead">
-          한 방에 쏘지 말고 티저 → 본편 → 리마인드 3단 구성. 피로도 낮추고 전환
-          시점 분산.
-        </p>
+        <h2><span class="num">3</span>발송 시나리오</h2>
+        <p class="lead">3단 플로우 유지 (티저 → 본편 → 리마인드).</p>
         <table>
           <thead>
             <tr>
@@ -742,103 +1146,61 @@
               <td>D-2 · 20:00</td>
               <td>단일 이미지 + 링크</td>
               <td>"🤫 플친만 먼저 봅니다. 내일 밤 공개."</td>
-              <td>오픈율 45%</td>
+              <td>오픈 45%</td>
             </tr>
             <tr>
               <td><span class="pill">본편</span></td>
               <td>D-day · 20:00</td>
-              <td>캐러셀 6컷</td>
-              <td>"NEW 더 파인 립 셰이퍼 · 플친 전용 30% OFF"</td>
+              <td>캐러셀 5컷</td>
+              <td>"NEW 더 파인 립 셰이퍼 · 플친 30% OFF"</td>
               <td>CTR 12% · 전환 4%</td>
             </tr>
             <tr>
               <td><span class="pill">리마인드</span></td>
               <td>D+2 · 12:00</td>
-              <td>단일 이미지 (미오픈자 한정)</td>
-              <td>"⏰ 오늘 자정 정가로 복귀합니다."</td>
+              <td>단일 이미지 (미오픈자)</td>
+              <td>"⏰ 오늘 자정 정가 복귀"</td>
               <td>재오픈 18%</td>
             </tr>
           </tbody>
         </table>
       </section>
 
-      <!-- 디자이너 체크리스트 -->
       <section class="sec">
-        <h2><span class="num">5</span>디자이너 체크리스트</h2>
-        <p class="lead">캐러셀 제작 시 반드시 확인할 항목.</p>
+        <h2><span class="num">4</span>디자이너 체크리스트</h2>
+        <p class="lead">800 × 1100 px 기준. 반드시 확인.</p>
         <div class="check">
-          <div class="check-item">정사각 800×800 / 1040×1040 두 벌 추출</div>
+          <div class="check-item">800 × 1100 px 세로 포맷 추출 (5장)</div>
           <div class="check-item">
-            브랜드 컬러 팔레트 고정 (#ec4899 / #be185d / #a855f7)
-          </div>
-          <div class="check-item">1컷·6컷은 A/B 2안 모두 제작</div>
-          <div class="check-item">
-            모델 입술 클로즈업 고해상 (500% 확대 깨짐 없이)
+            브랜드 컬러 고정: #ec4899 / #be185d / #a855f7
           </div>
           <div class="check-item">
-            컬러 스와치는 실제 입술 착용컷 우선 (손등 X)
+            서브 컬러: 골드 옐로우 #fde68a (하이라이트)
+          </div>
+          <div class="check-item">1컷 NEW 배지 + UP TO 30% OFF 우상단 필수</div>
+          <div class="check-item">
+            2컷 BEFORE/AFTER는 동일 모델·립·조명 유지
           </div>
           <div class="check-item">
-            폰트 위계 3단 고정 (대제목 · 서브 · 캡션)
+            3컷 모델컷은 측면 3/4 프레임, 입술 포커스
           </div>
           <div class="check-item">
-            6컷 CTA는 금액·기한 텍스트 누락 절대 금지
+            4컷 세트 제품컷: 제품 2종 나란히 + 핑크 바닥
           </div>
+          <div class="check-item">5컷 30% 숫자 최소 높이 400px (시인성)</div>
+          <div class="check-item">상하 여백 80px (카톡 썸 잘림 방지)</div>
           <div class="check-item">
-            최하단 여백 90px 확보 (카톡 썸 잘림 방지)
+            "12시간" 자사시험 근거 없으면 "롱래스팅" 완화
           </div>
+          <div class="check-item">CTA 딥링크 iOS/Android QR 테스트</div>
           <div class="check-item">
-            표시광고법: "~ZERO" 등 절대표현 근거 문구 병기
-          </div>
-          <div class="check-item">
-            딥링크 URL 최종 확정 후 QR 테스트 (iOS/Android)
-          </div>
-        </div>
-      </section>
-
-      <!-- 메모 -->
-      <section class="sec">
-        <h2><span class="num">6</span>법적·톤 체크 메모</h2>
-        <p class="lead">
-          카톡 플친은 광고 수신 동의 채널이지만, 과장 표현은 그대로 리스크.
-        </p>
-        <div class="grid">
-          <div
-            class="kv"
-            style="border-left-color: #ef4444; background: #fee2e2"
-          >
-            <div class="k" style="color: #991b1b">표시광고법 주의</div>
-            <div class="v" style="font-size: 13px">
-              "12시간 NO 번짐" → 자사 시험 결과 근거 필수. 없으면 "롱래스팅
-              처방" 완화.
-            </div>
-          </div>
-          <div
-            class="kv"
-            style="border-left-color: #f59e0b; background: #fef3c7"
-          >
-            <div class="k" style="color: #854d0e">플럼핑 표현</div>
-            <div class="v" style="font-size: 13px">
-              의학적 볼륨업 오인 X. "입술이 통통하게 보이는 효과" 수준으로.
-            </div>
-          </div>
-          <div class="kv">
-            <div class="k">브랜드 톤</div>
-            <div class="v" style="font-size: 13px">
-              Desirable me everyday — 과시 X, 데일리·자기긍정 결.
-            </div>
-          </div>
-          <div class="kv">
-            <div class="k">이모지 사용</div>
-            <div class="v" style="font-size: 13px">
-              푸시 미리보기 1~2개 OK. 카피 본문에는 과용 X.
-            </div>
+            고해상 2x 원본 + 압축(200KB이하) 2벌 제공
           </div>
         </div>
       </section>
 
       <div class="footer">
-        © TAM BEAUTY · 립라이너 CRM 캐러셀 기획서 v1 · 2026.04
+        © TAM BEAUTY · 립라이너 CRM 캐러셀 기획서 v2 · 2026.04
       </div>
     </div>
   </body>
