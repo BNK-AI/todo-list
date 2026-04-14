@@ -163,7 +163,7 @@
 
       .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         gap: 22px;
         margin-top: 12px;
       }
@@ -177,20 +177,19 @@
         flex-direction: column;
       }
       .card .preview {
-        aspect-ratio: 8/11;
+        aspect-ratio: 4/3;
         position: relative;
         overflow: hidden;
         display: flex;
-        flex-direction: column;
       }
       .card-index {
         position: absolute;
-        top: 14px;
-        left: 14px;
+        top: 12px;
+        left: 12px;
         background: var(--tb-ink);
         color: #fff;
-        font-size: 11px;
-        padding: 5px 11px;
+        font-size: 10px;
+        padding: 4px 10px;
         border-radius: 999px;
         font-weight: 700;
         letter-spacing: 1.5px;
@@ -198,12 +197,12 @@
       }
       .card-size {
         position: absolute;
-        top: 14px;
-        right: 14px;
+        top: 12px;
+        right: 12px;
         background: rgba(255, 255, 255, 0.9);
         color: var(--tb-warm);
-        font-size: 10px;
-        padding: 4px 9px;
+        font-size: 9px;
+        padding: 3px 8px;
         border-radius: 6px;
         font-weight: 700;
         z-index: 5;
@@ -245,107 +244,130 @@
         color: var(--tb-ink);
       }
 
-      /* Slide 1 MAIN */
+      /* ---- Slide 1 MAIN (가로 2분할: 좌 텍스트 / 우 제품) ---- */
       .s1 {
         background: linear-gradient(
-          165deg,
+          120deg,
           #fef8f3 0%,
-          #fdeee4 45%,
+          #fdeee4 55%,
           #f0cfc0 100%
         );
-        padding: 42px 24px 20px;
+        padding: 22px 24px;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 14px;
+      }
+      .s1 .s1-left {
+        flex: 1.15;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
+        padding-top: 18px;
+        position: relative;
+        z-index: 2;
+      }
+      .s1 .s1-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
       }
       .s1 .tag-new {
-        position: absolute;
-        top: 50px;
-        right: 20px;
         background: var(--tb-wine);
         color: #fef8f3;
-        padding: 5px 12px;
+        padding: 4px 11px;
         border-radius: 999px;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 800;
         letter-spacing: 1.5px;
-        z-index: 3;
+        display: inline-block;
+        align-self: flex-start;
+        margin-bottom: 6px;
       }
-      .s1 .discount-tag {
-        position: absolute;
-        top: 94px;
-        right: 20px;
-        text-align: center;
-        z-index: 3;
-        background: var(--tb-ink);
-        color: var(--tb-peach);
-        padding: 9px 11px;
-        border-radius: 10px;
-        line-height: 1;
-      }
-      .s1 .discount-tag .up {
+      .s1 .kicker {
         font-size: 9px;
-        color: var(--tb-terra);
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        margin-bottom: 3px;
-      }
-      .s1 .discount-tag .pct {
-        font-size: 30px;
-        font-weight: 900;
-        color: var(--tb-peach);
-        letter-spacing: -1px;
-      }
-      .s1 .discount-tag .off {
-        font-size: 9px;
-        color: var(--tb-terra);
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin-top: 2px;
-      }
-      .s1 .title {
-        margin-top: 55px;
-      }
-      .s1 .title .kicker {
-        font-size: 10px;
         color: var(--tb-terra);
         letter-spacing: 3px;
         font-weight: 700;
         margin-bottom: 6px;
       }
-      .s1 .title h3 {
+      .s1 h3 {
         margin: 0;
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 800;
         color: var(--tb-ink);
         letter-spacing: -0.5px;
-        line-height: 1.2;
+        line-height: 1.15;
       }
-      .s1 .title h3 em {
+      .s1 h3 em {
         font-style: normal;
         color: var(--tb-wine);
       }
-      .s1 .title .product-name {
-        font-size: 13px;
+      .s1 .product-name {
+        font-size: 12px;
         color: var(--tb-warm);
-        margin-top: 8px;
+        margin-top: 6px;
         font-weight: 600;
-        letter-spacing: 0.3px;
       }
-      .s1 .title .mood {
-        font-size: 11px;
+      .s1 .mood {
+        font-size: 10px;
         color: var(--tb-warm);
-        margin-top: 4px;
+        margin-top: 3px;
         font-weight: 500;
         line-height: 1.5;
       }
-      .s1 .product {
-        flex: 1;
-        display: flex;
+      .s1 .foot {
+        background: var(--tb-ink);
+        color: var(--tb-peach);
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-size: 10px;
+        display: inline-flex;
+        gap: 10px;
         align-items: center;
-        justify-content: center;
-        margin: 4px 0;
+        align-self: flex-start;
+        margin-top: auto;
+      }
+      .s1 .foot b {
+        color: var(--tb-terra);
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+      .s1 .discount-stack {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: var(--tb-ink);
+        color: var(--tb-peach);
+        padding: 8px 10px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 1;
+        z-index: 3;
+      }
+      .s1 .discount-stack .up {
+        font-size: 8px;
+        color: var(--tb-terra);
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        margin-bottom: 2px;
+      }
+      .s1 .discount-stack .pct {
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--tb-peach);
+        letter-spacing: -1px;
+      }
+      .s1 .discount-stack .off {
+        font-size: 8px;
+        color: var(--tb-terra);
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        margin-top: 2px;
       }
       .s1 .product-mock {
-        width: 38%;
+        width: 40%;
         aspect-ratio: 1/4.5;
         background: linear-gradient(
           180deg,
@@ -355,10 +377,11 @@
           #d4856a 78%,
           #2a2a2a 78%
         );
-        border-radius: 5px;
-        box-shadow: 0 20px 40px -15px rgba(139, 44, 62, 0.4);
+        border-radius: 4px;
+        box-shadow: 0 16px 30px -12px rgba(139, 44, 62, 0.4);
         transform: rotate(-14deg);
         position: relative;
+        margin-top: 24px;
       }
       .s1 .product-mock::after {
         content: "CLOUD PLUMPING";
@@ -367,44 +390,31 @@
         left: 50%;
         transform: translate(-50%, -50%) rotate(90deg);
         color: #fef8f3;
-        font-size: 7px;
-        letter-spacing: 2.5px;
+        font-size: 6px;
+        letter-spacing: 2px;
         font-weight: 700;
         white-space: nowrap;
       }
-      .s1 .foot {
-        background: var(--tb-ink);
-        color: var(--tb-peach);
-        padding: 9px 13px;
-        border-radius: 10px;
-        font-size: 11px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .s1 .foot b {
-        color: var(--tb-terra);
-        font-size: 12px;
-      }
 
-      /* Slide 2 B&A */
+      /* ---- Slide 2 B&A (가로 2분할: 좌 BEFORE / 우 AFTER + 상단 헤더) ---- */
       .s2 {
         background: var(--tb-cream);
+        flex-direction: column;
       }
       .s2 .header {
-        padding: 24px 22px 12px;
+        padding: 14px 18px 10px;
         text-align: center;
       }
       .s2 .header .eyebrow {
-        font-size: 10px;
+        font-size: 9px;
         color: var(--tb-terra);
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         font-weight: 700;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
       }
       .s2 .header h3 {
         margin: 0;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 800;
         color: var(--tb-ink);
         letter-spacing: -0.5px;
@@ -413,34 +423,34 @@
       .s2 .header h3 span {
         color: var(--tb-wine);
       }
-      .s2 .ba {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
       .s2 .ba-row {
         flex: 1;
+        display: flex;
+        border-top: 1px solid var(--tb-line);
+      }
+      .s2 .ba-col {
+        flex: 1;
         position: relative;
-        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 14px;
       }
-      .s2 .ba-row .lip {
-        width: 72%;
+      .s2 .ba-col .lip {
+        width: 75%;
         height: 72%;
-        border-radius: 14px;
+        border-radius: 12px;
         position: relative;
       }
-      .s2 .ba-row .tag {
+      .s2 .ba-col .tag {
         position: absolute;
-        top: 12px;
-        left: 12px;
-        padding: 5px 11px;
+        top: 10px;
+        left: 10px;
+        padding: 4px 10px;
         border-radius: 4px;
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 800;
-        letter-spacing: 2.5px;
+        letter-spacing: 2px;
         z-index: 3;
       }
       .s2 .before {
@@ -464,6 +474,7 @@
       }
       .s2 .after {
         background: linear-gradient(135deg, #fdeee4, #f8ddd0);
+        border-left: 2px solid var(--tb-ink);
       }
       .s2 .after .tag {
         background: var(--tb-wine);
@@ -480,26 +491,31 @@
           ),
           #fdeee4;
       }
-      .s2 .divider {
+      .s2 .divider-badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background: var(--tb-ink);
         color: var(--tb-peach);
-        padding: 9px;
-        text-align: center;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-      }
-      .s2 .divider span {
-        color: var(--tb-terra);
+        padding: 5px 9px;
+        border-radius: 999px;
+        font-size: 9px;
         font-weight: 800;
+        letter-spacing: 1.5px;
+        z-index: 4;
+        white-space: nowrap;
+      }
+      .s2 .divider-badge span {
+        color: var(--tb-terra);
       }
 
-      /* Slide 3 HERO */
+      /* ---- Slide 3 HERO (가로 2분할: 좌 모델 / 우 카피) ---- */
       .s3 {
-        background: linear-gradient(180deg, #4a2d2d 0%, #2a1a1a 100%);
+        background: linear-gradient(135deg, #4a2d2d 0%, #2a1a1a 100%);
         color: #fef8f3;
-        padding: 34px 22px 22px;
-        justify-content: space-between;
+        padding: 0;
+        flex-direction: row;
         overflow: hidden;
       }
       .s3::before {
@@ -507,38 +523,64 @@
         position: absolute;
         inset: 0;
         background: radial-gradient(
-          ellipse at 72% 38%,
-          rgba(201, 160, 122, 0.32),
-          transparent 55%
+          ellipse at 30% 50%,
+          rgba(201, 160, 122, 0.3),
+          transparent 60%
         );
+        z-index: 1;
+      }
+      .s3 .s3-left {
+        flex: 1.1;
+        position: relative;
+        overflow: hidden;
       }
       .s3 .model {
         position: absolute;
-        right: -12%;
-        bottom: -8%;
-        width: 78%;
-        aspect-ratio: 3/4;
-        background: linear-gradient(160deg, #8b4c5e 0%, #6b2d3a 100%);
-        border-radius: 50% 50% 45% 55% / 60% 60% 40% 40%;
-        opacity: 0.5;
-        filter: blur(1.5px);
+        inset: 0;
+        background: linear-gradient(
+          160deg,
+          #8b4c5e 0%,
+          #6b2d3a 60%,
+          #4a2d2d 100%
+        );
+        opacity: 0.75;
       }
-      .s3 .content {
+      .s3 .model::after {
+        content: "";
+        position: absolute;
+        right: -20%;
+        bottom: -10%;
+        width: 100%;
+        aspect-ratio: 3/4;
+        background: radial-gradient(
+          ellipse at 50% 40%,
+          #a85d6e 0%,
+          #6b2d3a 55%,
+          transparent 70%
+        );
+        filter: blur(2px);
+      }
+      .s3 .s3-right {
+        flex: 1;
+        padding: 22px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: relative;
         z-index: 2;
       }
       .s3 .eyebrow {
-        font-size: 10px;
+        font-size: 9px;
         letter-spacing: 3px;
         color: var(--tb-terra);
         font-weight: 700;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
       .s3 h3 {
         margin: 0;
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 800;
-        line-height: 1.2;
+        line-height: 1.15;
         letter-spacing: -0.5px;
       }
       .s3 h3 em {
@@ -546,53 +588,56 @@
         color: var(--tb-terra);
       }
       .s3 .sub {
-        margin-top: 10px;
-        font-size: 12px;
+        margin-top: 8px;
+        font-size: 11px;
         color: rgba(254, 248, 243, 0.85);
-        line-height: 1.55;
+        line-height: 1.5;
         font-weight: 500;
       }
       .s3 .usps {
-        position: relative;
-        z-index: 2;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 5px;
+        margin-top: auto;
       }
       .s3 .usp-line {
         background: rgba(254, 248, 243, 0.1);
-        backdrop-filter: blur(6px);
-        padding: 9px 12px;
-        border-radius: 8px;
-        font-size: 12px;
+        backdrop-filter: blur(4px);
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 10px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         border-left: 2px solid var(--tb-terra);
       }
       .s3 .usp-line b {
         color: var(--tb-terra);
-        font-size: 10px;
-        letter-spacing: 1px;
-        min-width: 18px;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        min-width: 14px;
       }
 
-      /* Slide 4 SWATCH (6 컬러) */
+      /* ---- Slide 4 SWATCH (가로: 상단 헤더 + 3x2 그리드) ---- */
       .s4 {
         background: #fff;
-        padding: 24px 20px;
-        justify-content: space-between;
+        flex-direction: column;
+        padding: 18px 20px;
+      }
+      .s4 .header {
+        text-align: left;
+        margin-bottom: 12px;
       }
       .s4 .header .eyebrow {
-        font-size: 10px;
+        font-size: 9px;
         color: var(--tb-terra);
         letter-spacing: 3px;
         font-weight: 700;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
       }
       .s4 .header h3 {
         margin: 0;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 800;
         color: var(--tb-ink);
         letter-spacing: -0.5px;
@@ -602,106 +647,96 @@
         color: var(--tb-wine);
       }
       .s4 .header .sub {
-        font-size: 11px;
+        font-size: 10px;
         color: var(--tb-warm);
-        margin-top: 4px;
+        margin-top: 3px;
       }
-      .s4 .swatch-list {
+      .s4 .swatch-grid {
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 7px;
-        padding: 10px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
       }
-      .s4 .sw-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 6px 9px;
-        border-radius: 8px;
+      .s4 .sw-box {
         background: var(--tb-cream);
         border: 1px solid var(--tb-line);
+        border-radius: 8px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
       .s4 .sw-chip {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         flex-shrink: 0;
         box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
       }
       .s4 .sw-info {
-        flex: 1;
         min-width: 0;
+        flex: 1;
       }
       .s4 .sw-no {
-        font-size: 8px;
+        font-size: 7px;
         color: var(--tb-terra);
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
       }
       .s4 .sw-name {
-        font-size: 11.5px;
+        font-size: 10px;
         font-weight: 700;
         color: var(--tb-ink);
-        margin: 1px 0;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .s4 .sw-en {
+        font-size: 8px;
+        color: var(--tb-warm);
+        font-style: italic;
         line-height: 1.2;
       }
-      .s4 .sw-mood {
-        font-size: 9px;
-        color: var(--tb-warm);
-        line-height: 1.3;
-      }
 
-      /* Slide 5 BENEFIT - 이미지 배경 구조 */
+      /* ---- Slide 5 BENEFIT (가로 2분할: 좌 이미지 / 우 카피+가격) ---- */
       .s5 {
         background: linear-gradient(
-          180deg,
+          135deg,
           #8b2c3e 0%,
           #6b2538 55%,
           #4a1d2a 100%
         );
         color: #fef8f3;
         padding: 0;
-        justify-content: space-between;
+        flex-direction: row;
         overflow: hidden;
       }
-      .s5 .s5-top {
-        position: relative;
-        z-index: 3;
-        padding: 28px 22px 14px;
-        text-align: center;
-      }
-      .s5 .s5-top .eyebrow {
-        font-size: 11px;
-        letter-spacing: 4px;
-        color: var(--tb-peach);
-        font-weight: 800;
-        margin-bottom: 10px;
-        opacity: 0.95;
-      }
-      .s5 .s5-top h3 {
-        margin: 0;
-        font-size: 21px;
-        font-weight: 800;
-        line-height: 1.3;
-        letter-spacing: -0.5px;
-        color: #fef8f3;
-      }
-      .s5 .s5-top h3 em {
-        font-style: normal;
-        color: var(--tb-terra);
+      .s5::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 20% 80%,
+          rgba(201, 160, 122, 0.25),
+          transparent 55%
+        );
+        z-index: 1;
       }
       .s5 .s5-image {
-        flex: 1;
+        flex: 1.1;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background:
           linear-gradient(
             180deg,
-            rgba(139, 44, 62, 0.25) 0%,
-            transparent 20%,
-            transparent 75%,
-            rgba(74, 29, 42, 0.7) 100%
+            rgba(139, 44, 62, 0.15) 0%,
+            transparent 30%,
+            transparent 70%,
+            rgba(74, 29, 42, 0.5) 100%
           ),
           repeating-linear-gradient(
             45deg,
@@ -709,126 +744,113 @@
             rgba(254, 248, 243, 0.08) 12px 24px
           ),
           linear-gradient(135deg, #a84558 0%, #6b2538 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-top: 1px solid rgba(254, 248, 243, 0.1);
-        border-bottom: 1px solid rgba(254, 248, 243, 0.1);
+        border-right: 1px solid rgba(254, 248, 243, 0.15);
       }
       .s5 .img-placeholder {
         background: rgba(254, 248, 243, 0.12);
         backdrop-filter: blur(4px);
         border: 1.5px dashed rgba(254, 248, 243, 0.45);
-        border-radius: 12px;
-        padding: 14px 18px;
+        border-radius: 10px;
+        padding: 12px 14px;
         text-align: center;
         color: rgba(254, 248, 243, 0.85);
-        max-width: 75%;
+        max-width: 80%;
       }
       .s5 .img-placeholder .label {
-        font-size: 10px;
-        letter-spacing: 3px;
+        font-size: 9px;
+        letter-spacing: 2.5px;
         color: var(--tb-terra);
         font-weight: 800;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
       }
       .s5 .img-placeholder .desc {
-        font-size: 11px;
-        line-height: 1.5;
+        font-size: 10px;
+        line-height: 1.4;
         font-weight: 500;
       }
       .s5 .img-placeholder .desc b {
         color: #fef8f3;
       }
-      .s5 .s5-bottom {
+      .s5 .s5-right {
+        flex: 1;
+        padding: 22px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: relative;
-        z-index: 3;
-        padding: 18px 22px 22px;
+        z-index: 2;
         text-align: center;
-        background: linear-gradient(
-          180deg,
-          rgba(74, 29, 42, 0) 0%,
-          rgba(42, 26, 26, 0.85) 100%
-        );
       }
-      .s5 .price-line {
+      .s5 .eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--tb-peach);
+        font-weight: 800;
+        margin-bottom: 8px;
+        opacity: 0.95;
+      }
+      .s5 h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+        color: #fef8f3;
+      }
+      .s5 h3 em {
+        font-style: normal;
+        color: var(--tb-terra);
+      }
+      .s5 .price-block {
+        margin: 12px 0;
+      }
+      .s5 .price-block .old {
+        font-size: 11px;
+        color: rgba(254, 248, 243, 0.55);
+        text-decoration: line-through;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .s5 .price-block .new-line {
         display: flex;
         align-items: baseline;
         justify-content: center;
-        gap: 9px;
-        margin-bottom: 10px;
-        flex-wrap: wrap;
+        gap: 8px;
       }
-      .s5 .price-line .old {
-        font-size: 13px;
-        color: rgba(254, 248, 243, 0.55);
-        text-decoration: line-through;
-      }
-      .s5 .price-line .off-pct {
+      .s5 .price-block .off-pct {
         background: var(--tb-ink);
         color: var(--tb-peach);
-        padding: 3px 9px;
-        border-radius: 6px;
-        font-size: 12px;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 11px;
         font-weight: 800;
         letter-spacing: 0.5px;
       }
-      .s5 .price-line .new-won {
-        font-size: 28px;
+      .s5 .price-block .new-won {
+        font-size: 26px;
         font-weight: 900;
         color: var(--tb-terra);
         letter-spacing: -1px;
         line-height: 1;
       }
-      .s5 .price-line .new-won small {
-        font-size: 13px;
+      .s5 .price-block .new-won small {
+        font-size: 11px;
         font-weight: 600;
         color: #fef8f3;
-        margin-left: 2px;
+        margin-left: 1px;
       }
       .s5 .deadline {
         background: rgba(0, 0, 0, 0.4);
-        padding: 7px;
-        border-radius: 8px;
-        font-size: 11px;
-        letter-spacing: 1px;
+        padding: 6px;
+        border-radius: 6px;
+        font-size: 10px;
+        letter-spacing: 0.8px;
       }
       .s5 .deadline b {
         color: var(--tb-terra);
       }
 
       /* 공통 */
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-      }
-      th,
-      td {
-        padding: 9px 12px;
-        text-align: left;
-        border-bottom: 1px solid var(--tb-line);
-      }
-      th {
-        background: var(--tb-cream);
-        color: var(--tb-wine);
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.5px;
-      }
-      tr:last-child td {
-        border-bottom: none;
-      }
-      td .pill {
-        display: inline-block;
-        background: var(--tb-peach);
-        color: var(--tb-wine);
-        padding: 2px 8px;
-        border-radius: 999px;
-        font-size: 11px;
-        font-weight: 700;
-      }
-
       .check {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -914,48 +936,6 @@
         margin-top: 6px;
       }
 
-      .funnel {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 12px;
-      }
-      .funnel-step {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        padding: 12px 16px;
-        border-radius: 10px;
-        background: var(--tb-cream);
-        border-left: 4px solid var(--tb-terra);
-      }
-      .funnel-step.goal {
-        background: linear-gradient(90deg, #fdeee4, #f8ddd0);
-        border-left-color: var(--tb-wine);
-      }
-      .funnel-step .label {
-        font-size: 11px;
-        color: var(--tb-terra);
-        font-weight: 700;
-        letter-spacing: 1px;
-        min-width: 80px;
-      }
-      .funnel-step .desc {
-        flex: 1;
-        font-size: 13px;
-        color: var(--tb-ink);
-        font-weight: 500;
-      }
-      .funnel-step .num {
-        font-size: 19px;
-        font-weight: 800;
-        color: var(--tb-wine);
-        letter-spacing: -0.5px;
-      }
-      .funnel-step.goal .num {
-        font-size: 24px;
-      }
-
       .color-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -1016,13 +996,12 @@
       <section class="hero">
         <span class="tag">KAKAO PLUS · CRM CAROUSEL</span>
         <h1>탐뷰티 더 클라우드 플럼핑 립 라이너 · 플친 캐러셀 기획서</h1>
-        <p>디자이너 작업용 · 800 × 1100 세로 · 5컷 구성 · 단독 40% OFF</p>
+        <p>디자이너 작업용 · 800 × 600 가로 · 5컷 구성 · 단독 40% OFF</p>
         <div class="meta">
-          <span>📐 800 × 1100 px</span>
+          <span>📐 800 × 600 px (가로)</span>
           <span>🎞 5컷</span>
           <span>💰 14,000 → 8,400원 (-40%)</span>
           <span>🎨 6 컬러</span>
-          <span>🎯 구매 3건 목표</span>
         </div>
       </section>
 
@@ -1052,15 +1031,15 @@
           </div>
           <div class="kv">
             <div class="k">사이즈</div>
-            <div class="v">800 × 1100 px · 5컷</div>
+            <div class="v">800 × 600 px · 가로 · 5컷</div>
           </div>
           <div class="kv">
             <div class="k">채널</div>
             <div class="v">카카오톡 플친</div>
           </div>
           <div class="kv">
-            <div class="k">구매 목표</div>
-            <div class="v">3건 (선착순 100명)</div>
+            <div class="k">선착순</div>
+            <div class="v">100명 · D-3</div>
           </div>
         </div>
       </section>
@@ -1162,7 +1141,7 @@
 
       <!-- 캐러셀 5컷 -->
       <section class="sec">
-        <h2><span class="num">3</span>캐러셀 5컷 시안 (800 × 1100)</h2>
+        <h2><span class="num">3</span>캐러셀 5컷 시안 (800 × 600 가로)</h2>
         <p class="lead">
           MAIN → B&amp;A → MODEL HERO → COLOR SWATCH → BENEFIT.
         </p>
@@ -1172,21 +1151,27 @@
           <div class="card">
             <div class="preview s1">
               <span class="card-index">01 / 05</span>
-              <span class="card-size">800×1100</span>
-              <span class="tag-new">NEW</span>
-              <div class="discount-tag">
+              <span class="card-size">800×600</span>
+              <div class="discount-stack">
                 <div class="up">PLUS ONLY</div>
                 <div class="pct">40%</div>
                 <div class="off">OFF</div>
               </div>
-              <div class="title">
-                <div class="kicker">TAM BEAUTY · CLOUD PLUMPING</div>
-                <h3>라인 하나로<br /><em>입술 볼륨까지.</em></h3>
-                <div class="product-name">더 클라우드 플럼핑 립 라이너</div>
-                <div class="mood">플친 단독 첫 오픈, 40% OFF</div>
+              <div class="s1-left">
+                <div>
+                  <span class="tag-new">NEW</span>
+                  <div class="kicker">TAM · CLOUD PLUMPING</div>
+                  <h3>라인 하나로<br /><em>입술 볼륨까지.</em></h3>
+                  <div class="product-name">더 클라우드 플럼핑 립 라이너</div>
+                  <div class="mood">플친 단독 첫 오픈, 40% OFF</div>
+                </div>
+                <div class="foot">
+                  <span>플친 단독 40% OFF</span><b>· D-3</b>
+                </div>
               </div>
-              <div class="product"><div class="product-mock"></div></div>
-              <div class="foot"><span>플친 단독 40% OFF</span><b>D-3</b></div>
+              <div class="s1-right">
+                <div class="product-mock"></div>
+              </div>
             </div>
             <div class="card-body">
               <div class="role">🎯 MAIN</div>
@@ -1195,8 +1180,9 @@
                 플럼핑 립 라이너 40% OFF"
               </div>
               <div class="note">
-                <b>비주얼:</b> 제품 3D 샷 (15도 틸트) · NEW 배지 + 40% OFF 박스
-                우상.<br /><b>배경:</b> 아이보리→피치 누드 그라데이션.
+                <b>레이아웃:</b> 좌(카피) + 우(제품 3D 샷 15도 틸트) · NEW 배지
+                좌측 · 40% OFF 박스 우상.<br /><b>배경:</b> 아이보리→피치 누드
+                그라데이션.
               </div>
             </div>
           </div>
@@ -1213,23 +1199,21 @@
                 "
                 >02 / 05</span
               >
-              <span class="card-size">800×1100</span>
+              <span class="card-size">800×600</span>
               <div class="header">
                 <div class="eyebrow">BEFORE &amp; AFTER</div>
-                <h3>
-                  플럼핑 라이너 <span>있고 없고</span>,<br />이만큼 달라져요.
-                </h3>
+                <h3>플럼핑 라이너 <span>있고 없고</span>, 이만큼 달라져요.</h3>
               </div>
-              <div class="ba">
-                <div class="ba-row before">
+              <div class="ba-row">
+                <div class="ba-col before">
                   <span class="tag">BEFORE</span>
                   <div class="lip"></div>
                 </div>
-                <div class="divider">라인 한 번 + <span>플럼핑 효과</span></div>
-                <div class="ba-row after">
+                <div class="ba-col after">
                   <span class="tag">AFTER</span>
                   <div class="lip"></div>
                 </div>
+                <div class="divider-badge">라인 한 번 + <span>볼륨</span></div>
               </div>
             </div>
             <div class="card-body">
@@ -1239,8 +1223,9 @@
                 <span class="em">있고 없고, 이만큼 달라져요</span>"
               </div>
               <div class="note">
-                <b>촬영:</b> 동일 모델 · 동일 립틴트 · 조명 동일. 라이너 유무로
-                입술 볼륨 비교.<br /><b>프레임:</b> 코~턱 클로즈업.
+                <b>레이아웃:</b> 상단 헤더 + 좌/우 2분할 (BEFORE | AFTER). 중앙
+                배지로 구분.<br /><b>촬영:</b> 동일 모델·립틴트·조명 · 라이너
+                유무만 차이 · 코~턱 클로즈업.
               </div>
             </div>
           </div>
@@ -1253,21 +1238,23 @@
                 style="background: var(--tb-terra); color: var(--tb-ink)"
                 >03 / 05</span
               >
-              <span class="card-size">800×1100</span>
-              <div class="model"></div>
-              <div class="content">
-                <div class="eyebrow">CLOUD PLUMPING LINE</div>
-                <h3>구름처럼 부드럽게,<br />볼륨까지 <em>오래.</em></h3>
-                <div class="sub">
-                  탐뷰티 클라우드 시리즈,<br />이번엔 라이너로.
-                </div>
+              <span class="card-size">800×600</span>
+              <div class="s3-left">
+                <div class="model"></div>
               </div>
-              <div class="usps">
-                <div class="usp-line"><b>01</b> 구름처럼 부드러운 발색</div>
-                <div class="usp-line">
-                  <b>02</b> 선 따라 차오르는 플럼핑 효과
+              <div class="s3-right">
+                <div>
+                  <div class="eyebrow">CLOUD PLUMPING LINE</div>
+                  <h3>구름처럼 부드럽게,<br />볼륨까지 <em>오래.</em></h3>
+                  <div class="sub">
+                    탐뷰티 클라우드 시리즈,<br />이번엔 라이너로.
+                  </div>
                 </div>
-                <div class="usp-line"><b>03</b> 6 컬러 무드 라인업</div>
+                <div class="usps">
+                  <div class="usp-line"><b>01</b> 구름처럼 부드러운 발색</div>
+                  <div class="usp-line"><b>02</b> 선 따라 차오르는 플럼핑</div>
+                  <div class="usp-line"><b>03</b> 6 컬러 무드 라인업</div>
+                </div>
               </div>
             </div>
             <div class="card-body">
@@ -1276,69 +1263,69 @@
                 "구름처럼 부드럽게, <span class="em">볼륨까지 오래</span>"
               </div>
               <div class="note">
-                <b>비주얼:</b> 모델 측면 3/4 · 딥 와인 배경 + 테라 골드
-                하이라이트.
+                <b>레이아웃:</b> 좌(모델 클로즈업 · 측면 3/4) + 우(카피 + USP
+                3줄).<br /><b>톤:</b> 딥 와인/플럼 배경 + 테라 골드 하이라이트.
               </div>
             </div>
           </div>
 
-          <!-- S4 SWATCH (6 컬러) -->
+          <!-- S4 SWATCH (3×2 그리드) -->
           <div class="card">
             <div class="preview s4">
               <span class="card-index">04 / 05</span>
-              <span class="card-size">800×1100</span>
+              <span class="card-size">800×600</span>
               <div class="header">
                 <div class="eyebrow">6 COLORS</div>
-                <h3><span>매일 다른 무드</span>,<br />6가지 컬러.</h3>
+                <h3><span>매일 다른 무드</span>, 6가지 컬러.</h3>
                 <div class="sub">데일리 누드부터 무드 딥까지</div>
               </div>
-              <div class="swatch-list">
-                <div class="sw-row">
+              <div class="swatch-grid">
+                <div class="sw-box">
                   <div class="sw-chip" style="background: #6e3a3f"></div>
                   <div class="sw-info">
                     <div class="sw-no">01</div>
-                    <div class="sw-name">더 포지 드림 · Forge Dream</div>
-                    <div class="sw-mood">깊은 무드의 다크 로즈</div>
+                    <div class="sw-name">포지 드림</div>
+                    <div class="sw-en">Forge Dream</div>
                   </div>
                 </div>
-                <div class="sw-row">
+                <div class="sw-box">
                   <div class="sw-chip" style="background: #b96878"></div>
                   <div class="sw-info">
                     <div class="sw-no">02</div>
-                    <div class="sw-name">더 비터 페탈 · Bitter Petal</div>
-                    <div class="sw-mood">쌉싸름한 더스티 페탈 핑크</div>
+                    <div class="sw-name">비터 페탈</div>
+                    <div class="sw-en">Bitter Petal</div>
                   </div>
                 </div>
-                <div class="sw-row">
+                <div class="sw-box">
                   <div class="sw-chip" style="background: #c47b78"></div>
                   <div class="sw-info">
                     <div class="sw-no">03</div>
-                    <div class="sw-name">더 로즈 티 · Rose Tea</div>
-                    <div class="sw-mood">은은한 장미차 누드 로즈</div>
+                    <div class="sw-name">로즈 티</div>
+                    <div class="sw-en">Rose Tea</div>
                   </div>
                 </div>
-                <div class="sw-row">
+                <div class="sw-box">
                   <div class="sw-chip" style="background: #d4988a"></div>
                   <div class="sw-info">
                     <div class="sw-no">04</div>
-                    <div class="sw-name">더 피치 버터 · Peach Butter</div>
-                    <div class="sw-mood">부드러운 피치 베이지 누드</div>
+                    <div class="sw-name">피치 버터</div>
+                    <div class="sw-en">Peach Butter</div>
                   </div>
                 </div>
-                <div class="sw-row">
+                <div class="sw-box">
                   <div class="sw-chip" style="background: #d07560"></div>
                   <div class="sw-info">
                     <div class="sw-no">05</div>
-                    <div class="sw-name">더 선셋 베일 · Sunset Veil</div>
-                    <div class="sw-mood">노을빛 코랄 베일</div>
+                    <div class="sw-name">선셋 베일</div>
+                    <div class="sw-en">Sunset Veil</div>
                   </div>
                 </div>
-                <div class="sw-row">
+                <div class="sw-box">
                   <div class="sw-chip" style="background: #9a5d4e"></div>
                   <div class="sw-info">
                     <div class="sw-no">06</div>
-                    <div class="sw-name">더 시나몬 번 · Cinnamon Bun</div>
-                    <div class="sw-mood">따뜻한 시나몬 브라운 누드</div>
+                    <div class="sw-name">시나몬 번</div>
+                    <div class="sw-en">Cinnamon Bun</div>
                   </div>
                 </div>
               </div>
@@ -1346,13 +1333,12 @@
             <div class="card-body">
               <div class="role">🎨 COLOR SWATCH</div>
               <div class="copy">
-                "매일 다른 무드, <span class="em">6가지 컬러</span> · 데일리부터
-                무드 딥까지"
+                "매일 다른 무드, <span class="em">6가지 컬러</span>"
               </div>
               <div class="note">
-                <b>비주얼:</b> 모델 입술 착용컷 6장 (손등 스와치 X).
-                호수명·영문명 병기.<br /><b>배치 옵션:</b> 6분할 그리드 (3×2)
-                또는 세로 리스트.
+                <b>레이아웃:</b> 상단 헤더 + 하단 3×2 그리드 (가로 세줄, 세로
+                두줄).<br /><b>비주얼:</b> 모델 입술 착용컷 6장 우선. 손등
+                스와치 X.
               </div>
             </div>
           </div>
@@ -1365,28 +1351,29 @@
                 style="background: var(--tb-peach); color: var(--tb-wine)"
                 >05 / 05</span
               >
-              <span class="card-size">800×1100</span>
-
-              <div class="s5-top">
-                <div class="eyebrow">PLUS FRIENDS ONLY</div>
-                <h3>플친에게만 드리는<br /><em>40% 쿠폰</em></h3>
-              </div>
+              <span class="card-size">800×600</span>
 
               <div class="s5-image">
                 <div class="img-placeholder">
                   <div class="label">📷 IMAGE AREA</div>
                   <div class="desc">
                     <b>모델 착용컷 · 제품 연출컷 · 립 클로즈업</b><br />중 택 1
-                    배치 (풀 브리드 이미지)
+                    (풀 브리드)
                   </div>
                 </div>
               </div>
 
-              <div class="s5-bottom">
-                <div class="price-line">
+              <div class="s5-right">
+                <div>
+                  <div class="eyebrow">PLUS FRIENDS ONLY</div>
+                  <h3>플친에게만 드리는<br /><em>40% 쿠폰</em></h3>
+                </div>
+                <div class="price-block">
                   <span class="old">14,000원</span>
-                  <span class="off-pct">-40%</span>
-                  <span class="new-won">8,400<small>원</small></span>
+                  <div class="new-line">
+                    <span class="off-pct">-40%</span>
+                    <span class="new-won">8,400<small>원</small></span>
+                  </div>
                 </div>
                 <div class="deadline">
                   ⏰ <b>D-3 자정</b> 정가 복귀 · 선착순 100명
@@ -1400,10 +1387,10 @@
                 · 선착순 100명"
               </div>
               <div class="note">
-                <b>레이아웃:</b> 상단 카피 · 중앙 이미지 영역 (풀 브리드) · 하단
-                가격/마감 3단 구조.<br /><b>이미지 영역:</b> 모델 착용컷 / 제품
-                연출컷 / 립 클로즈업 중 택 1 (800×500~600 권장).<br /><b>톤:</b>
-                이미지 위 상·하단 그라디언트 오버레이로 텍스트 가독성 확보.
+                <b>레이아웃:</b> 좌(이미지 영역 · 풀 브리드) + 우(카피 + 가격 +
+                마감).<br /><b>이미지 영역:</b> 모델 착용컷 / 제품 연출컷 / 립
+                클로즈업 중 택 1 (380 × 600 권장).<br /><b>톤:</b> 이미지 위
+                그라디언트 오버레이로 좌우 경계 부드럽게 처리.
               </div>
             </div>
           </div>
@@ -1461,7 +1448,7 @@
       <section class="sec">
         <h2><span class="num">5</span>디자이너 체크리스트</h2>
         <div class="check">
-          <div class="check-item">800 × 1100 px 세로 포맷 5장</div>
+          <div class="check-item">800 × 600 px 가로 포맷 5장</div>
           <div class="check-item">메인 팔레트: #fef8f3 · #f8ddd0 · #c9a07a</div>
           <div class="check-item">
             포인트 팔레트: #d4856a · #c96b8e · #8b2c3e
@@ -1474,25 +1461,24 @@
             제품 정식명 "더 클라우드 플럼핑 립 라이너" 표기 (축약 X)
           </div>
           <div class="check-item">
-            1컷: NEW 배지(좌상) + 40% OFF 박스(우상) + 제품 정식명 ·
-            정가/할인가는 5컷에 집중
+            1컷: 좌(카피) + 우(제품컷) 2분할 · NEW 배지(좌) + 40% OFF 박스(우상)
           </div>
           <div class="check-item">
-            2컷 B&amp;A: 동일 모델 · 동일 립틴트 · 조명 동일 (라이너 유무만
-            차이)
+            2컷 B&amp;A: 좌(BEFORE) + 우(AFTER) 2분할 · 동일 모델·립틴트·조명
+            (라이너 유무만 차이)
           </div>
           <div class="check-item">
-            3컷 모델컷: 측면 3/4 프레임 · 클라우드 시리즈 톤 통일
+            3컷 HERO: 좌(모델 측면 3/4) + 우(카피 + USP) 2분할
           </div>
           <div class="check-item">
-            4컷 컬러 스와치 6장: 모델 입술 착용컷 우선 · 시안 기준 세로
-            리스트(1열), 3×2 그리드도 가능
+            4컷 SWATCH: 상단 헤더 + 3×2 그리드 (가로 3 · 세로 2) · 모델 입술
+            착용컷 우선
           </div>
           <div class="check-item">
-            5컷 이미지 영역: 모델/제품/연출컷 중 1장 풀 브리드 (800 × 500~600)
+            5컷 BENEFIT: 좌(이미지 풀 브리드) + 우(카피 + 가격 + 마감) 2분할
           </div>
           <div class="check-item">
-            5컷 텍스트 가독성: 이미지 상·하단 그라디언트 오버레이 처리
+            5컷 이미지 영역: 380 × 600 권장 · 우측과 그라디언트 경계 처리
           </div>
           <div class="check-item">
             5컷 가격 표시: 14,000원(취소선) · -40% · 8,400원 강조
