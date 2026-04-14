@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>탐뷰티 립 라이너 · 카톡 플친 CRM 캐러셀 기획서 v3</title>
+    <title>탐뷰티 립라이너 · 카톡 플친 CRM 캐러셀 기획서 v4</title>
     <style>
       :root {
-        /* 탐뷰티 실제 브랜드 팔레트 (클라우드블러 v3 기준) */
         --tb-ivory: #fef8f3;
         --tb-nude: #fdeee4;
         --tb-peach: #f8ddd0;
@@ -19,7 +18,6 @@
         --tb-warm: #7a5c52;
         --tb-cream: #faf8f5;
         --tb-line: #ede8e0;
-        --tb-gold: #c9a07a;
       }
       * {
         box-sizing: border-box;
@@ -38,6 +36,7 @@
         margin: 0 auto;
       }
 
+      /* Hero */
       .hero {
         background: linear-gradient(
           135deg,
@@ -45,11 +44,10 @@
           #f8ddd0 50%,
           #e8b89a 100%
         );
-        color: var(--tb-ink);
         border-radius: 20px;
-        padding: 42px 36px;
-        margin-bottom: 32px;
-        box-shadow: 0 20px 40px -20px rgba(139, 44, 62, 0.25);
+        padding: 40px 34px;
+        margin-bottom: 28px;
+        box-shadow: 0 20px 40px -20px rgba(139, 44, 62, 0.22);
         position: relative;
         overflow: hidden;
       }
@@ -71,13 +69,13 @@
         border-radius: 999px;
         font-size: 12px;
         letter-spacing: 2px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
         color: var(--tb-warm);
       }
       .hero h1 {
         position: relative;
-        margin: 0 0 10px;
-        font-size: 30px;
+        margin: 0 0 8px;
+        font-size: 28px;
         font-weight: 800;
         letter-spacing: -0.5px;
         color: var(--tb-ink);
@@ -85,15 +83,14 @@
       .hero p {
         position: relative;
         margin: 0;
-        opacity: 0.75;
         font-size: 14px;
         color: var(--tb-warm);
       }
       .hero .meta {
         position: relative;
-        margin-top: 20px;
+        margin-top: 18px;
         display: flex;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: wrap;
       }
       .hero .meta span {
@@ -108,14 +105,14 @@
       .sec {
         background: #fff;
         border-radius: 16px;
-        padding: 28px;
-        margin-bottom: 24px;
+        padding: 26px;
+        margin-bottom: 22px;
         box-shadow: 0 4px 20px -10px rgba(139, 44, 62, 0.1);
         border: 1px solid var(--tb-line);
       }
       .sec h2 {
         margin: 0 0 6px;
-        font-size: 20px;
+        font-size: 19px;
         color: var(--tb-wine);
         display: flex;
         align-items: center;
@@ -124,30 +121,30 @@
       .sec h2 .num {
         background: var(--tb-terra);
         color: #fff;
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
         border-radius: 8px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
       }
       .sec .lead {
         color: var(--tb-warm);
-        font-size: 14px;
-        margin: 0 0 20px;
+        font-size: 13px;
+        margin: 0 0 18px;
       }
 
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 14px;
+        gap: 12px;
       }
       .kv {
         background: var(--tb-cream);
         border-radius: 12px;
-        padding: 14px 16px;
+        padding: 13px 15px;
         border-left: 3px solid var(--tb-terra);
       }
       .kv .k {
@@ -158,15 +155,53 @@
         margin-bottom: 4px;
       }
       .kv .v {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         color: var(--tb-ink);
       }
 
+      /* TODO 박스 */
+      .todo-box {
+        background: #fff5f0;
+        border: 1.5px dashed var(--tb-rose);
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-top: 14px;
+      }
+      .todo-box .t-tag {
+        display: inline-block;
+        background: var(--tb-rose);
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+      .todo-box h4 {
+        margin: 0 0 6px;
+        font-size: 14px;
+        color: var(--tb-wine);
+      }
+      .todo-box p {
+        margin: 0;
+        font-size: 13px;
+        color: #6a2518;
+        line-height: 1.55;
+      }
+      .todo-box code {
+        background: rgba(139, 44, 62, 0.08);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      /* Cards */
       .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 22px;
         margin-top: 12px;
       }
       .card {
@@ -187,8 +222,8 @@
       }
       .card-index {
         position: absolute;
-        top: 16px;
-        left: 16px;
+        top: 14px;
+        left: 14px;
         background: var(--tb-ink);
         color: #fff;
         font-size: 11px;
@@ -200,24 +235,23 @@
       }
       .card-size {
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 14px;
+        right: 14px;
         background: rgba(255, 255, 255, 0.9);
         color: var(--tb-warm);
         font-size: 10px;
         padding: 4px 9px;
         border-radius: 6px;
         font-weight: 700;
-        letter-spacing: 0.5px;
         z-index: 5;
       }
       .card-body {
-        padding: 20px 22px;
+        padding: 18px 20px;
         background: #fff;
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 9px;
       }
       .card-body .role {
         font-size: 11px;
@@ -248,7 +282,7 @@
         color: var(--tb-ink);
       }
 
-      /* Slide 1 MAIN */
+      /* Slide 1 — MAIN: 부담없이 생기있게 */
       .s1 {
         background: linear-gradient(
           165deg,
@@ -256,75 +290,82 @@
           #fdeee4 45%,
           #f0cfc0 100%
         );
-        padding: 44px 28px 22px;
+        padding: 44px 26px 22px;
         justify-content: space-between;
       }
-      .s1 .new-badge {
+      .s1 .tag-new {
         position: absolute;
         top: 52px;
-        right: 24px;
-        background: var(--tb-ink);
-        color: var(--tb-peach);
-        padding: 6px 13px;
+        right: 22px;
+        background: var(--tb-wine);
+        color: #fef8f3;
+        padding: 5px 12px;
         border-radius: 999px;
         font-size: 12px;
         font-weight: 800;
         letter-spacing: 1.5px;
         z-index: 3;
       }
-      .s1 .discount {
+      .s1 .discount-tag {
         position: absolute;
         top: 96px;
-        right: 24px;
+        right: 22px;
         text-align: right;
         z-index: 3;
+        background: var(--tb-ink);
+        color: var(--tb-peach);
+        padding: 10px 12px;
+        border-radius: 10px;
       }
-      .s1 .discount .up {
-        font-size: 10px;
-        color: var(--tb-wine);
+      .s1 .discount-tag .up {
+        font-size: 9px;
+        color: var(--tb-terra);
         font-weight: 700;
         letter-spacing: 1.5px;
       }
-      .s1 .discount .pct {
-        font-size: 44px;
+      .s1 .discount-tag .pct {
+        font-size: 32px;
         font-weight: 900;
-        color: var(--tb-wine);
+        color: var(--tb-peach);
         line-height: 1;
-        letter-spacing: -2px;
-        font-family: "Playfair Display", serif;
+        letter-spacing: -1px;
       }
-      .s1 .discount .off {
-        font-size: 11px;
-        color: var(--tb-ink);
+      .s1 .discount-tag .off {
+        font-size: 9px;
+        color: var(--tb-terra);
         font-weight: 700;
         letter-spacing: 2px;
         margin-top: 2px;
       }
       .s1 .title {
-        margin-top: 72px;
+        margin-top: 60px;
       }
       .s1 .title .kicker {
-        font-size: 11px;
+        font-size: 10px;
         color: var(--tb-terra);
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         font-weight: 700;
         margin-bottom: 8px;
       }
       .s1 .title h3 {
         margin: 0;
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 800;
         color: var(--tb-ink);
-        letter-spacing: -1px;
-        line-height: 1.1;
-        font-family: "Playfair Display", serif;
+        letter-spacing: -0.5px;
+        line-height: 1.15;
+      }
+      .s1 .title h3 em {
+        font-style: normal;
+        color: var(--tb-wine);
       }
       .s1 .title .mood {
-        font-size: 13px;
+        font-size: 12px;
         color: var(--tb-warm);
         margin-top: 10px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         font-weight: 500;
+        line-height: 1.5;
       }
       .s1 .product {
         flex: 1;
@@ -334,7 +375,7 @@
         margin: 4px 0;
       }
       .s1 .product-mock {
-        width: 46%;
+        width: 40%;
         aspect-ratio: 1/4.5;
         background: linear-gradient(
           180deg,
@@ -344,7 +385,7 @@
           #d4856a 78%,
           #2a2a2a 78%
         );
-        border-radius: 6px;
+        border-radius: 5px;
         box-shadow: 0 20px 40px -15px rgba(139, 44, 62, 0.4);
         transform: rotate(-14deg);
         position: relative;
@@ -364,7 +405,7 @@
       .s1 .foot {
         background: var(--tb-ink);
         color: var(--tb-peach);
-        padding: 10px 14px;
+        padding: 9px 13px;
         border-radius: 10px;
         font-size: 11px;
         display: flex;
@@ -374,10 +415,9 @@
       .s1 .foot b {
         color: var(--tb-terra);
         font-size: 12px;
-        letter-spacing: 1px;
       }
 
-      /* Slide 2 B&A */
+      /* Slide 2 — B&A */
       .s2 {
         background: var(--tb-cream);
       }
@@ -394,11 +434,11 @@
       }
       .s2 .header h3 {
         margin: 0;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 800;
         color: var(--tb-ink);
-        letter-spacing: -0.8px;
-        font-family: "Playfair Display", serif;
+        letter-spacing: -0.5px;
+        line-height: 1.25;
       }
       .s2 .header h3 span {
         color: var(--tb-wine);
@@ -473,22 +513,22 @@
       .s2 .divider {
         background: var(--tb-ink);
         color: var(--tb-peach);
-        padding: 10px;
+        padding: 9px;
         text-align: center;
         font-size: 11px;
         font-weight: 700;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
       }
       .s2 .divider span {
         color: var(--tb-terra);
         font-weight: 800;
       }
 
-      /* Slide 3 HERO */
+      /* Slide 3 — MODEL HERO */
       .s3 {
-        background: linear-gradient(180deg, #2a2a2a 0%, #4a2d2d 100%);
+        background: linear-gradient(180deg, #4a2d2d 0%, #2a1a1a 100%);
         color: #fef8f3;
-        padding: 40px 26px 22px;
+        padding: 36px 24px 22px;
         justify-content: space-between;
         overflow: hidden;
       }
@@ -498,7 +538,7 @@
         inset: 0;
         background: radial-gradient(
           ellipse at 72% 38%,
-          rgba(201, 160, 122, 0.38),
+          rgba(201, 160, 122, 0.32),
           transparent 55%
         );
       }
@@ -519,28 +559,27 @@
       }
       .s3 .eyebrow {
         font-size: 10px;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         color: var(--tb-terra);
         font-weight: 700;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
       .s3 h3 {
         margin: 0;
-        font-size: 34px;
+        font-size: 28px;
         font-weight: 800;
-        line-height: 1;
-        letter-spacing: -1.5px;
-        font-family: "Playfair Display", serif;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
       }
       .s3 h3 em {
-        font-style: italic;
+        font-style: normal;
         color: var(--tb-terra);
       }
       .s3 .sub {
-        margin-top: 12px;
+        margin-top: 10px;
         font-size: 13px;
-        color: rgba(254, 248, 243, 0.8);
-        line-height: 1.6;
+        color: rgba(254, 248, 243, 0.85);
+        line-height: 1.55;
         font-weight: 500;
       }
       .s3 .usps {
@@ -551,9 +590,9 @@
         gap: 7px;
       }
       .s3 .usp-line {
-        background: rgba(254, 248, 243, 0.08);
+        background: rgba(254, 248, 243, 0.1);
         backdrop-filter: blur(6px);
-        padding: 9px 13px;
+        padding: 9px 12px;
         border-radius: 8px;
         font-size: 12px;
         display: flex;
@@ -568,151 +607,100 @@
         min-width: 18px;
       }
 
-      /* Slide 4 SET */
+      /* Slide 4 — 컬러 스와치 */
       .s4 {
         background: #fff;
-        padding: 26px 22px;
+        padding: 28px 22px;
         justify-content: space-between;
       }
       .s4 .header .eyebrow {
         font-size: 10px;
         color: var(--tb-terra);
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         font-weight: 700;
         margin-bottom: 6px;
       }
       .s4 .header h3 {
         margin: 0;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 800;
         color: var(--tb-ink);
         letter-spacing: -0.5px;
-        font-family: "Playfair Display", serif;
+        line-height: 1.2;
       }
-      .s4 .header .sub {
-        font-size: 11px;
-        color: var(--tb-warm);
-        margin-top: 4px;
-        letter-spacing: 0.5px;
-      }
-      .s4 .set-visual {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        padding: 20px 0;
-        background: var(--tb-cream);
-        border-radius: 14px;
-        margin: 14px 0;
-        position: relative;
-        border: 1px solid var(--tb-line);
-      }
-      .s4 .set-visual::before {
-        content: "+";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-        color: var(--tb-terra);
-        font-weight: 300;
-      }
-      .s4 .pm {
-        width: 34px;
-        aspect-ratio: 1/4;
-        border-radius: 4px;
-        box-shadow: 0 8px 16px -6px rgba(139, 44, 62, 0.3);
-      }
-      .s4 .pm1 {
-        background: linear-gradient(
-          180deg,
-          #2a2a2a 0%,
-          #2a2a2a 22%,
-          #c9a07a 22%,
-          #d4856a 78%,
-          #2a2a2a 78%
-        );
-      }
-      .s4 .pm2 {
-        background: linear-gradient(
-          180deg,
-          #8b2c3e 0%,
-          #8b2c3e 28%,
-          #f8ddd0 28%,
-          #f8ddd0 72%,
-          #8b2c3e 72%
-        );
-        width: 30px;
-        aspect-ratio: 1/3;
-      }
-      .s4 .matched {
-        background: var(--tb-cream);
-        border: 1px dashed var(--tb-terra);
-        border-radius: 8px;
-        padding: 8px 10px;
-        font-size: 11px;
-        color: var(--tb-warm);
-        text-align: center;
-        margin-bottom: 10px;
-      }
-      .s4 .matched b {
+      .s4 .header h3 span {
         color: var(--tb-wine);
       }
-      .s4 .price-box {
-        background: var(--tb-ink);
-        color: var(--tb-peach);
-        border-radius: 12px;
-        padding: 14px 16px;
+      .s4 .header .sub {
+        font-size: 12px;
+        color: var(--tb-warm);
+        margin-top: 6px;
       }
-      .s4 .price-box .name {
-        font-size: 11px;
-        color: rgba(254, 248, 243, 0.75);
-        margin-bottom: 6px;
-        letter-spacing: 0.5px;
-      }
-      .s4 .price-box .row {
+      .s4 .swatch-list {
+        flex: 1;
         display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 0;
+      }
+      .s4 .sw-row {
+        display: flex;
+        align-items: center;
         gap: 12px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: var(--tb-cream);
+        border: 1px solid var(--tb-line);
       }
-      .s4 .price-box .old {
-        font-size: 12px;
-        color: rgba(254, 248, 243, 0.5);
-        text-decoration: line-through;
+      .s4 .sw-chip {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
       }
-      .s4 .price-box .new {
-        font-size: 24px;
-        font-weight: 900;
+      .s4 .sw-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .s4 .sw-no {
+        font-size: 9px;
         color: var(--tb-terra);
-        letter-spacing: -0.5px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
       }
-      .s4 .price-box .new small {
-        font-size: 12px;
-        color: var(--tb-peach);
-        font-weight: 600;
+      .s4 .sw-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--tb-ink);
+        margin: 1px 0;
       }
-      .s4 .price-box .off-pct {
-        background: var(--tb-wine);
-        color: var(--tb-peach);
-        padding: 3px 10px;
+      .s4 .sw-mood {
+        font-size: 10px;
+        color: var(--tb-warm);
+        line-height: 1.3;
+      }
+      .s4 .sw-tone {
+        font-size: 9px;
+        background: var(--tb-peach);
+        color: var(--tb-wine);
+        padding: 2px 6px;
         border-radius: 999px;
-        font-size: 12px;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 0.5px;
       }
 
-      /* Slide 5 BENEFIT */
+      /* Slide 5 — BENEFIT (립라이너 30% 단독) */
       .s5 {
         background: linear-gradient(
           135deg,
-          #8b2c3e 0%,
-          #6b2538 60%,
-          #4a1d2a 100%
+          #d4856a 0%,
+          #c96b8e 60%,
+          #8b2c3e 100%
         );
-        color: var(--tb-peach);
-        padding: 38px 26px 22px;
+        color: #fef8f3;
+        padding: 36px 24px 22px;
         justify-content: space-between;
         text-align: center;
       }
@@ -721,8 +709,8 @@
         position: absolute;
         inset: 0;
         background: radial-gradient(
-          circle at 25% 75%,
-          rgba(201, 160, 122, 0.25),
+          circle at 25% 80%,
+          rgba(201, 160, 122, 0.28),
           transparent 55%
         );
       }
@@ -733,43 +721,73 @@
       .s5 .eyebrow {
         font-size: 11px;
         letter-spacing: 4px;
-        color: var(--tb-terra);
+        color: var(--tb-peach);
         font-weight: 800;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        opacity: 0.95;
       }
       .s5 h3 {
         margin: 0;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 800;
-        line-height: 1.2;
-        letter-spacing: -0.8px;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
         color: #fef8f3;
-        font-family: "Playfair Display", serif;
       }
-      .s5 h3 .big {
-        display: block;
-        font-size: 78px;
+      .s5 .price-block {
+        margin: 14px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .s5 .price-block .old {
+        font-size: 14px;
+        color: rgba(254, 248, 243, 0.6);
+        text-decoration: line-through;
+        letter-spacing: 0.5px;
+      }
+      .s5 .price-block .new-line {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+      }
+      .s5 .price-block .new-line .off-pct {
+        background: var(--tb-ink);
+        color: var(--tb-peach);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+      .s5 .price-block .new-line .new-won {
+        font-size: 36px;
         font-weight: 900;
-        color: var(--tb-terra);
-        line-height: 0.9;
-        margin: 8px 0;
-        letter-spacing: -3px;
+        color: #fef8f3;
+        letter-spacing: -1.5px;
+        line-height: 1;
+      }
+      .s5 .price-block .new-line .new-won small {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(254, 248, 243, 0.85);
+        letter-spacing: 0;
       }
       .s5 .sub {
         font-size: 12px;
         opacity: 0.85;
-        margin-top: 8px;
-        font-weight: 400;
+        margin-top: 2px;
       }
       .s5 .cta {
         position: relative;
         z-index: 2;
         background: var(--tb-peach);
         color: var(--tb-wine);
-        padding: 14px;
+        padding: 13px;
         border-radius: 12px;
         font-weight: 800;
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 0.5px;
         box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.35);
       }
@@ -778,122 +796,23 @@
         color: var(--tb-warm);
         font-weight: 500;
         font-size: 10px;
-        letter-spacing: 0;
-        margin-top: 4px;
+        margin-top: 3px;
       }
       .s5 .deadline {
         position: relative;
         z-index: 2;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.3);
         padding: 7px;
         border-radius: 8px;
         font-size: 11px;
         letter-spacing: 1px;
-        margin-top: 8px;
+        margin-top: 7px;
       }
       .s5 .deadline b {
-        color: var(--tb-terra);
+        color: var(--tb-peach);
       }
 
-      /* 컬러 스와치 */
-      .color-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 12px;
-        margin-top: 12px;
-      }
-      .color-card {
-        background: #fff;
-        border: 1px solid var(--tb-line);
-        border-radius: 12px;
-        padding: 14px;
-        display: flex;
-        gap: 12px;
-        align-items: flex-start;
-      }
-      .color-card .chip {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        flex-shrink: 0;
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
-      }
-      .color-card .meta .no {
-        font-size: 10px;
-        color: var(--tb-terra);
-        font-weight: 700;
-        letter-spacing: 1.5px;
-      }
-      .color-card .meta .name {
-        font-size: 14px;
-        font-weight: 700;
-        color: var(--tb-ink);
-        margin: 2px 0;
-      }
-      .color-card .meta .en {
-        font-size: 11px;
-        color: var(--tb-warm);
-        font-style: italic;
-        margin-bottom: 4px;
-      }
-      .color-card .meta .mood {
-        font-size: 11px;
-        color: var(--tb-warm);
-        line-height: 1.45;
-      }
-      .color-card .meta .match {
-        font-size: 10px;
-        color: var(--tb-wine);
-        margin-top: 4px;
-        font-weight: 600;
-      }
-
-      /* KPI 퍼널 */
-      .funnel {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 12px;
-      }
-      .funnel-step {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        padding: 12px 16px;
-        border-radius: 10px;
-        background: var(--tb-cream);
-        border-left: 4px solid var(--tb-terra);
-      }
-      .funnel-step.goal {
-        background: linear-gradient(90deg, #fdeee4, #f8ddd0);
-        border-left-color: var(--tb-wine);
-      }
-      .funnel-step .label {
-        font-size: 11px;
-        color: var(--tb-terra);
-        font-weight: 700;
-        letter-spacing: 1px;
-        min-width: 80px;
-      }
-      .funnel-step .desc {
-        flex: 1;
-        font-size: 13px;
-        color: var(--tb-ink);
-        font-weight: 500;
-      }
-      .funnel-step .num {
-        font-size: 20px;
-        font-weight: 800;
-        color: var(--tb-wine);
-        letter-spacing: -0.5px;
-        font-family: "Playfair Display", serif;
-      }
-      .funnel-step.goal .num {
-        color: var(--tb-wine);
-        font-size: 26px;
-      }
-
-      /* common */
+      /* 공통 */
       table {
         width: 100%;
         border-collapse: collapse;
@@ -901,7 +820,7 @@
       }
       th,
       td {
-        padding: 10px 12px;
+        padding: 9px 12px;
         text-align: left;
         border-bottom: 1px solid var(--tb-line);
       }
@@ -949,14 +868,14 @@
       .usp-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 14px;
+        gap: 12px;
         margin-top: 12px;
       }
       .usp {
         background: linear-gradient(135deg, #fff, var(--tb-cream));
         border: 1px solid var(--tb-line);
         border-radius: 14px;
-        padding: 18px;
+        padding: 16px;
       }
       .usp .badge {
         display: inline-block;
@@ -970,7 +889,7 @@
       }
       .usp h4 {
         margin: 0 0 6px;
-        font-size: 16px;
+        font-size: 15px;
         color: var(--tb-ink);
       }
       .usp p {
@@ -979,16 +898,28 @@
         color: var(--tb-warm);
         line-height: 1.55;
       }
+      .usp .tentative {
+        display: inline-block;
+        margin-left: 6px;
+        font-size: 10px;
+        background: #fff5f0;
+        color: var(--tb-rose);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        border: 1px dashed var(--tb-rose);
+      }
 
       .copybank {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 12px;
+        gap: 10px;
       }
       .copybank .cb {
         background: var(--tb-cream);
         border-radius: 12px;
-        padding: 14px;
+        padding: 13px;
         border-left: 3px solid var(--tb-dusty);
       }
       .copybank .cb .tag {
@@ -1008,17 +939,103 @@
         font-size: 11px;
         color: var(--tb-warm);
         margin-top: 6px;
-        font-style: italic;
+      }
+
+      .funnel {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .funnel-step {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        background: var(--tb-cream);
+        border-left: 4px solid var(--tb-terra);
+      }
+      .funnel-step.goal {
+        background: linear-gradient(90deg, #fdeee4, #f8ddd0);
+        border-left-color: var(--tb-wine);
+      }
+      .funnel-step .label {
+        font-size: 11px;
+        color: var(--tb-terra);
+        font-weight: 700;
+        letter-spacing: 1px;
+        min-width: 80px;
+      }
+      .funnel-step .desc {
+        flex: 1;
+        font-size: 13px;
+        color: var(--tb-ink);
+        font-weight: 500;
+      }
+      .funnel-step .num {
+        font-size: 19px;
+        font-weight: 800;
+        color: var(--tb-wine);
+        letter-spacing: -0.5px;
+      }
+      .funnel-step.goal .num {
+        font-size: 24px;
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .color-card {
+        background: #fff;
+        border: 1px solid var(--tb-line);
+        border-radius: 12px;
+        padding: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .color-card .chip {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+      }
+      .color-card .meta .no {
+        font-size: 10px;
+        color: var(--tb-terra);
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      .color-card .meta .name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--tb-ink);
+        margin: 1px 0;
+      }
+      .color-card .meta .en {
+        font-size: 10px;
+        color: var(--tb-warm);
+        margin-bottom: 3px;
+      }
+      .color-card .meta .mood {
+        font-size: 10px;
+        color: var(--tb-warm);
+        line-height: 1.4;
       }
 
       .warn {
         background: #fff5f0;
         border-left: 3px solid var(--tb-rose);
-        padding: 14px 16px;
+        padding: 12px 14px;
         border-radius: 8px;
-        font-size: 13px;
+        font-size: 12px;
         color: #6a2518;
-        margin-top: 14px;
+        margin-top: 12px;
       }
       .warn b {
         color: var(--tb-wine);
@@ -1028,57 +1045,122 @@
         text-align: center;
         color: var(--tb-warm);
         font-size: 12px;
-        margin-top: 30px;
-        padding: 20px;
+        margin-top: 28px;
+        padding: 18px;
       }
     </style>
   </head>
   <body>
     <div class="wrap">
       <section class="hero">
-        <span class="tag">KAKAO PLUS · CRM CAROUSEL · V3</span>
-        <h1>탐뷰티 립 라이너 · 플친 캐러셀 기획서</h1>
+        <span class="tag">KAKAO PLUS · CRM CAROUSEL · V4</span>
+        <h1>탐뷰티 립라이너 · 플친 캐러셀 기획서</h1>
         <p>
-          5컷 · B&amp;A 중심 · 탐뷰티 누드 로즈 팔레트 적용 · 소규모 현실 KPI
+          립라이너 단독 30% OFF · 과한 고급화 걷어낸 젤리 립 시리즈 톤 · 구매
+          3건 목표
         </p>
         <div class="meta">
           <span>📐 800 × 1100 세로</span>
           <span>🎞 5컷</span>
-          <span>🎯 구매 3명 목표 (이전 1명 → ×3)</span>
-          <span>🎨 실제 브랜드 톤 적용</span>
+          <span>🎯 구매 3건 (이전 1건 → ×3)</span>
+          <span>💰 립라이너 30% 단독 OFF</span>
         </div>
       </section>
 
-      <!-- 변경 요약 -->
+      <!-- v4 변경 -->
       <section class="sec">
-        <h2><span class="num">0</span>v3 변경 요약</h2>
-        <p class="lead">팀 미팅 피드백 3건 반영.</p>
+        <h2><span class="num">0</span>v4 변경 요약</h2>
+        <p class="lead">사용자 피드백 3건 반영.</p>
         <div class="grid">
           <div class="kv">
-            <div class="k">① 브랜드 컬러</div>
-            <div class="v">비비드 핑크 → 아이보리/누드/테라코타/와인</div>
+            <div class="k">① 할인 구조</div>
+            <div class="v">세트 매칭 → <b>립라이너 단독 30% OFF</b></div>
           </div>
           <div class="kv">
-            <div class="k">② KPI</div>
-            <div class="v">CTR% → 절대숫자 · 구매 3명 목표</div>
+            <div class="k">② 톤 보정</div>
+            <div class="v">
+              Playfair 세리프 제거 · 억지 고급화 걷어내고 젤리 립 시리즈 톤
+            </div>
           </div>
           <div class="kv">
-            <div class="k">③ 컬러 라인업</div>
-            <div class="v">립틴트 8컬러와 매칭되는 4호수 확정</div>
+            <div class="k">③ USP</div>
+            <div class="v">상세페이지 URL 받아 확정 (임시 3종 유지)</div>
           </div>
           <div class="kv">
-            <div class="k">④ 문안</div>
-            <div class="v">추구미·Quiet Luxury 톤으로 리라이팅</div>
+            <div class="k">④ 유지</div>
+            <div class="v">
+              브랜드 팔레트 · 5컷 구성 · B&amp;A 중심 · KPI 3건
+            </div>
+          </div>
+        </div>
+
+        <div class="todo-box">
+          <span class="t-tag">TODO · USP 확정 필요</span>
+          <h4>탐뷰티 립라이너 상세페이지 URL을 주세요</h4>
+          <p>
+            공식몰이 Cafe24 JS 렌더링이라 외부 조회로는 실제 제품 스펙이 안
+            읽힙니다. 상세페이지 URL(예:
+            <code>tambeauty.kr/product/...</code>)을 공유해주시면
+            <b>실제 제품 USP · 성분 · 컬러 네이밍 · 가격</b>을 그대로 반영해
+            즉시 교체합니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- USP (임시) -->
+      <section class="sec">
+        <h2>
+          <span class="num">1</span>USP 3가지
+          <span
+            style="
+              font-size: 12px;
+              color: var(--tb-rose);
+              font-weight: 600;
+              margin-left: 8px;
+            "
+            >· 임시안</span
+          >
+        </h2>
+        <p class="lead">
+          탐뷰티 젤리 플럼핑 립 시리즈 상세페이지 톤("여릿한", "오묘한",
+          "영롱반짝")을 차용한 임시 USP. 상세페이지 URL 받으면 교체.
+        </p>
+        <div class="usp-grid">
+          <div class="usp">
+            <span class="badge">USP 01</span><span class="tentative">임시</span>
+            <h4>또렷하게, 하지만 부담없이</h4>
+            <p>데일리에 딱 맞는 자연스러운 라인 발색. 과하지 않은 입술.</p>
+          </div>
+          <div class="usp">
+            <span class="badge">USP 02</span><span class="tentative">임시</span>
+            <h4>물 한 모금에도 버티는 롱래스팅</h4>
+            <p>마스크·컵에 묻지 않고 오래 가는 밀착감.</p>
+          </div>
+          <div class="usp">
+            <span class="badge">USP 03</span><span class="tentative">임시</span>
+            <h4>젤리 립과 찰떡, 탐뷰티 매칭 컬러</h4>
+            <p>탐뷰티 립틴트·립오일과 자연스럽게 겹쳐 쓰기 좋은 톤 구성.</p>
           </div>
         </div>
       </section>
 
-      <!-- 컬러 라인업 -->
+      <!-- 컬러 (임시) -->
       <section class="sec">
-        <h2><span class="num">1</span>컬러 라인업 (4 호수)</h2>
+        <h2>
+          <span class="num">2</span>컬러 라인업
+          <span
+            style="
+              font-size: 12px;
+              color: var(--tb-rose);
+              font-weight: 600;
+              margin-left: 8px;
+            "
+            >· 임시안</span
+          >
+        </h2>
         <p class="lead">
-          탐뷰티 실제 립 틴트 8컬러와 매칭되는 4호수로 구성. 네이밍은 탐뷰티
-          공식 컨벤션 "01. The + 과일 / 더 + 과일"을 따름.
+          탐뷰티 공식 네이밍 컨벤션 "01. 더 + 과일" 기반 임시 구성. 실제
+          상세페이지에 있는 호수로 교체 예정.
         </p>
         <div class="color-grid">
           <div class="color-card">
@@ -1087,8 +1169,7 @@
               <div class="no">01</div>
               <div class="name">더 피치</div>
               <div class="en">The Peach</div>
-              <div class="mood">부드러운 피치 누드 베이지 · 웜톤</div>
-              <div class="match">🍑 립틴트 02 더 피치 · 06 더 리치 매칭</div>
+              <div class="mood">부드러운 데일리 누드</div>
             </div>
           </div>
           <div class="color-card">
@@ -1097,8 +1178,7 @@
               <div class="no">02</div>
               <div class="name">더 구아바</div>
               <div class="en">The Guava</div>
-              <div class="mood">딸기우유 소프트 로즈 핑크 · 쿨톤</div>
-              <div class="match">🫐 립틴트 01 더 구아바 · 05 더 피그 매칭</div>
+              <div class="mood">딸기우유 소프트 핑크</div>
             </div>
           </div>
           <div class="color-card">
@@ -1107,8 +1187,7 @@
               <div class="no">03</div>
               <div class="name">더 애플</div>
               <div class="en">The Apple</div>
-              <div class="mood">생기 가득한 애플 코랄 레드 · 웜톤</div>
-              <div class="match">🍎 립틴트 04 더 애플 매칭</div>
+              <div class="mood">생기 있는 코랄 레드</div>
             </div>
           </div>
           <div class="color-card">
@@ -1117,37 +1196,8 @@
               <div class="no">04</div>
               <div class="name">더 그레이프</div>
               <div class="en">The Grape</div>
-              <div class="mood">쿨 그레이프 모브 와인 · 쿨톤</div>
-              <div class="match">
-                🍇 립틴트 07 더 체리 · 08 더 그레이프 매칭
-              </div>
+              <div class="mood">쿨 그레이프 모브</div>
             </div>
-          </div>
-        </div>
-        <div class="warn">
-          <b>크로스셀 논리:</b> 립틴트 기구매자에게 "내가 쓰던 호수 그대로의 립
-          라인" 메시지 = 구매 저항 최소화.
-        </div>
-      </section>
-
-      <!-- USP -->
-      <section class="sec">
-        <h2><span class="num">2</span>USP 3가지</h2>
-        <div class="usp-grid">
-          <div class="usp">
-            <span class="badge">USP 01</span>
-            <h4>0.1mm 각도 팁</h4>
-            <p>밀리미터 단위 정교한 라인. 초보도 실패 없이.</p>
-          </div>
-          <div class="usp">
-            <span class="badge">USP 02</span>
-            <h4>데일리 롱래스팅</h4>
-            <p>물·마스크·커피잔에도 뭉개지지 않는 밀착력.</p>
-          </div>
-          <div class="usp">
-            <span class="badge">USP 03</span>
-            <h4>립틴트 매칭 4호수</h4>
-            <p>기존 탐뷰티 립 라인과 자연 매칭. "내 호수 그대로 라인업".</p>
           </div>
         </div>
       </section>
@@ -1156,8 +1206,8 @@
       <section class="sec">
         <h2><span class="num">3</span>캐러셀 5컷 시안 (800 × 1100)</h2>
         <p class="lead">
-          브랜드 팔레트 반영 재작업. 문안은 2026 트렌드(추구미·Quiet
-          Luxury·의식있는 소비) 톤으로 리라이팅.
+          세리프체 걷어내고, 카피는 젤리 립 시리즈 상세페이지의 감각어
+          톤("여릿한·영롱반짝·또렷한")으로 보정. 힘 빼고 자연스럽게.
         </p>
 
         <div class="cards">
@@ -1166,30 +1216,33 @@
             <div class="preview s1">
               <span class="card-index">01 / 05</span>
               <span class="card-size">800×1100</span>
-              <span class="new-badge">NEW</span>
-              <div class="discount">
-                <div class="up">UP TO</div>
+              <span class="tag-new">NEW</span>
+              <div class="discount-tag">
+                <div class="up">LIP LINER</div>
                 <div class="pct">30%</div>
                 <div class="off">OFF</div>
               </div>
               <div class="title">
                 <div class="kicker">TAM BEAUTY · LIP LINER</div>
-                <h3>The Fine<br />Lip Liner.</h3>
-                <div class="mood">오늘의 추구미,<br />1mm에서 완성.</div>
+                <h3>또렷한 입술,<br /><em>그거 하나면 돼요.</em></h3>
+                <div class="mood">
+                  데일리에 딱,<br />탐뷰티 립라이너 신상 오픈.
+                </div>
               </div>
               <div class="product"><div class="product-mock"></div></div>
-              <div class="foot"><span>플친 단독 런칭</span><b>D-3</b></div>
+              <div class="foot"><span>플친 단독 30% OFF</span><b>D-3</b></div>
             </div>
             <div class="card-body">
-              <div class="role">🎯 MAIN · 제품 + 할인 배지</div>
+              <div class="role">🎯 MAIN · 제품 + 30% 배지</div>
               <div class="copy">
-                "NEW · The Fine Lip Liner ·
-                <span class="em">오늘의 추구미, 1mm에서 완성.</span>"
+                "또렷한 입술, 그거 하나면 돼요 ·
+                <span class="em">립라이너 30% OFF</span>"
               </div>
               <div class="note">
-                <b>트렌드 레퍼런스:</b> "추구미"(얼루어 2026), Quiet Luxury.
-                직설적 USP 나열 대신 분위기 중심.<br /><b>비주얼:</b> 제품 3D
-                15도 틸트 + 테라 골드 캡 · NEW 배지 · UP TO 30% 우상단.
+                <b>톤 보정:</b> Playfair 세리프 → Pretendard 본체로.
+                "추구미·Quiet Luxury" 같은 컨셉 카피 제거하고 탐뷰티 실제
+                톤("~하면 돼요", "딱").<br /><b>30% 배지:</b> 립라이너 단독
+                할인으로 명시 (세트 매칭 프레임 제거).
               </div>
             </div>
           </div>
@@ -1209,14 +1262,14 @@
               <span class="card-size">800×1100</span>
               <div class="header">
                 <div class="eyebrow">BEFORE &amp; AFTER</div>
-                <h3>선 <span>하나</span>에<br />분위기가 완성된다.</h3>
+                <h3>립라이너 <span>있고 없고</span>,<br />이만큼 달라져요.</h3>
               </div>
               <div class="ba">
                 <div class="ba-row before">
                   <span class="tag">BEFORE</span>
                   <div class="lip"></div>
                 </div>
-                <div class="divider">립 라인 <span>한 끗</span> 차이</div>
+                <div class="divider">립 라인 <span>한 번</span>이면 완성</div>
                 <div class="ba-row after">
                   <span class="tag">AFTER</span>
                   <div class="lip"></div>
@@ -1226,13 +1279,12 @@
             <div class="card-body">
               <div class="role">🔍 B&amp;A · 비교 증명</div>
               <div class="copy">
-                "<span class="em">선 하나에 분위기가 완성된다.</span> · 립 라인
-                한 끗 차이"
+                "립라이너 <span class="em">있고 없고, 이만큼 달라져요</span>"
               </div>
               <div class="note">
-                <b>트렌디 포인트:</b> "분위기" = 2024-26 뷰티 핵심 키워드.
-                "완성도" 같은 기능어 배제, 감각어로.<br /><b>촬영:</b> 동일
-                모델·동일 립틴트(02 피치 권장)·조명 동일. 립라이너 유무만 차이.
+                <b>톤 보정:</b> "분위기가 완성된다" 컨셉 카피 제거. 친근한
+                대화체로.<br /><b>촬영:</b> 동일 모델 · 동일 립틴트 · 조명 동일.
+                립라이너 유무만 차이.
               </div>
             </div>
           </div>
@@ -1248,76 +1300,98 @@
               <span class="card-size">800×1100</span>
               <div class="model"></div>
               <div class="content">
-                <div class="eyebrow">QUIETLY DEFINED</div>
-                <h3>Quietly,<br /><em>defined.</em></h3>
+                <div class="eyebrow">DAILY LIP LINE</div>
+                <h3>오래 가는<br />데일리 립 라인.</h3>
                 <div class="sub">
-                  조용히, 선명하게.<br />덜어낸 듯 완성된 입술.
+                  물 한 모금, 마스크에도<br />그대로 남아있는 또렷함.
                 </div>
               </div>
               <div class="usps">
-                <div class="usp-line"><b>01</b> 0.1mm 각도 팁 · 초정교</div>
-                <div class="usp-line"><b>02</b> 데일리 롱래스팅</div>
-                <div class="usp-line"><b>03</b> 립틴트 4호수 매칭</div>
+                <div class="usp-line"><b>01</b> 또렷하게, 부담없이</div>
+                <div class="usp-line"><b>02</b> 물·마스크에도 롱래스팅</div>
+                <div class="usp-line"><b>03</b> 탐뷰티 립과 찰떡 매칭</div>
               </div>
             </div>
             <div class="card-body">
-              <div class="role">✨ HERO · 무드 + USP 요약</div>
+              <div class="role">✨ HERO · 모델컷 + USP</div>
               <div class="copy">
-                "Quietly, defined —
-                <span class="em">조용히, 선명하게. 덜어낸 듯 완성된 입술.</span
-                >"
+                "오래 가는 <span class="em">데일리 립 라인</span> · 마스크에도
+                그대로"
               </div>
               <div class="note">
-                <b>트렌디 포인트:</b> Quiet Luxury + 미니멀리즘. 화려한 과시 X,
-                "덜어낸 듯"의 미감.<br /><b>비주얼:</b> 모델 측면 3/4 · 딥
-                와인/차콜 배경 + 테라 골드 하이라이트.
+                <b>톤 보정:</b> "Quietly, defined." 영문 카피 제거. 직관적
+                한국어로.<br /><b>비주얼:</b> 모델 측면 3/4 · 딥 와인 배경 +
+                테라 골드 하이라이트.
               </div>
             </div>
           </div>
 
-          <!-- S4 SET -->
+          <!-- S4 SWATCH -->
           <div class="card">
             <div class="preview s4">
               <span class="card-index">04 / 05</span>
               <span class="card-size">800×1100</span>
               <div class="header">
-                <div class="eyebrow">MATCHED DUO</div>
-                <h3>내 호수 그대로의<br />라인업.</h3>
-                <div class="sub">LIP LINER + JELLY PLUMPING LIP TINT</div>
+                <div class="eyebrow">4 COLORS</div>
+                <h3>내 <span>입술에 딱</span> 맞는<br />4가지 컬러.</h3>
+                <div class="sub">
+                  웜톤·쿨톤 모두 커버 · 탐뷰티 립 라인과 매칭
+                </div>
               </div>
-              <div class="set-visual">
-                <div class="pm pm1"></div>
-                <div class="pm pm2"></div>
-              </div>
-              <div class="matched">
-                🎯 립틴트 기구매 호수와 <b>자동 매칭 추천</b>
-              </div>
-              <div class="price-box">
-                <div class="name">립 라이너 + 젤리 립 틴트 매칭 세트</div>
-                <div class="row">
-                  <div>
-                    <div class="old">28,800원</div>
-                    <div class="new">19,900<small>원</small></div>
+              <div class="swatch-list">
+                <div class="sw-row">
+                  <div class="sw-chip" style="background: #c89885"></div>
+                  <div class="sw-info">
+                    <div class="sw-no">01</div>
+                    <div class="sw-name">더 피치</div>
+                    <div class="sw-mood">부드러운 데일리 누드</div>
                   </div>
-                  <div class="off-pct">-30%</div>
+                  <span class="sw-tone">웜톤</span>
+                </div>
+                <div class="sw-row">
+                  <div class="sw-chip" style="background: #c8768a"></div>
+                  <div class="sw-info">
+                    <div class="sw-no">02</div>
+                    <div class="sw-name">더 구아바</div>
+                    <div class="sw-mood">딸기우유 소프트 핑크</div>
+                  </div>
+                  <span class="sw-tone">쿨톤</span>
+                </div>
+                <div class="sw-row">
+                  <div class="sw-chip" style="background: #b7504a"></div>
+                  <div class="sw-info">
+                    <div class="sw-no">03</div>
+                    <div class="sw-name">더 애플</div>
+                    <div class="sw-mood">생기 있는 코랄 레드</div>
+                  </div>
+                  <span class="sw-tone">웜톤</span>
+                </div>
+                <div class="sw-row">
+                  <div class="sw-chip" style="background: #6d2a3a"></div>
+                  <div class="sw-info">
+                    <div class="sw-no">04</div>
+                    <div class="sw-name">더 그레이프</div>
+                    <div class="sw-mood">쿨 그레이프 모브</div>
+                  </div>
+                  <span class="sw-tone">쿨톤</span>
                 </div>
               </div>
             </div>
             <div class="card-body">
-              <div class="role">💋 SET · 크로스셀</div>
+              <div class="role">🎨 COLOR · 4 호수 스와치</div>
               <div class="copy">
-                "<span class="em">내 호수 그대로의 라인업</span> · 립틴트와 자동
-                매칭 세트 19,900원"
+                "내 입술에 딱 맞는 <span class="em">4가지 컬러</span> · 웜쿨
+                모두 OK"
               </div>
               <div class="note">
-                <b>트렌디 포인트:</b> 신규 컬러 강요 X. "기존 내 취향 그대로
-                확장" 프레임 = 저항감 제거.<br /><b>비주얼:</b> 립 라이너(테라)
-                + 립 틴트(와인/누드) 나란히 · 크림 바닥 + 점선 매칭 라벨.
+                <b>v4 변경:</b> 세트 상품 컷 → 컬러 스와치 컷으로 교체. 립라이너
+                단독 할인 맞춤.<br /><b>비주얼:</b> 모델 입술 착용컷 4장 (손등
+                스와치 X). 호수명·톤 라벨 병기.
               </div>
             </div>
           </div>
 
-          <!-- S5 BENEFIT -->
+          <!-- S5 BENEFIT · 립라이너 단독 30% -->
           <div class="card">
             <div class="preview s5">
               <span
@@ -1327,42 +1401,44 @@
               >
               <span class="card-size">800×1100</span>
               <div class="content">
-                <div class="eyebrow">ONLY PLUS FRIENDS</div>
-                <h3>
-                  아는 사람만<br />가져가는<span class="big">30%</span>쿠폰.
-                </h3>
-                <div class="sub">선착순 100명 · 이번주만</div>
+                <div class="eyebrow">PLUS FRIENDS ONLY</div>
+                <h3>플친에게만<br />드리는 30% 쿠폰</h3>
+                <div class="price-block">
+                  <div class="old">14,400원</div>
+                  <div class="new-line">
+                    <span class="off-pct">-30%</span>
+                    <span class="new-won">10,080<small>원</small></span>
+                  </div>
+                </div>
+                <div class="sub">선착순 100명 · 이번 주만</div>
               </div>
               <div class="cta">
-                쿠폰 받고 바로 장바구니<small>tambeauty.kr 자동 적용</small>
+                쿠폰 받고 바로 담기<small>tambeauty.kr 자동 적용</small>
               </div>
               <div class="deadline">⏰ <b>D-3 자정</b> 정가 복귀</div>
             </div>
             <div class="card-body">
-              <div class="role">🔥 BENEFIT · CTA</div>
+              <div class="role">🔥 BENEFIT · 립라이너 단독 할인</div>
               <div class="copy">
-                "<span class="em">아는 사람만 가져가는 30% 쿠폰</span> · 선착순
-                100명"
+                "<span class="em">립라이너 30% OFF</span> · 14,400원 → 10,080원
+                · 선착순 100명"
               </div>
               <div class="note">
-                <b>트렌디 포인트:</b> "ONLY ~에서만" 공격적 어조 대신 "아는
-                사람만" 스노버리 톤. 긴박감은 "이번주만" + D-3으로 유지.<br /><b
-                  >선착순 숫자:</b
+                <b>v4 핵심 변경:</b> 세트 19,900원 구성 제거.
+                <b>립라이너 단독가</b>로 할인 노출.<br /><b
+                  >실제 가격 반영 필요:</b
                 >
-                이전 5,000명 → <b>100명</b>으로 현실화 (실제 플친 규모 기준).
+                14,400원은 립틴트 기준 추정치 → 상세페이지 받으면 실제가로 교체.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- KPI 퍼널 -->
+      <!-- KPI -->
       <section class="sec">
-        <h2><span class="num">4</span>KPI 목표 (현실 퍼널)</h2>
-        <p class="lead">
-          이전 런칭 1건 구매 → 이번 목표 3건. 대규모 CTR%가 아닌 절대 숫자
-          기준으로 재설정.
-        </p>
+        <h2><span class="num">4</span>KPI 목표 (구매 3건)</h2>
+        <p class="lead">이전 런칭 1건 → 목표 3건. 절대 숫자 기반 퍼널 운영.</p>
         <div class="funnel">
           <div class="funnel-step">
             <div class="label">STEP 1</div>
@@ -1371,7 +1447,7 @@
           </div>
           <div class="funnel-step">
             <div class="label">STEP 2</div>
-            <div class="desc">메시지 오픈 (목표 오픈율 40%)</div>
+            <div class="desc">메시지 오픈 (목표 ~40%)</div>
             <div class="num">~40%</div>
           </div>
           <div class="funnel-step">
@@ -1381,7 +1457,7 @@
           </div>
           <div class="funnel-step">
             <div class="label">STEP 4</div>
-            <div class="desc">장바구니 / 쿠폰 발급</div>
+            <div class="desc">쿠폰 발급 / 장바구니</div>
             <div class="num">5건↑</div>
           </div>
           <div class="funnel-step goal">
@@ -1391,18 +1467,14 @@
           </div>
         </div>
         <div class="warn">
-          <b>숫자 기반 운영:</b> %가 아닌 "구매 몇 건" 단위로 매일 체크. D-day
-          0건이면 리마인드 카피 즉시 수정. 1~2건이면 D+2 미오픈자 재발송 강화.
-          3건 달성 시 "완판 임박" 카피로 2차 푸시.
+          <b>운영 룰:</b> D-day 구매 0건 → 리마인드 카피 즉시 수정 / 1~2건 → D+2
+          미오픈자 재발송 강화 / 3건 달성 → "완판 임박" 2차 푸시.
         </div>
       </section>
 
       <!-- 발송 시나리오 -->
       <section class="sec">
         <h2><span class="num">5</span>발송 시나리오 (구매 3건 달성 플로우)</h2>
-        <p class="lead">
-          3단 플로우 유지하되, 구매수 기준으로 각 단계 콜투액션 조정.
-        </p>
         <table>
           <thead>
             <tr>
@@ -1410,7 +1482,7 @@
               <th>발송일</th>
               <th>형식</th>
               <th>핵심 메시지</th>
-              <th>구매 누적 목표</th>
+              <th>누적 목표</th>
             </tr>
           </thead>
           <tbody>
@@ -1418,28 +1490,28 @@
               <td><span class="pill">티저</span></td>
               <td>D-2 · 20:00</td>
               <td>단일 이미지</td>
-              <td>"🤫 플친에만 먼저. 내일 밤 오픈."</td>
+              <td>"내일 밤, 립라이너 플친 오픈."</td>
               <td>–</td>
             </tr>
             <tr>
               <td><span class="pill">본편</span></td>
               <td>D-day · 20:00</td>
               <td>캐러셀 5컷</td>
-              <td>"오늘의 추구미, 1mm에서 완성 · 30% OFF"</td>
+              <td>"또렷한 입술, 그거 하나면 돼요 · 30% OFF"</td>
               <td><b>1건↑</b></td>
             </tr>
             <tr>
               <td><span class="pill">리마인드 ①</span></td>
               <td>D+1 · 12:00</td>
-              <td>단일 이미지 (미오픈자)</td>
-              <td>"🎯 아는 사람만 가져가는 쿠폰, 아직 있어요."</td>
+              <td>단일 (미오픈자)</td>
+              <td>"아직 쿠폰 남아있어요."</td>
               <td><b>2건↑</b></td>
             </tr>
             <tr>
               <td><span class="pill">리마인드 ②</span></td>
               <td>D+2 · 21:00</td>
-              <td>단일 이미지 (전체)</td>
-              <td>"⏰ 자정 정가 복귀 · 마지막 찬스"</td>
+              <td>단일 (전체)</td>
+              <td>"자정이면 정가예요, 얼른요."</td>
               <td><b>3건 달성</b></td>
             </tr>
           </tbody>
@@ -1448,55 +1520,51 @@
 
       <!-- 카피 뱅크 -->
       <section class="sec">
-        <h2><span class="num">6</span>트렌디 카피 뱅크 (A/B 테스트 대비)</h2>
+        <h2><span class="num">6</span>카피 뱅크 (A/B용)</h2>
         <p class="lead">
-          2026 뷰티 마케팅 키워드 반영 (추구미·Quiet Luxury·의식있는
-          소비·덜어냄의 미감).
+          탐뷰티 젤리 립 시리즈 상세페이지 톤
+          레퍼런스("여릿한·영롱반짝·오묘한·청량한"). 과한 세리프·영문 카피 배제.
         </p>
         <div class="copybank">
           <div class="cb">
-            <div class="tag">HOOK · 추구미형</div>
-            <div class="text">"오늘의 추구미, 1mm에서 완성."</div>
-            <div class="ref">레퍼런스: 얼루어 "요즘의 추구미란 바로 이것"</div>
+            <div class="tag">HOOK A</div>
+            <div class="text">"또렷한 입술, 그거 하나면 돼요."</div>
+            <div class="ref">친근한 대화체</div>
           </div>
           <div class="cb">
-            <div class="tag">HOOK · 분위기형</div>
-            <div class="text">"선 하나에 분위기가 완성된다."</div>
-            <div class="ref">
-              레퍼런스: 2024-26 뷰티 "분위기" 키워드 중심 카피
-            </div>
+            <div class="tag">HOOK B</div>
+            <div class="text">"데일리에 딱, 립라이너 한 번이면."</div>
+            <div class="ref">가벼운 톤</div>
           </div>
           <div class="cb">
-            <div class="tag">HERO · Quiet Luxury</div>
-            <div class="text">"Quietly, defined. 조용히, 선명하게."</div>
-            <div class="ref">
-              레퍼런스: W Korea "자연스럽고 우아한 누드립" 트렌드
-            </div>
+            <div class="tag">B&amp;A A</div>
+            <div class="text">"립라이너 있고 없고, 이만큼 달라져요."</div>
+            <div class="ref">비교 직관</div>
           </div>
           <div class="cb">
-            <div class="tag">HERO · 미니멀</div>
-            <div class="text">"덜어낸 듯, 완성된 입술."</div>
-            <div class="ref">레퍼런스: MZ 미니멀리즘 · 의식있는 소비</div>
+            <div class="tag">B&amp;A B</div>
+            <div class="text">"라인 한 번 그었을 뿐인데."</div>
+            <div class="ref">짧고 가볍게</div>
           </div>
           <div class="cb">
-            <div class="tag">SET · 매칭</div>
-            <div class="text">"내 호수 그대로의 라인업."</div>
-            <div class="ref">기존 립틴트 고객 저항감 제거</div>
+            <div class="tag">HERO A</div>
+            <div class="text">"오래 가는 데일리 립 라인."</div>
+            <div class="ref">기능 직관</div>
           </div>
           <div class="cb">
-            <div class="tag">CTA · 스노버리</div>
-            <div class="text">"아는 사람만 가져가는 30% 쿠폰."</div>
-            <div class="ref">"ONLY 지그재그에서만" 공격형 대체안</div>
+            <div class="tag">HERO B</div>
+            <div class="text">"지워지지 않는 또렷함, 하루 종일."</div>
+            <div class="ref">지속력 강조</div>
           </div>
           <div class="cb">
-            <div class="tag">CTA · 소프트 긴박</div>
-            <div class="text">"이번 주만, 조용히 드려요."</div>
-            <div class="ref">과한 카운트다운 대신 절제된 긴박감</div>
+            <div class="tag">CTA A</div>
+            <div class="text">"플친에게만 드리는 30% 쿠폰."</div>
+            <div class="ref">단순 혜택</div>
           </div>
           <div class="cb">
-            <div class="tag">리마인드 ②</div>
-            <div class="text">"자정엔 사라져요, 조용히."</div>
-            <div class="ref">마지막 푸시 · 감성 긴박감</div>
+            <div class="tag">CTA B</div>
+            <div class="text">"지금 쿠폰 받고, 10,080원에 담아요."</div>
+            <div class="ref">가격 노출형</div>
           </div>
         </div>
       </section>
@@ -1504,48 +1572,36 @@
       <!-- 디자이너 체크리스트 -->
       <section class="sec">
         <h2><span class="num">7</span>디자이너 체크리스트</h2>
-        <p class="lead">800 × 1100 px · 탐뷰티 공식 팔레트 기준.</p>
         <div class="check">
           <div class="check-item">
             800 × 1100 px 세로 포맷 5장 + 리마인드 단컷 3종
           </div>
+          <div class="check-item">메인 팔레트: #fef8f3 · #f8ddd0 · #c9a07a</div>
           <div class="check-item">
-            메인 팔레트: #fef8f3(아이보리) · #f8ddd0(피치) · #c9a07a(테라골드)
+            포인트 팔레트: #d4856a · #c96b8e · #8b2c3e
+          </div>
+          <div class="check-item">텍스트: #2a2a2a · #7a5c52</div>
+          <div class="check-item">
+            <b>세리프체(Playfair 등) 사용 금지</b> · 산세리프 Pretendard로 통일
           </div>
           <div class="check-item">
-            포인트 팔레트: #d4856a(로즈) · #c96b8e(더스티) · #8b2c3e(와인)
+            1컷 NEW 배지 + <b>립라이너 30% OFF</b> 단독 표기
           </div>
+          <div class="check-item">2컷 B&amp;A: 동일 모델·립틴트·조명 유지</div>
+          <div class="check-item">3컷 모델컷: 측면 3/4 프레임</div>
           <div class="check-item">
-            텍스트 팔레트: #2a2a2a(차콜) · #7a5c52(웜 그레이)
+            4컷 컬러 스와치: 모델 입술 착용컷 우선 (손등 X)
           </div>
-          <div class="check-item">
-            비비드 핑크(#ec4899) 사용 금지 · 기존 클라우드블러 v3 톤 통일
-          </div>
-          <div class="check-item">1컷 NEW 배지 + UP TO 30% 우상단 필수</div>
-          <div class="check-item">
-            2컷 BEFORE/AFTER: 동일 모델·동일 립틴트·동일 조명
-          </div>
-          <div class="check-item">
-            3컷 모델컷: 측면 3/4 프레임 · 딥 와인 배경
-          </div>
-          <div class="check-item">
-            4컷 세트컷: 립 라이너 + 립 틴트 나란히 + 매칭 라벨
-          </div>
-          <div class="check-item">
-            5컷 30% 숫자: 최소 높이 420px (Playfair Display 또는 세리프)
-          </div>
+          <div class="check-item">5컷 할인가: 정가 취소선 + 10,080원 크게</div>
           <div class="check-item">
             "롱래스팅" 표기 권장 (자사시험 없으면 "12시간" 금지)
           </div>
-          <div class="check-item">CTA 딥링크 iOS/Android QR 테스트 필수</div>
-          <div class="check-item">
-            고해상 2x 원본 + 웹용 압축(150KB 이하) 2벌 제공
-          </div>
+          <div class="check-item">고해상 2x + 웹용 압축(150KB 이하) 2벌</div>
         </div>
       </section>
 
       <div class="footer">
-        © TAM BEAUTY · 립 라이너 CRM 캐러셀 기획서 v3 · 2026.04
+        © TAM BEAUTY · 립라이너 CRM 캐러셀 기획서 v4 · 2026.04
       </div>
     </div>
   </body>
