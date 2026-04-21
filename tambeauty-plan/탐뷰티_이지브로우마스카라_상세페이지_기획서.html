@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      탐뷰티 | 더 클라우드 이지 브로우 마스카라 — 상세페이지 기획서 v2
+    </title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background: #f6f0f6;
+        color: #2d1f3d;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .meta-bar {
+        background: #2d1f3d;
+        color: #e2c8e0;
+        padding: 12px 30px;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 0.5px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .meta-bar strong {
+        color: #fce8b8;
+        font-weight: 500;
+      }
+      .meta-bar .tag {
+        background: #fce8b8;
+        color: #2d1f3d;
+        padding: 3px 10px;
+        border-radius: 2px;
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 40px 100px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 30px 0 60px;
+        border-bottom: 1px solid #d8c0d8;
+        margin-bottom: 60px;
+      }
+      .hero .eyebrow {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 14px;
+        color: #8b5cf6;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+        color: #2d1f3d;
+      }
+      .hero .ko-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: #6b5b7a;
+        margin-bottom: 24px;
+      }
+      .hero .spec {
+        font-size: 12px;
+        color: #8b5cf6;
+        letter-spacing: 3px;
+      }
+
+      section {
+        margin-bottom: 60px;
+      }
+      .sec-no {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 13px;
+        color: #8b5cf6;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        padding-bottom: 14px;
+        border-bottom: 2px solid #2d1f3d;
+        letter-spacing: -0.3px;
+      }
+      h3 {
+        font-size: 17px;
+        font-weight: 700;
+        margin: 28px 0 12px;
+        color: #2d1f3d;
+      }
+      h4 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 16px 0 8px;
+        color: #6b5b7a;
+        letter-spacing: 0.3px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      code {
+        background: #ede0ed;
+        padding: 1px 6px;
+        border-radius: 2px;
+        font-size: 12px;
+        color: #6b3d6b;
+      }
+
+      .callout {
+        background: #fff;
+        border-left: 3px solid #2d1f3d;
+        padding: 20px 24px;
+        margin: 20px 0;
+        font-size: 13.5px;
+        line-height: 1.9;
+      }
+      .callout.warn {
+        border-left-color: #e91e63;
+        background: #fdf2f8;
+      }
+      .callout.warn b {
+        color: #c2185b;
+      }
+      .callout.note {
+        border-left-color: #8b5cf6;
+        background: #f5edf8;
+      }
+      .callout.insight {
+        border-left-color: #f9c74f;
+        background: #fff9e6;
+      }
+      .callout.insight b {
+        color: #b8860b;
+      }
+
+      .key-copy {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #f3e3f3 0%, #fff6e0 100%);
+        margin: 24px 0;
+        border-radius: 4px;
+      }
+      .key-copy .en {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 32px;
+        color: #2d1f3d;
+        margin-bottom: 14px;
+        line-height: 1.2;
+      }
+      .key-copy .kr {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #2d1f3d;
+      }
+      .key-copy .sub {
+        font-size: 13px;
+        color: #6b5b7a;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 13px;
+        background: #fff;
+      }
+      th {
+        background: #2d1f3d;
+        color: #f6f0f6;
+        padding: 12px 14px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+      td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #ede0ed;
+        vertical-align: top;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      .usp-rank {
+        display: inline-block;
+        background: #2d1f3d;
+        color: #fce8b8;
+        padding: 2px 8px;
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        margin-right: 8px;
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 20px 0;
+      }
+      .color-chip {
+        background: #fff;
+        padding: 16px;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .color-chip .swatch {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+      }
+      .color-chip .code {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        color: #8b5cf6;
+        margin-bottom: 2px;
+      }
+      .color-chip .name {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        margin-bottom: 4px;
+        color: #2d1f3d;
+      }
+      .color-chip .desc {
+        font-size: 10.5px;
+        color: #6b5b7a;
+        line-height: 1.5;
+      }
+
+      .compare td:nth-child(2) {
+        color: #c2185b;
+        text-decoration: line-through;
+        text-decoration-color: #e8a1c0;
+      }
+      .compare td:nth-child(3) {
+        color: #2d1f3d;
+        font-weight: 500;
+      }
+
+      ul {
+        margin: 10px 0 10px 20px;
+      }
+      li {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .preview-box {
+        background: #fff;
+        border: 1px dashed #c5a8c5;
+        padding: 32px 24px;
+        margin: 14px 0;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .preview-box .label {
+        display: inline-block;
+        background: #2d1f3d;
+        color: #fce8b8;
+        font-size: 10px;
+        padding: 3px 10px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+      }
+      .preview-box .main-copy {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 24px;
+        margin-bottom: 8px;
+        color: #2d1f3d;
+      }
+      .preview-box .sub-copy {
+        font-size: 13px;
+        color: #6b5b7a;
+      }
+
+      /* 촬영 가이드 전용 */
+      .palette-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .palette {
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      .palette .p-swatch {
+        width: 100%;
+        height: 70px;
+        border-radius: 2px;
+        margin-bottom: 8px;
+      }
+      .palette .p-name {
+        font-size: 10px;
+        font-weight: 700;
+        color: #2d1f3d;
+        margin-bottom: 2px;
+      }
+      .palette .p-hex {
+        font-family: "Playfair Display", serif;
+        font-size: 10px;
+        color: #8b5cf6;
+      }
+
+      .shot-list {
+        background: #fff;
+        padding: 20px 24px;
+        margin: 16px 0;
+        border-left: 3px solid #8b5cf6;
+        font-size: 13px;
+      }
+      .shot-list b {
+        color: #2d1f3d;
+      }
+      .shot-list .cut {
+        padding: 8px 0;
+        border-bottom: 1px dashed #e8d4e8;
+      }
+      .shot-list .cut:last-child {
+        border-bottom: none;
+      }
+
+      .ng-box {
+        background: #fdf2f8;
+        border: 1px solid #f8bbd0;
+        padding: 16px 20px;
+        margin: 16px 0;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+      .ng-box b {
+        color: #c2185b;
+      }
+      .ng-box ul {
+        margin-left: 18px;
+      }
+
+      footer {
+        margin-top: 80px;
+        padding-top: 30px;
+        border-top: 1px solid #d8c0d8;
+        text-align: center;
+        font-size: 11px;
+        color: #8b5cf6;
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="meta-bar">
+      <div>
+        <strong>TAM BEAUTY</strong> &nbsp;·&nbsp; The Cloud Easy Brow Mascara
+        상세페이지 기획서 v2
+      </div>
+      <div>
+        <span class="tag">DRAFT v2</span>
+        <span style="margin-left: 10px">2026-04-21</span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="hero">
+        <div class="eyebrow">TAM BEAUTY · Detail Page Brief v2</div>
+        <h1>The Cloud Easy Brow Mascara</h1>
+        <div class="ko-title">
+          더 클라우드 이지 브로우 마스카라 — 상세페이지 기획서
+        </div>
+        <div class="spec">
+          2.5G &nbsp;·&nbsp; 6 SHADES &nbsp;·&nbsp; TARGET 25–35
+        </div>
+      </div>
+
+      <!-- 0. 기획 배경 -->
+      <section>
+        <div class="sec-no">00 / CONTEXT</div>
+        <h2>기획 배경 & 무드 재정의</h2>
+
+        <div class="callout warn">
+          <b>기존 기획안 (v0) 의 문제</b><br />
+          1. 톤이 틴 (<code>#슥삭카라 #아이돌브로우 #청초컬러</code>) → 25–35
+          타겟과 반대<br />
+          2. 타 브랜드(fwee·롬앤·에뛰드) 레퍼런스 이미지 노출 → 탐뷰티 고유 무드
+          없음<br />
+          3. USP 6개 평평 나열 → 1등 메시지 모호
+        </div>
+
+        <div class="callout warn">
+          <b>1차 리뷰 (v1) 의 실수 — 아이보리·세리프·미니멀 방향</b><br />
+          패키지가 이미 <b>라일락 + 버터옐로우 + 달·구름·별 그래픽</b>의 드리미
+          파스텔 결. 이걸 "성인 미니멀"로 꺾으면
+          <b>패키지와 상세페이지가 따로 논다</b>. 힌스 결은 탐뷰티 정체성과 맞지
+          않음.
+        </div>
+
+        <div class="callout insight">
+          <b>진짜 무드: Elevated Kawaii (어른의 드리미 파스텔)</b><br />
+          25–35 여성 중 <b>"귀여움을 유치하지 않게 즐기고 싶은"</b> 레이어가
+          타겟.<br />
+          · 한국 — soft girl / 러블리 시크 / coquette core<br />
+          · 일본 — ゆめかわ(유메카와) 성인화 버전<br />
+          · 참고 브랜드 — i'mmeme, WHIPPED, 데이지크(2024+), Unleashia
+        </div>
+      </section>
+
+      <!-- 1. 제품 사양 -->
+      <section>
+        <div class="sec-no">01 / SPEC</div>
+        <h2>제품 사양</h2>
+        <table>
+          <tr>
+            <th style="width: 25%">항목</th>
+            <th>내용</th>
+          </tr>
+          <tr>
+            <td>제품명</td>
+            <td>
+              The Cloud Easy Brow Mascara · 더 클라우드 이지 브로우 마스카라
+            </td>
+          </tr>
+          <tr>
+            <td>용량</td>
+            <td>2.5g</td>
+          </tr>
+          <tr>
+            <td>컬러</td>
+            <td>
+              6종 (01 바닐라밀크 · 02 카라멜밀크 · 03 헤이즐밀크 · 04 모카밀크 ·
+              05 카카오밀크 · 06 피오니밀크)
+            </td>
+          </tr>
+          <tr>
+            <td>핵심 구조</td>
+            <td>
+              <b>듀얼 브러쉬</b> (콤 브러쉬 + 마스카라 브러쉬) — 카테고리 내
+              구조적 차별점
+            </td>
+          </tr>
+          <tr>
+            <td>제형</td>
+            <td>무중력 크림 · 구름 컨셉 · 밀키 발색</td>
+          </tr>
+          <tr>
+            <td>기능</td>
+            <td>8시간 지속 · 땀·물·유수분 저항</td>
+          </tr>
+          <tr>
+            <td>성분</td>
+            <td>탄력 — 식물성 펩타이드·콜라겐 / 영양 — 검은콩 추출물</td>
+          </tr>
+          <tr>
+            <td>인증</td>
+            <td>피부자극지수 0.00 · 한국비건인증원 비건 인증</td>
+          </tr>
+          <tr>
+            <td>패키지</td>
+            <td>라일락 퍼플 바디 + 버터 옐로우 캡 · 달·구름·별 그래픽 패턴</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 2. 컨셉 & 톤 -->
+      <section>
+        <div class="sec-no">02 / CONCEPT</div>
+        <h2>컨셉 & 브랜드 톤</h2>
+
+        <h3>탐뷰티 브랜드 무드 정의</h3>
+        <p>
+          <b>"Elevated Kawaii"</b> — 성인 여성이 유치하지 않게 즐기는 드리미
+          파스텔. 귀여운 컬러와 그래픽은 유지하되, 타이포·모델·레이아웃으로
+          "어른의 감성"을 입힙니다.
+        </p>
+
+        <table>
+          <tr>
+            <th>구분</th>
+            <th>기존 v0</th>
+            <th>신규 v2</th>
+          </tr>
+          <tr>
+            <td>무드</td>
+            <td>아이돌 · 틴 귀여움</td>
+            <td>Elevated Kawaii (어른 드리미)</td>
+          </tr>
+          <tr>
+            <td>배경</td>
+            <td>비비드 핑크</td>
+            <td>라일락 + 버터 + 크림 파스텔 믹스</td>
+          </tr>
+          <tr>
+            <td>타이포</td>
+            <td>굵은 귀여운 폰트</td>
+            <td>영문 세리프(우아) + 한글 얇은 고딕</td>
+          </tr>
+          <tr>
+            <td>모델</td>
+            <td>틴·아이돌 룩</td>
+            <td>25–32 소프트 걸 (내추럴 + 드리미)</td>
+          </tr>
+          <tr>
+            <td>그래픽</td>
+            <td>없음/분산</td>
+            <td>패키지의 달·구름·별 모티프 일관 사용</td>
+          </tr>
+        </table>
+
+        <h3>메인 카피</h3>
+        <div class="key-copy">
+          <div class="en">Soft Cloud, Soft Dream</div>
+          <div class="kr">구름처럼, 꿈처럼</div>
+          <div class="sub">
+            하루의 무드를 부드럽게 그려주는 6개의 밀키 브로우
+          </div>
+        </div>
+
+        <h4>서브 카피 후보 (디자이너 선택용)</h4>
+        <ul>
+          <li>"달빛처럼 스며드는 밀키 컬러"</li>
+          <li>"하루 끝까지, 꿈같이 부드럽게"</li>
+          <li>"Your Daily Dream Brow"</li>
+          <li>"구름 한 조각, 눈썹 위에"</li>
+        </ul>
+
+        <div class="callout warn">
+          <b>사용 금지 카피·해시태그</b><br />
+          <code>#슥삭카라</code> · <code>#아이돌브로우</code> ·
+          <code>#청초컬러</code> · <code>#딱붙카라</code> · "샵에서 메이크업
+          받은 듯" · "아이돌눈썹"
+        </div>
+      </section>
+
+      <!-- 3. USP 위계 -->
+      <section>
+        <div class="sec-no">03 / USP HIERARCHY</div>
+        <h2>USP 위계 — 1 → 2 → 3 순서 고정</h2>
+        <table>
+          <tr>
+            <th style="width: 10%">순위</th>
+            <th style="width: 30%">USP</th>
+            <th>왜 이 순위인가</th>
+          </tr>
+          <tr>
+            <td><span class="usp-rank">01</span></td>
+            <td><b>듀얼 브러쉬</b><br />(콤 + 마스카라)</td>
+            <td>
+              경쟁 브로우 마스카라 중 <b>구조적으로 다른 유일한 포인트</b>. 한
+              자루로 결 정돈 + 컬러링 완성
+            </td>
+          </tr>
+          <tr>
+            <td><span class="usp-rank">02</span></td>
+            <td><b>6 Milky Shades</b></td>
+            <td>25–35 실제 구매 결정 요인. 밀키 네이밍 체계 유지</td>
+          </tr>
+          <tr>
+            <td><span class="usp-rank">03</span></td>
+            <td><b>Cloud Formula + 8H</b></td>
+            <td>무중력 구름 제형 + 지속력. 한 섹션 통합</td>
+          </tr>
+          <tr>
+            <td><span class="usp-rank">+</span></td>
+            <td>비건 · 무자극 · 스킨케어</td>
+            <td>"안심하고 쓰는 이유"로 한 섹션 통합 (신뢰 보강)</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 4. 섹션 구성 -->
+      <section>
+        <div class="sec-no">04 / PAGE STRUCTURE</div>
+        <h2>상세페이지 섹션 구성</h2>
+
+        <!-- SEC 1 -->
+        <h3>SEC 1 — Hero (후킹 3초)</h3>
+        <div class="preview-box">
+          <div class="label">HERO</div>
+          <div class="main-copy">Soft Cloud, Soft Dream</div>
+          <div class="sub-copy">구름처럼, 꿈처럼 — 6개의 밀키 브로우</div>
+          <div
+            style="
+              margin-top: 14px;
+              font-size: 11px;
+              color: #8b5cf6;
+              letter-spacing: 2px;
+            "
+          >
+            2.5G · 6 SHADES
+          </div>
+        </div>
+        <table>
+          <tr>
+            <td style="width: 25%"><b>메인 비주얼</b></td>
+            <td>
+              모델 얼굴 45도 각도 + 제품 떠 있는 구름 그래픽 연출. 라일락~크림
+              그라데 배경
+            </td>
+          </tr>
+          <tr>
+            <td><b>포인트 그래픽</b></td>
+            <td>
+              패키지의 <b>달·구름·별</b> 모티프를 작은 일러스트로 배치 (과하지
+              않게)
+            </td>
+          </tr>
+          <tr>
+            <td><b>컬러 스와치</b></td>
+            <td>6색 밀키 스와치 한 줄 (히어로 하단)</td>
+          </tr>
+          <tr>
+            <td><b>금지</b></td>
+            <td>fwee·롬앤 등 타사 이미지 / 비비드 핫핑크 배경 / 만화 이모지</td>
+          </tr>
+        </table>
+
+        <!-- SEC 2 -->
+        <h3>SEC 2 — Brand Moment (감성 오프닝)</h3>
+        <div
+          class="preview-box"
+          style="
+            background: linear-gradient(135deg, #f3e3f3 0%, #fff6e0 100%);
+            border: none;
+          "
+        >
+          <div class="label">STORY</div>
+          <div class="main-copy" style="font-size: 20px">
+            당신의 하루에도 날씨가 있다면
+          </div>
+          <div class="sub-copy">
+            맑은 날, 구름 많은 날, 꿈 같은 새벽. 오늘의 무드에 맞는 여섯 가지
+            밀키 브로우를 만나보세요.
+          </div>
+        </div>
+        <p>
+          패키지의 달·구름·별 패턴이 각각 "하루의 순간"을 의미한다는 내러티브
+          도입. 25–35 타겟에게 제품이 아닌 "무드 컬렉션"으로 인식되게.
+        </p>
+
+        <!-- SEC 3 -->
+        <h3>
+          SEC 3 — KEY #1 : Dual Brush
+          <span style="font-size: 12px; color: #8b5cf6">(USP 1)</span>
+        </h3>
+        <div class="preview-box">
+          <div class="label">KEY 01</div>
+          <div class="main-copy">One Wand, Two Brushes</div>
+          <div class="sub-copy">한 자루로 완성되는 2-Step Brow</div>
+        </div>
+        <table>
+          <tr>
+            <td style="width: 25%"><b>구조 설명</b></td>
+            <td>콤 브러쉬 → 결 정돈 / 마스카라 브러쉬 → 컬러링 · 블렌딩</td>
+          </tr>
+          <tr>
+            <td><b>핵심 비주얼</b></td>
+            <td>
+              듀얼 브러쉬 매크로 (라일락 캡 살리고 옐로우 네크가 포인트로
+              보이게)
+            </td>
+          </tr>
+          <tr>
+            <td><b>보조 비주얼</b></td>
+            <td>실제 눈썹에 두 브러쉬 사용하는 GIF 2개</td>
+          </tr>
+          <tr>
+            <td><b>중요도</b></td>
+            <td>상세페이지 <b>중심축</b> · 비주얼 예산 최다 배정</td>
+          </tr>
+        </table>
+
+        <!-- SEC 4 -->
+        <h3>
+          SEC 4 — KEY #2 : 6 Milky Shades
+          <span style="font-size: 12px; color: #8b5cf6">(USP 2)</span>
+        </h3>
+        <div class="color-grid">
+          <div class="color-chip">
+            <div class="swatch" style="background: #d8c9b0"></div>
+            <div class="code">01</div>
+            <div class="name">VANILLA MILK</div>
+            <div class="desc">애쉬빛 블리치 베이지<br />탈색모·밝은 염색모</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background: #a67c52"></div>
+            <div class="code">02</div>
+            <div class="name">CARAMEL MILK</div>
+            <div class="desc">소프트 브라운<br />중간 염색모·자연모</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background: #b8a083"></div>
+            <div class="code">03</div>
+            <div class="name">HAZEL MILK</div>
+            <div class="desc">뮤티드 밀키 베이지<br />중간 염색모·자연모</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background: #7d6755"></div>
+            <div class="code">04</div>
+            <div class="name">MOCHA MILK</div>
+            <div class="desc">그윽한 토프 브라운<br />중간~어두운 자연모</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background: #4a4038"></div>
+            <div class="code">05</div>
+            <div class="name">CACAO MILK</div>
+            <div class="desc">딥 쿨 그레이<br />어두운 자연모</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background: #c89fa5"></div>
+            <div class="code">06</div>
+            <div class="name">PEONY MILK</div>
+            <div class="desc">
+              톤다운 애쉬 핑크 (포인트)<br />탈색모·밝은 염색모
+            </div>
+          </div>
+        </div>
+        <p>
+          <b>구성 제안</b> — 각 컬러당 2컷: (1) 모델 눈썹 클로즈업 + (2) 손등 or
+          배경 스와치 + 밀키 텍스처. 배경은 <b>라일락 크림</b>으로 통일.
+        </p>
+        <h4>하단 — 퍼스널 가이드 매트릭스</h4>
+        <p>
+          X축: Warm ↔ Cool &nbsp;|&nbsp; Y축: Light ↔ Deep · 각 컬러 위치 배치 +
+          모발 색상별 추천
+        </p>
+
+        <!-- SEC 5 -->
+        <h3>
+          SEC 5 — KEY #3 : Cloud Formula & Long-Lasting
+          <span style="font-size: 12px; color: #8b5cf6">(USP 3)</span>
+        </h3>
+        <div class="preview-box">
+          <div class="label">KEY 03</div>
+          <div class="main-copy">Glides like butter, Soft like a cloud</div>
+          <div class="sub-copy">무게감 없는 무중력 크림 포뮬러</div>
+        </div>
+        <table>
+          <tr>
+            <td style="width: 25%"><b>상단 비주얼</b></td>
+            <td>제형 매크로 + 구름 모양 폼 디자인 연출</td>
+          </tr>
+          <tr>
+            <td><b>하단 블록</b></td>
+            <td>
+              <b>Long-Lasting 8H</b> 바른 직후 vs 8시간 후 / 물·땀 저항 컷
+            </td>
+          </tr>
+          <tr>
+            <td><b>통합 이유</b></td>
+            <td>"구름 제형"과 "지속력"은 같은 메시지 — 하루 종일 예쁜 이유</td>
+          </tr>
+        </table>
+
+        <!-- SEC 6 -->
+        <h3>SEC 6 — Safe on Skin (비건 + 무자극 통합)</h3>
+        <div class="preview-box">
+          <div class="label">SAFE</div>
+          <div class="main-copy">Soft on Brows, Softer on Skin</div>
+          <div class="sub-copy">눈썹에도, 피부에도 부드럽게</div>
+        </div>
+        <table>
+          <tr>
+            <td style="width: 50%">
+              <b>좌</b><br />피부자극지수 <b>0.00</b> 인증서
+            </td>
+            <td><b>우</b><br />한국비건인증원 비건 인증 마크</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <b>하단 성분 아이콘 3종</b> (라일락 원형 아이콘으로 통일)<br />·
+              식물성 펩타이드 (탄력) · 식물성 콜라겐 (탄력) · 검은콩 추출물
+              (영양)
+            </td>
+          </tr>
+        </table>
+
+        <!-- SEC 7 -->
+        <h3>SEC 7 — How To Use (4스텝)</h3>
+        <ol style="margin-left: 20px">
+          <li>콤 브러쉬로 결 정리</li>
+          <li>마스카라 브러쉬로 결 반대 방향 컬러링</li>
+          <li>앞머리부터 자연스럽게 빗기</li>
+          <li>콤 브러쉬로 뭉친 부위 블렌딩</li>
+        </ol>
+        <p style="margin-top: 10px; color: #6b5b7a; font-size: 12.5px">
+          각 스텝별 눈썹 클로즈업 컷. 배경은 크림 화이트로 깨끗하게.
+        </p>
+
+        <!-- SEC 8 -->
+        <h3>SEC 8 — Reviews / Social Proof</h3>
+        <ul>
+          <li>25–35 실사용 리뷰 3~5개 (별점·오늘의 룩)</li>
+          <li>인스타·유튜브 바이럴 캡처 (있을 경우)</li>
+          <li>올리브영 리뷰 수 / 재구매율</li>
+        </ul>
+
+        <!-- SEC 9 -->
+        <h3>SEC 9 — Product Info</h3>
+        <p>
+          제품명 · 용량 · 전성분 · 제조사(탐뷰티 / ㈜에이위즈) · 사용 주의사항
+        </p>
+      </section>
+
+      <!-- 5. 디자이너 톤 가이드 -->
+      <section>
+        <div class="sec-no">05 / ART DIRECTION</div>
+        <h2>디자이너 톤 가이드</h2>
+        <table>
+          <tr>
+            <th style="width: 25%">항목</th>
+            <th>지시사항</th>
+          </tr>
+          <tr>
+            <td>배경 컬러</td>
+            <td>
+              라일락(#F3E3F3) · 크림(#FFF6E0) · 밀키 화이트(#FFF8F0) &nbsp;
+              <b style="color: #c2185b">(비비드 핫핑크·순백·검정 배경 금지)</b>
+            </td>
+          </tr>
+          <tr>
+            <td>타이포</td>
+            <td>
+              영문 — Playfair Display / DM Serif (세리프, 이탤릭) / 한글 — 얇은
+              고딕 (Noto Sans KR 300~400)
+            </td>
+          </tr>
+          <tr>
+            <td>모델</td>
+            <td>25–32 여성, 자연스러운 웨이브, 파스텔 니트·실크 의상</td>
+          </tr>
+          <tr>
+            <td>그래픽 모티프</td>
+            <td>
+              패키지의 <b>달·구름·별</b>을 미니 아이콘으로 섹션 구분선·포인트에
+              반복 사용
+            </td>
+          </tr>
+          <tr>
+            <td>이모지·과장</td>
+            <td>금지 (구름 모양 오브제 같은 촬영 소품으로 귀여움 표현)</td>
+          </tr>
+          <tr>
+            <td>이미지 사이즈</td>
+            <td>가로 860px · 모바일 우선 · 텍스트 이미지 삽입</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 6. 촬영 가이드 (신규) -->
+      <section>
+        <div class="sec-no">06 / PHOTO SHOOT GUIDE</div>
+        <h2>촬영 가이드</h2>
+
+        <h3>6-1. 컬러 팔레트 (HEX 고정)</h3>
+        <div class="palette-grid">
+          <div class="palette">
+            <div class="p-swatch" style="background: #e8c8e0"></div>
+            <div class="p-name">Lilac Pink</div>
+            <div class="p-hex">#E8C8E0</div>
+          </div>
+          <div class="palette">
+            <div class="p-swatch" style="background: #fce8b8"></div>
+            <div class="p-name">Butter Yellow</div>
+            <div class="p-hex">#FCE8B8</div>
+          </div>
+          <div class="palette">
+            <div
+              class="p-swatch"
+              style="background: #fff8f0; border: 1px solid #eee"
+            ></div>
+            <div class="p-name">Cream White</div>
+            <div class="p-hex">#FFF8F0</div>
+          </div>
+          <div class="palette">
+            <div class="p-swatch" style="background: #e91e63"></div>
+            <div class="p-name">Hot Pink*</div>
+            <div class="p-hex">#E91E63</div>
+          </div>
+          <div class="palette">
+            <div class="p-swatch" style="background: #a8d5c8"></div>
+            <div class="p-name">Mint Teal*</div>
+            <div class="p-hex">#A8D5C8</div>
+          </div>
+          <div class="palette">
+            <div class="p-swatch" style="background: #2d1f3d"></div>
+            <div class="p-name">Deep Purple</div>
+            <div class="p-hex">#2D1F3D</div>
+          </div>
+        </div>
+        <p style="font-size: 12px; color: #6b5b7a">
+          * Hot Pink / Mint Teal는 <b>포인트 액센트만</b> (전체 면적의 5% 이하).
+          큰 면적은 Lilac·Butter·Cream 3색으로.
+        </p>
+
+        <h3>6-2. 조명</h3>
+        <table>
+          <tr>
+            <td style="width: 25%"><b>광원</b></td>
+            <td>소프트박스 1~2개 + 디퓨저 (직접광 금지)</td>
+          </tr>
+          <tr>
+            <td><b>색온도</b></td>
+            <td>5000~5500K (아침 햇살 톤). 웜라이트 과하면 노란 바래짐</td>
+          </tr>
+          <tr>
+            <td><b>그림자</b></td>
+            <td>
+              부드럽고 얕게. 하드 섀도우 금지. 드리미 연출용 살짝의 플레어는 OK
+            </td>
+          </tr>
+          <tr>
+            <td><b>포스트</b></td>
+            <td>채도 95% · 콘트라스트 92% 정도로 살짝 낮춰 "파우더리" 느낌</td>
+          </tr>
+        </table>
+
+        <h3>6-3. 배경 & 바닥 소재</h3>
+        <ul>
+          <li><b>플랫레이</b>: 라일락 페이퍼 or 라일락 리넨 (질감 살짝)</li>
+          <li>
+            <b>제품 단독컷</b>: 크림 화이트 매트 배경 + 라일락 그라데 추가
+          </li>
+          <li><b>모델컷</b>: 밀키 크림 벽 or 파스텔 그라데 페이퍼</li>
+          <li>
+            <b>금지</b>: 순백(너무 차가움), 진한 핑크, 검정, 나무결, 대리석
+          </li>
+        </ul>
+
+        <h3>6-4. 소품 리스트</h3>
+        <table>
+          <tr>
+            <th style="width: 30%">소품</th>
+            <th>용도 · 연출</th>
+          </tr>
+          <tr>
+            <td>화이트 울/코튼 구름 오브제</td>
+            <td>제품 주변 배치 (구름 위에 떠 있는 듯)</td>
+          </tr>
+          <tr>
+            <td>아크릴 달·별 미니 데코</td>
+            <td>플랫레이 포인트 (3~5개씩만)</td>
+          </tr>
+          <tr>
+            <td>파스텔 포일 조각</td>
+            <td>빛 반사용 · 드리미 플레어</td>
+          </tr>
+          <tr>
+            <td>라일락·버터 폼폼</td>
+            <td>구도 균형용 (1~2개만)</td>
+          </tr>
+          <tr>
+            <td>투명 아크릴 큐브</td>
+            <td>제품 높이감 연출</td>
+          </tr>
+          <tr>
+            <td>실크 드레이프 (파스텔)</td>
+            <td>배경 질감 · 모델 얼굴 옆</td>
+          </tr>
+          <tr>
+            <td>파스텔 드라이 플라워</td>
+            <td>과하지 않게 한쪽 모서리만</td>
+          </tr>
+        </table>
+
+        <h3>6-5. 모델 디렉션</h3>
+        <table>
+          <tr>
+            <td style="width: 25%"><b>연령·무드</b></td>
+            <td>25–32 / 내추럴 + 소프트 걸. 아이돌 · 과한 글램 금지</td>
+          </tr>
+          <tr>
+            <td><b>헤어</b></td>
+            <td>
+              자연스러운 웨이브 or 로우 번 · 앞머리는 생얼형 시스루 or 없음
+            </td>
+          </tr>
+          <tr>
+            <td><b>메이크업</b></td>
+            <td>내추럴 베이스 + 글로시 립 · 블러셔는 연하게 · 눈썹이 주인공</td>
+          </tr>
+          <tr>
+            <td><b>의상</b></td>
+            <td>
+              파스텔 니트 · 실크 블라우스 · 크림 턱시도 셔츠. 슬리브리스 OK.
+              패턴·로고 금지
+            </td>
+          </tr>
+          <tr>
+            <td><b>표정</b></td>
+            <td>
+              살짝 미소 · 꿈꾸는 듯 시선은 먼 곳.
+              <b>정면 직시·윙크·브이 금지</b>
+            </td>
+          </tr>
+          <tr>
+            <td><b>앵글</b></td>
+            <td>얼굴 45도 + 눈썹 클로즈업. 과한 로우앵글(올려찍기) 금지</td>
+          </tr>
+        </table>
+
+        <h3>6-6. 컷 리스트 (섹션별)</h3>
+        <div class="shot-list">
+          <div class="cut">
+            <b>Hero</b> — 모델 45도 얼굴 클로즈업 + 제품 1개 플로팅 + 구름
+            그래픽 오버레이 (1컷)
+          </div>
+          <div class="cut">
+            <b>Brand Moment</b> — 제품 6종 플랫레이 + 달·구름·별 오브제 (1컷)
+          </div>
+          <div class="cut">
+            <b>KEY 01 Dual Brush</b> — 브러쉬 매크로 (2컷: 콤·마스카라) + 사용
+            GIF (2개)
+          </div>
+          <div class="cut">
+            <b>KEY 02 Shades</b> — 컬러별 2컷씩 × 6 = 12컷 (눈썹 클로즈업 +
+            스와치)
+          </div>
+          <div class="cut">
+            <b>KEY 03 Formula</b> — 제형 매크로 1컷 + 구름 폼 연출 1컷 + 8H 비교
+            2컷 + 물 저항 1컷
+          </div>
+          <div class="cut">
+            <b>Safe on Skin</b> — 성분 아이콘 3종 + 인증서 1컷
+          </div>
+          <div class="cut"><b>How to Use</b> — 스텝별 눈썹 클로즈업 4컷</div>
+          <div class="cut">
+            <b>Ending</b> — 제품 6종 라인업 + 밀키 텍스처 연출 (1컷)
+          </div>
+          <div style="margin-top: 12px; font-weight: 700; color: #2d1f3d">
+            → 총 필요 컷: 28컷 + GIF 2개 (여유분 포함 35컷 권장)
+          </div>
+        </div>
+
+        <h3>6-7. NG 리스트</h3>
+        <div class="ng-box">
+          <b>이런 건 찍지 마세요</b>
+          <ul>
+            <li>과한 메이크업 · 스모키 · 강한 립 컬러</li>
+            <li>하드 조명 · 딥 섀도우 · 실루엣 컷</li>
+            <li>비비드 레드·오렌지·네온 배경</li>
+            <li>브이·윙크·혀 내밀기 등 틴 포즈</li>
+            <li>만화 스티커·이모지 오버레이</li>
+            <li>나무 테이블·대리석·벽돌 배경 (톤 충돌)</li>
+            <li>제품을 "산처럼 쌓기" (탐뷰티 드리미 결과 불일치)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. 변경 요약 -->
+      <section>
+        <div class="sec-no">07 / SUMMARY</div>
+        <h2>기존 기획안 대비 변경 요약</h2>
+        <table class="compare">
+          <tr>
+            <th style="width: 20%">구분</th>
+            <th style="width: 40%">기존 v0</th>
+            <th>신규 v2</th>
+          </tr>
+          <tr>
+            <td>타겟</td>
+            <td>틴 ~ 20초 (아이돌)</td>
+            <td>25–35 (soft girl · elevated kawaii)</td>
+          </tr>
+          <tr>
+            <td>메인 무드</td>
+            <td>비비드 핑크 · 틴 귀여움</td>
+            <td>라일락·버터 드리미 파스텔 · 어른 결</td>
+          </tr>
+          <tr>
+            <td>해시태그</td>
+            <td>#슥삭카라 외 4개</td>
+            <td>삭제 · 영문 세리프 카피 중심</td>
+          </tr>
+          <tr>
+            <td>USP 위계</td>
+            <td>6개 평평</td>
+            <td>듀얼 브러쉬 1위 고정</td>
+          </tr>
+          <tr>
+            <td>레퍼런스 이미지</td>
+            <td>fwee · 롬앤 직접 노출</td>
+            <td>탐뷰티 자체 비주얼만 · 달·구름·별 모티프 활용</td>
+          </tr>
+          <tr>
+            <td>스킨케어 + 비건</td>
+            <td>분산 2섹션</td>
+            <td>1섹션 통합</td>
+          </tr>
+          <tr>
+            <td>촬영 가이드</td>
+            <td>없음</td>
+            <td>팔레트·조명·소품·모델·컷리스트·NG 포함</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 8. 다음 단계 -->
+      <section>
+        <div class="sec-no">08 / NEXT STEPS</div>
+        <h2>다음 단계</h2>
+        <ol style="margin-left: 20px">
+          <li>본 기획서 확정 → 촬영 소품 · 모델 섭외 리스트업</li>
+          <li>아트 디렉터와 컷 리스트 28컷 확정 · 촬영 일정 잡기</li>
+          <li>카피라이터와 메인/서브 카피 AB 최종 선택</li>
+          <li>촬영 후 디자이너 레이아웃 작업 → 1차 시안 → 피드백 → 최종</li>
+          <li>
+            올리브영 · 자사몰 · 일본 큐텐용 3개 버전 별도 작업 (리소스 공유,
+            카피만 현지화)
+          </li>
+        </ol>
+      </section>
+
+      <footer>
+        TAM BEAUTY · The Cloud Easy Brow Mascara<br />
+        Draft Planning Document v2 · 2026-04-21<br />
+        본 기획서는 디자이너·포토그래퍼 작업 방향 가이드용입니다. 세부 카피 및
+        비주얼은 촬영 결과물에 따라 조정 가능합니다.
+      </footer>
+    </div>
+  </body>
+</html>

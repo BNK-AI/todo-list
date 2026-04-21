@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탐뷰티 | 이지 브로우 마스카라 — 상세페이지 기획서 v2 FINAL</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background: #f6f0f6;
+        color: #2d1f3d;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .meta-bar {
+        background: #2d1f3d;
+        color: #e2c8e0;
+        padding: 12px 30px;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 0.5px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .meta-bar strong { color: #fce8b8; font-weight: 500; }
+      .meta-bar .tag {
+        background: #fce8b8;
+        color: #2d1f3d;
+        padding: 3px 10px;
+        border-radius: 2px;
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      .wrap { max-width: 960px; margin: 0 auto; padding: 60px 40px 100px; }
+
+      .hero {
+        text-align: center;
+        padding: 30px 0 60px;
+        border-bottom: 1px solid #d8c0d8;
+        margin-bottom: 60px;
+      }
+      .hero .eyebrow {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 14px;
+        color: #8b5cf6;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+        color: #2d1f3d;
+      }
+      .hero .ko-title { font-size: 18px; font-weight: 400; color: #6b5b7a; margin-bottom: 22px; }
+      .hero .spec { font-size: 12px; color: #8b5cf6; letter-spacing: 3px; }
+      .hero .price {
+        display: inline-block;
+        margin-top: 18px;
+        background: #2d1f3d;
+        color: #fce8b8;
+        padding: 8px 18px;
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+
+      section { margin-bottom: 70px; }
+      .sec-no {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 13px;
+        color: #8b5cf6;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        padding-bottom: 14px;
+        border-bottom: 2px solid #2d1f3d;
+        letter-spacing: -0.3px;
+      }
+      h3 { font-size: 17px; font-weight: 700; margin: 28px 0 12px; color: #2d1f3d; }
+      h4 { font-size: 14px; font-weight: 700; margin: 16px 0 8px; color: #6b5b7a; letter-spacing: 0.3px; }
+      p { font-size: 14px; margin-bottom: 10px; }
+      code { background: #ede0ed; padding: 1px 6px; border-radius: 2px; font-size: 12px; color: #6b3d6b; }
+
+      .callout {
+        background: #fff;
+        border-left: 3px solid #2d1f3d;
+        padding: 20px 24px;
+        margin: 20px 0;
+        font-size: 13.5px;
+        line-height: 1.9;
+      }
+      .callout.warn { border-left-color: #e91e63; background: #fdf2f8; }
+      .callout.warn b { color: #c2185b; }
+      .callout.note { border-left-color: #8b5cf6; background: #f5edf8; }
+      .callout.insight { border-left-color: #f9c74f; background: #fff9e6; }
+      .callout.insight b { color: #b8860b; }
+
+      .key-copy {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #f3e3f3 0%, #fff6e0 100%);
+        margin: 24px 0;
+        border-radius: 4px;
+      }
+      .key-copy .en {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 32px;
+        color: #2d1f3d;
+        margin-bottom: 14px;
+        line-height: 1.2;
+      }
+      .key-copy .kr { font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #2d1f3d; }
+      .key-copy .sub { font-size: 13px; color: #6b5b7a; }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 13px;
+        background: #fff;
+      }
+      th {
+        background: #2d1f3d;
+        color: #f6f0f6;
+        padding: 12px 14px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+      td { padding: 12px 14px; border-bottom: 1px solid #ede0ed; vertical-align: top; }
+      tr:last-child td { border-bottom: none; }
+      table.bench th:first-child { width: 16%; }
+      table.bench td:first-child { font-weight: 700; color: #2d1f3d; }
+      table.bench tr.us td { background: #fff6e0; color: #2d1f3d; font-weight: 500; }
+
+      .usp-rank {
+        display: inline-block;
+        background: #2d1f3d;
+        color: #fce8b8;
+        padding: 2px 8px;
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        margin-right: 8px;
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 20px 0;
+      }
+      .color-chip {
+        background: #fff;
+        padding: 16px;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .color-chip .swatch {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+      }
+      .color-chip .code {
+        font-family: "Playfair Display", serif;
+        font-size: 13px;
+        color: #8b5cf6;
+        margin-bottom: 2px;
+      }
+      .color-chip .name {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        margin-bottom: 4px;
+        color: #2d1f3d;
+      }
+      .color-chip .desc { font-size: 10.5px; color: #6b5b7a; line-height: 1.5; }
+
+      ul { margin: 10px 0 10px 20px; }
+      li { font-size: 14px; margin-bottom: 4px; }
+
+      .preview-box {
+        background: #fff;
+        border: 1px dashed #c5a8c5;
+        padding: 32px 24px;
+        margin: 14px 0;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .preview-box .label {
+        display: inline-block;
+        background: #2d1f3d;
+        color: #fce8b8;
+        font-size: 10px;
+        padding: 3px 10px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+      }
+      .preview-box .main-copy {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 24px;
+        margin-bottom: 8px;
+        color: #2d1f3d;
+      }
+      .preview-box .sub-copy { font-size: 13px; color: #6b5b7a; }
+
+      /* 패키징 비주얼 (이모지+SVG) */
+      .pkg-viz {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 30px;
+        background: #1a1226;
+        padding: 40px;
+        border-radius: 6px;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .pkg-illustration {
+        text-align: center;
+        font-size: 12px;
+        color: #e2c8e0;
+      }
+      .pkg-illustration svg { width: 100%; max-width: 180px; height: auto; }
+      .pkg-info { color: #f6f0f6; font-size: 13px; line-height: 1.9; }
+      .pkg-info strong { color: #fce8b8; }
+      .pkg-info .tag-chip {
+        display: inline-block;
+        background: #8b5cf6;
+        color: #fff;
+        padding: 3px 10px;
+        font-size: 11px;
+        border-radius: 20px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+      }
+
+      .persona-card {
+        background: #fff;
+        padding: 22px 26px;
+        margin: 14px 0;
+        border-radius: 4px;
+        border-top: 3px solid #8b5cf6;
+      }
+      .persona-card h4 { font-size: 15px; color: #2d1f3d; margin: 0 0 10px; }
+      .persona-card .meta {
+        font-size: 11px;
+        color: #8b5cf6;
+        letter-spacing: 1px;
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        margin-bottom: 8px;
+      }
+
+      /* 섹션 구조 블록 */
+      .section-map { background: #fff; border-radius: 4px; padding: 24px; margin: 20px 0; }
+      .block {
+        border-left: 3px solid #8b5cf6;
+        padding: 12px 16px;
+        margin-bottom: 10px;
+        background: #faf5fa;
+      }
+      .block .idx {
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        color: #8b5cf6;
+        letter-spacing: 1px;
+      }
+      .block .title { font-size: 14px; font-weight: 700; color: #2d1f3d; }
+      .block .desc { font-size: 12px; color: #6b5b7a; margin-top: 2px; }
+
+      .checklist { background: #fff; padding: 20px 26px; border-radius: 4px; }
+      .checklist li { font-size: 13px; margin-bottom: 8px; list-style: none; position: relative; padding-left: 24px; }
+      .checklist li:before {
+        content: "☐";
+        position: absolute;
+        left: 0;
+        color: #8b5cf6;
+        font-size: 16px;
+      }
+
+      .footer-note {
+        text-align: center;
+        padding: 30px;
+        background: #2d1f3d;
+        color: #e2c8e0;
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="meta-bar">
+      <div>
+        <strong>탐뷰티 · TAM BEAUTY</strong> &nbsp;|&nbsp; 이지 브로우 마스카라
+        <span class="tag">v2 FINAL</span>
+      </div>
+      <div>자사몰 상세페이지 기획서 · 2026.04.21</div>
+    </div>
+
+    <div class="wrap">
+
+      <!-- HERO -->
+      <header class="hero">
+        <div class="eyebrow">TAM BEAUTY · BROW</div>
+        <h1>Easy Brow Mascara</h1>
+        <div class="ko-title">이지 브로우 마스카라 &nbsp;·&nbsp; 2-in-1 듀얼 엔드</div>
+        <div class="spec">BROW COMB × COLOR WAND</div>
+        <div class="price">자사몰 단독 · 14,000원 (런칭가 예정)</div>
+      </header>
+
+      <!-- 0. 개요 -->
+      <section>
+        <div class="sec-no">SEC 00 — OVERVIEW</div>
+        <h2>한 줄 기획</h2>
+        <div class="key-copy">
+          <div class="en">Comb it. Color it. Done.</div>
+          <div class="kr">빗질 한 번으로 완성되는 눈썹</div>
+          <div class="sub">컬러 왁싱 + 빗 정돈을 하나의 도구에 담은 듀얼 엔드 브로우 마스카라</div>
+        </div>
+        <div class="callout note">
+          <b>핵심 포지셔닝</b><br />
+          "이지(Easy)" — 브로우 초심자도 실패 안 하는 원스텝 스타일링.<br />
+          하단 미니 브러시로 컬러를 넣고, 상단 듀얼 콤(빗+스크루)으로 그 자리에서 정돈.<br />
+          <b>기존 브로우 마스카라의 2가지 약점(뭉침·빗 없음)을 도구 설계로 해결</b>한 것이 커뮤니케이션의 중심.
+        </div>
+      </section>
+
+      <!-- 1. 타겟 -->
+      <section>
+        <div class="sec-no">SEC 01 — TARGET</div>
+        <h2>타겟 & 인사이트</h2>
+
+        <div class="persona-card">
+          <div class="meta">PRIMARY · 20~28세 · 자사몰 재방문 고객</div>
+          <h4>"눈썹 타투는 부담, 매일 그리기는 귀찮은 MZ"</h4>
+          <p>
+            데일리 풀메이크업까진 안 해도 눈썹만큼은 챙기는 타입.
+            아이브로우 펜슬은 있지만, 자연스럽게 결 살리는 건 잘 못함.
+            SNS에서 "눈썹 컬러 맞추기 = 무드 완성"이라는 걸 체감함.
+          </p>
+        </div>
+
+        <div class="persona-card">
+          <div class="meta">SECONDARY · 첫 브로우 마스카라 구매자</div>
+          <h4>"실패하기 싫어서 미루던 카테고리 진입자"</h4>
+          <p>
+            뭉침·떡짐·안 빠지는 염색 같은 공포 때문에 미뤄온 유저.
+            도구(빗)가 같이 있다는 점에서 "이건 실패 안 하겠다"는 안심 포인트가 필요.
+          </p>
+        </div>
+
+        <div class="callout insight">
+          <b>인사이트</b> &mdash; "발색/컬러"로 경쟁하기엔 시장이 포화. <b>"빗질로 정돈되는 자연스러움"</b>이라는 행동-기반 혜택으로 각을 세운다. 콤이 실제로 달려있는 구조적 차별점을 시각적으로 반복 노출.
+        </div>
+      </section>
+
+      <!-- 2. 패키징 분석 -->
+      <section>
+        <div class="sec-no">SEC 02 — PACKAGING</div>
+        <h2>패키징 분석 (실물 기반)</h2>
+
+        <div class="pkg-viz">
+          <div class="pkg-illustration">
+            <svg viewBox="0 0 120 280" xmlns="http://www.w3.org/2000/svg">
+              <!-- 캡(빗 부분) -->
+              <rect x="45" y="20" width="30" height="70" rx="2" fill="#c4a5e8"/>
+              <!-- 빗 teeth -->
+              <g fill="#2d1f3d">
+                <rect x="48" y="15" width="1" height="10"/>
+                <rect x="51" y="13" width="1" height="12"/>
+                <rect x="54" y="12" width="1" height="13"/>
+                <rect x="57" y="12" width="1" height="13"/>
+                <rect x="60" y="13" width="1" height="12"/>
+                <rect x="63" y="15" width="1" height="10"/>
+                <rect x="66" y="15" width="1" height="10"/>
+                <rect x="69" y="15" width="1" height="10"/>
+              </g>
+              <!-- 연결부 (노란 링) -->
+              <rect x="42" y="90" width="36" height="22" rx="3" fill="#f2e49a"/>
+              <line x1="45" y1="93" x2="45" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <line x1="50" y1="93" x2="50" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <line x1="55" y1="93" x2="55" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <line x1="60" y1="93" x2="60" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <line x1="65" y1="93" x2="65" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <line x1="70" y1="93" x2="70" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <line x1="75" y1="93" x2="75" y2="109" stroke="#d4c27a" stroke-width="0.5"/>
+              <!-- 튜브 body -->
+              <rect x="40" y="112" width="40" height="150" rx="6" fill="#d4b5e8"/>
+              <!-- 패턴 (달/별/구름) -->
+              <text x="50" y="135" font-size="10" fill="#fff">☁</text>
+              <text x="65" y="150" font-size="9" fill="#f294b0">🌙</text>
+              <text x="48" y="170" font-size="8" fill="#9adbf2">★</text>
+              <text x="62" y="190" font-size="9" fill="#fff">☁</text>
+              <text x="50" y="210" font-size="8" fill="#f9c74f">★</text>
+              <text x="62" y="230" font-size="9" fill="#f294b0">🌙</text>
+              <!-- 로고 -->
+              <text x="50" y="258" font-size="8" font-weight="700" fill="#2d1f3d" font-family="serif">tam</text>
+            </svg>
+            <div style="margin-top: 12px; font-size: 11px;">라일락 + 드리미 패턴</div>
+          </div>
+          <div class="pkg-info">
+            <strong>컬러</strong> · 라일락(#D4B5E8) 베이스 + 연노랑(#F2E49A) 링<br/>
+            <strong>패턴</strong> · 달 · 별 · 구름 (핑크/블루/옐로우 악센트)<br/>
+            <strong>형태</strong> · 슬림 튜브 + 분리식 캡<br/>
+            <strong>상단 캡</strong> · 듀얼 콤 (빗 + 스크루 브러시)<br/>
+            <strong>하단 완드</strong> · 미니 브러시(색 도포용)<br/>
+            <strong>로고</strong> · 다크퍼플 세리프 "tam BEAUTY"<br/><br/>
+            <span class="tag-chip">Y2K</span>
+            <span class="tag-chip">dreamy</span>
+            <span class="tag-chip">cute-core</span>
+            <span class="tag-chip">portable</span>
+          </div>
+        </div>
+
+        <div class="callout note">
+          <b>시각 자산 활용 전략</b><br/>
+          패키징의 "달/별/구름" 모티프를 상세페이지 전체의 배경 일러스트·구분선·아이콘 톤으로 확장.<br/>
+          → 본문에서 "dreamy brows" "소프트 무드" 같은 감성 컬러 라인업 서사를 시각적으로 받쳐준다.
+        </div>
+      </section>
+
+      <!-- 3. 경쟁사 벤치마킹 -->
+      <section>
+        <div class="sec-no">SEC 03 — BENCHMARK</div>
+        <h2>경쟁사 벤치마킹</h2>
+
+        <h3>포지셔닝 맵 — 국내 주력 브로우 마스카라</h3>
+        <table class="bench">
+          <thead>
+            <tr>
+              <th>브랜드 / 제품</th>
+              <th>가격대</th>
+              <th>포지션 / 핵심 혜택</th>
+              <th>도구 구조</th>
+              <th>패키징 무드</th>
+              <th>약점(우리의 기회)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>에뛰드 컬러 마이 브로우</td>
+              <td>5,500원</td>
+              <td>초저가 · 컬러 다양성</td>
+              <td>단일 미니 브러시</td>
+              <td>유아적 컬러팝</td>
+              <td>빗 없음 · 뭉침 피드백</td>
+            </tr>
+            <tr>
+              <td>이니스프리 오토 아이브로우</td>
+              <td>7,000원</td>
+              <td>생활 기본형</td>
+              <td>단일 브러시</td>
+              <td>무던한 심플</td>
+              <td>무드 없음 · SNS 화제성 ↓</td>
+            </tr>
+            <tr>
+              <td>롬앤 한 프레임 브로우 (젤)</td>
+              <td>9,500원</td>
+              <td>MZ 감성 · 투명 유지력</td>
+              <td>스크루 브러시</td>
+              <td>미니멀 시크</td>
+              <td>컬러 연출 약함</td>
+            </tr>
+            <tr>
+              <td>페리페라 오일 틴트 브로우</td>
+              <td>11,000원</td>
+              <td>틴트 감성 · 영컨슈머</td>
+              <td>스펀지팁 + 미니붓</td>
+              <td>Y2K 귀여움</td>
+              <td>빗 별매 · 세팅 약함</td>
+            </tr>
+            <tr>
+              <td>미샤 아이브로우 스타일러</td>
+              <td>9,800원</td>
+              <td>듀얼엔드(펜슬+스크루)</td>
+              <td>펜슬 + 스크루</td>
+              <td>실용 드럭스토어</td>
+              <td>컬러 느낌 약함 · 올드함</td>
+            </tr>
+            <tr>
+              <td>베네피트 질미 브로우 볼륨</td>
+              <td>34,000원</td>
+              <td>프리미엄 볼륨 픽서</td>
+              <td>마이크로 파이버 브러시</td>
+              <td>노란색 레트로</td>
+              <td>가격 장벽 · 컬러 단조</td>
+            </tr>
+            <tr class="us">
+              <td>탐뷰티 이지 브로우 마스카라 (우리)</td>
+              <td>14,000원</td>
+              <td><b>2-in-1 · 빗질로 완성</b></td>
+              <td><b>듀얼 엔드(콤+브러시)</b></td>
+              <td>라일락 드리미·Y2K</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout insight">
+          <b>벤치마킹 결론</b><br/>
+          <b>① 14,000원 가격대에 "도구(빗) 내장" 제품이 비어있음</b> — 페리페라/롬앤과 가격 접근성은 비슷하나, "빗 별매" 고질 문제를 해결.<br/>
+          <b>② 드리미/Y2K 무드는 페리페라와 겹치나</b>, 탐뷰티의 "클라우드" 라인(블러셔·립라이너)과 결 통일 → <b>시리즈 자산으로 묶어 LTV 확장</b>.<br/>
+          <b>③ 베네피트급 프리미엄 감성 + 올리브영 가격</b>이라는 포지션이 비어있음 — 패키징 퀄리티로 이 갭을 메운다.
+        </div>
+
+        <h3>벤치마킹 카피 톤 비교</h3>
+        <table>
+          <tr>
+            <th>브랜드</th>
+            <th>대표 카피</th>
+            <th>톤</th>
+          </tr>
+          <tr>
+            <td>롬앤</td>
+            <td>"하루종일 무너지지 않는 한 프레임"</td>
+            <td>유지력 서사</td>
+          </tr>
+          <tr>
+            <td>페리페라</td>
+            <td>"촉촉하게 찰칵, 오일 틴트 브로우"</td>
+            <td>감각어 의성어</td>
+          </tr>
+          <tr>
+            <td>에뛰드</td>
+            <td>"데일리 컬러링, 내 눈썹에 파스텔"</td>
+            <td>컬러팝 친근함</td>
+          </tr>
+          <tr class="us">
+            <td><b>탐뷰티 (제안)</b></td>
+            <td><b>"빗질 한 번, 오늘의 브로우 완성"</b></td>
+            <td><b>행동-기반 완결성</b></td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 4. USP -->
+      <section>
+        <div class="sec-no">SEC 04 — USP</div>
+        <h2>USP 3가지</h2>
+
+        <h3><span class="usp-rank">01</span>듀얼 엔드 — 콤 + 컬러 브러시</h3>
+        <div class="callout">
+          상단 <b>빗+스크루 콤보</b>로 방향 잡고, 하단 <b>미니 브러시</b>로 자연스레 컬러 입힘.
+          컬러 도포 후 곧바로 상단 콤으로 결 정돈 → <b>원스텝 스타일링</b>.
+        </div>
+
+        <h3><span class="usp-rank">02</span>얇은 도포 · 뭉치지 않는 미니 브러시</h3>
+        <div class="callout">
+          브러시 헤드가 <b>일반 마스카라의 1/3 크기</b>로 눈썹 한 올 한 올에 얇게 발림.
+          떡짐 없이 본래 털 결 살리는 <b>"숨은 컬러링"</b> 연출.
+        </div>
+
+        <h3><span class="usp-rank">03</span>클라우드 시리즈 컬러링 — 웨어러블 브라운</h3>
+        <div class="callout">
+          클라우드 블러셔·립라이너와 <b>톤 결이 연결된 감성 브라운 5~6색</b>.
+          모발톤 매칭이 아니라 <b>오늘의 메이크업 무드와 매칭</b>하는 개념의 컬러.
+        </div>
+
+        <div class="callout warn">
+          <b>⚠ 유의</b> — "워터프루프" "24시간" 같은 과장 표현은 성분 검증 전까지 금지.
+          실제 테스트 결과 기반으로만 내세운다 (기획 메모 참고).
+        </div>
+      </section>
+
+      <!-- 5. 컬러 라인업 -->
+      <section>
+        <div class="sec-no">SEC 05 — COLORWAY</div>
+        <h2>컬러 라인업 제안 (5~6색)</h2>
+
+        <div class="color-grid">
+          <div class="color-chip">
+            <div class="swatch" style="background:#d4a88a;"></div>
+            <div class="code">No. 01</div>
+            <div class="name">라이트 비스킷</div>
+            <div class="desc">따뜻한 라이트 브라운 · 옅은 헤어용</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background:#a77854;"></div>
+            <div class="code">No. 02</div>
+            <div class="name">소프트 카라멜</div>
+            <div class="desc">중간 뉴트럴 브라운 · 데일리</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background:#5a3b28;"></div>
+            <div class="code">No. 03</div>
+            <div class="name">딥 에스프레소</div>
+            <div class="desc">진한 블랙 브라운 · 블랙헤어</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background:#b37a5c;"></div>
+            <div class="code">No. 04</div>
+            <div class="name">로지 코코아</div>
+            <div class="desc">핑크 끼 도는 로지 브라운</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background:#8e6440;"></div>
+            <div class="code">No. 05</div>
+            <div class="name">허니 월넛</div>
+            <div class="desc">옐로우 언더톤 브라운</div>
+          </div>
+          <div class="color-chip">
+            <div class="swatch" style="background:#c8b4d4;"></div>
+            <div class="code">No. 06 (한정)</div>
+            <div class="name">드리미 라벤더</div>
+            <div class="desc">패키징 오마주 · 유니크 포인트컬러</div>
+          </div>
+        </div>
+
+        <div class="callout note">
+          <b>컬러 네이밍 원칙</b> — 클라우드 시리즈 결(디저트·자연물)을 따른다. "라벤더"는 패키징과 연결되는 시그니처 픽·한정컬러로 활용 추천.
+        </div>
+      </section>
+
+      <!-- 6. 상세페이지 섹션 맵 -->
+      <section>
+        <div class="sec-no">SEC 06 — PAGE STRUCTURE</div>
+        <h2>상세페이지 섹션 구조 (총 14 블록)</h2>
+
+        <div class="section-map">
+          <div class="block"><span class="idx">01</span> <span class="title">히어로 비주얼 & 헤드 카피</span><div class="desc">패키징 정면 + "빗질 한 번, 오늘의 브로우 완성"</div></div>
+          <div class="block"><span class="idx">02</span> <span class="title">3줄 프리뷰 (문제 제기)</span><div class="desc">뭉침·빗없음·매일 다시 그리기 → 우리가 해결</div></div>
+          <div class="block"><span class="idx">03</span> <span class="title">핵심 USP #1 — 듀얼 엔드 구조</span><div class="desc">캡 분리 컷 + 상단 콤/하단 브러시 클로즈업</div></div>
+          <div class="block"><span class="idx">04</span> <span class="title">핵심 USP #2 — 미니 브러시 도포</span><div class="desc">털 한 올 한 올 디테일 컷 · before/after</div></div>
+          <div class="block"><span class="idx">05</span> <span class="title">핵심 USP #3 — 웨어러블 컬러링</span><div class="desc">헤어톤 ≠ 메이크업톤 인사이트 · 3가지 연출 컷</div></div>
+          <div class="block"><span class="idx">06</span> <span class="title">사용 방법 3-STEP</span><div class="desc">STEP1 컬러링 → STEP2 빗질 → STEP3 고정 · 짧은 모션컷 권장</div></div>
+          <div class="block"><span class="idx">07</span> <span class="title">컬러 라인업 (5~6색)</span><div class="desc">모델 연출컷 · 눈썹 클로즈업 · 헤어톤 매칭표</div></div>
+          <div class="block"><span class="idx">08</span> <span class="title">멀티유즈 — 헤어 타이 컬러링</span><div class="desc">잔머리·새치 터치업 활용 제안 (보너스 가치)</div></div>
+          <div class="block"><span class="idx">09</span> <span class="title">경쟁 제품 비교표</span><div class="desc">단일 브러시 vs 우리 · 약식 3행 비교</div></div>
+          <div class="block"><span class="idx">10</span> <span class="title">리뷰·레퍼런스 (시딩/인플루언서)</span><div class="desc">런칭 후 업데이트 · 초기엔 에디터 리뷰</div></div>
+          <div class="block"><span class="idx">11</span> <span class="title">성분 & 안전성 노트</span><div class="desc">비건/민감 성분 유무 · 성분표</div></div>
+          <div class="block"><span class="idx">12</span> <span class="title">제품 정보 / 스펙</span><div class="desc">용량·제조일·유통기한·사용법·주의사항</div></div>
+          <div class="block"><span class="idx">13</span> <span class="title">클라우드 시리즈 크로스셀</span><div class="desc">블러셔·립라이너 함께 보기 — LTV 증대</div></div>
+          <div class="block"><span class="idx">14</span> <span class="title">FAQ & 고객 문의</span><div class="desc">지워짐/눈썹 컬러 어울림/워터프루프 문의 대응</div></div>
+        </div>
+      </section>
+
+      <!-- 7. 카피 드래프트 -->
+      <section>
+        <div class="sec-no">SEC 07 — COPY DRAFT</div>
+        <h2>핵심 카피 드래프트</h2>
+
+        <h3>히어로 헤드라인 (후보)</h3>
+        <div class="preview-box">
+          <div class="label">OPTION A · 추천</div>
+          <div class="main-copy">Comb it. Color it. Done.</div>
+          <div class="sub-copy">빗질 한 번, 오늘의 브로우 완성</div>
+        </div>
+        <div class="preview-box">
+          <div class="label">OPTION B</div>
+          <div class="main-copy">One wand, finished brows.</div>
+          <div class="sub-copy">하나로 끝내는 눈썹, 이지 브로우 마스카라</div>
+        </div>
+        <div class="preview-box">
+          <div class="label">OPTION C</div>
+          <div class="main-copy">Dreamy Brows, Everyday.</div>
+          <div class="sub-copy">매일 쓰는 드리미 브로우</div>
+        </div>
+
+        <h3>섹션별 짧은 카피 (바디 드래프트)</h3>
+        <table>
+          <tr>
+            <th>블록</th>
+            <th>카피</th>
+          </tr>
+          <tr>
+            <td>#02 문제제기</td>
+            <td>"뭉치거나, 빗이 없거나 — 브로우 마스카라의 오래된 두 가지 불편."</td>
+          </tr>
+          <tr>
+            <td>#03 듀얼 엔드</td>
+            <td>"위쪽은 빗, 아래쪽은 컬러. 하나로 열고, 하나로 끝낸다."</td>
+          </tr>
+          <tr>
+            <td>#04 미니 브러시</td>
+            <td>"얇게, 결대로. 눈썹 한 올 한 올에 내려앉는 컬러."</td>
+          </tr>
+          <tr>
+            <td>#05 웨어러블</td>
+            <td>"머리색 말고, 오늘 메이크업에 맞추는 브로우."</td>
+          </tr>
+          <tr>
+            <td>#06 사용법</td>
+            <td>"1. 아래로 컬러. 2. 위로 빗질. 3. 끝."</td>
+          </tr>
+        </table>
+
+        <div class="callout warn">
+          <b>표현 금지 리스트</b><br />
+          · "24시간 유지" / "워터프루프" — 자료 검증 전<br />
+          · "붓기 완화" / "의약 효과" 암시 — 화장품 표시광고 위반<br />
+          · "통통" — 브랜드 톤에서 빼기로 결정된 단어 (기존 지침 승계)
+        </div>
+      </section>
+
+      <!-- 8. 촬영 가이드 -->
+      <section>
+        <div class="sec-no">SEC 08 — SHOOTING</div>
+        <h2>촬영 / 연출 가이드</h2>
+
+        <h3>필수 컷 리스트</h3>
+        <ul>
+          <li><b>Cut 01</b> — 패키징 정면(블랙 배경, 실물 이미지 1·3 톤)</li>
+          <li><b>Cut 02</b> — 캡 분리 해체컷 (상단 콤 + 하단 완드 동시에)</li>
+          <li><b>Cut 03</b> — 상단 콤 매크로 (빗+스크루 텍스처 노출)</li>
+          <li><b>Cut 04</b> — 하단 브러시 매크로 (얇은 헤드 강조)</li>
+          <li><b>Cut 05</b> — 모델 눈썹 Before / After (3각도)</li>
+          <li><b>Cut 06</b> — 사용 3-STEP 동작 모션 (짧은 GIF 권장)</li>
+          <li><b>Cut 07</b> — 컬러 5~6색 스와치 (팔 안쪽 또는 종이)</li>
+          <li><b>Cut 08</b> — 핸드헬드 연출 (파우치에 쏙, 휴대성 강조)</li>
+        </ul>
+
+        <h3>무드 톤 매뉴얼</h3>
+        <div class="callout note">
+          <b>배경:</b> 라일락(#D4B5E8) · 크림(#FFF6E0) · 오프화이트 <br />
+          <b>서브 컬러:</b> 피치핑크(#F294B0) · 라이트블루(#9ADBF2) · 카나리(#F9C74F)<br />
+          <b>조명:</b> 소프트, 직사광 지양 · 살짝 아웃포커스 로맨틱<br />
+          <b>레퍼런스:</b> 페리페라 Y2K × 롬앤 미니멀리즘의 중간 지점
+        </div>
+      </section>
+
+      <!-- 9. 디자이너 체크리스트 -->
+      <section>
+        <div class="sec-no">SEC 09 — DESIGNER CHECKLIST</div>
+        <h2>디자이너 체크리스트</h2>
+        <div class="checklist">
+          <ul>
+            <li>헤드 카피는 Playfair Display Italic + 노토산스KR 믹스로 고정</li>
+            <li>모든 블록 하단에 달·별·구름 모티프 중 하나 배치 (반복 = 시그니처)</li>
+            <li>컬러칩 이미지는 실제 스와치 촬영본 사용, 디지털 fill 금지</li>
+            <li>Before/After 사진은 동일 각도·조명 준수</li>
+            <li>가격/할인율은 런칭 직전 최종 확정값 반영 (현재값은 임시)</li>
+            <li>헤어/헤어타이 멀티유즈 연출컷은 "권장 용법 밖 사용임" 미세 안내</li>
+            <li>성분표 이미지 납품 전 규제 키워드 법무 크로스체크</li>
+            <li>모바일 기준 1단 스크롤 · 블록 간 간격 80~120px</li>
+            <li>제품명 표기: <code>이지 브로우 마스카라</code> — 영문 크리에이티브 네임 임의 변경 금지</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10. 리스크/기획메모 -->
+      <section>
+        <div class="sec-no">SEC 10 — MEMO</div>
+        <h2>기획 메모 · 리스크</h2>
+
+        <div class="callout warn">
+          <b>법적 주의</b> · 화장품법 제13조 표시·광고 범위 점검. "지속력"은 실측 시간 표기, "탈모/모발 강화" 같은 의약 유사 표현 금지.
+        </div>
+        <div class="callout note">
+          <b>운영 메모</b> · 듀얼엔드 구조로 초도 불량률(빗 부분 파손) 모니터링 필요. 초기 300개 QC 결과를 기획서 v3에 반영.
+        </div>
+        <div class="callout insight">
+          <b>CRM 연계 아이디어</b> · 클라우드 블러셔·립라이너 구매자에게 "이지 브로우" 런칭 알림 플친 카톡 캐러셀로 발송. (립라이너 캐러셀과 동일 포맷 재활용 가능)
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-no">SEC 11 — NEXT</div>
+        <h2>다음 액션</h2>
+        <ul>
+          <li>실물 샘플 매크로 촬영 예약 (이번 주)</li>
+          <li>컬러 라인업 5색/6색 최종 확정 (MD 협의)</li>
+          <li>카피 A/B/C 중 헤드 최종 픽 (내부 투표)</li>
+          <li>성분표/법적 표현 법무 리뷰 요청</li>
+          <li>디자이너 킥오프 — 이 기획서 공유 (v2 FINAL)</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="footer-note">
+      TAM BEAUTY · Easy Brow Mascara — 상세페이지 기획서 v2 FINAL · 2026.04.21
+    </div>
+  </body>
+</html>
