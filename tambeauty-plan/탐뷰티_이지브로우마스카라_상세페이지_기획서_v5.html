@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탐뷰티 | The Cloud easy brow mascara — 디자이너 핸드오프 v5 FINAL</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+      :root {
+        --ink: #1a1020;
+        --ink2: #3a2d4a;
+        --lilac: #d8c6e8;
+        --lilac-deep: #a68dc4;
+        --lilac-bg: #f0e8f4;
+        --cream: #f5efe4;
+        --off: #fbf9fc;
+        --accent: #6a3fb8;
+        --hot: #e84e9a;
+        --rule: #c9b8d4;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background: var(--off);
+        color: var(--ink);
+        line-height: 1.7;
+        font-weight: 400;
+        font-size: 15px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .meta-bar {
+        background: var(--ink);
+        color: #e8dcf0;
+        padding: 14px 30px;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 1px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .meta-bar strong { color: #f5e8c0; font-weight: 600; }
+      .meta-bar .tag {
+        background: #f5e8c0;
+        color: var(--ink);
+        padding: 3px 10px;
+        border-radius: 2px;
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+
+      .wrap { max-width: 1040px; margin: 0 auto; padding: 70px 48px 120px; }
+
+      /* COVER */
+      .cover {
+        text-align: center;
+        padding: 40px 0 60px;
+        border-bottom: 2px solid var(--ink);
+        margin-bottom: 70px;
+      }
+      .cover .eyebrow {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 13px;
+        color: var(--accent);
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+      }
+      .cover h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 46px;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+        color: var(--ink);
+      }
+      .cover h1 .it { font-style: italic; font-weight: 400; }
+      .cover .ko { font-size: 18px; font-weight: 400; color: var(--ink2); margin-bottom: 22px; }
+      .cover .doc-kind {
+        display: inline-block;
+        background: var(--ink);
+        color: var(--cream);
+        padding: 8px 20px;
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      .fact-row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin: 30px 0 0;
+      }
+      .fact-row .cell {
+        background: #fff;
+        padding: 18px 14px;
+        text-align: center;
+        border-radius: 6px;
+        border: 1px solid var(--rule);
+      }
+      .fact-row .k {
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: var(--accent);
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+      .fact-row .v {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ink);
+        font-family: "Playfair Display", serif;
+      }
+      .fact-row .v small { font-size: 13px; font-weight: 500; }
+
+      /* 섹션 공통 */
+      section { margin-bottom: 90px; }
+      .sec-no {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 13px;
+        color: var(--accent);
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--ink);
+        letter-spacing: -0.3px;
+      }
+      h2 + .lede {
+        font-size: 14px;
+        color: var(--ink2);
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--rule);
+      }
+      h3 { font-size: 18px; font-weight: 600; margin: 30px 0 14px; color: var(--ink); }
+      h4 { font-size: 12px; font-weight: 700; margin: 20px 0 8px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; }
+      p { font-size: 14px; margin-bottom: 10px; color: var(--ink2); }
+      strong, b { color: var(--ink); font-weight: 700; }
+      code {
+        background: var(--lilac-bg);
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 13px;
+        color: #4a1e7a;
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+      }
+
+      /* ===== 에셋 라이브러리 ===== */
+      .asset-lib {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+        margin: 24px 0;
+      }
+      .asset {
+        background: #fff;
+        border: 2px solid var(--ink);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .asset .thumb {
+        aspect-ratio: 4/5;
+        position: relative;
+        overflow: hidden;
+      }
+      .asset .cap {
+        padding: 12px 14px;
+        font-size: 12px;
+        border-top: 1px solid var(--rule);
+      }
+      .asset .cap .code {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+      .asset .cap .name { display: block; color: var(--ink); font-weight: 600; margin: 3px 0; }
+      .asset .cap .use { color: var(--ink2); font-size: 11px; line-height: 1.5; }
+
+      /* 연출컷 썸네일 CSS 재현 */
+      .thumb-A {
+        background: var(--lilac-bg);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3px;
+        padding: 8px;
+      }
+      .thumb-A::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 20%;
+        height: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(180deg, var(--lilac-deep) 40%, #f5e8b0 50%, var(--lilac-deep) 60%);
+        border-radius: 3px;
+        z-index: 2;
+      }
+      .thumb-A i { background: var(--lilac); border-radius: 2px; }
+
+      .thumb-B {
+        background: var(--lilac-bg);
+        position: relative;
+      }
+      .thumb-B::before {
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 60%;
+        height: 25%;
+        background: var(--lilac-deep);
+        border-radius: 6px;
+      }
+      .thumb-B::after {
+        content: "";
+        position: absolute;
+        bottom: 20%;
+        right: 15%;
+        width: 50%;
+        height: 18%;
+        background: linear-gradient(90deg, transparent, #8e6440, #8e6440, transparent);
+        border-radius: 40%;
+        transform: rotate(-8deg);
+      }
+
+      .thumb-C {
+        background: var(--lilac-bg);
+        position: relative;
+      }
+      .thumb-C::before {
+        content: "";
+        position: absolute;
+        top: 12%;
+        left: 20%;
+        width: 55%;
+        height: 25%;
+        background: var(--lilac-deep);
+        border-radius: 12px;
+      }
+      .thumb-C::after {
+        content: "☁";
+        position: absolute;
+        right: 10%;
+        bottom: 10%;
+        font-size: 48px;
+        color: #8e6440;
+      }
+
+      .thumb-D {
+        background: linear-gradient(135deg, var(--lilac-bg) 0%, var(--lilac) 100%);
+        position: relative;
+      }
+      .thumb-D::before, .thumb-D::after {
+        content: "";
+        position: absolute;
+        width: 18%;
+        height: 65%;
+        background: var(--lilac-deep);
+        border-radius: 4px;
+        top: 50%;
+        left: 50%;
+      }
+      .thumb-D::before { transform: translate(-50%, -50%) rotate(28deg); }
+      .thumb-D::after { transform: translate(-50%, -50%) rotate(-28deg); }
+
+      .thumb-E {
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .thumb-E::before {
+        content: "";
+        width: 70%;
+        height: 35%;
+        background: linear-gradient(90deg, transparent, #a8897a 20%, #bd9f8f 50%, #a8897a 80%, transparent);
+        border-radius: 50% / 60%;
+        transform: rotate(-5deg);
+      }
+
+      /* ===== 섹션별 핸드오프 카드 ===== */
+      .sec-block {
+        background: #fff;
+        border-radius: 8px;
+        padding: 0;
+        margin-bottom: 24px;
+        border: 1px solid var(--rule);
+        overflow: hidden;
+      }
+      .sec-head {
+        background: var(--ink);
+        color: var(--off);
+        padding: 18px 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .sec-head .left {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+      }
+      .sec-head .no {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        color: #f5e8c0;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+      .sec-head .title {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+      }
+      .sec-head .purpose {
+        font-size: 11px;
+        color: #d8c0e8;
+        letter-spacing: 1px;
+      }
+      .sec-body {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 0;
+      }
+      .sec-shot {
+        background: var(--lilac-bg);
+        padding: 20px;
+        border-right: 1px solid var(--rule);
+      }
+      .shot-slot {
+        aspect-ratio: 4/5;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 2px dashed var(--lilac-deep);
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        margin-bottom: 12px;
+      }
+      .shot-slot.has-asset { border-style: solid; padding: 0; position: relative; }
+      .shot-slot.has-asset .badge {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 10px;
+        padding: 3px 8px;
+        border-radius: 10px;
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 10;
+      }
+      .shot-slot .mock { width: 100%; height: 100%; position: relative; }
+      .shot-info {
+        font-size: 11.5px;
+        color: var(--ink2);
+        line-height: 1.6;
+      }
+      .shot-info b { color: var(--ink); }
+      .sec-info {
+        padding: 24px 28px;
+      }
+      .sec-info .copy-quote {
+        background: var(--lilac-bg);
+        padding: 14px 18px;
+        border-left: 3px solid var(--accent);
+        margin: 10px 0 18px;
+        border-radius: 0 4px 4px 0;
+      }
+      .sec-info .copy-quote .en {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 17px;
+        color: var(--ink);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .sec-info .copy-quote .kr {
+        font-size: 14px;
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .sec-info ul { margin: 6px 0 16px 20px; }
+      .sec-info li { font-size: 13px; color: var(--ink2); margin-bottom: 4px; }
+      .sec-info li b { color: var(--ink); }
+
+      .dodo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .dodo .box {
+        padding: 10px 14px;
+        font-size: 12px;
+        border-radius: 4px;
+      }
+      .dodo .do {
+        background: #e8f3e4;
+        color: #1f4018;
+        border-left: 3px solid #5a8c4a;
+      }
+      .dodo .dont {
+        background: #fbe4ea;
+        color: #5a1a30;
+        border-left: 3px solid #c24868;
+      }
+      .dodo .box b { display: block; font-size: 10px; letter-spacing: 1.5px; margin-bottom: 3px; }
+
+      /* ===== DS ===== */
+      .ds {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 20px;
+      }
+      .ds-card {
+        background: #fff;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        padding: 24px;
+      }
+      .palette-row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+        margin-bottom: 28px;
+      }
+      .palette-row .sw {
+        aspect-ratio: 1;
+        border-radius: 4px;
+        position: relative;
+      }
+      .palette-row .sw .hx {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 9px;
+        color: var(--ink2);
+        font-family: "Playfair Display", serif;
+        white-space: nowrap;
+      }
+      .palette-note { font-size: 12px; color: var(--ink2); line-height: 1.8; }
+      .palette-note b { color: var(--ink); }
+
+      .type-demo {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      .type-demo:last-child { border-bottom: none; }
+      .type-demo small { font-size: 11px; color: var(--ink2); }
+
+      /* ===== 페이지 맵 ===== */
+      .toc {
+        background: #fff;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .toc table { width: 100%; border-collapse: collapse; }
+      .toc td {
+        padding: 12px 18px;
+        border-bottom: 1px solid var(--rule);
+        font-size: 13px;
+      }
+      .toc tr:last-child td { border-bottom: none; }
+      .toc .num {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        color: var(--accent);
+        font-weight: 600;
+        width: 40px;
+      }
+      .toc .title { color: var(--ink); font-weight: 600; width: 28%; }
+      .toc .desc { color: var(--ink2); }
+      .toc .asset-chip {
+        display: inline-block;
+        background: var(--lilac-bg);
+        color: var(--accent);
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 10px;
+        margin-right: 3px;
+      }
+      .toc .asset-chip.missing {
+        background: #fff3cd;
+        color: #7a5d15;
+      }
+
+      /* 컬러 라인업 */
+      .colors {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        margin: 20px 0;
+      }
+      .color-cell {
+        background: #fff;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        padding: 14px;
+        text-align: center;
+      }
+      .color-cell .sw {
+        width: 100%;
+        aspect-ratio: 1.4;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .color-cell .no {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      .color-cell .en { font-size: 11px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+      .color-cell .kr { font-size: 11px; color: var(--ink2); margin-top: 2px; }
+
+      /* ===== 체크리스트 / 테이블 ===== */
+      table.matrix {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        background: #fff;
+        margin: 14px 0;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid var(--rule);
+      }
+      table.matrix th {
+        background: var(--ink);
+        color: var(--off);
+        padding: 12px 14px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+      }
+      table.matrix td {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--rule);
+        vertical-align: top;
+        color: var(--ink2);
+      }
+      table.matrix tr:last-child td { border-bottom: none; }
+
+      .checklist {
+        background: #fff;
+        border: 1px solid var(--rule);
+        padding: 24px 30px;
+        border-radius: 6px;
+      }
+      .checklist li {
+        font-size: 13px;
+        margin-bottom: 10px;
+        list-style: none;
+        position: relative;
+        padding-left: 28px;
+        color: var(--ink);
+      }
+      .checklist li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--accent);
+        border-radius: 3px;
+      }
+
+      .footer-note {
+        text-align: center;
+        padding: 36px;
+        background: var(--ink);
+        color: #d8c0e8;
+        font-size: 11px;
+        letter-spacing: 2px;
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+      }
+
+      .motif-rule {
+        height: 1px;
+        background: var(--rule);
+        position: relative;
+        margin: 60px 0;
+      }
+      .motif-rule::after {
+        content: "✦";
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%);
+        background: var(--off);
+        color: var(--accent);
+        padding: 0 14px;
+        font-size: 14px;
+      }
+
+      .callout {
+        background: #fff8dc;
+        border-left: 3px solid #d4a017;
+        padding: 16px 20px;
+        margin: 16px 0;
+        font-size: 13px;
+        color: var(--ink);
+        border-radius: 0 4px 4px 0;
+      }
+      .callout b { color: #8a5a00; }
+
+      @media (max-width: 900px) {
+        .asset-lib { grid-template-columns: repeat(2, 1fr); }
+        .sec-body { grid-template-columns: 1fr; }
+        .ds { grid-template-columns: 1fr; }
+        .colors { grid-template-columns: repeat(2, 1fr); }
+        .fact-row { grid-template-columns: repeat(2, 1fr); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="meta-bar">
+      <div>
+        <strong>TAM BEAUTY</strong> · The Cloud easy brow mascara
+        <span class="tag">v5 FINAL · HANDOFF</span>
+      </div>
+      <div>타겟 15~25 · 실제 에셋 바인딩 · 2026.04.21</div>
+    </div>
+
+    <div class="wrap">
+
+      <!-- COVER -->
+      <header class="cover">
+        <div class="eyebrow">TAM BEAUTY · THE CLOUD LINE</div>
+        <h1>The Cloud <span class="it">easy brow mascara</span></h1>
+        <div class="ko">더 클라우드 이지 브로우 마스카라</div>
+        <div class="doc-kind">DESIGNER HANDOFF · 실컷 반영</div>
+        <div class="fact-row">
+          <div class="cell"><div class="k">VOLUME</div><div class="v">2.5<small>g</small></div></div>
+          <div class="cell"><div class="k">COLORS</div><div class="v">6</div></div>
+          <div class="cell"><div class="k">LASTING</div><div class="v">8<small>h</small></div></div>
+          <div class="cell"><div class="k">IRRITATION</div><div class="v">0.00</div></div>
+          <div class="cell"><div class="k">VEGAN</div><div class="v">KVCA</div></div>
+        </div>
+      </header>
+
+      <!-- 00. ASSET LIBRARY -->
+      <section>
+        <div class="sec-no">SEC 00 — ASSET LIBRARY</div>
+        <h2>확보된 연출컷 & 제형컷</h2>
+        <p class="lede">
+          현재 촬영 완료된 실제 컷 5종. 각 섹션 카드 좌측의 <b>시안 슬롯</b>에 코드(A~E)로 바인딩 되어 있습니다.
+        </p>
+
+        <div class="asset-lib">
+          <div class="asset">
+            <div class="thumb thumb-A" style="position:relative;">
+              <i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="cap">
+              <div class="code">A</div>
+              <span class="name">그리드 플랫레이</span>
+              <span class="use">튜브 반복 배열 + 중앙 분해 듀얼 브러쉬. HERO용.</span>
+            </div>
+          </div>
+          <div class="asset">
+            <div class="thumb thumb-B" style="position:relative;"></div>
+            <div class="cap">
+              <div class="code">B</div>
+              <span class="name">브러쉬 매크로 + 스트로크</span>
+              <span class="use">상단 콤 + 완드 + 2톤 브라운 스트로크. DUAL BRUSH.</span>
+            </div>
+          </div>
+          <div class="asset">
+            <div class="thumb thumb-C" style="position:relative;"></div>
+            <div class="cap">
+              <div class="code">C</div>
+              <span class="name">구름 드로잉 컷</span>
+              <span class="use">완드로 구름 그려낸 제형 표현. FORMULA.</span>
+            </div>
+          </div>
+          <div class="asset">
+            <div class="thumb thumb-D" style="position:relative;"></div>
+            <div class="cap">
+              <div class="code">D</div>
+              <span class="name">플라잉 X자 교차</span>
+              <span class="use">공중 교차 다이내믹 컷. WHY NOW / 서브 히어로.</span>
+            </div>
+          </div>
+          <div class="asset">
+            <div class="thumb thumb-E" style="position:relative;"></div>
+            <div class="cap">
+              <div class="code">E</div>
+              <span class="name">블랙 배경 스와치</span>
+              <span class="use">제형 매크로 단독. COLOR CHART 연결.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>📸 아직 없는 에셋 (추가 필요)</b> · 눈썹 전/후 비교컷 · 모델 사용컷 · 6컬러별 개별 스와치(블랙 배경 동일 포맷) · 8시간 지속력 비교컷. 추가 촬영 후 각 섹션 슬롯의 <code>MISSING</code> 칩이 있는 곳에 배치.
+        </div>
+      </section>
+
+      <div class="motif-rule"></div>
+
+      <!-- 01. DESIGN SYSTEM -->
+      <section>
+        <div class="sec-no">SEC 01 — DESIGN SYSTEM</div>
+        <h2>디자인 시스템</h2>
+        <p class="lede">실제 패키지 라일락(#D8C6E8)과 크림 옐로우 링에서 추출한 팔레트. 드리미 × 청초 시크 무드.</p>
+
+        <div class="ds">
+          <div class="ds-card">
+            <h4>COLOR PALETTE</h4>
+            <div class="palette-row">
+              <div class="sw" style="background:#1a1020;"><div class="hx">Ink</div></div>
+              <div class="sw" style="background:#6a3fb8;"><div class="hx">Accent</div></div>
+              <div class="sw" style="background:#d8c6e8;"><div class="hx">Lilac</div></div>
+              <div class="sw" style="background:#f0e8f4;"><div class="hx">Lilac-BG</div></div>
+              <div class="sw" style="background:#f5efe4;"><div class="hx">Cream</div></div>
+              <div class="sw" style="background:#fbf9fc; border:1px solid #e0d8cf;"><div class="hx">Off-white</div></div>
+            </div>
+            <p class="palette-note">
+              <b>Primary</b> Ink #1A1020 · Accent Muted Violet #6A3FB8<br/>
+              <b>Brand</b> Lilac #D8C6E8 · Lilac BG #F0E8F4<br/>
+              <b>Neutral</b> Cream #F5EFE4 · Off-white #FBF9FC<br/><br/>
+              ※ 형광 핑크·포인트 옐로우 금지. 패키지 링 옐로우는 실사에서만 사용.
+            </p>
+          </div>
+
+          <div class="ds-card">
+            <h4>TYPOGRAPHY</h4>
+            <div class="type-demo">
+              <div style="font-family:'Playfair Display',serif; font-style:italic; font-size:32px; color:var(--ink); font-weight:500;">Soft like a cloud</div>
+              <small><b>H1 EN</b> Playfair Italic · 38~46px · 500</small>
+            </div>
+            <div class="type-demo">
+              <div style="font-size:22px; font-weight:600;">더 클라우드 이지 브로우 마스카라</div>
+              <small><b>H1 KR</b> Noto Sans KR · 20~24px · 600</small>
+            </div>
+            <div class="type-demo">
+              <div style="font-size:15px; color:var(--ink);">얇게 얹혀 하루 종일 무너지지 않는 눈썹</div>
+              <small><b>Body</b> Noto · 14~16px · 400 · line-height 1.7</small>
+            </div>
+            <div class="type-demo">
+              <div style="font-family:'Playfair Display',serif; font-style:italic; color:var(--accent); font-size:12px; letter-spacing:3px; font-weight:600;">CLOUD-LIGHT FINISH</div>
+              <small><b>Eyebrow</b> Playfair Italic · 11~13px · letter-spacing 3px</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="motif-rule"></div>
+
+      <!-- 02. PAGE MAP -->
+      <section>
+        <div class="sec-no">SEC 02 — PAGE MAP</div>
+        <h2>페이지 전체 맵 (12 섹션)</h2>
+        <p class="lede">각 섹션에 <b>에셋 바인딩 상태</b>를 표기. 보라색 칩 = 보유 · 노란 칩 = 추가 촬영 필요.</p>
+
+        <div class="toc">
+          <table>
+            <tr><td class="num">01</td><td class="title">HERO</td><td class="desc">인트로 · 전체 무드</td><td><span class="asset-chip">A</span></td></tr>
+            <tr><td class="num">02</td><td class="title">WHY NOW</td><td class="desc">타겟 인사이트 · 구매 동기</td><td><span class="asset-chip">D</span></td></tr>
+            <tr><td class="num">03</td><td class="title">DUAL BRUSH</td><td class="desc">도구 차별성 증명</td><td><span class="asset-chip">B</span> <span class="asset-chip">A</span></td></tr>
+            <tr><td class="num">04</td><td class="title">COLORIZE YOUR BROW</td><td class="desc">모델 연출 · 무드 톤업</td><td><span class="asset-chip missing">모델컷</span></td></tr>
+            <tr><td class="num">05</td><td class="title">COLOR CHART</td><td class="desc">6 Milks 발색·추천 모발톤</td><td><span class="asset-chip">E</span> <span class="asset-chip missing">×6</span></td></tr>
+            <tr><td class="num">06</td><td class="title">TONE GUIDE</td><td class="desc">모발톤 매칭 · 4분면 맵</td><td><span class="asset-chip">E</span></td></tr>
+            <tr><td class="num">07</td><td class="title">FORMULA</td><td class="desc">Cloud-light + Soft Coloring</td><td><span class="asset-chip">C</span> <span class="asset-chip missing">눈썹컷</span></td></tr>
+            <tr><td class="num">08</td><td class="title">LONG-LASTING 8H</td><td class="desc">지속력 · 전후 비교</td><td><span class="asset-chip missing">전후컷</span></td></tr>
+            <tr><td class="num">09</td><td class="title">SKIN CARING</td><td class="desc">성분·자극 0.00</td><td><span class="asset-chip">C</span></td></tr>
+            <tr><td class="num">10</td><td class="title">VEGAN</td><td class="desc">KVCA 인증</td><td><span class="asset-chip missing">인증서</span></td></tr>
+            <tr><td class="num">11</td><td class="title">HOW TO</td><td class="desc">4 STEP 사용법</td><td><span class="asset-chip missing">모델 GIF×4</span></td></tr>
+            <tr><td class="num">12</td><td class="title">PRODUCT INFO</td><td class="desc">스펙·FAQ·크로스셀</td><td><span class="asset-chip">A</span></td></tr>
+          </table>
+        </div>
+      </section>
+
+      <div class="motif-rule"></div>
+
+      <!-- 섹션 맵에서 쓸 썸네일 재사용 정의 -->
+      <section>
+        <div class="sec-no">SEC 03 — SECTION HANDOFF</div>
+        <h2>섹션별 상세 핸드오프</h2>
+        <p class="lede">각 섹션은 <b>좌측 시안 슬롯</b>(실사 에셋 미니) + <b>우측 지시사항</b>으로 구성. 디자이너는 시안 슬롯 크기·비율을 그대로 시안에 반영.</p>
+
+        <!-- SEC 01 HERO -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">01</span><span class="title">HERO</span></div>
+            <div class="purpose">첫인상 · 3초 이내 무드 전달</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset">
+                <span class="badge">A</span>
+                <div class="mock thumb-A">
+                  <i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="shot-info">
+                <b>A · 그리드 플랫레이</b><br/>
+                세로 4:5 크롭 권장<br/>
+                상하 약간 크롭해 중앙 분해 브러쉬가 "주인공"으로 보이게.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>HEAD COPY</h4>
+              <div class="copy-quote">
+                <span class="en">Glides like butter, Soft like a cloud.</span>
+                <span class="kr">샵에서 받은 듯한 청초한 눈썹</span>
+              </div>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>배경 이미지 풀블리드 + 중앙 상단 1/3 지점에 카피 오버레이</li>
+                <li>이미지 위 텍스트는 Ink #1A1020 · Playfair Italic 46px</li>
+                <li>해시태그 <code>#아이돌브로우 #청초컬러 #딱붙카라 #슥삭카라</code> 하단 중앙, 9~10px 작게</li>
+              </ul>
+              <h4>ASSETS</h4>
+              <ul>
+                <li>A 컷 원본 (고해상)</li>
+                <li>브랜드 로고 SVG (tam BEAUTY)</li>
+              </ul>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>여백·카피 오버레이</div>
+                <div class="box dont"><b>DON'T</b>배경에 구름 일러 추가</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 02 WHY NOW -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">02</span><span class="title">WHY NOW · 인트로</span></div>
+            <div class="purpose">문제 제기 · 구매 동기</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset">
+                <span class="badge">D</span>
+                <div class="mock thumb-D"></div>
+              </div>
+              <div class="shot-info">
+                <b>D · 플라잉 X자 교차</b><br/>
+                다이내믹 무빙감 → "쉽고 빠른 완성" 메시지 시각화에 적합.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="en">From combing to blending<br/>in two steps.</span>
+                <span class="kr">매일 그리는 눈썹, 오늘은 빗질 한 번으로 완성</span>
+              </div>
+              <h4>SUPPORT COPY</h4>
+              <ul>
+                <li>"샵에서 메이크업 받은 듯, 눈썹 결 정돈부터 블렌딩까지 2-STEP 듀얼 브러쉬로 완성하는 <b>#아이돌눈썹</b>"</li>
+              </ul>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>D 컷 중앙 배치 · 카피는 이미지 상/하 여백에</li>
+                <li>2-STEP 숫자 라벨(<code>01. 결 정리</code> / <code>02. 컬러링</code>)을 이미지 양쪽 여백에 얹기</li>
+              </ul>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>"샵" "청초" 키워드</div>
+                <div class="box dont"><b>DON'T</b>"뭉침" "떡짐" 부정어</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 03 DUAL BRUSH -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">03</span><span class="title">DUAL BRUSH</span></div>
+            <div class="purpose">핵심 USP · 도구의 차별성</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset">
+                <span class="badge">B</span>
+                <div class="mock thumb-B"></div>
+              </div>
+              <div class="shot-info">
+                <b>B · 브러쉬 매크로 + 스트로크</b><br/>
+                상단 콤 + 하단 완드 + 2톤 스트로크 동시 노출. 하단 스트로크에 <b>라벨 화살표</b> 디자인 추가 필요.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="en">Two brushes, one wand.</span>
+                <span class="kr">촘촘으로 블렌딩, 듬성으로 결 정리, 슬림 사선으로 컬러링</span>
+              </div>
+              <h4>LABELS (이미지 위 배치)</h4>
+              <ul>
+                <li><b>①촘촘 브러쉬</b> — 블렌딩 · "삭-"</li>
+                <li><b>②듬성 브러쉬</b> — 결 정리 · "슥-"</li>
+                <li><b>③슬림 사선 완드</b> — 컬러링</li>
+              </ul>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>B 컷 위에 얇은 선으로 라벨 화살표 (1pt, Accent #6A3FB8)</li>
+                <li>서포트 텍스트는 이미지 하단에 3단 그리드로</li>
+              </ul>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>촘촘/듬성 위치 PDF와 동일</div>
+                <div class="box dont"><b>DON'T</b>두 브러쉬 라벨 뒤바꾸기</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 04 COLORIZE -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">04</span><span class="title">COLORIZE YOUR BROW</span></div>
+            <div class="purpose">감성 연출 · 톤업 무드</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot">
+                <span class="badge" style="background:#d4a017;">MISSING</span>
+                <div class="shot-info" style="margin-top:10px;">
+                  <b>모델 3컷 그리드 필요</b><br/><br/>
+                  각기 다른 컬러 사용한 눈썹 클로즈업 또는 반측면 3컷.<br/><br/>
+                  <small>(반측면 · 정면 · 눈썹만 매크로)</small>
+                </div>
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="en">Colorize your Brow.</span>
+                <span class="kr">셋업 룩을 입은 듯한 무드 톤업</span>
+              </div>
+              <h4>SHOOTING BRIEF</h4>
+              <ul>
+                <li>의상 미니멀 (흰 티·니트·세트업)</li>
+                <li>메이크업 과하지 않게, 눈썹만 포인트</li>
+                <li>자연광 소프트 · 꾸안꾸 무드</li>
+                <li>컬러 3종 사용 제안: <b>02 카라멜 · 03 헤이즐 · 06 피오니</b></li>
+              </ul>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>3컷 1:1 정사각 그리드 · 이미지 간격 8px</li>
+                <li>카피는 그리드 위 중앙정렬</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 05 COLOR CHART -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">05</span><span class="title">COLOR CHART — 6 Milks</span></div>
+            <div class="purpose">6컬러 발색·색상명·추천 모발톤</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset">
+                <span class="badge">E + ×5</span>
+                <div class="mock thumb-E"></div>
+              </div>
+              <div class="shot-info">
+                <b>E · 블랙 스와치 템플릿</b><br/>
+                이 포맷을 기준으로 <b>6컬러 모두 동일한 구도로 재촬영</b> 필요.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COLORS</h4>
+              <div class="colors">
+                <div class="color-cell"><div class="sw" style="background:#e6d5b8;"></div><div class="no">01</div><div class="en">VANILLA MILK</div><div class="kr">바닐라 밀크</div></div>
+                <div class="color-cell"><div class="sw" style="background:#b08968;"></div><div class="no">02</div><div class="en">CARAMEL MILK</div><div class="kr">카라멜 밀크</div></div>
+                <div class="color-cell"><div class="sw" style="background:#c2a98a;"></div><div class="no">03</div><div class="en">HAZEL MILK</div><div class="kr">헤이즐 밀크</div></div>
+                <div class="color-cell"><div class="sw" style="background:#8b6f52;"></div><div class="no">04</div><div class="en">MOCHA MILK</div><div class="kr">모카 밀크</div></div>
+                <div class="color-cell"><div class="sw" style="background:#4a4038;"></div><div class="no">05</div><div class="en">CACAO MILK</div><div class="kr">카카오 밀크</div></div>
+                <div class="color-cell"><div class="sw" style="background:#c8a4ac;"></div><div class="no">06</div><div class="en">PEONY MILK</div><div class="kr">피오니 밀크</div></div>
+              </div>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>6컬러 블랙 스와치를 <b>2행 3열</b>로 배치 (모바일: 3행 2열)</li>
+                <li>각 스와치 하단: 번호 + 영문 + 국문 + 추천 모발톤 한 줄</li>
+                <li>상단 라벨 "Color Chart · Soft mood shades"</li>
+              </ul>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>6컷 동일 각도·조명</div>
+                <div class="box dont"><b>DON'T</b>디지털 색상 fill</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 06 TONE GUIDE -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">06</span><span class="title">TONE GUIDE</span></div>
+            <div class="purpose">모발톤별 추천 · 4분면 맵</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot" style="border-style:solid; background:var(--cream);">
+                <div class="shot-info" style="font-size:11px;">
+                  <b>라인 아트 4분면</b><br/><br/>
+                  Light ↑<br/>
+                  Warm ← × → Cool<br/>
+                  ↓ Deep<br/><br/>
+                  각 사분면에 컬러 번호 플롯
+                </div>
+              </div>
+              <div class="shot-info">
+                <b>디자이너 제작</b><br/>
+                일러스트레이션. 라인 1.5pt · 라벨 Playfair Italic 11px.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>GROUPING</h4>
+              <ul>
+                <li><b>Soft / Natural</b> — 02 카라멜 · 03 헤이즐 · 04 모카 · 05 카카오</li>
+                <li><b>Tone Up</b> — 01 바닐라 · 06 피오니</li>
+              </ul>
+              <h4>포지셔닝 (4분면)</h4>
+              <table class="matrix">
+                <tr><th>위치</th><th>컬러</th></tr>
+                <tr><td>Light · 중립</td><td>01 바닐라 밀크</td></tr>
+                <tr><td>Warm</td><td>02 카라멜 / 03 헤이즐</td></tr>
+                <tr><td>Cool</td><td>04 모카 / 06 피오니</td></tr>
+                <tr><td>Deep · Cool</td><td>05 카카오 밀크</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 07 FORMULA -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">07</span><span class="title">FORMULA</span></div>
+            <div class="purpose">제형 특성 · 텍스처 서사</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset" style="margin-bottom:12px;">
+                <span class="badge">C</span>
+                <div class="mock thumb-C"></div>
+              </div>
+              <div class="shot-info">
+                <b>C · 구름 드로잉 컷</b><br/>
+                제형의 부드러운 발림력 + 브랜드 "클라우드" 서사 동시 표현.
+              </div>
+              <div class="shot-slot" style="margin-top:12px;">
+                <span class="badge" style="background:#d4a017;">MISSING</span>
+                <div class="shot-info" style="margin-top:10px; font-size:11px;">
+                  <b>눈썹 매크로</b><br/>결 살아있는 클로즈업
+                </div>
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="en">Cloud-light Finish.</span>
+                <span class="kr">눈썹 위에 스치듯 얹혀 실키하게 픽싱되는 무중력 포뮬러</span>
+              </div>
+              <div class="copy-quote">
+                <span class="en">Soft Coloring.</span>
+                <span class="kr">결을 부드럽게 감싸듯, 자극 없이 균일하게 컬러링</span>
+              </div>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>C 컷을 좌측, 눈썹 매크로를 우측 (2단 그리드)</li>
+                <li>각 이미지 위에 카피 오버레이 가능 · 대비 확보 주의</li>
+              </ul>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>"실키" "스르르"</div>
+                <div class="box dont"><b>DON'T</b>"통통" "볼륨"</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 08 LONG LASTING -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">08</span><span class="title">LONG-LASTING 8H</span></div>
+            <div class="purpose">지속력 증명 · 객관적 비교</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot">
+                <span class="badge" style="background:#d4a017;">MISSING</span>
+                <div class="shot-info" style="margin-top:10px; font-size:11px;">
+                  <b>전후 비교 2컷</b><br/><br/>
+                  · 바른 직후<br/>· 8시간 후<br/><br/>
+                  동일 각도·조명·모델
+                </div>
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="en">Long-Lasting 8h.</span>
+                <span class="kr">땀·물·유수분에 강한 제형으로 유지되는 짱짱한 지속력</span>
+              </div>
+              <h4>MANDATORY NOTICE</h4>
+              <ul>
+                <li>"* 소비자의 이해를 돕기 위한 연출로 개인차 있음" — 고지 필수</li>
+                <li>"24시간" "완전방수" "워터프루프" — 표기 <b>금지</b></li>
+              </ul>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>좌: 바른 직후 / 우: 8시간 후 (수직 구분선 얇게)</li>
+                <li>중앙 상단 "바른 직후 &nbsp;→&nbsp; 8시간 후" 레이블</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 09 SKIN CARING -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">09</span><span class="title">SKIN CARING</span></div>
+            <div class="purpose">성분·안전성 · 이성 보강</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset">
+                <span class="badge">C</span>
+                <div class="mock thumb-C"></div>
+              </div>
+              <div class="shot-info">
+                <b>C · 구름 드로잉 재활용</b><br/>
+                "결까지 건강하게" 메시지에도 부합. FORMULA와 다른 크롭으로 사용.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="kr">눈썹도 관리가 필요하니까 — 스킨케어 성분으로 결까지 건강하게</span>
+              </div>
+              <h4>성분 3대 아이콘 (라인 아이콘 제작)</h4>
+              <table class="matrix">
+                <tr><th>분류</th><th>성분</th></tr>
+                <tr><td><b>[탄력]</b></td><td>식물성 펩타이드 · 식물성 콜라겐</td></tr>
+                <tr><td><b>[영양]</b></td><td>검은콩 추출물</td></tr>
+                <tr><td><b>[저자극]</b></td><td>피부 자극지수 <b>0.00</b> (임상 시험 완료)</td></tr>
+              </table>
+              <h4>REQUIRED</h4>
+              <ul>
+                <li>임상 시험 요약보고서 실물 이미지 (텍스트로 대체 금지)</li>
+                <li>자극지수 표기 시 기관명·시험일자 병기</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 10 VEGAN -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">10</span><span class="title">VEGAN</span></div>
+            <div class="purpose">가치소비 · 크루얼티프리</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot">
+                <span class="badge" style="background:#d4a017;">MISSING</span>
+                <div class="shot-info" style="margin-top:10px; font-size:11px;">
+                  <b>한국비건인증원 로고</b><br/>+ 옵션: 모델 + 동물 소품 컷
+                </div>
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>COPY</h4>
+              <div class="copy-quote">
+                <span class="en">Cruelty-Free · Vegan Certified.</span>
+                <span class="kr">동물과 환경을 사랑하는 마음으로</span>
+              </div>
+              <h4>LAYOUT</h4>
+              <ul>
+                <li>인증 로고 단독 또는 감성 연출컷 위에 얹기</li>
+                <li>짧게 끝내기 — 3~4줄 이내</li>
+              </ul>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>정식 로고 원본</div>
+                <div class="box dont"><b>DON'T</b>색상/비율 변형</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 11 HOW TO -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">11</span><span class="title">HOW TO — 4 STEP</span></div>
+            <div class="purpose">사용법 · 구매 후 실패 제거</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot">
+                <span class="badge" style="background:#d4a017;">MISSING</span>
+                <div class="shot-info" style="margin-top:10px; font-size:11px;">
+                  <b>모델 GIF ×4</b><br/><br/>
+                  STEP 1~4 각 3~5초 루프.<br/>각 컷마다 사용 브러쉬 아이콘.
+                </div>
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>4 STEP</h4>
+              <table class="matrix">
+                <tr><th>STEP</th><th>사용 브러쉬</th><th>동작</th></tr>
+                <tr><td>01</td><td>듬성</td><td>결 따라 빗어 <b>결 정리</b></td></tr>
+                <tr><td>02</td><td>슬림 사선</td><td>결 반대 방향 <b>컬러링</b></td></tr>
+                <tr><td>03</td><td>듬성</td><td>앞머리부터 <b>자연스레 빗기</b></td></tr>
+                <tr><td>04</td><td>촘촘</td><td>뭉침 풀고 <b>블렌딩</b></td></tr>
+              </table>
+              <div class="dodo">
+                <div class="box do"><b>DO</b>4 STEP 유지</div>
+                <div class="box dont"><b>DON'T</b>3 STEP으로 축약</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEC 12 INFO -->
+        <div class="sec-block">
+          <div class="sec-head">
+            <div class="left"><span class="no">12</span><span class="title">PRODUCT INFO · FAQ · 크로스셀</span></div>
+            <div class="purpose">전환 마무리 · 객단가 상승</div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-shot">
+              <div class="shot-slot has-asset">
+                <span class="badge">A</span>
+                <div class="mock thumb-A">
+                  <i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="shot-info">
+                <b>A · 재활용</b><br/>
+                하단 페이지 마감용 미러 컷. 색·톤 조정 가능.
+              </div>
+            </div>
+            <div class="sec-info">
+              <h4>제품 정보</h4>
+              <ul>
+                <li>용량 <b>2.5g</b> · 6 colors</li>
+                <li>제조일/유통기한 — 출고 직전 확인</li>
+                <li>사용상 주의사항 (화장품법 표준문구)</li>
+              </ul>
+              <h4>FAQ 후보</h4>
+              <ul>
+                <li>지워지는 데 얼마나 걸리나요?</li>
+                <li>민감 피부도 사용 가능한가요?</li>
+                <li>탈색모에 잘 어울리는 컬러는?</li>
+              </ul>
+              <h4>CROSS-SELL</h4>
+              <ul>
+                <li>The Cloud Blur Cream Blush</li>
+                <li>The Cloud Blur Lip Tint</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="motif-rule"></div>
+
+      <!-- 04. 납품 체크리스트 -->
+      <section>
+        <div class="sec-no">SEC 04 — DELIVERY CHECKLIST</div>
+        <h2>디자이너 납품 체크리스트</h2>
+        <div class="checklist">
+          <ul>
+            <li><b>제품명 표기</b> 영문 <code>The Cloud easy brow mascara</code> / 국문 <code>더 클라우드 이지 브로우 마스카라</code> 고정</li>
+            <li><b>공식 해시태그 4종</b> <code>#슥삭카라 #아이돌브로우 #청초컬러 #딱붙카라</code></li>
+            <li><b>컬러명</b> 영문 대문자 + 국문 병기 (01 VANILLA MILK · 바닐라 밀크 ...)</li>
+            <li><b>브러쉬 라벨 위치</b> 촘촘(블렌딩) / 듬성(빗질) / 슬림 사선(컬러링) — 뒤바꿈 금지</li>
+            <li><b>8시간 후 컷</b> "* 소비자 이해를 돕기 위한 연출로 개인차 있음" 고지 필수</li>
+            <li><b>자극지수 0.00</b> 임상 요약보고서 실물 이미지와 함께 노출</li>
+            <li><b>비건 로고</b> 한국비건인증원 정식 로고 · 색/비율 변형 금지</li>
+            <li><b>배경 모티프</b> 달/별/구름은 섹션 구분자 ✦ 레벨로만 사용 · 배경 전면 패턴화 금지</li>
+            <li><b>팔레트</b> 쨍한 핑크·형광 옐로우 사용 금지 · 라일락/크림/오프화이트 중심</li>
+            <li><b>타이포</b> 영문 Playfair Italic · 국문 Noto Sans KR · Bold 700은 fact 수치에만</li>
+            <li><b>모바일 1단</b> max-width 1040px · 블록 간격 80~120px</li>
+            <li><b>이미지 포맷</b> WebP 또는 JPG 품질 85% · 히어로 세로 4:5 · 컬러차트 1:1</li>
+            <li><b>GIF 사이즈</b> 각 2MB 이하 · 3~5초 루프</li>
+            <li><b>누락 에셋</b> MISSING 칩 달린 섹션은 <b>추가 촬영 후</b> 시안 1차 내 채움</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 05. Copy Do/Dont -->
+      <section>
+        <div class="sec-no">SEC 05 — COPY DO / DON'T</div>
+        <h2>카피 전체 Do / Don't</h2>
+        <table class="matrix">
+          <tr>
+            <th style="width:50%;">DO · 권장</th>
+            <th>DON'T · 금지</th>
+          </tr>
+          <tr>
+            <td>"샵에서 받은 듯" / "청초한 눈썹" / "무드 톤업"</td>
+            <td>"초딩도 할 수 있는" / "아이용" — 연령 하향</td>
+          </tr>
+          <tr>
+            <td>"실키" / "스르르" / "구름처럼 가볍게"</td>
+            <td><b>"통통"</b> / "빵빵" / "볼륨감" — 브랜드 금지어</td>
+          </tr>
+          <tr>
+            <td>"8시간 지속" / "짱짱한 유지력"</td>
+            <td>"24시간" / "완전방수" / "워터프루프"</td>
+          </tr>
+          <tr>
+            <td>"스킨케어 성분" / "결까지 건강하게"</td>
+            <td>"탈모 완화" / "모발 성장" / "발모"</td>
+          </tr>
+          <tr>
+            <td>"꾸안꾸" / "데일리" / "셋업 룩"</td>
+            <td>"키덜트" / "아가씨" / "소녀"</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 06. Next -->
+      <section>
+        <div class="sec-no">SEC 06 — NEXT</div>
+        <h2>다음 액션 (킥오프 후)</h2>
+        <ul style="margin-left:22px; font-size:14px;">
+          <li>본 문서 공유 · 섹션별 레이아웃 1차 시안 (3일)</li>
+          <li><b>누락 에셋 추가 촬영</b> (모델·전후·6컬러 개별 스와치·인증서 실물)</li>
+          <li>컬러명/법적 표현 법무 크로스체크</li>
+          <li>카피 A/B 픽 내부 투표 후 최종 반영</li>
+          <li>모바일 퍼스트 시안 레이아웃 컨펌</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="footer-note">
+      TAM BEAUTY · The Cloud easy brow mascara — Designer Handoff v5 FINAL · 2026.04.21
+    </div>
+  </body>
+</html>
