@@ -17,8 +17,6 @@
         --off: #fbf9fc;
         --accent: #8b5cf6;
         --hot: #ec4899;
-        --mint: #06b6d4;
-        --yellow: #facc15;
         --rule: #e5d9f2;
         --bench: #2d3a2d;
         --bench-bg: #eef1e8;
@@ -1634,19 +1632,21 @@
         <div class="ds">
           <div class="ds-card">
             <h4>COLOR PALETTE</h4>
-            <div class="palette-row">
-              <div class="sw" style="background:#8b5cf6;"><div class="hx">Violet</div></div>
+            <div class="palette-row" style="grid-template-columns: 2fr 1fr 1fr 1fr; gap:10px;">
+              <div class="sw" style="background:#8b5cf6; aspect-ratio:2/1; position:relative;">
+                <div style="position:absolute; top:8px; left:10px; color:#fff; font-size:9px; font-family:'Playfair Display',serif; font-style:italic; letter-spacing:1.5px; font-weight:700;">HERO</div>
+                <div class="hx" style="bottom:-22px;">Vivid Violet</div>
+              </div>
               <div class="sw" style="background:#ec4899;"><div class="hx">Hot Pink</div></div>
-              <div class="sw" style="background:#06b6d4;"><div class="hx">Mint</div></div>
-              <div class="sw" style="background:#facc15;"><div class="hx">Yellow</div></div>
               <div class="sw" style="background:#c4b5fd;"><div class="hx">Lilac</div></div>
               <div class="sw" style="background:#fff7e6;"><div class="hx">Cream</div></div>
             </div>
-            <p style="font-size:12px; color:var(--ink2); margin-top:22px;">
-              <b>Accent</b> Vivid Violet #8B5CF6<br/>
-              <b>Pop</b> Hot Pink #EC4899 · Mint #06B6D4 · Yellow #FACC15<br/>
-              <b>Brand</b> Lilac #C4B5FD · Cream #FFF7E6<br/>
-              <span style="font-size:11px;">텍스트 Ink(#1A1020) · 배경 Off-white(#FBF9FC) 기본 고정</span>
+            <p style="font-size:12px; color:var(--ink2); margin-top:28px; line-height:1.7;">
+              <b style="color:#8b5cf6;">HERO</b> Vivid Violet <code style="font-size:11px;">#8B5CF6</code> — 히어로/악센트 전담<br/>
+              <b style="color:#ec4899;">POINT</b> Hot Pink <code style="font-size:11px;">#EC4899</code> — CTA·MISSING 뱃지만 제한적 사용<br/>
+              <b>SOFT</b> Lilac <code style="font-size:11px;">#C4B5FD</code> — 카드 상단·태그 배경<br/>
+              <b>WARM</b> Cream <code style="font-size:11px;">#FFF7E6</code> — 섹션 하이라이트 배경<br/>
+              <span style="font-size:11px; color:#999;">텍스트 Ink <code style="font-size:11px;">#1A1020</code> · 배경 Off-white <code style="font-size:11px;">#FBF9FC</code> 고정</span>
             </p>
           </div>
           <div class="ds-card">
@@ -1668,6 +1668,49 @@
               <small><b>Eyebrow</b> Playfair Italic · 11~13px · ls 3px</small>
             </div>
           </div>
+        </div>
+
+        <h3 style="margin-top:34px;">COLOR USAGE MAP — 어디에 어떤 컬러를 쓰는지</h3>
+        <table class="matrix">
+          <tr>
+            <th style="width:22%;">역할</th>
+            <th style="width:26%;">컬러</th>
+            <th>사용처 · 적용 지점</th>
+          </tr>
+          <tr style="background:#faf7fd;">
+            <td><b style="color:#8b5cf6;">HERO · 히어로</b></td>
+            <td><span style="display:inline-block; width:14px; height:14px; background:#8b5cf6; border-radius:3px; vertical-align:middle; margin-right:6px;"></span>Vivid Violet <code>#8B5CF6</code></td>
+            <td>섹션 번호(SEC XX) · 이탤릭 eyebrow 라벨 · 본문 링크 · h3 보더 악센트 · 에셋 칩 · 태그 텍스트 · 카드 상단 3px 선</td>
+          </tr>
+          <tr>
+            <td><b style="color:#ec4899;">POINT · 포인트</b></td>
+            <td><span style="display:inline-block; width:14px; height:14px; background:#ec4899; border-radius:3px; vertical-align:middle; margin-right:6px;"></span>Hot Pink <code>#EC4899</code></td>
+            <td>할인율 · 가격 강조 숫자 · <b>MISSING 뱃지</b> · 법무 경고 강조 · 런칭가 라벨 (제한적 사용, 페이지당 3~5회)</td>
+          </tr>
+          <tr>
+            <td><b>SOFT · 서브 배경</b></td>
+            <td><span style="display:inline-block; width:14px; height:14px; background:#c4b5fd; border-radius:3px; vertical-align:middle; margin-right:6px;"></span>Lilac <code>#C4B5FD</code></td>
+            <td>카드 상단 스트라이프 · copy-quote 배경 · 태그 칩 배경 · 시안 슬롯 여백</td>
+          </tr>
+          <tr>
+            <td><b>WARM · 섹션 하이라이트</b></td>
+            <td><span style="display:inline-block; width:14px; height:14px; background:#fff7e6; border:1px solid #e5d9f2; border-radius:3px; vertical-align:middle; margin-right:6px;"></span>Cream <code>#FFF7E6</code></td>
+            <td>핵심 인용구 블록 배경 · fact 카드 강조 · 테이블 특정 행 하이라이트</td>
+          </tr>
+          <tr>
+            <td><b>TEXT · 본문</b></td>
+            <td><span style="display:inline-block; width:14px; height:14px; background:#1a1020; border-radius:3px; vertical-align:middle; margin-right:6px;"></span>Ink <code>#1A1020</code></td>
+            <td>h1/h2 제목 · 본문 중요 정보 · 뱃지 배경(CTA 버튼 · meta bar)</td>
+          </tr>
+          <tr>
+            <td><b>BASE · 배경</b></td>
+            <td><span style="display:inline-block; width:14px; height:14px; background:#fbf9fc; border:1px solid #e5d9f2; border-radius:3px; vertical-align:middle; margin-right:6px;"></span>Off-white <code>#FBF9FC</code></td>
+            <td>페이지 전체 배경 · 카드 내부 바탕 · 흰 종이 대체</td>
+          </tr>
+        </table>
+
+        <div class="callout" style="background:#f3eeff; border-left-color:#8b5cf6;">
+          <b style="color:#8b5cf6;">원칙</b> — 한 화면(뷰포트) 안에 포인트 컬러(Hot Pink)는 최대 1~2회만. 히어로 컬러(Violet)가 주도하고, 나머지는 본문/배경/여백으로 숨 쉴 공간 확보.
         </div>
       </section>
 
