@@ -12,7 +12,7 @@ from datetime import date
 pdfmetrics.registerFont(TTFont("Malgun", "C:/Windows/Fonts/malgun.ttf"))
 pdfmetrics.registerFont(TTFont("MalgunBd", "C:/Windows/Fonts/malgunbd.ttf"))
 
-TOTAL = 1_867_600
+TOTAL = 1_893_500
 COMMISSION_RATE = 0.30
 commission_incl_vat = int(round(TOTAL * COMMISSION_RATE))  # 560,280
 supply_value = int(commission_incl_vat // 1.1)              # 509,345
