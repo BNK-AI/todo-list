@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      탐뷰티 더 클라우드 플럼핑 립 라이너 · 네이버 블로그 체험단 가이드
+    </title>
+    <style>
+      :root {
+        --tb-ivory: #fef8f3;
+        --tb-nude: #fdeee4;
+        --tb-peach: #f8ddd0;
+        --tb-sand: #f0cfc0;
+        --tb-terra: #c9a07a;
+        --tb-rose: #d4856a;
+        --tb-dusty: #c96b8e;
+        --tb-wine: #8b2c3e;
+        --tb-ink: #2a2a2a;
+        --tb-warm: #7a5c52;
+        --tb-cream: #faf8f5;
+        --tb-line: #ede8e0;
+        --naver: #03c75a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        background: var(--tb-cream);
+        color: var(--tb-ink);
+        margin: 0;
+        padding: 40px 20px;
+        line-height: 1.65;
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #fef8f3 0%,
+          #f8ddd0 50%,
+          #e8b89a 100%
+        );
+        border-radius: 20px;
+        padding: 40px 34px;
+        margin-bottom: 28px;
+        box-shadow: 0 20px 40px -20px rgba(139, 44, 62, 0.22);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 85% 15%,
+          rgba(201, 160, 122, 0.3),
+          transparent 50%
+        );
+      }
+      .hero .tag {
+        position: relative;
+        display: inline-block;
+        background: var(--naver);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+      .hero h1 {
+        position: relative;
+        margin: 0 0 8px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .hero p {
+        position: relative;
+        margin: 0;
+        font-size: 14px;
+        color: var(--tb-warm);
+      }
+      .hero .meta {
+        position: relative;
+        margin-top: 18px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .hero .meta span {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: var(--tb-warm);
+        border: 1px solid rgba(201, 160, 122, 0.3);
+      }
+
+      .sec {
+        background: #fff;
+        border-radius: 16px;
+        padding: 26px;
+        margin-bottom: 22px;
+        box-shadow: 0 4px 20px -10px rgba(139, 44, 62, 0.1);
+        border: 1px solid var(--tb-line);
+      }
+      .sec h2 {
+        margin: 0 0 6px;
+        font-size: 19px;
+        color: var(--tb-wine);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .sec h2 .num {
+        background: var(--tb-terra);
+        color: #fff;
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .sec .lead {
+        color: var(--tb-warm);
+        font-size: 13px;
+        margin: 0 0 18px;
+      }
+      .sec h3 {
+        font-size: 15px;
+        color: var(--tb-ink);
+        margin: 18px 0 8px;
+        padding-left: 10px;
+        border-left: 3px solid var(--tb-terra);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+      }
+      .kv {
+        background: var(--tb-cream);
+        border-radius: 12px;
+        padding: 13px 15px;
+        border-left: 3px solid var(--tb-terra);
+      }
+      .kv .k {
+        font-size: 11px;
+        color: var(--tb-terra);
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+      .kv .v {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      /* 핵심 소구점 카드 */
+      .pitch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+        margin-top: 10px;
+      }
+      .pitch {
+        background: linear-gradient(135deg, #fff, var(--tb-cream));
+        border: 1px solid var(--tb-line);
+        border-radius: 14px;
+        padding: 18px;
+        position: relative;
+      }
+      .pitch .badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: var(--tb-wine);
+        color: #fff;
+        font-size: 10px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .pitch h4 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        color: var(--tb-ink);
+      }
+      .pitch .keywords {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 8px 0;
+      }
+      .pitch .keywords span {
+        background: var(--tb-peach);
+        color: var(--tb-wine);
+        font-size: 11px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      .pitch p {
+        margin: 6px 0 0;
+        font-size: 12.5px;
+        color: var(--tb-warm);
+        line-height: 1.6;
+      }
+
+      /* 컬러 */
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .color-card {
+        background: #fff;
+        border: 1px solid var(--tb-line);
+        border-radius: 12px;
+        padding: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .color-card .chip {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+      }
+      .color-card .no {
+        font-size: 10px;
+        color: var(--tb-terra);
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      .color-card .name {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 1px 0;
+      }
+      .color-card .mood {
+        font-size: 10.5px;
+        color: var(--tb-warm);
+      }
+
+      /* 구조 단계 */
+      .steps {
+        display: grid;
+        gap: 12px;
+        counter-reset: stepn;
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+        background: var(--tb-cream);
+        border-radius: 12px;
+        padding: 14px 16px;
+        border-left: 3px solid var(--tb-dusty);
+      }
+      .step .n {
+        counter-increment: stepn;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: var(--tb-wine);
+        color: #fff;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      }
+      .step .n::before {
+        content: counter(stepn);
+      }
+      .step h4 {
+        margin: 0 0 4px;
+        font-size: 14.5px;
+      }
+      .step p {
+        margin: 0;
+        font-size: 12.5px;
+        color: var(--tb-warm);
+      }
+      .step .eg {
+        margin-top: 8px;
+        background: #fff;
+        border: 1px dashed var(--tb-line);
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: var(--tb-ink);
+      }
+      .step .eg b {
+        color: var(--tb-wine);
+      }
+
+      /* 키워드 박스 */
+      .kw-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+      }
+      .kw-card {
+        background: var(--tb-cream);
+        border-radius: 12px;
+        padding: 14px;
+        border-left: 3px solid var(--tb-terra);
+      }
+      .kw-card .title {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--tb-terra);
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+      .kw-card .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .kw-card .chip {
+        background: #fff;
+        border: 1px solid var(--tb-line);
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 12px;
+        color: var(--tb-ink);
+      }
+      .kw-card .chip.strong {
+        background: var(--tb-wine);
+        border-color: var(--tb-wine);
+        color: #fff;
+        font-weight: 700;
+      }
+
+      /* 체크리스트 */
+      .check {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 10px;
+      }
+      .check-item {
+        background: var(--tb-cream);
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 13px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .check-item::before {
+        content: '✓';
+        color: var(--tb-terra);
+        font-weight: 800;
+      }
+
+      /* 금지 표현 */
+      .ban {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .ban .col {
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .ban .ok {
+        background: #eef8f1;
+        border: 1px solid #cce5d4;
+      }
+      .ban .ng {
+        background: #fbeef0;
+        border: 1px solid #e9cdd2;
+      }
+      .ban h4 {
+        margin: 0 0 8px;
+        font-size: 14px;
+      }
+      .ban .ok h4 {
+        color: #2a7a43;
+      }
+      .ban .ng h4 {
+        color: #a5364a;
+      }
+      .ban ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 12.5px;
+        line-height: 1.7;
+      }
+      .ban ul li {
+        color: var(--tb-ink);
+      }
+
+      /* 제목 예시 */
+      .title-list {
+        display: grid;
+        gap: 8px;
+      }
+      .title-list .t {
+        background: var(--tb-cream);
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 13.5px;
+        font-weight: 600;
+        border-left: 3px solid var(--tb-dusty);
+      }
+      .title-list .t .note {
+        display: block;
+        font-size: 11px;
+        color: var(--tb-warm);
+        font-weight: 400;
+        margin-top: 3px;
+      }
+
+      .hashtag-box {
+        background: var(--tb-cream);
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: 13px;
+        color: var(--tb-wine);
+        line-height: 1.8;
+        word-break: keep-all;
+      }
+
+      .footer {
+        text-align: center;
+        color: var(--tb-warm);
+        font-size: 12px;
+        margin-top: 28px;
+        padding: 18px;
+      }
+
+      @media (max-width: 640px) {
+        .ban {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <span class="tag">NAVER BLOG · 체험단 가이드</span>
+        <h1>
+          탐뷰티 더 클라우드 플럼핑 립 라이너<br />네이버 블로그 체험단 가이드
+        </h1>
+        <p>블로거 전달용 · 소구점 중심 포스팅 작성 가이드</p>
+        <div class="meta">
+          <span>💄 제품: 더 클라우드 플럼핑 립 라이너</span>
+          <span>🎨 6 컬러</span>
+          <span>📝 네이버 블로그 1건</span>
+          <span>📸 필수 사진 8컷 이상</span>
+        </div>
+      </section>
+
+      <!-- 0. 캠페인 개요 -->
+      <section class="sec">
+        <h2><span class="num">0</span>캠페인 개요</h2>
+        <div class="grid">
+          <div class="kv">
+            <div class="k">제품명 (정식)</div>
+            <div class="v">더 클라우드 플럼핑 립 라이너</div>
+          </div>
+          <div class="kv">
+            <div class="k">영문명</div>
+            <div class="v">The Cloud Plumping Lip Liner</div>
+          </div>
+          <div class="kv">
+            <div class="k">브랜드</div>
+            <div class="v">탐뷰티 (TAM BEAUTY)</div>
+          </div>
+          <div class="kv">
+            <div class="k">정가</div>
+            <div class="v">14,000원</div>
+          </div>
+          <div class="kv">
+            <div class="k">컬러</div>
+            <div class="v">6 호수 (호수 선택 가능)</div>
+          </div>
+          <div class="kv">
+            <div class="k">제공 내역</div>
+            <div class="v">제품 1개 + 배송비</div>
+          </div>
+          <div class="kv">
+            <div class="k">포스팅 분량</div>
+            <div class="v">이미지 8컷 이상 · 글자 1,500자 이상</div>
+          </div>
+          <div class="kv">
+            <div class="k">유지 기간</div>
+            <div class="v">최소 6개월</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. 핵심 소구점 (MUST) -->
+      <section class="sec">
+        <h2><span class="num">1</span>핵심 소구점 (MUST)</h2>
+        <p class="lead">
+          아래 5가지 중 <b>최소 3가지</b>는 반드시 포스팅에 녹여주세요. 특히
+          ①②는 필수입니다.
+        </p>
+        <div class="pitch-grid">
+          <div class="pitch">
+            <span class="badge">MUST 01</span>
+            <h4>선 하나로 입술 볼륨까지</h4>
+            <div class="keywords">
+              <span>#플럼핑라이너</span><span>#입술볼륨</span
+              ><span>#볼륨립</span>
+            </div>
+            <p>
+              단순 라이너가 아닌 <b>플럼핑 효과</b>를 전면에 배치. "선만
+              그었는데 입술이 도톰해 보여요" 등 체감 후기 형식으로 서술.
+            </p>
+          </div>
+          <div class="pitch">
+            <span class="badge">MUST 02</span>
+            <h4>구름처럼 부드러운 발색</h4>
+            <div class="keywords">
+              <span>#클라우드발색</span><span>#부드러운라이너</span
+              ><span>#뭉침없음</span>
+            </div>
+            <p>
+              또렷하지만 과하지 않은 <b>클라우드 발색</b>. 입술에 녹아드는 느낌,
+              경계 뜨지 않음, 끌리지 않는 텍스처 강조.
+            </p>
+          </div>
+          <div class="pitch">
+            <span class="badge">MUST 03</span>
+            <h4>6컬러 — 데일리 누드부터 무드 딥까지</h4>
+            <div class="keywords">
+              <span>#6컬러</span><span>#데일리누드</span
+              ><span>#퍼스널컬러</span>
+            </div>
+            <p>
+              받으신 호수의 <b>무드/퍼스널컬러</b>를 직접 언급. 웜톤·쿨톤 기준
+              어디에 어울리는지 한 줄 코멘트 권장.
+            </p>
+          </div>
+          <div class="pitch">
+            <span class="badge">MUST 04</span>
+            <h4>라이너+틴트 콤보 활용</h4>
+            <div class="keywords">
+              <span>#립콤보</span><span>#블러드립</span><span>#립메이크업</span>
+            </div>
+            <p>
+              라이너만 / 라이너+틴트 두 버전 연출. "립 메이크업의 완성도를
+              올려주는 아이템" 포지셔닝.
+            </p>
+          </div>
+          <div class="pitch">
+            <span class="badge">MUST 05</span>
+            <h4>데일리 지속력 · 번짐 최소</h4>
+            <div class="keywords">
+              <span>#지속력</span><span>#번짐없음</span><span>#오피스룩</span>
+            </div>
+            <p>
+              몇 시간 착용 후 변화 사진 1컷 권장. 마스크·식사 후 경계 유지되는지
+              체감 서술.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 컬러 라인업 -->
+      <section class="sec">
+        <h2><span class="num">2</span>컬러 라인업 (6 호수)</h2>
+        <p class="lead">
+          포스팅 본문에 받으신 호수의 <b>정식 컬러명 + 무드 설명</b>을 반드시
+          1회 이상 언급해 주세요.
+        </p>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="chip" style="background: #6e3a3f"></div>
+            <div>
+              <div class="no">01</div>
+              <div class="name">포지 드림</div>
+              <div class="mood">깊은 무드의 다크 로즈</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="chip" style="background: #b96878"></div>
+            <div>
+              <div class="no">02</div>
+              <div class="name">비터 페탈</div>
+              <div class="mood">쌉싸름한 더스티 페탈 핑크</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="chip" style="background: #c47b78"></div>
+            <div>
+              <div class="no">03</div>
+              <div class="name">로즈 티</div>
+              <div class="mood">은은한 장미차 누드 로즈</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="chip" style="background: #d4988a"></div>
+            <div>
+              <div class="no">04</div>
+              <div class="name">피치 버터</div>
+              <div class="mood">부드러운 피치 베이지 누드</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="chip" style="background: #d07560"></div>
+            <div>
+              <div class="no">05</div>
+              <div class="name">선셋 베일</div>
+              <div class="mood">노을빛 코랄 베일</div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="chip" style="background: #9a5d4e"></div>
+            <div>
+              <div class="no">06</div>
+              <div class="name">시나몬 번</div>
+              <div class="mood">따뜻한 시나몬 브라운 누드</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 포스팅 구조 -->
+      <section class="sec">
+        <h2><span class="num">3</span>포스팅 구조 가이드 (1,500자+)</h2>
+        <p class="lead">
+          아래 7단계 구조로 작성해주시면 검수 프리패스입니다. 각 단계별 예시
+          참고.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>도입 — 요즘 고민/상황</h4>
+              <p>
+                "요즘 립 라이너 뭐 쓰시나요?" "입술 볼륨이 고민이신 분들께" 등
+                공감 문장으로 시작.
+              </p>
+              <div class="eg">
+                <b>예시:</b> 요즘 립 라이너가 다시 유행이라던데, 저도 며칠
+                전부터 제대로 써보고 있어요.
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>제품 소개 — 정식명 + 가격 + 컬러 수</h4>
+              <p>
+                "탐뷰티 더 클라우드 플럼핑 립 라이너 (정가 14,000원 · 6컬러)"
+                형태로 1회 이상 정확히 표기.
+              </p>
+              <div class="eg">
+                <b>예시:</b> 오늘 소개할 제품은
+                <b>탐뷰티 더 클라우드 플럼핑 립 라이너</b>, 14,000원에 6가지
+                컬러로 출시된 신상이에요.
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>패키지 · 디테일 컷</h4>
+              <p>케이스 · 심 · 캡 · 클로즈업. 제품명 각인이 보이도록 촬영.</p>
+              <div class="eg">
+                <b>사진 3컷</b> (전면 / 각인 클로즈업 / 심 텍스처)
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>발색 · 스와치</h4>
+              <p>
+                받으신 호수의 발색을 손등·입술에 각각.
+                <b>조명 밝은 자연광</b>에서 촬영. 컬러명 캡션 필수.
+              </p>
+              <div class="eg">
+                <b>예시:</b> 제가 받은 03 로즈 티는 은은한 장미차 톤으로, 웜톤
+                분들께 특히 잘 어울리는 누드 로즈예요.
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>BEFORE / AFTER — 가장 중요</h4>
+              <p>
+                맨입술 사진 → 라이너 적용 후 사진. "플럼핑 효과"가 드러나도록
+                <b>동일 각도/조명</b>으로 촬영.
+              </p>
+              <div class="eg">
+                <b>예시 문구:</b> 선만 그었을 뿐인데 입술 라인이 또렷하게
+                잡히고, 경계 부분이 도톰하게 보여서 입술이 더 볼륨감 있어
+                보여요.
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>데일리 활용 · 지속력 리뷰</h4>
+              <p>
+                출근 전 바르고 몇 시간 후 사진 1컷. 음료 마신 후, 마스크 착용 후
+                등 실생활 시나리오.
+              </p>
+              <div class="eg">
+                <b>예시 문구:</b> 커피 한 잔 마신 뒤에도 라인 경계가 크게 번지지
+                않아서, 오피스룩으로 쓰기 좋았어요.
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>마무리 — 추천 대상 + 해시태그</h4>
+              <p>"이런 분들께 추천" 3줄 요약 + 필수 해시태그 15~20개.</p>
+              <div class="eg">
+                <b>예시:</b> 입술이 얇아 볼륨감을 원하시는 분 / 라이너 초보이신
+                분 / 누드 톤 립 좋아하시는 분께 추천드려요.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 제목 예시 -->
+      <section class="sec">
+        <h2><span class="num">4</span>포스팅 제목 예시</h2>
+        <p class="lead">
+          아래 톤 중 한 방향을 고르시되, <b>'플럼핑 립 라이너'</b>와
+          <b>'탐뷰티'</b> 키워드는 제목에 반드시 포함.
+        </p>
+        <div class="title-list">
+          <div class="t">
+            탐뷰티 더 클라우드 플럼핑 립 라이너 솔직 후기 | 03 로즈 티 발색 리뷰
+            <span class="note">기본형 · SEO 최적</span>
+          </div>
+          <div class="t">
+            선 하나로 입술 볼륨까지 | 탐뷰티 플럼핑 립 라이너 2주 사용기
+            <span class="note">후킹형 · 소구점 직결</span>
+          </div>
+          <div class="t">
+            립 라이너 초보도 쉬운 데일리 립 | 탐뷰티 클라우드 플럼핑 라이너
+            <span class="note">타겟형 · 초보 니즈</span>
+          </div>
+          <div class="t">
+            웜톤 누드립 찾으시는 분들께 | 탐뷰티 플럼핑 립 라이너 피치 버터
+            <span class="note">퍼스널컬러형 · 호수 맞춤</span>
+          </div>
+          <div class="t">
+            요즘 핫한 플럼핑 라이너 6컬러 비교 | 탐뷰티 더 클라우드 플럼핑 립
+            라이너
+            <span class="note">비교/정리형</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 필수 키워드 (SEO) -->
+      <section class="sec">
+        <h2><span class="num">5</span>필수 키워드 (네이버 SEO)</h2>
+        <p class="lead">
+          본문에 <b>자연스럽게</b> 노출되도록 배치. 빨간색 칩은 본문 3회 이상,
+          기타는 1~2회.
+        </p>
+        <div class="kw-box">
+          <div class="kw-card">
+            <div class="title">1순위 키워드 (본문 3회 이상)</div>
+            <div class="chips">
+              <span class="chip strong">플럼핑 립 라이너</span>
+              <span class="chip strong">탐뷰티</span>
+              <span class="chip strong">클라우드 플럼핑</span>
+            </div>
+          </div>
+          <div class="kw-card">
+            <div class="title">2순위 키워드 (1~2회)</div>
+            <div class="chips">
+              <span class="chip">립 라이너 추천</span>
+              <span class="chip">데일리 립</span>
+              <span class="chip">누드 립</span>
+              <span class="chip">립 라이너 사용법</span>
+              <span class="chip">입술 볼륨</span>
+              <span class="chip">립 메이크업</span>
+            </div>
+          </div>
+          <div class="kw-card">
+            <div class="title">롱테일 키워드 (제목·소제목에 1개)</div>
+            <div class="chips">
+              <span class="chip">립 라이너 초보</span>
+              <span class="chip">웜톤 누드립</span>
+              <span class="chip">쿨톤 로즈립</span>
+              <span class="chip">2030 데일리 립</span>
+              <span class="chip">봄 신상 립</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 필수 사진 -->
+      <section class="sec">
+        <h2><span class="num">6</span>필수 사진 구성 (8컷 이상)</h2>
+        <p class="lead">
+          자연광 · 흰 배경 또는 아이보리 소품 권장. 제품명 각인이 1컷 이상
+          선명하게 보여야 합니다.
+        </p>
+        <div class="check">
+          <div class="check-item">① 전면 패키지 (제품명 각인 보이게)</div>
+          <div class="check-item">② 제품 클로즈업 (심 / 텍스처)</div>
+          <div class="check-item">③ 손등 스와치 (호수명 캡션 포함)</div>
+          <div class="check-item">④ 맨입술 BEFORE</div>
+          <div class="check-item">⑤ 라이너 적용 AFTER (동일 각도)</div>
+          <div class="check-item">⑥ 라이너 + 틴트 레이어드 컷</div>
+          <div class="check-item">⑦ 데일리 연출컷 (셀카 or 착용샷)</div>
+          <div class="check-item">⑧ 몇 시간 후 지속력 비교컷</div>
+        </div>
+      </section>
+
+      <!-- 7. 해시태그 -->
+      <section class="sec">
+        <h2><span class="num">7</span>필수 해시태그</h2>
+        <p class="lead">
+          포스팅 하단에 아래 태그를 모두 포함해주세요. (순서 상관 없음)
+        </p>
+        <div class="hashtag-box">
+          #탐뷰티 #탐뷰티립라이너 #더클라우드플럼핑립라이너 #클라우드플럼핑
+          #플럼핑라이너 #플럼핑립라이너 #립라이너 #립라이너추천 #누드립
+          #데일리립 #립메이크업 #입술볼륨 #퍼스널컬러 #웜톤립 #쿨톤립 #봄신상립
+          #체험단 #내돈내산아님 #협찬
+        </div>
+      </section>
+
+      <!-- 8. 금지 표현 -->
+      <section class="sec">
+        <h2>
+          <span class="num">8</span>OK / 금지 표현 (화장품 표시·광고 준수)
+        </h2>
+        <p class="lead">
+          화장품법상 치료/효능 표현은 금지됩니다. 아래 안전 표현을 사용해주세요.
+        </p>
+        <div class="ban">
+          <div class="col ok">
+            <h4>✅ 사용 가능 표현</h4>
+            <ul>
+              <li>입술에 <b>볼륨감 있어 보이는</b> 연출</li>
+              <li>라인이 <b>또렷하게 잡혀</b>요</li>
+              <li><b>도톰해 보이는</b> 입술 표현</li>
+              <li>발색이 <b>선명하고 부드러워</b>요</li>
+              <li>경계 없이 <b>자연스럽게 밀착</b>돼요</li>
+              <li><b>색감이 오래 유지</b>되는 편이에요</li>
+            </ul>
+          </div>
+          <div class="col ng">
+            <h4>🚫 금지 표현</h4>
+            <ul>
+              <li>입술이 실제로 <b>커진다/두꺼워진다</b> (효능 단정)</li>
+              <li><b>주름이 없어진다</b>, <b>피부가 재생된다</b></li>
+              <li><b>의학적 치료/효과</b> 관련 단어</li>
+              <li><b>100%</b>, <b>최고</b>, <b>완벽</b> 등 절대 표현</li>
+              <li>타 브랜드 <b>실명 비교/비방</b></li>
+              <li>공식적으로 확인되지 않은 <b>성분 효능</b> 주장</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 제출 프로세스 -->
+      <section class="sec">
+        <h2><span class="num">9</span>제출 · 검수 프로세스</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>초안 작성 (수령일 D+7 이내)</h4>
+              <p>
+                본 가이드 1~8번 항목 반영하여 블로그에 <b>비공개</b>로 임시 저장
+                or 업로드.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>검수 요청 (임시 URL 전달)</h4>
+              <p>
+                담당자에게 URL + 비공개 비밀번호 전달. <b>1~2 영업일</b> 내
+                피드백 회신.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>수정 반영 후 공개 게시</h4>
+              <p>피드백 반영 → 전체 공개 전환. 게시 직후 URL 재공유.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="n"></div>
+            <div>
+              <h4>유지 기간 준수 (최소 6개월)</h4>
+              <p>
+                기간 내 무단 삭제·비공개·수정 금지. 불가피한 사유 시 사전 협의.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 유의사항 -->
+      <section class="sec">
+        <h2><span class="num">10</span>꼭 지켜주세요</h2>
+        <div class="check">
+          <div class="check-item">
+            제품 정식명 "<b>더 클라우드 플럼핑 립 라이너</b>" 본문 1회 이상
+            정확히 표기 (축약 X)
+          </div>
+          <div class="check-item">
+            브랜드 "<b>탐뷰티</b>" 한글 표기 (TAM BEAUTY 병기 가능)
+          </div>
+          <div class="check-item">
+            포스팅 상·하단에
+            <b>"탐뷰티로부터 제품을 제공받아 작성된 후기"</b> 문구 노출 (공정위
+            가이드)
+          </div>
+          <div class="check-item">타 브랜드 제품명 본문·사진 등장 금지</div>
+          <div class="check-item">본 가이드 문서 외부 공유 금지</div>
+          <div class="check-item">
+            포스팅 공개 후 <b>캡처 or URL</b>을 담당자에게 최종 리포트
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        © TAM BEAUTY · 더 클라우드 플럼핑 립 라이너 · 네이버 블로그 체험단
+        가이드 · 2026.04
+      </div>
+    </div>
+  </body>
+</html>
