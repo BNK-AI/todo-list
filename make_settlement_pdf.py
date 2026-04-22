@@ -22,7 +22,7 @@ balance = TOTAL - commission_incl_vat                       # 1,307,320
 def won(n):
     return f"{n:,}원"
 
-out_path = r"C:\Users\BNK-1\Desktop\todo-list\.claude\worktrees\distracted-tereshkova-02d692\정산표_슬래_공구수수료.pdf"
+out_path = r"C:\Users\BNK-1\Desktop\todo-list\.claude\worktrees\distracted-tereshkova-02d692\정산표_주식회사슬래이_공구수수료.pdf"
 
 doc = SimpleDocTemplate(
     out_path, pagesize=A4,
@@ -57,7 +57,7 @@ note_style = ParagraphStyle(
 story = []
 
 story.append(Paragraph("공구 수수료 정산표", title_style))
-story.append(Paragraph(f"정산일: {date.today().isoformat()}  /  수취인: 슬래", sub_style))
+story.append(Paragraph(f"정산일: {date.today().isoformat()}  /  수취인: (주)슬래이", sub_style))
 story.append(Spacer(1, 8*mm))
 
 # 1. 정산 개요
@@ -121,7 +121,7 @@ story.append(t2)
 story.append(Paragraph("3. 지급 금액", h2_style))
 pay_data = [
     ["구분", "금액", "비고"],
-    ["슬래 지급액 (공구 수수료)", won(commission_incl_vat), "VAT 포함"],
+    ["(주)슬래이 지급액 (공구 수수료)", won(commission_incl_vat), "VAT 포함"],
 ]
 t3 = Table(pay_data, colWidths=[60*mm, 50*mm, 60*mm])
 t3.setStyle(TableStyle([
