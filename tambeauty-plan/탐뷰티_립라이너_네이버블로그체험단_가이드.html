@@ -449,8 +449,186 @@
         padding: 18px;
       }
 
+      /* ==== 사진 디렉션 ==== */
+      .photo-setup {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .setup-card {
+        background: var(--tb-cream);
+        border-radius: 12px;
+        padding: 14px 16px;
+        border-top: 3px solid var(--tb-terra);
+      }
+      .setup-card .ic {
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
+      .setup-card h4 {
+        margin: 0 0 6px;
+        font-size: 14px;
+        color: var(--tb-wine);
+      }
+      .setup-card ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 12.5px;
+        line-height: 1.7;
+        color: var(--tb-ink);
+      }
+      .setup-card ul b {
+        color: var(--tb-wine);
+      }
+
+      .shots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        gap: 16px;
+        margin-top: 14px;
+      }
+      .shot {
+        background: #fff;
+        border: 1px solid var(--tb-line);
+        border-radius: 14px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 14px -8px rgba(139, 44, 62, 0.15);
+      }
+      .shot .frame {
+        aspect-ratio: 4/5;
+        background: var(--tb-cream);
+        position: relative;
+        border-bottom: 1px solid var(--tb-line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .shot .frame .no {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: var(--tb-ink);
+        color: #fef8f3;
+        font-size: 10px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        z-index: 3;
+      }
+      .shot .frame .ratio {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--tb-warm);
+        font-size: 9px;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        z-index: 3;
+      }
+      .shot .frame .diag {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* 다이어그램 공통 */
+      .diag-box {
+        width: 72%;
+        height: 72%;
+        border: 1.5px dashed rgba(139, 44, 62, 0.35);
+        border-radius: 10px;
+        position: relative;
+        background: #fff;
+      }
+      .diag-box .third-v,
+      .diag-box .third-h {
+        position: absolute;
+        background: rgba(201, 160, 122, 0.35);
+      }
+      .diag-box .third-v {
+        width: 1px;
+        top: 0;
+        bottom: 0;
+      }
+      .diag-box .third-h {
+        height: 1px;
+        left: 0;
+        right: 0;
+      }
+      .diag-subject {
+        position: absolute;
+        border-radius: 50%;
+      }
+      .shot-body {
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .shot-body .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+      }
+      .shot-body .title h4 {
+        margin: 0;
+        font-size: 15px;
+        color: var(--tb-ink);
+      }
+      .shot-body .title .pri {
+        background: var(--tb-wine);
+        color: #fff;
+        font-size: 9.5px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .shot-body .title .pri.soft {
+        background: var(--tb-terra);
+      }
+      .shot-meta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px 10px;
+        font-size: 11.5px;
+        color: var(--tb-ink);
+      }
+      .shot-meta .k {
+        color: var(--tb-terra);
+        font-weight: 700;
+        font-size: 9.5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .shot-tip {
+        background: var(--tb-cream);
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 11.5px;
+        color: var(--tb-warm);
+        line-height: 1.55;
+      }
+      .shot-tip b {
+        color: var(--tb-wine);
+      }
+
       @media (max-width: 640px) {
         .ban {
+          grid-template-columns: 1fr;
+        }
+        .shot-meta {
           grid-template-columns: 1fr;
         }
       }
@@ -463,12 +641,15 @@
         <h1>
           탐뷰티 더 클라우드 플럼핑 립 라이너<br />네이버 블로그 체험단 가이드
         </h1>
-        <p>블로거 전달용 · 소구점 중심 포스팅 작성 가이드</p>
+        <p>
+          블로거 전달용 · <b>사진 중심</b> 포스팅 작성 가이드 (공식 SNS 재활용
+          目的)
+        </p>
         <div class="meta">
           <span>💄 제품: 더 클라우드 플럼핑 립 라이너</span>
           <span>🎨 6 컬러</span>
           <span>📝 네이버 블로그 1건</span>
-          <span>📸 필수 사진 8컷 이상</span>
+          <span>📸 사진 10컷 · 구도 디렉션 포함</span>
         </div>
       </section>
 
@@ -815,22 +996,765 @@
         </div>
       </section>
 
-      <!-- 6. 필수 사진 -->
+      <!-- 6. 사진 디렉션 (메인 목적) -->
       <section class="sec">
-        <h2><span class="num">6</span>필수 사진 구성 (8컷 이상)</h2>
+        <h2><span class="num">6</span>사진 디렉션 — 이 캠페인의 메인 목적</h2>
         <p class="lead">
-          자연광 · 흰 배경 또는 아이보리 소품 권장. 제품명 각인이 1컷 이상
-          선명하게 보여야 합니다.
+          글보다 <b>사진이 1순위</b>입니다. 탐뷰티 공식 SNS·상세페이지에
+          재활용될 수 있어요. 아래 셋업을 지킨 후 10컷 구도 가이드대로
+          촬영해주세요.
         </p>
+
+        <!-- 6-A. 촬영 셋업 -->
+        <h3>6-A. 기본 촬영 셋업</h3>
+        <div class="photo-setup">
+          <div class="setup-card">
+            <div class="ic">☀️</div>
+            <h4>조명</h4>
+            <ul>
+              <li><b>자연광 1순위</b> — 오전 10–11시, 오후 2–3시</li>
+              <li>창 측면 45°, 창문 투명 커튼 1겹 권장</li>
+              <li>실내 촬영 시 <b>5500K 링라이트</b> + 디퓨저</li>
+              <li>직사광 · 황색 백열광 금지 (피부톤 틀어짐)</li>
+            </ul>
+          </div>
+          <div class="setup-card">
+            <div class="ic">🎨</div>
+            <h4>배경</h4>
+            <ul>
+              <li><b>아이보리 (#FEF8F3)</b> · 크림 · 웜베이지</li>
+              <li>대리석 · 린넨 패브릭 · 한지</li>
+              <li>쨍한 화이트 · 검정 · 원색 배경 금지</li>
+              <li>브랜드 톤 = <b>웜 뉴트럴</b></li>
+            </ul>
+          </div>
+          <div class="setup-card">
+            <div class="ic">🌸</div>
+            <h4>소품 (있으면 가산점)</h4>
+            <ul>
+              <li>말린 장미·수국 잎 1~2장 (컬러감 맞춰)</li>
+              <li>세라믹/도자 트레이 (베이지·누드톤)</li>
+              <li>자개 or 유리 접시 (반사감)</li>
+              <li>⚠️ 소품 과다 금지 — 제품이 주인공</li>
+            </ul>
+          </div>
+          <div class="setup-card">
+            <div class="ic">📐</div>
+            <h4>비율 · 포맷</h4>
+            <ul>
+              <li>제품컷: <b>1:1 정방형</b> (인스타 재활용)</li>
+              <li>인물·입술컷: <b>4:5 세로</b></li>
+              <li>데일리 무드: <b>3:4 세로</b></li>
+              <li>해상도: 최소 <b>3000 × 3000px</b> / JPG 고화질</li>
+            </ul>
+          </div>
+          <div class="setup-card">
+            <div class="ic">📱</div>
+            <h4>장비 · 세팅</h4>
+            <ul>
+              <li>스마트폰 후면 카메라 (전면 셀카 X)</li>
+              <li>HDR OFF · <b>비뷰티필터</b> OFF</li>
+              <li>매크로/클로즈업은 <b>15–20cm</b> 유지</li>
+              <li>흔들림 방지 — 삼각대 or 한 손 고정</li>
+            </ul>
+          </div>
+          <div class="setup-card">
+            <div class="ic">✂️</div>
+            <h4>보정 가이드</h4>
+            <ul>
+              <li>피부·립 색감 <b>원본 유지</b> (채도 +5 이내)</li>
+              <li>따뜻한 톤 살짝 (색온도 +3~5)</li>
+              <li>립 인위적 확대 · 변형 <b>금지</b></li>
+              <li>필터 프리셋은 <b>VSCO A4/A6</b> 약하게 정도</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6-B. 베스트 10컷 디렉션 -->
+        <h3>6-B. 베스트 10컷 구도 디렉션</h3>
+        <p class="lead">
+          ★ 우선 컷(1~5)은 반드시 촬영. 6~10은 블로그 풍성도를 위해 권장. 각
+          컷에 표시된 <b>구도 다이어그램</b>을 참고하세요.
+        </p>
+
+        <div class="shots">
+          <!-- 01 PACKAGE HERO -->
+          <div class="shot">
+            <div
+              class="frame"
+              style="background: linear-gradient(135deg, #fef8f3, #fdeee4)"
+            >
+              <span class="no">01</span><span class="ratio">1:1</span>
+              <div class="diag">
+                <div
+                  class="diag-box"
+                  style="background: linear-gradient(135deg, #fef8f3, #f8ddd0)"
+                >
+                  <div class="third-v" style="left: 33.3%"></div>
+                  <div class="third-v" style="left: 66.6%"></div>
+                  <div class="third-h" style="top: 33.3%"></div>
+                  <div class="third-h" style="top: 66.6%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 58%;
+                      top: 25%;
+                      width: 14%;
+                      height: 55%;
+                      background: linear-gradient(
+                        180deg,
+                        #2a2a2a 0 22%,
+                        #c9a07a 22% 78%,
+                        #2a2a2a 78%
+                      );
+                      border-radius: 3px;
+                      transform: rotate(-8deg);
+                      box-shadow: 0 8px 16px -6px rgba(139, 44, 62, 0.3);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>패키지 HERO 컷</h4>
+                <span class="pri">★ 1순위</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />정면 or 15° 틸트</div>
+                <div>
+                  <span class="k">배치</span><br />우측 1/3 라인에 세로 배치
+                </div>
+                <div><span class="k">거리</span><br />40~50cm</div>
+                <div>
+                  <span class="k">배경</span><br />아이보리 무지 + 가벼운 그림자
+                </div>
+              </div>
+              <div class="shot-tip">
+                💡 제품이 <b>상단 여백 25%</b>를 두고 세로로 서 있는 구도가
+                베스트. <b>각인 로고</b>가 선명하게 읽혀야 함. 그림자는 왼쪽
+                하단으로 살짝.
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 SIM MACRO -->
+          <div class="shot">
+            <div
+              class="frame"
+              style="background: linear-gradient(135deg, #fdeee4, #f0cfc0)"
+            >
+              <span class="no">02</span><span class="ratio">1:1</span>
+              <div class="diag">
+                <div class="diag-box" style="background: #fdeee4">
+                  <div class="third-v" style="left: 33.3%"></div>
+                  <div class="third-h" style="top: 66.6%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 15%;
+                      top: 55%;
+                      width: 70%;
+                      height: 16%;
+                      background: linear-gradient(
+                        90deg,
+                        #2a2a2a,
+                        #c9a07a 40%,
+                        #d4856a 70%,
+                        #8b2c3e
+                      );
+                      border-radius: 20px;
+                      transform: rotate(-18deg);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>심 매크로 클로즈업</h4>
+                <span class="pri">★ 1순위</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />45° 탑뷰</div>
+                <div><span class="k">배치</span><br />대각선 (좌하→우상)</div>
+                <div><span class="k">거리</span><br />매크로 15~20cm</div>
+                <div><span class="k">포커스</span><br />심 끝 크리미 질감</div>
+              </div>
+              <div class="shot-tip">
+                💡 심의 <b>촉촉한 질감</b>과 <b>컬러 발색</b>이 드러나는 각도가
+                핵심. 조명 반사로 심 표면에 살짝 윤기 도는 지점을 잡아주세요.
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 SWATCH -->
+          <div class="shot">
+            <div class="frame" style="background: #fef8f3">
+              <span class="no">03</span><span class="ratio">4:5</span>
+              <div class="diag">
+                <div class="diag-box">
+                  <div class="third-h" style="top: 33.3%"></div>
+                  <div class="third-h" style="top: 66.6%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 20%;
+                      top: 15%;
+                      width: 60%;
+                      height: 70%;
+                      background: radial-gradient(
+                        ellipse at 50% 40%,
+                        #f0cfc0,
+                        #e8b89a 60%,
+                        transparent 80%
+                      );
+                      border-radius: 40%;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 35%;
+                      top: 40%;
+                      width: 10%;
+                      height: 20%;
+                      background: #b96878;
+                      border-radius: 6px;
+                      opacity: 0.9;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 47%;
+                      top: 40%;
+                      width: 10%;
+                      height: 20%;
+                      background: #c47b78;
+                      border-radius: 6px;
+                      opacity: 0.9;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 59%;
+                      top: 40%;
+                      width: 10%;
+                      height: 20%;
+                      background: #d4988a;
+                      border-radius: 6px;
+                      opacity: 0.9;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>손등 스와치</h4>
+                <span class="pri">★ 1순위</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />완전 탑뷰 (90°)</div>
+                <div>
+                  <span class="k">배치</span><br />손등을 화면 중앙에 꽉 차게
+                </div>
+                <div><span class="k">거리</span><br />25~30cm</div>
+                <div>
+                  <span class="k">촬영</span><br />스와치
+                  <b>3~5회 그라데이션</b>
+                </div>
+              </div>
+              <div class="shot-tip">
+                💡 <b>호수명·컬러명</b>을 사진 위 캡션으로 얹을 자리 상단에 20%
+                여백 확보. 스와치는 얇게 번지게 → 진하게 그라데이션.
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 BEFORE 맨입술 -->
+          <div class="shot">
+            <div class="frame" style="background: #ede8e0">
+              <span class="no">04</span><span class="ratio">4:5</span>
+              <div class="diag">
+                <div class="diag-box" style="background: #ede8e0">
+                  <div class="third-h" style="top: 50%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 30%;
+                      top: 42%;
+                      width: 40%;
+                      height: 16%;
+                      background: radial-gradient(
+                        ellipse at 50% 50%,
+                        #b8828a,
+                        #a06871 50%,
+                        transparent 70%
+                      );
+                      filter: blur(1.5px);
+                      border-radius: 40%;
+                      opacity: 0.75;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>맨입술 BEFORE</h4>
+                <span class="pri">★ 1순위</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />정면 수평</div>
+                <div>
+                  <span class="k">프레이밍</span><br />코끝~턱선 (입술 중앙)
+                </div>
+                <div><span class="k">거리</span><br />25~30cm</div>
+                <div><span class="k">표정</span><br />무표정, 입 다물기</div>
+              </div>
+              <div class="shot-tip">
+                💡 립밤도 <b>바르지 말고</b> 촬영. AFTER와
+                <b>완전히 같은 각도·거리·조명</b>으로 찍어야 비교 의미가
+                있습니다. 삼각대 강추.
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 AFTER 적용 -->
+          <div class="shot">
+            <div
+              class="frame"
+              style="background: linear-gradient(135deg, #fdeee4, #f8ddd0)"
+            >
+              <span class="no">05</span><span class="ratio">4:5</span>
+              <div class="diag">
+                <div
+                  class="diag-box"
+                  style="background: linear-gradient(135deg, #fdeee4, #f8ddd0)"
+                >
+                  <div class="third-h" style="top: 50%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 28%;
+                      top: 40%;
+                      width: 44%;
+                      height: 20%;
+                      background: radial-gradient(
+                        ellipse at 50% 50%,
+                        #8b2c3e 0%,
+                        #b05060 40%,
+                        #d4856a 55%,
+                        transparent 70%
+                      );
+                      border-radius: 40%;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>라이너 AFTER (플럼핑 강조)</h4>
+                <span class="pri">★ 1순위</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />04와 동일</div>
+                <div><span class="k">프레이밍</span><br />04와 동일</div>
+                <div><span class="k">포인트</span><br />라인 경계 도톰하게</div>
+                <div>
+                  <span class="k">표정</span><br />04와 동일 (차이 최소화)
+                </div>
+              </div>
+              <div class="shot-tip">
+                💡 <b>라인만 그린 상태</b>가 1차. 선만으로 입술이 도톰해
+                보이는지가 핵심. 하이라이터 얹으면 플럼핑 시각 효과 UP (옵션).
+              </div>
+            </div>
+          </div>
+
+          <!-- 06 3/4 HALF -->
+          <div class="shot">
+            <div
+              class="frame"
+              style="background: linear-gradient(135deg, #8b2c3e, #4a1d2a)"
+            >
+              <span class="no">06</span><span class="ratio">4:5</span>
+              <div class="diag">
+                <div
+                  class="diag-box"
+                  style="background: linear-gradient(160deg, #8b4c5e, #6b2d3a)"
+                >
+                  <div class="third-v" style="left: 33.3%"></div>
+                  <div class="third-v" style="left: 66.6%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 10%;
+                      top: 15%;
+                      width: 55%;
+                      height: 70%;
+                      background: radial-gradient(
+                        ellipse at 60% 40%,
+                        #a85d6e 10%,
+                        #6b2d3a 60%,
+                        transparent 80%
+                      );
+                      filter: blur(1.5px);
+                      border-radius: 45%;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>3/4 측면 하프샷</h4>
+                <span class="pri soft">추천</span>
+              </div>
+              <div class="shot-meta">
+                <div>
+                  <span class="k">앵글</span><br />측면 3/4 (얼굴 왼쪽 3/4 노출)
+                </div>
+                <div>
+                  <span class="k">배치</span><br />얼굴 좌 1/3, 우 2/3 여백
+                </div>
+                <div>
+                  <span class="k">자세</span><br />턱 살짝 내리고 시선 위
+                </div>
+                <div><span class="k">프레이밍</span><br />쇄골~이마</div>
+              </div>
+              <div class="shot-tip">
+                💡 옆에서도 입술 라인이 <b>도톰하게 살아있는 각도</b>. 우측 2/3
+                여백은 <b>카피 들어갈 자리</b>로 비워두세요.
+              </div>
+            </div>
+          </div>
+
+          <!-- 07 LAYERED -->
+          <div class="shot">
+            <div class="frame" style="background: #fef8f3">
+              <span class="no">07</span><span class="ratio">1:1</span>
+              <div class="diag">
+                <div class="diag-box">
+                  <div class="third-v" style="left: 50%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 15%;
+                      top: 35%;
+                      width: 70%;
+                      height: 30%;
+                      background: radial-gradient(
+                        ellipse at 50% 50%,
+                        #8b2c3e 5%,
+                        #c47b78 35%,
+                        #d4988a 55%,
+                        transparent 70%
+                      );
+                      border-radius: 45%;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>라이너 + 틴트 레이어드</h4>
+                <span class="pri soft">추천</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />정면 매크로</div>
+                <div>
+                  <span class="k">프레이밍</span><br />입술 전체 + 인중·턱 약간
+                </div>
+                <div><span class="k">거리</span><br />20~25cm</div>
+                <div><span class="k">포커스</span><br />라이너 경계 선명</div>
+              </div>
+              <div class="shot-tip">
+                💡 라이너 경계가 <b>밖에서 안으로 그라데이션</b>되는 구조가
+                보여야 함. 치아·혀 노출 X, 입 가볍게 다물기.
+              </div>
+            </div>
+          </div>
+
+          <!-- 08 DAILY MOOD -->
+          <div class="shot">
+            <div
+              class="frame"
+              style="background: linear-gradient(135deg, #fef8f3, #f0cfc0)"
+            >
+              <span class="no">08</span><span class="ratio">3:4</span>
+              <div class="diag">
+                <div
+                  class="diag-box"
+                  style="background: linear-gradient(135deg, #fef8f3, #f0cfc0)"
+                >
+                  <div class="third-v" style="left: 66.6%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 20%;
+                      top: 15%;
+                      width: 40%;
+                      height: 55%;
+                      background: radial-gradient(
+                        ellipse at 50% 40%,
+                        #e8b89a 30%,
+                        #c9a07a 70%,
+                        transparent 90%
+                      );
+                      filter: blur(1px);
+                      border-radius: 45%;
+                      opacity: 0.85;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 70%;
+                      top: 55%;
+                      width: 8%;
+                      height: 30%;
+                      background: linear-gradient(
+                        180deg,
+                        #2a2a2a 0 22%,
+                        #c9a07a 22% 78%,
+                        #2a2a2a 78%
+                      );
+                      border-radius: 2px;
+                      transform: rotate(15deg);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>데일리 무드 연출컷</h4>
+                <span class="pri soft">추천</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />정면 or 45° 탑뷰</div>
+                <div><span class="k">구성</span><br />모델 + 손에 제품</div>
+                <div><span class="k">의상</span><br />화이트·베이지·크림톤</div>
+                <div>
+                  <span class="k">장소</span><br />드레스룸·거울 앞·창가
+                </div>
+              </div>
+              <div class="shot-tip">
+                💡 <b>블로그 썸네일 후보</b> 컷. 모델 얼굴 왼쪽, 제품 오른쪽
+                배치. 과한 필터·스티커 X.
+              </div>
+            </div>
+          </div>
+
+          <!-- 09 DURATION -->
+          <div class="shot">
+            <div class="frame" style="background: #fef8f3">
+              <span class="no">09</span><span class="ratio">1:1</span>
+              <div class="diag">
+                <div class="diag-box">
+                  <div class="third-v" style="left: 50%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 8%;
+                      top: 30%;
+                      width: 36%;
+                      height: 40%;
+                      background: radial-gradient(
+                        ellipse at 50% 50%,
+                        #8b2c3e,
+                        #b05060 45%,
+                        transparent 65%
+                      );
+                      border-radius: 45%;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 56%;
+                      top: 30%;
+                      width: 36%;
+                      height: 40%;
+                      background: radial-gradient(
+                        ellipse at 50% 50%,
+                        #8b2c3e,
+                        #b05060 45%,
+                        transparent 65%
+                      );
+                      border-radius: 45%;
+                      opacity: 0.85;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>지속력 비교 (2컷 병치)</h4>
+                <span class="pri soft">추천</span>
+              </div>
+              <div class="shot-meta">
+                <div>
+                  <span class="k">앵글</span><br />정면 매크로 (동일 각도)
+                </div>
+                <div><span class="k">시간</span><br />직후 / 4~5시간 뒤</div>
+                <div>
+                  <span class="k">편집</span><br />좌우 병치 후 시간 캡션
+                </div>
+                <div><span class="k">조건</span><br />음료 1회 이상 음용</div>
+              </div>
+              <div class="shot-tip">
+                💡 두 컷 모두 <b>동일 조명·거리</b>. 라인 경계가 유지되는지
+                보여주는 게 목적. 식사 전/후 버전도 OK.
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 FLATLAY -->
+          <div class="shot">
+            <div
+              class="frame"
+              style="background: linear-gradient(135deg, #fef8f3, #fdeee4)"
+            >
+              <span class="no">10</span><span class="ratio">1:1</span>
+              <div class="diag">
+                <div class="diag-box">
+                  <div class="third-v" style="left: 33.3%"></div>
+                  <div class="third-v" style="left: 66.6%"></div>
+                  <div class="third-h" style="top: 33.3%"></div>
+                  <div class="third-h" style="top: 66.6%"></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 35%;
+                      top: 25%;
+                      width: 10%;
+                      height: 50%;
+                      background: linear-gradient(
+                        180deg,
+                        #2a2a2a 0 22%,
+                        #c9a07a 22% 78%,
+                        #2a2a2a 78%
+                      );
+                      border-radius: 3px;
+                      transform: rotate(-20deg);
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 55%;
+                      top: 55%;
+                      width: 20%;
+                      height: 20%;
+                      background: #e8b89a;
+                      border-radius: 50%;
+                      opacity: 0.5;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 15%;
+                      top: 62%;
+                      width: 14%;
+                      height: 14%;
+                      background: #d4856a;
+                      border-radius: 50%;
+                      opacity: 0.4;
+                    "
+                  ></div>
+                  <div
+                    class="diag-subject"
+                    style="
+                      left: 72%;
+                      top: 20%;
+                      width: 12%;
+                      height: 12%;
+                      background: #c9a07a;
+                      border-radius: 50%;
+                      opacity: 0.4;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="shot-body">
+              <div class="title">
+                <h4>플랫레이 (장식컷)</h4>
+                <span class="pri soft">추천</span>
+              </div>
+              <div class="shot-meta">
+                <div><span class="k">앵글</span><br />완전 탑뷰 (90°)</div>
+                <div>
+                  <span class="k">구성</span><br />제품 + 꽃잎 + 스와치종이
+                </div>
+                <div><span class="k">배경</span><br />린넨 or 한지</div>
+                <div>
+                  <span class="k">배치</span><br />3분할 교차점에 주요 피사체
+                </div>
+              </div>
+              <div class="shot-tip">
+                💡 포스팅 <b>마무리 장식용</b>. 과한 소품 대신 꽃잎 2~3장으로
+                여백 살리기. 대각선 흐름이 예뻐요.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6-C. 금지 구도 -->
+        <h3>6-C. 이런 사진은 금지</h3>
+        <div class="ban">
+          <div class="col ok">
+            <h4>✅ 좋은 사진 체크</h4>
+            <ul>
+              <li>자연광 · 웜 뉴트럴 배경</li>
+              <li>제품명 각인이 1컷 이상 <b>선명</b></li>
+              <li>BEFORE/AFTER <b>동일 세팅</b></li>
+              <li>색감 원본에 가깝게</li>
+              <li>피사체가 <b>3분할 교차점</b>에 배치</li>
+              <li>여백 확보 (카피 얹을 자리)</li>
+            </ul>
+          </div>
+          <div class="col ng">
+            <h4>🚫 피해야 할 구도</h4>
+            <ul>
+              <li>어두운 실내 · 황색 백열광</li>
+              <li>검정·빨강 등 원색 배경</li>
+              <li>과한 필터 · 뷰티필터로 입술 변형</li>
+              <li>전면 셀카 (왜곡 심함)</li>
+              <li>치아·혀 노출된 립 클로즈업</li>
+              <li>타 브랜드 제품 동반 등장</li>
+              <li>손톱·손 관리 안 된 스와치</li>
+              <li>컬러가 실제와 달라 보이는 과보정</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6-D. 제출 기준 -->
+        <h3>6-D. 사진 제출 기준</h3>
         <div class="check">
-          <div class="check-item">① 전면 패키지 (제품명 각인 보이게)</div>
-          <div class="check-item">② 제품 클로즈업 (심 / 텍스처)</div>
-          <div class="check-item">③ 손등 스와치 (호수명 캡션 포함)</div>
-          <div class="check-item">④ 맨입술 BEFORE</div>
-          <div class="check-item">⑤ 라이너 적용 AFTER (동일 각도)</div>
-          <div class="check-item">⑥ 라이너 + 틴트 레이어드 컷</div>
-          <div class="check-item">⑦ 데일리 연출컷 (셀카 or 착용샷)</div>
-          <div class="check-item">⑧ 몇 시간 후 지속력 비교컷</div>
+          <div class="check-item">
+            <b>원본 파일(JPG)</b>을 블로그 포스팅과 <b>별도로</b> 담당자에게
+            전달
+          </div>
+          <div class="check-item">
+            최소 해상도 3000 × 3000px · 용량 2MB 이상
+          </div>
+          <div class="check-item">
+            파일명: <b>탐뷰티립라이너_[블로거명]_[컷번호].jpg</b>
+          </div>
+          <div class="check-item">
+            재활용 동의서 동봉 (탐뷰티 공식 SNS·상세페이지 노출용)
+          </div>
+          <div class="check-item">스크린샷·압축 저화질 이미지 제출 불가</div>
         </div>
       </section>
 
