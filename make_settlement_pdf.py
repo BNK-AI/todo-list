@@ -93,7 +93,7 @@ story.append(Paragraph("2. 수수료 공급가액 · 부가세 분리", h2_style
 tax_data = [
     ["항목", "금액", "산식"],
     ["공급가액", won(supply_value), f"{commission_incl_vat:,} ÷ 1.1"],
-    ["부가세 (10%)", won(vat), f"{commission_incl_vat:,} − {supply_value:,}"],
+    ["부가세 (10%)", won(vat), ""],
     ["합계 (VAT 포함)", won(commission_incl_vat), "공급가액 + 부가세"],
 ]
 t2 = Table(tax_data, colWidths=[55*mm, 55*mm, 60*mm])
